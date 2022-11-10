@@ -31,4 +31,14 @@ When a "phase" is energized, the stepper motor will rotate by one step. The moto
 * **The motor will be protected at the nameplate current rating (6A).**  
 This is because a stepper motor divides a full rotation into a certain amount of equal steps. A stepper motor can do this by having groups of coils called "phases." When a "phase" is energized, the stepper motor will rotate by one step. The motor will only move on to the next step if the next "phase" group is energized. 
 
-^ Source: https://learn.adafruit.com/all-about-stepper-motors 
+^ Source: https://learn.adafruit.com/all-about-stepper-motors  
+240.4(B) is the standard for overcurrent devices rated 800 amperes or less, which allows the use of a higher rated overcurrent device as long as the conditions are met. All of these conditions have been cleared.  
+ * The conductors being protected are not part of a branch circuit supplying more than one receptacle for cord-and-plug-connected portable loads.  
+ * The ampacity of the conductors does not correspond with the standard ampere rating of a fuse or a circuit breaker without overload trip adjustments above its rating (but that shall be permitted to have other trip or rating adjustments).  
+ * The next higher standard rating selected does not exceed 800 amperes.  
+^ Source: https://up.codes/viewer/illinois/nfpa-70-2020/chapter/2/wiring-and-protection#240.4_(B)  
+
+## Schematic
+
+**Motor**  
+![Schematic](https://www.omc-stepperonline.com/download/34HE59-6004S.pdf)  
