@@ -97,3 +97,12 @@ t2 = 0.5 sec
 t2 = 1 sec  
 
 Our current goal is for the rotary device to take roughly 3 seconds to transition from 1 compartment to another. The device would need to rotate 18° to have a complete transition. Luckily for us our choice of stepper motor makes it so each step is 1.8°, which makes it so we have to take exactly 10 steps to reach the next compartment. Using this information, we can determine that are desired rpm will be roughly 1 rpm since 18°/3 sec =6° per second.  
+
+To find the motor that would work best for our project  
+
+Stepper Motors are DC motors that divided a full rotation into a set of equal steps. This will give us greater control on speed and movement of our motor, and the math happens to work in our favor.  
+
+To know what type of stepper motor we need, we have to calculate the torque it will need to properly rotate our device.  
+
+With the known values above, and the values that can be varied, a torque calculation table can be created for each case:  
+<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/TorqueCalculations.jpg" width=100% height=100%>  
