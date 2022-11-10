@@ -23,7 +23,7 @@ Weight of 3-ft diameter acrylic: Assuming 1/8'" thickness, a 3 sq. ft. square ac
   * This is also assuming that the acrylic circle will be solid throughout, which will not be the case for the vending machine. The inner 1'4" diameter will be hollowed out for components and sensors. Assuming that the acrylic will be solid throughout gives us torque calculations higher than what will be reality. This makes sure that if the constraints are met, they will definitely be met during the testing. 
 
 * **The motor will receive 24VDC from the power system.**
-* The motor will be a stepper motor.**  
+* **The motor will be a stepper motor.**  
 This is because a stepper motor divides a full rotation into a certain amount of equal steps. A stepper motor can do this by having groups of coils called "phases."  
 When a "phase" is energized, the stepper motor will rotate by one step. The motor will only move on to the next step if the next "phase" group is energized.  
 
