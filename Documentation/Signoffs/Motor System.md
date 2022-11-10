@@ -43,3 +43,4 @@ This is because a stepper motor divides a full rotation into a certain amount of
 
 **Motor**  
 ![Schematic]("C:\Users\dillo\Downloads\GetImage.jpeg")  
+
