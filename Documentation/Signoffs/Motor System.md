@@ -42,7 +42,7 @@ This is because a stepper motor divides a full rotation into a certain amount of
 ## Schematic
 
 **Motor**  
-![Motor](![Driver](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg))
+![Motor](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg)
 
 This is the schematic for the stepper motor our team is looking to use, the E Series Nema 34 Stepper Motor. This motor has a holding torque of 12 Nm (or 106.29 lb-in). The calculations that led us to this decision is in Analysis. If we are able to go with this motor, we will need a driver. There is a driver built specifically for the Nema 34: The HSS86 Hybrid Step Servo.  
 ^ Source: https://www.omc-stepperonline.com/download/34HE59-6004S.pdf  
@@ -50,3 +50,18 @@ This is the schematic for the stepper motor our team is looking to use, the E Se
 **Driver**  
 <img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg" width=50% height=50%>  
 
+This is the schematic for the frame of the servo, mainly used for implementation into a machine. All measurements are in mm.  
+^ Source: https://www.jbcnc.se/images/datasheets/HSS86.pdf  
+
+<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverWiring.jpg" width=50% height=50%>  
+This is the wiring diagram for the driver and how it connects to the motor and step encoding. The resistors shown can vary, but because the signal control voltage will be +12V, the input port will need to be connected to a 1KΩ-2KΩ resistor.  
+
+## Analysis
+
+As stated previously, the motor must be able to output enough torque to rotate roughly 45 lbs. Our current machine design is a hollow cylinder, with the outer diameter being 3' and the inner, hollow diameter being roughly 1'4"  
+
+T=W(R21+R22)2∗∆N308t
+
+The equation above is for calculating the torque required to move a certain weight in a hollow cylinder.  
+
+The variables above are defined as:  
