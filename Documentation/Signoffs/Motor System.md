@@ -42,5 +42,5 @@ This is because a stepper motor divides a full rotation into a certain amount of
 ## Schematic
 
 **Motor**  
-![Schematic](images/MotorSchematic.jpg)  
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/MotorSchematic.jpg)  
 
