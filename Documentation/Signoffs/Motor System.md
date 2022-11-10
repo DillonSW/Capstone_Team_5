@@ -42,7 +42,7 @@ This is because a stepper motor divides a full rotation into a certain amount of
 ## Schematic
 
 **Motor**  
-![Motor](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg)
+![Motor](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/MotorSchematic.jpg)
 
 This is the schematic for the stepper motor our team is looking to use, the E Series Nema 34 Stepper Motor. This motor has a holding torque of 12 Nm (or 106.29 lb-in). The calculations that led us to this decision is in Analysis. If we are able to go with this motor, we will need a driver. There is a driver built specifically for the Nema 34: The HSS86 Hybrid Step Servo.  
 ^ Source: https://www.omc-stepperonline.com/download/34HE59-6004S.pdf  
@@ -60,8 +60,40 @@ This is the wiring diagram for the driver and how it connects to the motor and s
 
 As stated previously, the motor must be able to output enough torque to rotate roughly 45 lbs. Our current machine design is a hollow cylinder, with the outer diameter being 3' and the inner, hollow diameter being roughly 1'4"  
 
-T=W(R21+R22)2∗∆N308t
+T=W(R1^2+R2^2)/2∗∆N/308t
 
 The equation above is for calculating the torque required to move a certain weight in a hollow cylinder.  
 
 The variables above are defined as:  
+T = Required Torque, lb-ft  
+WK^2 = Mass Moment of Inertia of load to be accelerated lb-ft^2  
+∆N = Change of Speed, rpm  
+t = time to accelerate the load, seconds  
+W = weight of object, lb  
+R1 = outside radius of cylinder, ft  
+R2 = inside radius of cylinder, ft  
+
+^ Source: https://www.engineersedge.com/motors/hollow_cylinder_axis_torque_force_equation.htm  
+
+The values of W, R1, & R2 Are consistence since they are the current constraints of our design:  
+W = 45 lb 
+
+R1 = 1.5 ft 
+
+R2 = 0.666 ft 
+
+While the values of ∆N & t will vary for testing purposes: 
+
+∆N1 = 5 rpm 
+
+∆N2 = 3 rpm 
+
+∆N2 = 1 rpm 
+
+t1 = 0.25 sec 
+
+t2 = 0.5 sec 
+
+t2 = 1 sec  
+
+Our current goal is for the rotary device to take roughly 3 seconds to transition from 1 compartment to another. The device would need to rotate 18° to have a complete transition. Luckily for us our choice of stepper motor makes it so each step is 1.8°, which makes it so we have to take exactly 10 steps to reach the next compartment. Using this information, we can determine that are desired rpm will be roughly 1 rpm since 18°/3 sec =6° per second.  
