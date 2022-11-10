@@ -27,4 +27,8 @@ Weight of 3-ft diameter acrylic: Assuming 1/8'" thickness, a 3 sq. ft. square ac
 This is because a stepper motor divides a full rotation into a certain amount of equal steps. A stepper motor can do this by having groups of coils called "phases."  
 When a "phase" is energized, the stepper motor will rotate by one step. The motor will only move on to the next step if the next "phase" group is energized.  
 
+^ Source: https://learn.adafruit.com/all-about-stepper-motors  
+* **The motor will be protected at the nameplate current rating (6A).**  
+This is because a stepper motor divides a full rotation into a certain amount of equal steps. A stepper motor can do this by having groups of coils called "phases." When a "phase" is energized, the stepper motor will rotate by one step. The motor will only move on to the next step if the next "phase" group is energized. 
+
 ^ Source: https://learn.adafruit.com/all-about-stepper-motors 
