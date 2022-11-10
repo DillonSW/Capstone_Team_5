@@ -106,3 +106,12 @@ To know what type of stepper motor we need, we have to calculate the torque it w
 
 With the known values above, and the values that can be varied, a torque calculation table can be created for each case:  
 <img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/TorqueCalculations.jpg" width=100% height=100%>  
+As shown above, the highest amount of torque required would be at 5 rpm, accelerating in 0.25 seconds. This torque would be 5.3374 Nm.  
+However, these results are assuming that a DC motor will be 100% efficient when operating at a lower rated load. This is an unreasonable expectation. Most DC motors are designed to be anywhere from 50-100% efficient with peak efficiency being at around 75% of the rated load. So for a 12 Nm motor, the optimal load range is from 6 to 12 Nm, with peak being at 9 Nm. Because we would have at most 5.337 Nm of required torque, the motor will be running at a lower efficiency than, but close to, 50%. This is acceptable because the motor will still be able to output enough torque to rotate our platforms at our desired speed and acceleration (3rpm and 0.25s acceleration time).  
+^ Source: https://www.energy.gov/sites/prod/files/2014/04/f15/10097517.pdf  
+
+Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
+
+## BOM
+
+<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/MotorBOM.jpg" width=100% height=100%>
