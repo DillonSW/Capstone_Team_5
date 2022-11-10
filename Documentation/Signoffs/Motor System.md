@@ -42,11 +42,11 @@ This is because a stepper motor divides a full rotation into a certain amount of
 ## Schematic
 
 **Motor**  
-<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/MotorSchematic.jpg" width=50% height=50%> 
+![Motor](![Driver](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg))
 
 This is the schematic for the stepper motor our team is looking to use, the E Series Nema 34 Stepper Motor. This motor has a holding torque of 12 Nm (or 106.29 lb-in). The calculations that led us to this decision is in Analysis. If we are able to go with this motor, we will need a driver. There is a driver built specifically for the Nema 34: The HSS86 Hybrid Step Servo.  
 ^ Source: https://www.omc-stepperonline.com/download/34HE59-6004S.pdf  
 
 **Driver**  
-![Driver](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg){ width=50% }  
+<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg" width=50% height=50%>  
 
