@@ -177,5 +177,9 @@ Since the motor we are looking at can have a holding torque of 12 Nm, it will me
 
 ## BOM
 
-<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/MotorBOM.jpg" width=100% height=100%>
+| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
+|--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
+| Nema 34 Stepper Motor | Stepper Motor for Rotating Platforms | 
+| HSS86        | Hybrid Stepper Servo Driver | 
+| JOS 1.2 kΩ Resistor | 1% Tolerance, Metal film, 1/2 Watt | 
 
