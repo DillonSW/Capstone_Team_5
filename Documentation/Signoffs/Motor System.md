@@ -150,7 +150,7 @@ W = 75 lbs
 R1 = 1.5 ft  
 R2 = 0.67 ft  
 
-**Required Torque Calculations (lb-ft) **  
+**Required Torque Calculations (lb-ft)**  
 
 |  t(s)  |        |∆N (rpm)|        |  
 |--------|--------|--------|--------|
