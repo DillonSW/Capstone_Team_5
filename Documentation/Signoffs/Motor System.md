@@ -179,7 +179,8 @@ Since the motor we are looking at can have a holding torque of 12 Nm, it will me
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| Nema 34 Stepper Motor | Stepper Motor for Rotating Platforms | 
-| HSS86        | Hybrid Stepper Servo Driver | 
-| JOS 1.2 kΩ Resistor | 1% Tolerance, Metal film, 1/2 Watt | 
+| Nema 34 Stepper Motor | Stepper Motor for Rotating Platforms | Motor | 34HE59-6004S | Stepper Online | 1 | $66.85 | 66.85 |
+| HSS86        | Hybrid Stepper Servo Driver | Motor | NBKDM-HBS86H | MEIHAOCNC | 1 | $55.00 | 55 |
+| JOS 1.2 kΩ Resistor | 1% Tolerance, Metal film, 1/2 Watt | Motor | CJ-W050-MF | California JOS | 100 | $0.0399 | 3.99 |
+| **Total** |  |  |  | **Total Components** | 102 | **Total Cost** | 125.84 |
 
