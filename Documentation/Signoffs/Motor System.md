@@ -150,9 +150,9 @@ W = 75 lbs
 R1 = 1.5 ft  
 R2 = 0.67 ft  
 
-|**Required Torque Calculations (lb-ft) **|  
-|∆N|
-
+**Required Torque Calculations (lb-ft) **
+|  t(s)  |     ∆N (rpm)     |  1  |  2  |  3  |
+|--------|------------------|-----|-----|-----|
 As shown above, the highest amount of torque required would be at 5 rpm, accelerating in 0.25 seconds. This torque would be 8.8957 Nm.  
 However, these results are assuming that a DC motor will be 100% efficient when operating at a lower rated load. This is an unreasonable expectation. Most DC motors are designed to be anywhere from 50-100% efficient with peak efficiency being at around 75% of the rated load. So for a 12 Nm motor, the optimal load range is from 6 to 12 Nm, with peak being at 9 Nm. Because we would have at most 8.8957 Nm of required torque, and an assumed efficiency of 50% the most torque requited would be 17.7914 Nm. However we are deciding to run the motor assuming a lower acceleration time and rpm. At the values we are expecting to run (0.5s acceleration and 3 rpm), also assuming 50% efficiency, the required torque would be 5.3374 Nm, which is an acceptable level for our desired motor. 
 
