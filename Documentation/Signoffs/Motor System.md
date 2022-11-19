@@ -6,7 +6,9 @@ This subsystem's role in our design is to move new devices to the checkout door 
  
 ## Constraints
 
-* **The boards being rotated on the platforms (box and all) will weigh 0.5lbs**  
+* **The boards being rotated on the platforms (box and all) weigh 0.5lbs**  
+^ Each platform will be able to hold 20 boards
+
 **The platforms being rotated by the motor:**  
 * **Will hold 20 boards (10 lbs)**
 
@@ -17,7 +19,7 @@ This subsystem's role in our design is to move new devices to the checkout door 
 
 * **Will weigh 3.937 lbs each**  
 ^ 1/8" acrylic weighs 0.694 lbs/sq. ft. https://www.usplastic.com/knowledgebase/article.aspx?contentkey=884 
-Area of circle = 78.540% area of square with same diameter: (pi*0.5^2)/1 = 0.78540  
+Area of circle = 78.540% area of square with same diameter: $(pi*0.5^2)/1 = 0.78540$  
 (Weight of whole, 3' diameter, 1/8" thick circle) - (Weight of missing, 16" diameter, hollow center) = 4.906 - 0.969 = **3.937**.  
 Material of platform: Acrylic  
 
@@ -47,7 +49,7 @@ Flexural Strength: 16,500 PSI (6mm thickness)
 * **Will be 1/16th or 1/8th thick (assuming 1/8th inch for worst-case).**  
 ^ Given the density of aluminum (2.7 g/cm^3) and given the area equation for a hollow cylinder  
 
-M = πhmD(r^2 - (r - t)^2)  
+$M = (π)(h)(mD)(r^2 - (r - t)^2)$  
 where:  
   M = mass of the hollow cylinder
   h = height  
@@ -57,7 +59,7 @@ where:
 The hollow aluminum cylinder will weigh **9.622 lbs**  
 
 **The Motor:  **
-* **Given the calculations above, must rotate a total weight of 70.858 lbs. (We will assume roughly 5% tolerance for error, so for calculations we will use 75 lbs)**  
+* **Given the calculations above, must rotate a total weight of 70.858 lbs. (We will assume roughly 20% tolerance for error, so for calculations we will use 85 lbs)**
  
 * **The motor will receive 24VDC from the power system.**  
 
@@ -99,7 +101,7 @@ This is the wiring diagram for the driver and how it connects to the motor and s
 
 As stated previously, the motor must be able to output enough torque to rotate roughly 75 lbs. Our current machine design is a hollow cylinder, with the outer diameter being 3' and the inner, hollow diameter being roughly 1'4"  
 
-T=W(R1^2+R2^2)/2∗∆N/308t
+$T=W(R1^2+R2^2)/2∗(∆N/308t)$
 
 The equation above is for calculating the torque required to move a certain weight in a hollow cylinder.  
 
@@ -115,7 +117,7 @@ R2 = inside radius of cylinder, ft
 ^ Source: https://www.engineersedge.com/motors/hollow_cylinder_axis_torque_force_equation.htm  
 
 The values of W, R1, & R2 Are consistence since they are the current constraints of our design:  
-W = 75 lb 
+W = 85 lb 
 
 R1 = 1.5 ft 
 
