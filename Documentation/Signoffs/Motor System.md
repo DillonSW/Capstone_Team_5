@@ -81,7 +81,7 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 
 ## Schematic
 
-<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Driver and Motor Schematic.jpg" width=50% height=50%>
+![Motor](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Driver and Motor Schematic.jpg)  
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
 ## Analysis
@@ -90,11 +90,11 @@ As stated previously, the motor must be able to output enough torque to rotate r
 
 Below is some algebra that help derive the correct formula to use for our system:
 
-$T = Torque$
-$I = Moment of Inertia$ 
-$α = Angular Acceleration$ 
-$a = Acceleration$ 
-$r = Radius$ 
+$T = Torque$ | 
+$I = Moment of Inertia$ | 
+$α = Angular Acceleration$ | 
+$a = Acceleration$ | 
+$r = Radius$ | 
 $m = Mass$
 
 Torque is usually found by multiplying Force and the Radius of the cylinder.
@@ -234,8 +234,7 @@ However, these results are assuming that a DC motor will be 100% efficient when 
 
 **Note**
 The torque required to stop the device is well below the holding torque of the selected motor. Also, since this motor has an electromagnetic brake, it will have even greater stopping power assuring the motor does not lose its step. A table displaying the pull out torque is placed below. Pull Out Torque is the maximum torque the brake can output at higher speeds. The higher the rmp, the less it can brake. Our maximum speed (5 rpm) will not come close to being an issue.  
-
-<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PulloutTorque.jpg" width=50% height=50%>
+![Motor](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PulloutTorque.jpg)
 
 Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
 
