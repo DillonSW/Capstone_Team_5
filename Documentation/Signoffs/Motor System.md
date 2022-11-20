@@ -10,9 +10,7 @@ This subsystem's role in our design is to move new devices to the checkout door 
 ^ Each platform will be able to hold 20 boards
 
 **The platforms being rotated by the motor:**  
-* **Will hold 20 boards (10 lbs)**
-
-* **Will be made out of acrylic **  
+* **Will be made out of acrylic**  
 
 * **Will be 3.175 mm (1/8 inch) thick, 3 feet in diameter, and have a 16" hollowed diameter in the center.**  
 ^ This will make the platforms like hollow rings. 
@@ -99,7 +97,7 @@ This is the wiring diagram for the driver and how it connects to the motor and s
 
 ## Analysis
 
-As stated previously, the motor must be able to output enough torque to rotate roughly 75 lbs. Our current machine design is a hollow cylinder, with the outer diameter being 3' and the inner, hollow diameter being roughly 1'4"  
+As stated previously, the motor must be able to output enough torque to rotate roughly 85 lbs. Our current machine design is a hollow cylinder, with the outer diameter being 3' and the inner, hollow diameter being roughly 1'4"  
 
 $T=W(R1^2+R2^2)/2∗(∆N/308t)$
 
@@ -121,19 +119,19 @@ W = 85 lb
 
 R1 = 1.5 ft 
 
-R2 = 0.666 ft 
+R2 = 0.667 ft 
 
 While the values of ∆N & t will vary for testing purposes: 
 
 ∆N1 = 5 rpm 
 
-∆N2 = 3 rpm 
+**∆N2 = 3 rpm** 
 
 ∆N2 = 1 rpm 
 
 t1 = 0.25 sec 
 
-t2 = 0.5 sec 
+**t2 = 0.5 sec** 
 
 t2 = 1 sec  
 
@@ -148,7 +146,7 @@ To know what type of stepper motor we need, we have to calculate the torque it w
 With the known values above, and the values that can be varied, a torque calculation table can be created for each case:  
 
 **Givens:**  
-W = 75 lbs  
+W = 85 lbs  
 R1 = 1.5 ft  
 R2 = 0.67 ft  
 
@@ -157,21 +155,21 @@ R2 = 0.67 ft
 |  t(s)  |        |∆N (rpm)|        |  
 |--------|--------|--------|--------|
 |        |    1   |    2   |    3   |
-|  0.25  | 1.3122 | 3.9367 | 6.5611 |
-|  0.5   | 0.6561 | 1.9683 | 3.2806 |
-|    1   | 0.3281 | 0.9842 | 1.6403 |  
+|  0.25  | 1.4872 | 4.4616 | 7.4360 |
+|  0.5   | 0.7436 | 2.2308 | 3.7180 |
+|    1   | 0.3718 | 1.1154 | 1.8590 |  
 
 **Converted to Nm**  
 
 |  t(s)  |        |∆N (rpm)|        |  
 |--------|--------|--------|--------|
 |        |    1   |    2   |    3   |
-|  0.25  | 1.7791 | 5.3374 | 8.8957 |
-|  0.5   | 0.8896 | 2.6687 | 4.4479 |
-|    1   | 0.4448 | 1.3344 | 2.2239 |  
+|  0.25  | 2.0164 | 6.0491 | 10.0818 |
+|  0.5   | 1.0082 | 3.0245 | 5.0409 |
+|    1   | 0.5041 | 1.5123 | 2.5205 |  
 
-As shown above, the highest amount of torque required would be at 5 rpm, accelerating in 0.25 seconds. This torque would be 8.8957 Nm.  
-However, these results are assuming that a DC motor will be 100% efficient when operating at a lower rated load. This is an unreasonable expectation. Most DC motors are designed to be anywhere from 50-100% efficient with peak efficiency being at around 75% of the rated load. So for a 12 Nm motor, the optimal load range is from 6 to 12 Nm, with peak being at 9 Nm. Because we would have at most 8.8957 Nm of required torque, and an assumed efficiency of 50% the most torque requited would be 17.7914 Nm. However we are deciding to run the motor assuming a lower acceleration time and rpm. At the values we are expecting to run (0.5s acceleration and 3 rpm), also assuming 50% efficiency, the required torque would be 5.3374 Nm, which is an acceptable level for our desired motor. 
+As shown above, the highest amount of torque required would be at 5 rpm, accelerating in 0.25 seconds. This torque would be 10.0818 Nm.  
+However, these results are assuming that a DC motor will be 100% efficient when operating at a lower rated load. This is an unreasonable expectation. Most DC motors are designed to be anywhere from 50-100% efficient with peak efficiency being at around 75% of the rated load. So for a 12 Nm motor, the optimal load range is from 6 to 12 Nm, with peak being at 9 Nm. Because we would have at most 10.0818 Nm of required torque, and an assumed efficiency of 50% the most torque requited would be 20.1636 Nm. However we are deciding to run the motor assuming a lower acceleration time and rpm. At the values we are expecting to run (0.5s acceleration and 3 rpm), also assuming 50% efficiency, the required torque would be 6.049 Nm, which is an acceptable level for our desired motor. 
 
 ^ Source: https://www.energy.gov/sites/prod/files/2014/04/f15/10097517.pdf 
 
