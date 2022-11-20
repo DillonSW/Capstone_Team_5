@@ -56,7 +56,7 @@ where:
   mD = Mean Density of cylinder material  
 The hollow aluminum cylinder will weigh **9.622 lbs**  
 
-**The Motor:  **
+**The Motor:**
 * **Given the calculations above, must rotate a total weight of 70.858 lbs. (We will assume roughly 20% tolerance for error, so for calculations we will use 85 lbs)**
 
 * **Will have a time to accelerate (the loads) of less than 1 second.**
