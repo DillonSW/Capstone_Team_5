@@ -235,6 +235,7 @@ However, these results are assuming that a DC motor will be 100% efficient when 
 **Note**
 The torque required to stop the device is well below the holding torque of the selected motor. Also, since this motor has an electromagnetic brake, it will have even greater stopping power assuring the motor does not lose its step. A table displaying the pull out torque is placed below. Pull Out Torque is the maximum torque the brake can output at higher speeds. The higher the rmp, the less it can brake. Our maximum speed (5 rpm) will not come close to being an issue.  
 ![PulloutTorque](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/PulloutTorque.jpg)
+
 Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
 
 ## BOM
