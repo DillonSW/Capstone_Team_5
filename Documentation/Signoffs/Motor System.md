@@ -58,46 +58,74 @@ The hollow aluminum cylinder will weigh **9.622 lbs**
 
 **The Motor:  **
 * **Given the calculations above, must rotate a total weight of 70.858 lbs. (We will assume roughly 20% tolerance for error, so for calculations we will use 85 lbs)**
- 
-* **The motor will receive 24VDC from the power system.**  
 
-* **The motor will be a stepper motor.**  
-This is because a stepper motor divides a full rotation into a certain amount of equal steps. A stepper motor can do this by having groups of coils called "phases."  
-When a "phase" is energized, the stepper motor will rotate by one step. The motor will only move on to the next step if the next "phase" group is energized.  
+* **Will have a time to accelerate (the loads) of less than 1 second.**
+^ As explained below, we want our time to accelerate to be 0.5 seconds. We can run our calculations based off of 1 second time to accelerate as a worse-case scenario.
 
-^ Source: https://learn.adafruit.com/all-about-stepper-motors  
+**Circuity:** 
+* **Will be protected at 125% the nameplate current rating (7.5A).** This comes from the following codes.
 
-* **The motor will be protected at the nameplate current rating (6A).**  
-This is because a stepper motor divides a full rotation into a certain amount of equal steps. A stepper motor can do this by having groups of coils called "phases." When a "phase" is energized, the stepper motor will rotate by one step. The motor will only move on to the next step if the next "phase" group is energized. 
+The standard NEC 430.52(D) states "Torque motor branch circuits shall be protected at the motor nameplace current rating in accordance with 240.4(B)
+^ Source: https://up.codes/s/rating-or-setting-for-individual-motor-circuit
 
-^ Source: https://learn.adafruit.com/all-about-stepper-motors  
-240.4(B) is the standard for overcurrent devices rated 800 amperes or less, which allows the use of a higher rated overcurrent device as long as the conditions are met. All of these conditions have been cleared.  
+NEC 240.4(B) is the standard for overcurrent devices rated 800 amperes or less, which allows the use of a higher rated overcurrent device as long as the conditions are met. All of these conditions have been cleared.  
  * The conductors being protected are not part of a branch circuit supplying more than one receptacle for cord-and-plug-connected portable loads.  
  * The ampacity of the conductors does not correspond with the standard ampere rating of a fuse or a circuit breaker without overload trip adjustments above its rating (but that shall be permitted to have other trip or rating adjustments).  
  * The next higher standard rating selected does not exceed 800 amperes.  
-  
 ^ Source: https://up.codes/viewer/illinois/nfpa-70-2020/chapter/2/wiring-and-protection#240.4_(B)  
+
+The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred twenty-five percent [125%] of the inverter output circuit current shall be used in ampacity calculations for the following: Feeders, Taps, and Busbars."
+^ Source: https://up.codes/viewer/delaware/nfpa-70-2014/chapter/7/special-conditions#705.12_(D)_(2)
 
 ## Schematic
 
-**Motor**  
-![Motor](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/MotorSchematic.jpg)
-
-This is the schematic for the stepper motor our team is looking to use, the E Series Nema 34 Stepper Motor. This motor has a holding torque of 12 Nm (or 106.29 lb-in). The calculations that led us to this decision is in Analysis. If we are able to go with this motor, we will need a driver. There is a driver built specifically for the Nema 34: The HSS86 Hybrid Step Servo.  
-^ Source: https://www.omc-stepperonline.com/download/34HE59-6004S.pdf  
-
-**Driver**  
-<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverSchematic.jpg" width=50% height=50%>  
-
-This is the schematic for the frame of the servo, mainly used for implementation into a machine. All measurements are in mm.  
-^ Source: https://www.jbcnc.se/images/datasheets/HSS86.pdf  
-
-<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverWiring.jpg" width=50% height=50%>  
-This is the wiring diagram for the driver and how it connects to the motor and step encoding. The resistors shown can vary, but because the signal control voltage will be +12V, the input port will need to be connected to a 1KΩ-2KΩ resistor.  
+<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Driver and Motor Schematic.jpg" width=50% height=50%>
+The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
 ## Analysis
 
-As stated previously, the motor must be able to output enough torque to rotate roughly 85 lbs. Our current machine design is a hollow cylinder, with the outer diameter being 3' and the inner, hollow diameter being roughly 1'4"  
+As stated previously, the motor must be able to output enough torque to rotate roughly 75 lbs. Our current machine design is a hollow cylinder, with the outer diameter being 3' and the inner, hollow diameter being roughly 1'4" 
+
+Below is some algebra that help derive the correct formula to use for our system:
+
+$T = Torque$
+$I = Moment of Inertia$ 
+$α = Angular Acceleration$ 
+$a = Acceleration$ 
+$r = Radius$ 
+$m = Mass$
+
+Torque is usually found by multiplying Force and the Radius of the cylinder. 
+$T = Fr$
+Force is equal to mass x acceleration 
+$F = ma$
+By reorganizing  
+$a = F/m$                (1) 
+Acceleration can also be expressed as 
+$a = (d/dt)(ds/dt)$
+For rotatory motion $s = rdθ$
+$a = (d/dt)(rdθ/dt)$
+Reorganize 
+$a = r(d/dt)(dθ/dt)$
+Angular Acceleration (α) 
+$α = (d/dt)(dθ/dt)$
+This means α can be substituted in 
+$a = rα$                 (2)
+The formula for torque can be reorganized in to 
+$F = T/r$                (3)
+By substituting equations (2) and (3) into (1), we get 
+$rα= (T/r)/m$
+Which can be reorganized in to 
+$T=mr^2α$
+The formula for moment of inertia is 
+$I = mr^2$ 
+Which can be substituted in as 
+$T= Iα$  
+
+Confirming the equation needed to be used to find our Torque.
+Since we are working with a cylinder with a hollow center, we are using the equation required to find the moment of inertia for an Annular cylinder
+[$I= (1/2)M(R1^2+R2^2)$]
+This equation has been confirmed by multiple sources, and fits into the standards for the equation for moment of inertia [$I = mr^2$]. 
 
 $T=W(R1^2+R2^2)/2∗(∆N/308t)$
 
@@ -113,6 +141,7 @@ R1 = outside radius of cylinder, ft
 R2 = inside radius of cylinder, ft  
 
 ^ Source: https://www.engineersedge.com/motors/hollow_cylinder_axis_torque_force_equation.htm  
+^ Source further explaining equation: https://www.powertransmission.com/ext/resources/issues/0417/baldor-basics.pdf?1646351827
 
 The values of W, R1, & R2 Are consistence since they are the current constraints of our design:  
 W = 85 lb 
@@ -122,7 +151,6 @@ R1 = 1.5 ft
 R2 = 0.667 ft 
 
 While the values of ∆N & t will vary for testing purposes: 
-
 ∆N1 = 5 rpm 
 
 **∆N2 = 3 rpm** 
@@ -173,14 +201,19 @@ However, these results are assuming that a DC motor will be 100% efficient when 
 
 ^ Source: https://www.energy.gov/sites/prod/files/2014/04/f15/10097517.pdf 
 
+**Note**
+The torque required to stop the device is well below the holding torque of the selected motor. Also, since this motor has an electromagnetic brake, it will have even greater stopping power assuring the motor does not lose its step. A table displaying the pull out torque is placed below. Pull Out Torque is the maximum torque the brake can output at higher speeds. The higher the rmp, the less it can brake. Our maximum speed (5 rpm) will not come close to being an issue.  
+
+**INSERT PHOTO**
+
 Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
 
 ## BOM
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| Nema 34 Stepper Motor | Stepper Motor for Rotating Platforms | Motor | 34HE59-6004S | Stepper Online | 1 | $66.85 | $66.85 |
+| P Series Nema 34 Stepper Motor | Stepper Motor for Rotating Platforms | Motor | 34E1KBK50-120 | Stepper Online | 1 | $195.01 | $195.01 |
 | HSS86        | Hybrid Stepper Servo Driver | Motor | NBKDM-HBS86H | MEIHAOCNC | 1 | $55.00 | $55.00 |
-| JOS 1.2 kΩ Resistor | 1% Tolerance, Metal film, 1/2 Watt | Motor | CJ-W050-MF | California JOS | 100 | $0.0399 | $3.99 |
-| **Total** |  |  |  | **Total Components** | 102 | **Total Cost** | $125.84 |
+| JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
+| **Total** |  |  |  | **Total Components** | 12 | **Total Cost** | $255.74 |
 
