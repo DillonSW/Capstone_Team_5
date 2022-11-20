@@ -95,37 +95,66 @@ $a = Acceleration$
 $r = Radius$ 
 $m = Mass$
 
-Torque is usually found by multiplying Force and the Radius of the cylinder. 
+Torque is usually found by multiplying Force and the Radius of the cylinder.
+
 $T = Fr$
+
 Force is equal to mass x acceleration 
+
 $F = ma$
+
 By reorganizing  
+
 $a = F/m$                (1) 
+
 Acceleration can also be expressed as 
+
 $a = (d/dt)(ds/dt)$
+
 For rotatory motion $s = rdθ$
+
 $a = (d/dt)(rdθ/dt)$
+
 Reorganize 
+
 $a = r(d/dt)(dθ/dt)$
+
 Angular Acceleration (α) 
+
 $α = (d/dt)(dθ/dt)$
+
 This means α can be substituted in 
+
 $a = rα$                 (2)
+
 The formula for torque can be reorganized in to 
+
 $F = T/r$                (3)
+
 By substituting equations (2) and (3) into (1), we get 
+
 $rα= (T/r)/m$
+
 Which can be reorganized in to 
+
 $T=mr^2α$
+
 The formula for moment of inertia is 
+
 $I = mr^2$ 
+
 Which can be substituted in as 
+
 $T= Iα$  
 
 Confirming the equation needed to be used to find our Torque.
 Since we are working with a cylinder with a hollow center, we are using the equation required to find the moment of inertia for an Annular cylinder
-[$I= (1/2)M(R1^2+R2^2)$]
-This equation has been confirmed by multiple sources, and fits into the standards for the equation for moment of inertia [$I = mr^2$]. 
+
+$I= (1/2)M(R1^2+R2^2)$
+
+This equation has been confirmed by multiple sources, and fits into the standards for the equation for moment of inertia
+
+$I = mr^2$ 
 
 $T=W(R1^2+R2^2)/2∗(∆N/308t)$
 
@@ -204,7 +233,7 @@ However, these results are assuming that a DC motor will be 100% efficient when 
 **Note**
 The torque required to stop the device is well below the holding torque of the selected motor. Also, since this motor has an electromagnetic brake, it will have even greater stopping power assuring the motor does not lose its step. A table displaying the pull out torque is placed below. Pull Out Torque is the maximum torque the brake can output at higher speeds. The higher the rmp, the less it can brake. Our maximum speed (5 rpm) will not come close to being an issue.  
 
-**INSERT PHOTO**
+<img src="https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PulloutTorque.jpg" width=50% height=50%>
 
 Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
 
