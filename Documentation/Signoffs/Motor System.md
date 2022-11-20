@@ -66,6 +66,7 @@ The hollow aluminum cylinder will weigh **9.622 lbs**
 * **Will be protected at 125% the nameplate current rating (7.5A).** This comes from the following codes.
 
 The standard NEC 430.52(D) states "Torque motor branch circuits shall be protected at the motor nameplace current rating in accordance with 240.4(B)
+
 ^ Source: https://up.codes/s/rating-or-setting-for-individual-motor-circuit
 
 NEC 240.4(B) is the standard for overcurrent devices rated 800 amperes or less, which allows the use of a higher rated overcurrent device as long as the conditions are met. All of these conditions have been cleared.  
@@ -75,6 +76,7 @@ NEC 240.4(B) is the standard for overcurrent devices rated 800 amperes or less, 
 ^ Source: https://up.codes/viewer/illinois/nfpa-70-2020/chapter/2/wiring-and-protection#240.4_(B)  
 
 The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred twenty-five percent [125%] of the inverter output circuit current shall be used in ampacity calculations for the following: Feeders, Taps, and Busbars."
+
 ^ Source: https://up.codes/viewer/delaware/nfpa-70-2014/chapter/7/special-conditions#705.12_(D)_(2)
 
 ## Schematic
