@@ -82,12 +82,15 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 ## Schematic
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorSchemRevision.jpg)
+
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
 ![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/MotorMount.jpg)
+
 The image above shows the proposed idea of mounting the motor into the machine. Proposed by the Mechanical Engineering team, the motor will be mounted at the bottom of the machine, and will be on the same level as the mount for the platforms.
 
 ![Connection](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/PulleySystem.jpg)
+
 The image above shows the proposed idea of having the motor rotate the platforms. Proposed and discussed by the Mechanical and ECE teams, there will be a gear or belt-feed attatched to the motor's shaft and to the platform's base. These mounts will be of identical size in order to keep the ratio of motor rotation and platform rotation equal. Of course, there will be efficiency loss; any belt-feed or gear ratio will have some sort of loss. As shown in the calculations, we are assuming the worst-case scenario of 50% efficiency.
 
 ## Analysis
