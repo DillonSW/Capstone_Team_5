@@ -29,6 +29,8 @@ Flexural Strength: 16,500 PSI (6mm thickness)
 
 * **Given these calculations, the total weight of the platforms and boards will be 44.811 lbs.**
 
+* **The platforms will also have a 1 in. gap between them and the frame of the machine.**
+
 **The dividers on each platform:**
 * **Will also be made of acrylic**  
 
@@ -241,11 +243,53 @@ However, these results are assuming that a DC motor will be 100% efficient when 
 
 ^ Source: https://www.energy.gov/sites/prod/files/2014/04/f15/10097517.pdf 
 
+A safety measure we must take into account is the potential for a pinch point to occur. According to OSHA 1910.211(d)(44)
+* Pinch point means any point other than the point of operation at which it is possible for a part of the body to be caught between the moving parts of a press or auxiliary equipment, or between moving and stationary parts of a press or auxiliary equipment or between the material and moving part or parts of the press or auxiliary equipment. 
+
+^ Source: https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.211 
+
+Due to this definition, a pinch point can occur between the dividers and the frame of the machine during platform rotation. This is why we are leaving a 1 in. gap between the platforms and the frame. 
+
+We will assume that the radius from the frame to the pulley / gear is 1.2 ft (or 0.36924 m). 
+
+Given the average width of an index finger is 0.75 in.: 
+
+$T = Fr$
+
+$6.049 = F(0.36924)$ -> $F = 16.3823 N = 3.68289 lb$
+
+We are going to assume that the force acting on a finger in the pinch point will act like shear-force.
+
+The equation for shear-force is: 
+
+$τ = F/A$ 
+
+Where 
+τ = Shear Force 
+F = Force Applied 
+A = Cross-sectional Area, parallel to F 
+^ Source: https://www.engineersedge.com/material_science/shear-stress.htm 
+
+For a 1 in. long gap, with an average .75 in. width finger, 
+
+$A = length x width = 0.75 in^2$
+
+So 
+
+$τ = 3.68289/0.75 = 4.91052 lb/in^2%
+
+The max applied shear force on a finger in the given scenario is roughly 5 lb/in^2. This is also assuming that the finger cannot bend. The force required to fracture a "small bone" can be as little as 25 lbs of pressure. It is safe to assume that 1/5th of the minimum force required to fracture a small bone will not cause severe damage. This can be tested by using an object similar to a finger (such as a baby carrot) and rotating the platforms while the carrot is in the door. 
+^ Source: https://scienceline.ucsb.edu/getkey.php?key=3088 
+
+If all else fails, there can be a delay for the platform rotating. During this delay, the user interface can display a message to remove any appendages from the machine, or it can be pinched. There can also be a sign attached to the machine. 
+
 **Note**
 The torque required to stop the device is well below the holding torque of the selected motor. Also, since this motor has an electromagnetic brake, it will have even greater stopping power assuring the motor does not lose its step. A table displaying the pull out torque is placed below. Pull Out Torque is the maximum torque the brake can output at higher speeds. The higher the rmp, the less it can brake. Our maximum speed (5 rpm) will not come close to being an issue.  
 ![PulloutTorque](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/PulloutTorque.jpg)
 
 Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
+
+The motor, as stated before, can rotate 1.8° per step. The datasheet states that there is a 0.09 tolerance, meaning the motor can step anywhere from 17.1° to 18.9° in 10 steps. Because the Mechanical Engineering team plans on keeping the rotation ratio between the motor and the platform the same, there will be, at maximum, 0.9° of error per board. This error is allowable, as this is not enough error for the sensor to miss the board during a rotation.
 
 ## BOM
 
