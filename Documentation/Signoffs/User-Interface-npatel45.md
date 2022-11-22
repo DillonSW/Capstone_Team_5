@@ -18,9 +18,20 @@ For the User Interface subsystem to function properly, LCD touch screen would ne
  
 #### Schematic:
 
-<div align="center"> 
+<div align="center">  
+  
+![image](https://user-images.githubusercontent.com/101990738/203437345-1d371ec5-7c23-4b43-86b6-ec64e5d2023c.png)
+  
+_Figure 1: Dimensions of LCD_
   
 ![image](https://user-images.githubusercontent.com/101990738/203420602-62791559-bc8c-4834-87f6-5370614b598a.png)
+  
+_Figure 2: Ports on LCD_
+
+![image](https://user-images.githubusercontent.com/101990738/203436487-dcc3a30c-626c-4406-9c1c-32b90ba2831c.png)
+  
+_Figure 3: Connections of LCD with mini-PC_
+
   
 <div align="left"> 
 
@@ -78,15 +89,12 @@ So to meet all the above requirements the following decision was made:
   
 <div align="center">
  
-|                 |    Details                                              |
-|:---------------:|:-------------------------------------------------------:|
-| Name/Brand      | Elecrow 7" Touch Screen LCD                             |
-| Touchscreen     | Yes (Can also be used as external monitor through HDMI) |
-| Type            | Capacitive                                              |
-| Interface       | USB/HDMI                                                |
-| Diagonal Size   | 7"                                                      |
-| Driving Voltage | 5V @ 1A                                                 |
-| Documentation   | Mediocre                                                |
+|      Part         |    Price             |
+|:-----------------:|:--------------------:|
+| Elecrow LCD       | $ 63.99              |
+| USB cable         | (-) Included         |
+| HDMI cable        | (-) Included         |
+| **Total**         | **$63.99**           |
   
 <div align="left">
   
