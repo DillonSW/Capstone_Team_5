@@ -265,18 +265,19 @@ The equation for shear-force is:
 $τ = F/A$ 
 
 Where 
-τ = Shear Force 
-F = Force Applied 
-A = Cross-sectional Area, parallel to F 
+$τ = Shear Force$ |  
+$F = Force Applied$ | 
+$A = Cross-sectional Area, parallel to F$
+
 ^ Source: https://www.engineersedge.com/material_science/shear-stress.htm 
 
 For a 1 in. long gap, with an average .75 in. width finger, 
 
-$A = length x width = 0.75 in^2$
+$A = (length)(width) = 0.75 in^2$
 
 So 
 
-$τ = 3.68289/0.75 = 4.91052 lb/in^2%
+$τ = 3.68289/0.75 = 4.91052 lb/in^2$
 
 The max applied shear force on a finger in the given scenario is roughly 5 lb/in^2. This is also assuming that the finger cannot bend. The force required to fracture a "small bone" can be as little as 25 lbs of pressure. It is safe to assume that 1/5th of the minimum force required to fracture a small bone will not cause severe damage. This can be tested by using an object similar to a finger (such as a baby carrot) and rotating the platforms while the carrot is in the door. 
 ^ Source: https://scienceline.ucsb.edu/getkey.php?key=3088 
