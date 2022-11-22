@@ -1,12 +1,12 @@
-Vending Machine Subsystem - User-Interface
------
-
-#### Function of the Subsystem:
+# Vending Machine Subsystem - User-Interface
+### Function of the Subsystem:
+---
 When designing vending machine the main component of the machine is to get input from the user and process that information and send that information to the rest of the parts corresponding to it. So, in the same way for ECE board vending machine the student must be able to input their information, and select products from given set of  choices so target this requirement, UI (User Interface) subsystem is required.
   
 •	Receive information from student using medium of a touch screen LCD (Liquid Crystal Display)
  
-#### Specifications & Constraints:
+### Specifications & Constraints:
+---
  
   1. Must be able to recognize depression of any keys and relay that information to mini-PC
   2. Must be able to send or display instructions coming from or to mini-PC
@@ -16,30 +16,31 @@ When designing vending machine the main component of the machine is to get input
  
 For the User Interface subsystem to function properly, LCD touch screen would need to display messages/signals coming from different subsystems or sometimes even from Interface itself. For example, if a student tries to access a particular option from the menu the touch screen must be able to send that information to mini-PC and in return display the information received back from mini-PC to let the user know whether the selected task was successfully completed or was not, and if not it should also display the reason so that it can help student understand what he/she did wrong (1,2,3). Additionally, the monitor should be big enough so that the student won't have to squint their eyes and bend down to see what is on the display prompt (4).
  
-#### Schematic:
+### Schematic:
+---
 
 <div align="center">  
   
 ![image](https://user-images.githubusercontent.com/101990738/203437345-1d371ec5-7c23-4b43-86b6-ec64e5d2023c.png)
   
-_Figure 1: Dimensions of LCD_
+_Figure 1: Dimensions of LCD [1]_
   
 ![image](https://user-images.githubusercontent.com/101990738/203420602-62791559-bc8c-4834-87f6-5370614b598a.png)
   
-_Figure 2: Ports on LCD_
+_Figure 2: Ports on LCD [1]_
 
 ![image](https://user-images.githubusercontent.com/101990738/203436487-dcc3a30c-626c-4406-9c1c-32b90ba2831c.png)
   
-_Figure 3: Connections of LCD with mini-PC_
+_Figure 3: Connections of LCD with mini-PC [1]_
 
-  
 <div align="left"> 
 
-#### Analysis:
+### Analysis:
+---
  
 The vending machines' main interface with the pupils will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about whether the board has been successfully checked out or not. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. The following points were made for each one:
  
- ##### Resistive Touchscreens
+ ##### Resistive Touchscreens [2]
  - Pros
     - Low Cost
     - Less possibility of accidental contact
@@ -54,7 +55,7 @@ The vending machines' main interface with the pupils will be the LCD. It will be
     - Expensive to fix
     - If the screen has a minor fracture, it won't function.
  
- ##### Capacitive Touchscreens
+ ##### Capacitive Touchscreens  [2]
  - Pros
     - Durability
     - Facilitates Customization
@@ -85,7 +86,8 @@ So to meet all the above requirements the following decision was made:
 
 <div align="left">
   
-#### BOM (Bill of Materials): 
+### BOM (Bill of Materials): 
+---
   
 <div align="center">
  
@@ -95,8 +97,22 @@ So to meet all the above requirements the following decision was made:
 | USB cable         | (-) Included         |
 | HDMI cable        | (-) Included         |
 | **Total**         | **$63.99**           |
-  
+ 
 <div align="left">
+  
+**Link to the product: 
+  
+[1] https://www.amazon.com/ELECROW-Display-1024X600-Function-Raspberry/dp/B01GDMDFZA/ref=asc_df_B01GDMDFZA/?tag=&linkCode=df0&hvadid=309779531175&hvpos=&hvnetw=g&hvrand=10466085907421531413&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9013670&hvtargid=pla-442095369518&ref=&adgrpid=62412137260&th=1
+  
+[2] https://www.elecrow.com/7-inch-1024-600-hdmi-lcd-display-with-touch-screen.html
+  
+
+
+### References: 
+---
+[1]. https://www.elecrow.com/7-inch-1024-600-hdmi-lcd-display-with-touch-screen.html
+  
+[2]. https://www.newvisiondisplay.com/capacitive-vs-resistive-touchscreen/
   
 
 
