@@ -1,7 +1,7 @@
 # Vending Machine Subsystem - User-Interface
 ### Function of the Subsystem:
 ---
-When designing vending machine the main component of the machine is to get input from the user and process that information and send that information to the rest of the parts corresponding to it. So, in the same way for ECE board vending machine the student must be able to input their information, and select products from given set of  choices so target this requirement, UI (User Interface) subsystem is required.
+When designing vending machine the main component of the machine is to get input from the user and process that information and send that information to the rest of the parts corresponding to it. So, in the same way for ECE board vending machine the student must be able to input their information, and select products from given set of  choices so to target this requirement, UI (User Interface) subsystem is required.
   
 •	Receive information from student using medium of a touch screen LCD (Liquid Crystal Display)
  
@@ -14,7 +14,7 @@ When designing vending machine the main component of the machine is to get input
   4. Must be big and bright enough to read it from
   5. Must have HDMI or type C or USB port to connect to mini-PC
  
-For the User Interface subsystem to function properly, LCD touch screen would need to display messages/signals coming from different subsystems or sometimes even from Interface itself. For example, if a student tries to access a particular option from the menu the touch screen must be able to send that information to mini-PC and in return display the information received back from mini-PC to let the user know whether the selected task was successfully completed or was not, and if not it should also display the reason so that it can help student understand what he/she did wrong (1,2,3). Additionally, the monitor should be big enough so that the student won't have to squint their eyes and bend down to see what is on the display prompt (4).
+For the User Interface subsystem to function properly, LCD touch screen would need to display messages/signals coming from different subsystems or sometimes even from Interface itself. For example, if a student tries to access a particular option from the menu the touch screen must be able to send that information to mini-PC and in return display the information received back from mini-PC to let the user know whether the selected task was successfully completed or was not, and if not it should also display the reason so that it can help student understand what he/she did wrong (1,2,3). Additionally, the monitor should be big and bright enough so that the student won't have to squint their eyes to see what is on the display prompt (4).
  
 ### Schematic:
 ---
@@ -38,7 +38,7 @@ _Figure 3: Connections of LCD with mini-PC [1]_
 ### Analysis:
 ---
  
-The vending machines' main interface with the pupils will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about whether the board has been successfully checked out or not. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. The following points were made for each one:
+The vending machines' main interface with the students will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about whether the board has been successfully checked out or not. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. The following points were made for each one:
  
  ##### Resistive Touchscreens [2]
  - Pros
