@@ -4,7 +4,7 @@ The subsystem's role in our design is to control all electronic hardware (locks,
 
 ## Constraints 
 
-**The PLC: 
+**The PLC:** 
 
 * **Must have at least 13 I/O pins**
 
