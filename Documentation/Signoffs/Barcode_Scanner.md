@@ -15,6 +15,7 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 ## Schematic  
 
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Barcode-Scanner/images/Barcode_Scanner.jpg)
 
 ## Analysis  
 
