@@ -31,3 +31,4 @@ The scanner will be used at different ranges to determine an appropriate range f
 |--------------|-------------|-----------|--------------|----------|-------|-------|
 | Eversame 2 in 1 USB Tester | Voltmeter | Barcode Scanner | Eversame | 1 | $22.99 | $22.99 |  
 | Barcode Scanner Module | 1D/2D Code Reader | Barcode Scanner | Waveshare | 1 | $39.99 | $39.99 |  
+|  |  |  | **Components** | 2 | **Total Cost** | $62.98 |  
