@@ -100,7 +100,7 @@ So to meet all the above requirements the following decision was made:
  
 <div align="left">
   
-**Link to the product: 
+**Link to the product:**   
   
 [1] https://www.amazon.com/ELECROW-Display-1024X600-Function-Raspberry/dp/B01GDMDFZA/ref=asc_df_B01GDMDFZA/?tag=&linkCode=df0&hvadid=309779531175&hvpos=&hvnetw=g&hvrand=10466085907421531413&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9013670&hvtargid=pla-442095369518&ref=&adgrpid=62412137260&th=1
   
