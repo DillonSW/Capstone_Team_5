@@ -80,7 +80,7 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevision.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionTwo.jpg)
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The encoder is a part of the driver and has its own output ports on the driver, however it is labeled as separate in the datasheets. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
