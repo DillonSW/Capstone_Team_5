@@ -5,14 +5,14 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 
 # Constraints
-**
-	• The locks must be controlled digitally
- 
-**	• The locks must be able to resist the forced entry of human force.
 
-**	• The "state" of the locks must be known at all times
+**• The locks must be controlled digitally.**
+ 
+**• The locks must be able to resist the forced entry of human force.**
+
+**• The "state" of the locks must be known at all times.**
 	
-**	• The labinet doors must remain lock in the case of power outage/blackout
+**• The labinet doors must remain lock in the case of power outage/blackout.**
 
 ![image](https://user-images.githubusercontent.com/100805322/204165855-432babae-403e-43d8-9ac5-47d1b4751871.png)
 
@@ -22,7 +22,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 # Analysis
 
-## Locks
+### Locks
 Solenoid Locks use a small electromagnet to control the plunger of the lock. When the solenoid is unpowered, the lock's plunger rest in its extended "locked" state. However, when the solenoid is powered the lock's plunger is pulled back allowing the cabinet door to be opened. This allows us to digitally control the locking state of the cabinet doors. This process is controlled by the PLC.
 
 
@@ -37,7 +37,7 @@ For the solenoid locks to be activated, they will require a voltage of 9V-12V an
 
 In the case power loss and/or blackout there is little to no loss in security, since the locks only release when the solenoid is powered. 
 
-## Proximity Sensors
+### Proximity Sensors
 As both a safety precaution and security measure, there needs to be a confirmation of the door being closed and the lock being locked.
 
 To confirm the state of the locking mechanism, there will be an inductive proximity sensor installed on each level. An inductive proximity sensor only detects the presence of metallic objects, making it difficult for tampering. This proximity version of the sensor has a detection range of 4mm, allowing room for error for contact. This also prevents damage being done to the sensors every time the plunger enters the strike plate. 
