@@ -289,7 +289,7 @@ Since the motor we are looking at can have a holding torque of 12 Nm, it will me
 
 The motor, as stated before, can rotate 1.8° per step. The datasheet states that there is a 0.09 tolerance, meaning the motor can step anywhere from 17.1° to 18.9° in 10 steps. Because the Mechanical Engineering team plans on keeping the rotation ratio between the motor and the platform the same, there will be, at maximum, 0.9° of error per board. This error is allowable, as this is not enough error for the sensor to miss the board during a rotation.
 
-The datasheets also claim that the driver will cause the motor to not lose its steps. While that does not seem feasible, the datasheet gives different amounts of micro steps that the encoder can have. These values can range from 400 to 51200. An encoder's resolution can be represented as pulses per revolution (PPR). Given that the stepper motor we chose has can rotate 1.8° per step, the minimum PPR we would need is
+The datasheet gives different amounts of micro steps that the encoder can have. These values can range from 400 to 51200. An encoder's resolution can be represented as pulses per revolution (PPR). Given that the stepper motor we chose has can rotate 1.8° per step, the minimum PPR we would need is
 
 $N = 360/I$
 
