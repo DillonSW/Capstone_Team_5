@@ -61,9 +61,6 @@ The hollow aluminum cylinder will weigh **9.622 lbs**
 **The Motor:**
 * **Given the calculations above, must rotate a total weight of 70.858 lbs. (We will assume roughly 20% tolerance for error, so for calculations we will use 85 lbs)**
 
-* **Will have a time to accelerate (the loads) of less than 1 second.**
-^ As explained below, we want our time to accelerate to be 0.5 seconds. We can run our calculations based off of 1 second time to accelerate as a worse-case scenario.
-
 **Circuity:** 
 * **Will be protected at 125% the nameplate current rating (7.5A).** This comes from the following codes.
 
@@ -83,9 +80,11 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorSchemRevision.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevision.jpg)
 
-The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
+The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The encoder is a part of the driver and has its own output ports on the driver, however it is labeled as separate in the datasheets. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
+
+The datasheets also claim that the driver will cause the motor to not lose its steps. While that does not seem feasible, the datasheet gives different amounts of micro steps that the encoder can have. These values can range from 400 to 51200. Because having more micro steps will lead to the motor being more precise, but we don't want to run the encoder at its maximum steps, we will run the encoder with 12800 micro steps.
 
 ![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/MotorMount.jpg)
 
