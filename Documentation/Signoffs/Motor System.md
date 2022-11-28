@@ -297,6 +297,7 @@ The motor, as stated before, can rotate 1.8° per step. The datasheet states tha
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 | P Series Nema 34 Stepper Motor | Stepper Motor for Rotating Platforms | Motor | 34E1KBK50-120 | Stepper Online | 1 | $195.01 | $195.01 |
 | HSS86        | Hybrid Stepper Servo Driver | Motor | NBKDM-HBS86H | MEIHAOCNC | 1 | $55.00 | $55.00 |
+| 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
-| **Total** |  |  |  | **Total Components** | 12 | **Total Cost** | $255.74 |
+| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $273.32 |
 
