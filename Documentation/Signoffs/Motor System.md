@@ -84,8 +84,6 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The encoder is a part of the driver and has its own output ports on the driver, however it is labeled as separate in the datasheets. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
-The datasheets also claim that the driver will cause the motor to not lose its steps. While that does not seem feasible, the datasheet gives different amounts of micro steps that the encoder can have. These values can range from 400 to 51200. Because having more micro steps will lead to the motor being more precise, but we don't want to run the encoder at its maximum steps, we will run the encoder with 12800 micro steps.
-
 ![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/MotorMount.jpg)
 
 The image above shows the proposed idea of mounting the motor into the machine. Proposed by the Mechanical Engineering team, the motor will be mounted at the bottom of the machine, and will be on the same level as the mount for the platforms.
@@ -290,6 +288,22 @@ The torque required to stop the device is well below the holding torque of the s
 Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
 
 The motor, as stated before, can rotate 1.8° per step. The datasheet states that there is a 0.09 tolerance, meaning the motor can step anywhere from 17.1° to 18.9° in 10 steps. Because the Mechanical Engineering team plans on keeping the rotation ratio between the motor and the platform the same, there will be, at maximum, 0.9° of error per board. This error is allowable, as this is not enough error for the sensor to miss the board during a rotation.
+
+The datasheets also claim that the driver will cause the motor to not lose its steps. While that does not seem feasible, the datasheet gives different amounts of micro steps that the encoder can have. These values can range from 400 to 51200. An encoder's resolution can be represented as pulses per revolution (PPR). Given that the stepper motor we chose has can rotate 1.8° per step, the minimum PPR we would need is
+
+$N = 360/I$
+
+Where
+
+N = Number of points per revolution (or per 360°)
+
+I = Smallest required increment of measurement. For this motor, $I = 1.8°$
+
+Therefore
+
+$N = 360/1.8 = 200$
+
+This means that the bare minimum amount of PPR, or encoder resolution, that we would need to accurately reach our destination is 200. Because the stepper motor driver encoder's resolution can go from 400 to 51200, and resolution will suffice for precisely meeting our specifications. To account for potential error and to further increase the precision and accuracy of our stepper motor, we will choose an encoder resolution of 12800 PPR.
 
 ## BOM
 
