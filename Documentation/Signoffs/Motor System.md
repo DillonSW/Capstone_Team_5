@@ -84,6 +84,10 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The encoder is a part of the driver and has its own output ports on the driver, however it is labeled as separate in the datasheets. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
+Also to note, the HSS86 driver can take between 20-80 AC, or 30-110 DC voltage. Because the wall outlet's nominal voltage is between 110-120 AC voltage, we must step it down in order to safely power the driver.
+^ Source: https://www.jbcnc.se/images/datasheets/HSS86.pdf
+^ Source: https://conquerallelectrical.ca/us-electrical-outlet-voltage/?utm_source=rss&utm_medium=rss&utm_campaign=us-electrical-outlet-voltage
+
 ![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/MotorMount.jpg)
 
 The image above shows the proposed idea of mounting the motor into the machine. Proposed by the Mechanical Engineering team, the motor will be mounted at the bottom of the machine, and will be on the same level as the mount for the platforms.
