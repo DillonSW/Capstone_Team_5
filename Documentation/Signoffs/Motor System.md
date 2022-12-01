@@ -78,15 +78,32 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 
 ^ Source: https://up.codes/viewer/delaware/nfpa-70-2014/chapter/7/special-conditions#705.12_(D)_(2)
 
+* **Will follow the NEC 310-16 Table for its wirings**
+
+This table is for "Allowable Ampacities of Insulated Conductors Rated 0 Through 2000 Volts, 60°C Through 90°C (140°F Through 194°F), Not More Than
+Three Current-Carrying Conductors in Raceway, Cable, or Earth (Directly Buried), Based on Ambient Temperature of 30°C (86°F)"
+
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionTwo.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionThree.jpg)
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The encoder is a part of the driver and has its own output ports on the driver, however it is labeled as separate in the datasheets. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
 Also to note, the HSS86 driver can take between 20-80 AC, or 30-110 DC voltage. Because the wall outlet's nominal voltage is between 110-120 AC voltage, we must step it down in order to safely power the driver.
 ^ Source: https://www.jbcnc.se/images/datasheets/HSS86.pdf
 ^ Source: https://conquerallelectrical.ca/us-electrical-outlet-voltage/?utm_source=rss&utm_medium=rss&utm_campaign=us-electrical-outlet-voltage
+
+To adhere to the NEC 310-16 table, we are going to implement the following:
+
+* Because the wall outlet will be outputting 120VAC, the equation for current with respect to power consumption is $I = P/V$. The peak current from the driver is 8 Amps, meaning the primary transformer wires will draw $P = 120(8) = 960 W$.
+
+14 gauge, TW (Or Thermoplastic high-heat resistance and water-resistant) copper wires will suffice for the wires for the primary side of the transformer, as according to the table, at 140°F, they can withstand a max of 20 Amps. This is well above our expected current draw for the transformer.
+
+On the secondary side of the transformer we chose, the output is 24VAC, 1600mA, 40Watt. Since the current draw is 1.6A, we will also use 14 gauge, TW, copper wires. These will once again be rated for much higher currents than we will draw (20A).
+
+^ Source: https://media.distributordatasolutions.com/ThomasAndBetts/v2/part2/files/File_7437_emAlbumalbumsOcal20(USA)oc_1_g_nec31016pdfClickHerea.pdf
+^ Source: https://www.jameco.com/z/MGT-2440-Jameco-ReliaPro-24-VAC-1600-mA-40-Watt-Wall-Adapter-Transformer_2230627.html
+^ Source: https://www.lincenergysystems.com/blog/difference-between-tracer-wire-tw-thw-thhn/
 
 ![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/MotorMount.jpg)
 
@@ -317,5 +334,6 @@ This means that the bare minimum amount of PPR, or encoder resolution, that we w
 | HSS86        | Hybrid Stepper Servo Driver | Motor | NBKDM-HBS86H | MEIHAOCNC | 1 | $55.00 | $55.00 |
 | 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
-| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $273.32 |
+| MGT2440 | 120VAC to 24VAC Transformer | Motor | 2230627 | Jameco | 1 | $14.95 | $14.95 |
+| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $288.27 |
 
