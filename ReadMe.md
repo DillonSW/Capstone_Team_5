@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-     Every year hundreds of students require various devices
+Every year hundreds of students require various devices
 for their ECE (Electrical and Computer Engineering) classes.
 These specific devices are provided by the College of
 Engineering and are rented out to students through the ECE
@@ -12,7 +12,7 @@ Office. This capstone project will focus on designing and
 implementing a vending machine that can distribute devices
 out to students while recording which students have checked
 out a device.  
-     The finished product will be a vending machine with the
+The finished product will be a vending machine with the
 functionality to vend the needed specific devices to students.
 A student can enter their information into the machine, and the
 machine will record who has checked out their respective
@@ -24,7 +24,7 @@ the next student.
 
 ## Capabilities
 
-     The first prototype of the vending machine will have the
+The first prototype of the vending machine will have the
 capability to prevent boards from getting stuck, have a card
 reader to verify the student’s identity, have a locked drawer to
 enable associates to restock the machine, and have memory in
