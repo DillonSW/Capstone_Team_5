@@ -16,23 +16,23 @@ The finished product will be a vending machine with the
 functionality to vend the needed specific devices to students.
 A student can enter their information into the machine, and the
 machine will record who has checked out their respective
-device(s). The machine will use a drawer system that has
-LEDs (Light Emitting Diode) which will allow students to see
-and determine which device is the one they should remove.
-The student will then take the device and shut the drawer for
-the next student.    
+device(s). The machine will use a motor to rotate a device to the  
+door for a student to remove that has LEDs (Light Emitting Diode)  
+which will allow students to see and determine which device is  
+the one they should remove. The student will then take the device  
+and shut the door for the next student.    
 
 ## Capabilities
 
 The first prototype of the vending machine will have the
 capability to prevent boards from getting stuck, have a card
-reader to verify the student’s identity, have a locked drawer to
+reader to verify the student’s identity, have locked doors to
 enable associates to restock the machine, and have memory in
-the event of a fault or power loss: to remember its
-functionality. Also, the machine will be fitted with a method
+the event of a fault or power loss. Also, the machine will be fitted with a method
 of communication for the associates to procure student
 information from it. Security will be implemented to prevent
-boards from being stolen and to protect the database.  
+boards from being stolen and to protect the database. The machine will  
+also have a safety system to prevent a student getting hurt by the rotating inner section.  
 
 ## Salient Outcomes
 
