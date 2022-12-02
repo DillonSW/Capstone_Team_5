@@ -83,6 +83,9 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 This table is for "Allowable Ampacities of Insulated Conductors Rated 0 Through 2000 Volts, 60°C Through 90°C (140°F Through 194°F), Not More Than
 Three Current-Carrying Conductors in Raceway, Cable, or Earth (Directly Buried), Based on Ambient Temperature of 30°C (86°F)"
 
+* **Will be powered by a step-down transformer that will convert the wall voltage down to 24VAC.**
+^ As stated below, the driver we chose for the motor can only be ran with 24-80VAC or 30-110VDC. We will use a step-down transformer to accomplish this.
+
 ## Schematic
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionThree.jpg)
@@ -326,6 +329,18 @@ $N = 360/1.8 = 200$
 
 This means that the bare minimum amount of PPR, or encoder resolution, that we would need to accurately reach our destination is 200. Because the stepper motor driver encoder's resolution can go from 400 to 51200, and resolution will suffice for precisely meeting our specifications. To account for potential error and to further increase the precision and accuracy of our stepper motor, we will choose an encoder resolution of 12800 PPR.
 
+The transformer that we have selected has the following specifications:
+
+Input/Primary Voltage: 120/208/240VAC
+
+Output/Secondary Voltage: 24VAC
+
+Power Rating: 40W
+
+This means that the transformer will output $40/24 = 1.6$ Amps of current into the subsystem's wires.
+
+The wires we chose (14 gauge) are rated to withstand up to 20Amps of current, based on the NEC 310-16 table. Becuase of this, the wires will also output 1.6 Amps to the loads.
+
 ## BOM
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
@@ -334,6 +349,6 @@ This means that the bare minimum amount of PPR, or encoder resolution, that we w
 | HSS86        | Hybrid Stepper Servo Driver | Motor | NBKDM-HBS86H | MEIHAOCNC | 1 | $55.00 | $55.00 |
 | 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
-| MGT2440 | 120VAC to 24VAC Transformer | Motor | 2230627 | Jameco | 1 | $14.95 | $14.95 |
-| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $288.27 |
+| Step-Down Transformer | Class B 120VAC to 24VAC Transformer | Motor | (ASIN) B086S79N1C | BOJACK | 1 | $23.50 | $23.50 |
+| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $296.82 |
 
