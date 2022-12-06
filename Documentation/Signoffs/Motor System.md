@@ -380,6 +380,6 @@ The wires we chose (14 gauge) are rated to withstand up to 20Amps of current, ba
 | HSS86        | Hybrid Stepper Servo Driver | Motor | NBKDM-HBS86H | MEIHAOCNC | 1 | $55.00 | $55.00 |
 | 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
-| Step-Down Transformer | Class B 120VAC to 24VAC Transformer | Motor | (ASIN) B086S79N1C | BOJACK | 1 | $23.50 | $23.50 |
-| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $296.82 |
+| Step-Down Transformer | 120VAC to 24VAC, 196VA, Laminated Core Transformer | Motor | (DigiKey) HM4992-ND | Hammond Manufacturing | 1 | $120.76 | $120.76 |
+| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $394.08 |
 
