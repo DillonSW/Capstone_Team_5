@@ -86,9 +86,12 @@ Three Current-Carrying Conductors in Raceway, Cable, or Earth (Directly Buried),
 * **Will be powered by a step-down transformer that will convert the wall voltage down to 24VAC.**
 ^ As stated below, the driver we chose for the motor can only be ran with 24-80VAC or 30-110VDC. We will use a step-down transformer to accomplish this.
 
+* **This transformer must satisfy the driver's peak current draw for worst-case scenarios**
+^ This peak current, as per the HSS86 datasheet, is 8A.
+
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionFour.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionFive.jpg)
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The encoder is a part of the driver and has its own output ports on the driver, however it is labeled as separate in the datasheets. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
@@ -96,17 +99,45 @@ Also to note, the HSS86 driver can take between 20-80 AC, or 30-110 DC voltage. 
 ^ Source: https://www.jbcnc.se/images/datasheets/HSS86.pdf
 ^ Source: https://conquerallelectrical.ca/us-electrical-outlet-voltage/?utm_source=rss&utm_medium=rss&utm_campaign=us-electrical-outlet-voltage
 
-To adhere to the NEC 310-16 table, we are going to implement the following:
+To adhere to the NEC 310-16 table, the following must be considered:
 
-* Because the wall outlet will be outputting 120VAC, the equation for current with respect to power consumption is $I = P/V$. The peak current from the driver is 8 Amps, meaning the primary transformer wires will draw $P = 120(8) = 960 W$.
+* The step-down transformer, based on constraints, **must** output 24VAC to the driver.
+
+* The driver's **peak current draw** is 8A.
+
+This means the secondary side of the transformer will draw, at max, 192W.
+
+Using the equation:
+
+$Pin = Pout$
+
+$(Vin)(Iin) = (Vload)(Imax)$
+
+$120VAC(Iin) = (24VAC)(8A)$
+
+$Iin = 1.6A$
+
+This means the wires primary side of the transformer must be able to withstand 1.6A, and the wires on the secondary side of the transformer must be able to withstand 8A max.
 
 14 gauge, TW (Or Thermoplastic high-heat resistance and water-resistant) copper wires will suffice for the wires for the primary side of the transformer, as according to the table, at 140°F, they can withstand a max of 20 Amps. This is well above our expected current draw for the transformer.
 
-On the secondary side of the transformer we chose, the output is 24VAC, 1600mA, 40Watt. Since the current draw is 1.6A, we will also use 14 gauge, TW, copper wires. These will once again be rated for much higher currents than we will draw (20A).
+Based on the table for wire resistances, the DC resistance of 14 gauge, TW, solid copper wiring at 167°F is 3.070Ω per 1000 feet of wiring. We will not use this much wiring, especially for the secondary side of the transformer.
+
+Assuming we use **at max** 10 feet if wiring, the power losses on the primary side will be
+
+$L = I^2(R)(10/1000)$
+$L = (1.6^2)(3.070)(0.01) = 0.079W$
+
+Because the transformer will be close to the motor's driver, we can assume that we will use a minimal amount of wiring. Assuming we use **at max** 2 feet of wiring, the power losses on the secondary side will be
+
+$L = (8^2)(3.070)(0.002) = 0.393W$
+
+These losses are 0.04% and 0.2% respectively. These losses will be minimal, and the transformer will suffice for maintaining the power output we need.
 
 ^ Source: https://media.distributordatasolutions.com/ThomasAndBetts/v2/part2/files/File_7437_emAlbumalbumsOcal20(USA)oc_1_g_nec31016pdfClickHerea.pdf
-^ Source: https://www.jameco.com/z/MGT-2440-Jameco-ReliaPro-24-VAC-1600-mA-40-Watt-Wall-Adapter-Transformer_2230627.html
+^ Source: https://www.digikey.com/en/products/detail/hammond-manufacturing/266R24/2358204?utm_adgroup=Power%20Transformers&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Transformers_NEW&utm_term=&utm_content=Power%20Transformers&gclid=Cj0KCQiAyracBhDoARIsACGFcS7UAKRBbe6JzUCeMfhZeq82NOPU_WidrIWtPeYixXPgv_66qJZ5nWoaAht5EALw_wcB
 ^ Source: https://www.lincenergysystems.com/blog/difference-between-tracer-wire-tw-thw-thhn/
+^ Source: http://www.paigewire.com/wire_resistance-prop.aspx?AspxAutoDetectCookieSupport=1
 
 ![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/MotorMount.jpg)
 
