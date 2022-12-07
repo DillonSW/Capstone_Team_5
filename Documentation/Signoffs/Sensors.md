@@ -12,7 +12,7 @@ Constraints
 
 The Sensors: 
 
-* **Must identify whether a device is present or if it is not.**  
+* **Must identify whether a device is present or if it is not present.**  
 
 * **Cannot take up too many I/O pins in the PLC**   
 
@@ -32,7 +32,7 @@ This is how to Time of flight sensor is going to work. We have designated three 
  
 ## Analysis 
 
-There are hundreds of different sensor options to choose from, so it took much deliberation to choose the right one. Most options were easy to disregard through common sense, like for sensors that would obviously be too expensive or too large for the scale of our project. The main sensors considered included Weighing Sensors, Pressure Sensors, Ultrasonic sensors, and Photoelectric sensors. 
+There are hundreds of different sensor options to choose from, so we deliberated extensively to choose the best sensor for our purposes. Through common sense, most options were easy to disregard, like sensors that would obviously be too expensive or too physically large for the scale of our project. The main sensor considerations included Weighing Sensors, Pressure Sensors, Ultrasonic sensors, and Photoelectric sensors. 
 
  
 
