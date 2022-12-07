@@ -12,7 +12,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 **• The "state" of the locks must be known at all times.**
 	
-**• The labinet doors must remain lock in the case of power outage/blackout.**
+**• The cabinet doors must remain lock in the case of power outage/blackout.**
 
 ![image](https://user-images.githubusercontent.com/100805322/204165855-432babae-403e-43d8-9ac5-47d1b4751871.png)
 
