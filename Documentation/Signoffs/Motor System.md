@@ -85,7 +85,7 @@ Three Current-Carrying Conductors in Raceway, Cable, or Earth (Directly Buried),
 
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionSix.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionSeven.jpg)
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
@@ -94,6 +94,8 @@ This selected dirver and motor will be able to connect and work together. The dr
 Also to note, the STP-DRVAC-20425 driver can take a nominal input voltage of 90-240VAC. Because of this we will not need a step-down transformer.
 ^ Source: https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/stepper_drives/stp-drvac-24025
 ^ Source: https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/single_shaft_stepper_motors/stp-mtrac-34156
+
+The fuses labeled in the schematic are AGC4 fuses. These are "Bussmann fuse, AGC series, small dimension, fast-acting, 4A, 250 VAC, glass tube." This protects the system for 160% of the rated current **and** are the manufacturer recommended fuses.
 
 To adhere to the NEC 310-16 table, the following must be considered:
 
@@ -352,5 +354,7 @@ This means that the bare minimum amount of PPR, or encoder resolution, that we w
 | STP-DRVAC-24025 | AC Microstepping Stepper Driver | Motor | STP-DRVAC-24025 | SureStep | 1 | $213.00 | 213.00 |
 | 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
-| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $520.31 |
+| AGC4 | (Pack of 5) 4A, fast-act, 250 VAC fuse breakers | Motor | AGC4 | Bussmann | 1 | $3.50 | $3.50 |
+| DN-F6L110 | (Pack of 10) DIN Rail Fuse Breaker Terminal | Motor | DN-F6L110 | DINnector | 1 | $74.00 | $74.00 |
+| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $597.81 |
 
