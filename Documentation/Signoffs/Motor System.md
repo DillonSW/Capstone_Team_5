@@ -85,7 +85,7 @@ Three Current-Carrying Conductors in Raceway, Cable, or Earth (Directly Buried),
 
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionSeven.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionEight.jpg)
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
@@ -354,7 +354,6 @@ This means that the bare minimum amount of PPR, or encoder resolution, that we w
 | STP-DRVAC-24025 | AC Microstepping Stepper Driver | Motor | STP-DRVAC-24025 | SureStep | 1 | $213.00 | 213.00 |
 | 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
-| AGC4 | (Pack of 5) 4A, fast-act, 250 VAC fuse breakers | Motor | AGC4 | Bussmann | 1 | $3.50 | $3.50 |
-| DN-F6L110 | (Pack of 10) DIN Rail Fuse Breaker Terminal | Motor | DN-F6L110 | DINnector | 1 | $74.00 | $74.00 |
-| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $597.81 |
+| FAZ-D4-1-SP | Single Pole, 4 Amp, DIN Rail Mount Breaker | Motor | FAZ-D4-1-SP | Eaton | 2 | $15.00 | $30.00 |
+| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $550.31 |
 
