@@ -93,7 +93,7 @@ This selected dirver and motor will be able to connect and work together. The dr
 
 Also to note, the STP-DRVAC-20425 driver can take a nominal input voltage of 90-240VAC. Because of this we will not need a step-down transformer.
 ^ Source: https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/stepper_drives/stp-drvac-24025
-^ Source: https://conquerallelectrical.ca/us-electrical-outlet-voltage/?utm_source=rss&utm_medium=rss&utm_campaign=us-electrical-outlet-voltage
+^ Source: https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/single_shaft_stepper_motors/stp-mtrac-34156
 
 To adhere to the NEC 310-16 table, the following must be considered:
 
