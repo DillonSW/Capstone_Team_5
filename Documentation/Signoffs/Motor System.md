@@ -83,59 +83,43 @@ The standard NEC 705.12(D)(2) Bus or Conductor Ampere Rating states "One hundred
 This table is for "Allowable Ampacities of Insulated Conductors Rated 0 Through 2000 Volts, 60°C Through 90°C (140°F Through 194°F), Not More Than
 Three Current-Carrying Conductors in Raceway, Cable, or Earth (Directly Buried), Based on Ambient Temperature of 30°C (86°F)"
 
-* **Will be powered by a step-down transformer that will convert the wall voltage down to 24VAC.**
-^ As stated below, the driver we chose for the motor can only be ran with 24-80VAC or 30-110VDC. We will use a step-down transformer to accomplish this.
-
-* **This transformer must satisfy the driver's peak current draw for worst-case scenarios**
-^ This peak current, as per the HSS86 datasheet, is 8A.
-
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionFive.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/DriverAndMotorRevisionSix.jpg)
 
-The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The encoder is a part of the driver and has its own output ports on the driver, however it is labeled as separate in the datasheets. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
+The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
-Also to note, the HSS86 driver can take between 20-80 AC, or 30-110 DC voltage. Because the wall outlet's nominal voltage is between 110-120 AC voltage, we must step it down in order to safely power the driver.
-^ Source: https://www.jbcnc.se/images/datasheets/HSS86.pdf
+This selected dirver and motor will be able to connect and work together. The driver, STP-DRVAC-24025, states "Only use stepper motors wound for high bus voltages (**STP-MTRAC** motors) with high bus voltage drives (STP-DRVAC-xxxxx)." The motor we chose follows this naming convention: **STP-MTRAC**-34156.
+
+Also to note, the STP-DRVAC-20425 driver can take a nominal input voltage of 90-240VAC. Because of this we will not need a step-down transformer.
+^ Source: https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/stepper_drives/stp-drvac-24025
 ^ Source: https://conquerallelectrical.ca/us-electrical-outlet-voltage/?utm_source=rss&utm_medium=rss&utm_campaign=us-electrical-outlet-voltage
 
 To adhere to the NEC 310-16 table, the following must be considered:
 
-* The step-down transformer, based on constraints, **must** output 24VAC to the driver.
+The datasheet states that the driver will draw 2.5 Amps per phase. Note that this does not mean that it will draw current equal to 2.5 times the number of phases. It simply means that every time the phase is changed, the driver will draw 2.5 Amps.
 
-* The driver's **peak current draw** is 8A.
+Because we are getting rid of the transformer, there will be no primary and secondary windings to account for, and there will only be 1 set of wires connecting the wall outlet to the driver. No power analysis is needed because we already know the input voltage and the draw current.
 
-This means the secondary side of the transformer will draw, at max, 192W.
+This means the wires must be able to withstand 2.5A.
 
-Using the equation:
+14 gauge, TW (Or Thermoplastic high-heat resistance and water-resistant) copper wires will suffice for the wires as according to the table, at 140°F, they can withstand a max of 20 Amps. This is well above our expected current draw for the driver.
 
-$Pin = Pout$
+Based on the table for wire resistances, the DC resistance of 14 gauge, TW, solid copper wiring at 167°F is 3.070Ω per 1000 feet of wiring. We will not use this much wiring.
 
-$(Vin)(Iin) = (Vload)(Imax)$
+Assuming we use **at max** 10 feet if wiring, the power losses will be
 
-$120VAC(Iin) = (24VAC)(8A)$
+$L = (I^2)(R)(10/1000)$
+$L = (2.5^2)(3.070)(0.01) = 0.1919W$
 
-$Iin = 1.6A$
+The losses over the total power of this system will be
 
-This means the wires primary side of the transformer must be able to withstand 1.6A, and the wires on the secondary side of the transformer must be able to withstand 8A max.
+$(L/W)(100) = (0.1919/300)(100) = 0.064
 
-14 gauge, TW (Or Thermoplastic high-heat resistance and water-resistant) copper wires will suffice for the wires for the primary side of the transformer, as according to the table, at 140°F, they can withstand a max of 20 Amps. This is well above our expected current draw for the transformer.
+This loss is 0.064%. This loss will be minimal, and the transformer will suffice for maintaining the power output we need.
 
-Based on the table for wire resistances, the DC resistance of 14 gauge, TW, solid copper wiring at 167°F is 3.070Ω per 1000 feet of wiring. We will not use this much wiring, especially for the secondary side of the transformer.
-
-Assuming we use **at max** 10 feet if wiring, the power losses on the primary side will be
-
-$L = I^2(R)(10/1000)$
-$L = (1.6^2)(3.070)(0.01) = 0.079W$
-
-Because the transformer will be close to the motor's driver, we can assume that we will use a minimal amount of wiring. Assuming we use **at max** 2 feet of wiring, the power losses on the secondary side will be
-
-$L = (8^2)(3.070)(0.002) = 0.393W$
-
-These losses are 0.04% and 0.2% respectively. These losses will be minimal, and the transformer will suffice for maintaining the power output we need.
-
+^ Source: https://www.automationdirect.com/adc/shopping/catalog/motion_control/stepper_systems/stepper_drives/stp-drvac-24025
 ^ Source: https://media.distributordatasolutions.com/ThomasAndBetts/v2/part2/files/File_7437_emAlbumalbumsOcal20(USA)oc_1_g_nec31016pdfClickHerea.pdf
-^ Source: https://www.digikey.com/en/products/detail/hammond-manufacturing/266R24/2358204?utm_adgroup=Power%20Transformers&utm_source=google&utm_medium=cpc&utm_campaign=Shopping_Product_Transformers_NEW&utm_term=&utm_content=Power%20Transformers&gclid=Cj0KCQiAyracBhDoARIsACGFcS7UAKRBbe6JzUCeMfhZeq82NOPU_WidrIWtPeYixXPgv_66qJZ5nWoaAht5EALw_wcB
 ^ Source: https://www.lincenergysystems.com/blog/difference-between-tracer-wire-tw-thw-thhn/
 ^ Source: http://www.paigewire.com/wire_resistance-prop.aspx?AspxAutoDetectCookieSupport=1
 
@@ -291,7 +275,7 @@ R2 = 0.67 ft
 |    1   | 0.5041 | 1.5123 | 2.5205 |  
 
 As shown above, the highest amount of torque required would be at 5 rpm, accelerating in 0.25 seconds. This torque would be 10.0818 Nm.  
-However, these results are assuming that a DC motor will be 100% efficient when operating at a lower rated load. This is an unreasonable expectation. Most DC motors are designed to be anywhere from 50-100% efficient with peak efficiency being at around 75% of the rated load. So for a 12 Nm motor, the optimal load range is from 6 to 12 Nm, with peak being at 9 Nm. Because we would have at most 10.0818 Nm of required torque, and an assumed efficiency of 50% the most torque requited would be 20.1636 Nm. However we are deciding to run the motor assuming a lower acceleration time and rpm. At the values we are expecting to run (0.5s acceleration and 3 rpm), also assuming 50% efficiency, the required torque would be 6.049 Nm, which is an acceptable level for our desired motor. 
+However, these results are assuming that a DC motor will be 100% efficient when operating at a lower rated load. This is an unreasonable expectation. Most DC motors are designed to be anywhere from 50-100% efficient with peak efficiency being at around 75% of the rated load. So for a 13 Nm motor, the optimal load range is from 6.5 to 13 Nm, with peak being at 9.25 Nm. Because we would have at most 10.0818 Nm of required torque, and an assumed efficiency of 50% the most torque requited would be 20.1636 Nm. However we are deciding to run the motor assuming a lower acceleration time and rpm. At the values we are expecting to run (0.5s acceleration and 3 rpm), also assuming 50% efficiency, the required torque would be 6.049 Nm, which is close to the acceptable level for our desired motor. 
 
 ^ Source: https://www.energy.gov/sites/prod/files/2014/04/f15/10097517.pdf 
 
@@ -338,13 +322,13 @@ If all else fails, there can be a delay for the platform rotating. During this d
 
 **Note**
 The torque required to stop the device is well below the holding torque of the selected motor. Also, since this motor has an electromagnetic brake, it will have even greater stopping power assuring the motor does not lose its step. A table displaying the pull out torque is placed below. Pull Out Torque is the maximum torque the brake can output at higher speeds. The higher the rmp, the less it can brake. Our maximum speed (5 rpm) will not come close to being an issue.  
-![PulloutTorque](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/PulloutTorque.jpg)
+![PulloutTorque](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/NewMotorTorque.jpg)
 
-Since the motor we are looking at can have a holding torque of 12 Nm, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
+Since the motor we are looking at can have a holding torque of 9 Nm at 5 rps, a higher speed than we intend to run the motor, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
 
-The motor, as stated before, can rotate 1.8° per step. The datasheet states that there is a 0.09 tolerance, meaning the motor can step anywhere from 17.1° to 18.9° in 10 steps. Because the Mechanical Engineering team plans on keeping the rotation ratio between the motor and the platform the same, there will be, at maximum, 0.9° of error per board. This error is allowable, as this is not enough error for the sensor to miss the board during a rotation.
+The motor, as stated before, can rotate 1.8° per step. The datasheet does not directly state tolerances for the step angle. However, compared to our previous motor selection, this motor is considerably more expensive. It can be assumed that the precision may be equal, meaning that there is a 0.09 tolerance, meaning the motor can step anywhere from 17.1° to 18.9° in 10 steps. Because the Mechanical Engineering team plans on keeping the rotation ratio between the motor and the platform the same, there will be, at maximum, 0.9° of error per board. This error is allowable, as this is not enough error for the sensor to miss the board during a rotation.
 
-The datasheet gives different amounts of micro steps that the encoder can have. These values can range from 400 to 51200. An encoder's resolution can be represented as pulses per revolution (PPR). Given that the stepper motor we chose has can rotate 1.8° per step, the minimum PPR we would need is
+The datasheet gives different amounts of micro steps that the encoder can have. These values can range from 200 to 25600. An encoder's resolution can be represented as pulses per revolution (PPR). Given that the stepper motor we chose has can rotate 1.8° per step, the minimum PPR we would need is
 
 $N = 360/I$
 
@@ -358,28 +342,15 @@ Therefore
 
 $N = 360/1.8 = 200$
 
-This means that the bare minimum amount of PPR, or encoder resolution, that we would need to accurately reach our destination is 200. Because the stepper motor driver encoder's resolution can go from 400 to 51200, and resolution will suffice for precisely meeting our specifications. To account for potential error and to further increase the precision and accuracy of our stepper motor, we will choose an encoder resolution of 12800 PPR.
-
-The transformer that we have selected has the following specifications:
-
-Input/Primary Voltage: 120/208/240VAC
-
-Output/Secondary Voltage: 24VAC
-
-Power Rating: 40W
-
-This means that the transformer will output $40/24 = 1.6$ Amps of current into the subsystem's wires.
-
-The wires we chose (14 gauge) are rated to withstand up to 20Amps of current, based on the NEC 310-16 table. Becuase of this, the wires will also output 1.6 Amps to the loads.
+This means that the bare minimum amount of PPR, or encoder resolution, that we would need to accurately reach our destination is 200. Because the stepper motor driver encoder's resolution can go from 200 to 25600, and resolution will suffice for precisely meeting our specifications. To account for potential error and to further increase the precision and accuracy of our stepper motor, we will choose an encoder resolution of 12800 PPR.
 
 ## BOM
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| P Series Nema 34 Stepper Motor | Stepper Motor for Rotating Platforms | Motor | 34E1KBK50-120 | Stepper Online | 1 | $195.01 | $195.01 |
-| HSS86        | Hybrid Stepper Servo Driver | Motor | NBKDM-HBS86H | MEIHAOCNC | 1 | $55.00 | $55.00 |
+| STP-MTRAC-34156 | Stepper Motor for Rotating Platforms | Motor | STP-MTRAC-34156 | SureStep | 1 | $284.00 | $284.00 |
+| STP-DRVAC-24025 | AC Microstepping Stepper Driver | Motor | STP-DRVAC-24025 | SureStep | 1 | $213.00 | 213.00 |
 | 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
-| Step-Down Transformer | 120VAC to 24VAC, 196VA, Laminated Core Transformer | Motor | (DigiKey) HM4992-ND | Hammond Manufacturing | 1 | $120.76 | $120.76 |
-| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $394.08 |
+| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $520.31 |
 
