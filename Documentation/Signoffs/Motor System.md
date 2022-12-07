@@ -62,7 +62,7 @@ The hollow aluminum cylinder will weigh **9.622 lbs**
 * **Given the calculations above, must rotate a total weight of 70.858 lbs. (We will assume roughly 20% tolerance for error, so for calculations we will use 85 lbs)**
 
 **Circuity:** 
-* **Will be protected at 125% the nameplate current rating (7.5A).** This comes from the following codes.
+* **Will be protected at 125% the nameplate current rating (3.19A).** This comes from the following codes.
 
 The standard NEC 430.52(D) states "Torque motor branch circuits shall be protected at the motor nameplace current rating in accordance with 240.4(B)
 
