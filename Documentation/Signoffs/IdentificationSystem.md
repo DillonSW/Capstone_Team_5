@@ -15,7 +15,7 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 ## Schematic  
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Barcode-Scanner/images/ID_System.jpg)  
+![Schematic](images/ID_System.jpg)  
 
 The simple schematic above shows a generic PC and meter. The PC powers and grounds the USB voltmeter and then sends output to the Barcode Scanner.  
 
