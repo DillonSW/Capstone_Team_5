@@ -29,11 +29,13 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 * Shall include a USB Hub to provide enough ports for modules
 
+* Shall include a port to connect to the UI system  
+
 ## Schematic  
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Barcode-Scanner/images/ID_System.jpg?raw=true)  
 
-The Schematic above shows the layout of the ID subsystem 
+The Schematic above shows the layout of the ID subsystem. The MiniPC connects to the PLC through the ethernet port and is powered by the power subsystem. A USB Hub is connected to the MiniPC and allows for more modules. Two USB Voltmeters are used for a Barcode Scanner and RFID Reader. The UI system is connected to the MiniPC through the Hub as well.  
 
 ## Analysis  
 
