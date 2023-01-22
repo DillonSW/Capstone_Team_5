@@ -6,14 +6,19 @@ The subsystem's role in our design is to control all electronic hardware (locks,
 
 **The PLC:** 
 
-* **Must have at least 13 I/O pins**
+* **Must have at least 6 Digital Input pins**
 
-^ Input: 3 locks, 3 sensors (6) | 
-  Output: 3 locks, 3 LEDs, 1 motor (7) 
+^ These are for the 3 door locks and sensors in order to be read by the PLC.
 
-From this, the input module must have at least 6 ports, and the output module must have at least 7 ports 
+* **Must have at least 6 Digital Output pins**
 
-We will most likely use modules containing more in case we need more ports. 
+^ These are also for the 3 door lock and sensors in order to be commanded by the PLC.
+
+* **Must have at least 3 24VDC Outputs**
+
+^ These are going to be used for the motor driver.
+
+From this, the input module must have at least 6 ports, and the output module must have at least 9 ports 
 
 * **Must be able to fit in a 1 square-foot area**
 
