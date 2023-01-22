@@ -40,7 +40,7 @@ Above is a draft schematic of how the PLC is going to be implemented into our ma
 
 ^ Source: https://www.electronics-tutorials.ws/diode/diode_8.html 
 
-The pins on the PLC are also tagged to their respective peripheral, and are specified as either an input (receiving from peripheral) or output (sending to peripheral) pin. The lock system will most likely need 2 pins per lock, as the PLC must constantly receive the state of the lock while also being able to increase or lower the voltage to the locks. 
+The pins on the PLC are also tagged to their respective peripheral, and are specified as either an input (receiving from peripheral) or output (sending to peripheral) pin. The lock system shown is just for connection references, and will most likely need 2 pins per lock, as the PLC must constantly receive the state of the lock while also being able to increase or lower the voltage to the locks. The labels for the locking system state "Pin 1, 3, or 5" and "Pin 2, 4, or 6" because this same locking system will be used for all 3 locks. This will be discussed in the Security and Locks documentation. The same goes for the Distance Sensors system, and will be discussed in the sensor system documentation.
 
 ## Analysis 
 
