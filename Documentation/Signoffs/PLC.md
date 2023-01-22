@@ -66,9 +66,9 @@ The following table shows the edge cases for resistor values.
 
 ## BOM 
 
-| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total | 
-|--------------|-------------|-----------|-------------|--------------|----------|-------|-------| 
-|1756-IB16 Allen Bradley| 12/24 VDC, 20 Pin Input Module | PLC | 1756-IB16 | Allen Bradley | 1 | $313.19 | $313.19 | 
-| P1-15TD1 | 3.3-24 VDC, 15-Point Output Module | PLC | 116074919 | Automation Direct | 1 | $103.00 | $103.00 | 
-| 1766-L32BXB Allen Bradley | MicroLogix 1400 PLC | PLC | 1756-L32BXB | Allen Bradley | 1 | $652.50 | $652.50 |  
-| **Total** |  |  |  | **Total Components** | 3 | **Total Cost** | $1068.69 | 
+| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
+|--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
+| Ethernet Cable | 5-ft, male-to-male, RJ45 Ethernet Cable | PLC | HL-001762 | Amazon Basics | 1 | $6.50 | $6.50 |
+| PDA/Serial Adaptor Cable | 1.3-ft, USB-to-RS232 (DB9) Cable | PLC | NS-PU99501 | Insignia | 1 | $19.99 | $19.99 |
+| 1766-L32BXB Allen Bradley | MicroLogix 1400 PLC | PLC | 1756-L32BXB | Allen Bradley | 1 | $601.40 | $601.40 |
+| **Total** |  |  |  | **Total Components** | 3 | **Total Cost** | $627.89 |
