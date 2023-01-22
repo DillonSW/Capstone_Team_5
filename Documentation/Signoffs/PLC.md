@@ -62,7 +62,11 @@ $(Vs – VLED)/ILED = R$
 
 The following table shows the edge cases for resistor values. 
 
-![ResistorValues](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/LEDResistors.jpg) 
+![ResistorValues](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/LEDResistors.jpg)
+
+![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
+
+The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
 
 ## BOM 
 
