@@ -32,6 +32,10 @@ _Figure 2: Ports on LCD [1]_
 ![image](https://user-images.githubusercontent.com/101990738/203436487-dcc3a30c-626c-4406-9c1c-32b90ba2831c.png)
   
 _Figure 3: Connections of LCD with mini-PC [1]_
+  
+ ![image](https://user-images.githubusercontent.com/101990738/214427528-1e055347-bf93-408f-95fb-df147eb98fa9.png)
+  
+_Figure 4: Schematic of the System_
 
 <div align="left"> 
 
