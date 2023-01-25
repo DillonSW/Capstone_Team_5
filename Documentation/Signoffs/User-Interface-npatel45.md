@@ -2,19 +2,13 @@
 ### Function of the Subsystem:
 ---
 When designing vending machine the main component of the machine is to get input from the user and process that information and send that information to the rest of the parts corresponding to it. So, in the same way for ECE board vending machine the student must be able to input their information, and select products from given set of  choices so to target this requirement, UI (User Interface) subsystem is required.
-  
-•	Receive information from student using medium of a touch screen LCD (Liquid Crystal Display)
  
 ### Specifications & Constraints:
 ---
  
-  1. Must be able to recognize depression of any keys and relay that information to mini-PC
-  2. Must be able to send or display instructions coming from or to mini-PC
-  3. Must be able to establish a direct connection with mini-PC
-  4. Must be big and bright enough to read it from
-  5. Must have HDMI or type C or USB port to connect to mini-PC
- 
-For the User Interface subsystem to function properly, LCD touch screen would need to display messages/signals coming from different subsystems or sometimes even from Interface itself. For example, if a student tries to access a particular option from the menu the touch screen must be able to send that information to mini-PC and in return display the information received back from mini-PC to let the user know whether the selected task was successfully completed or was not, and if not it should also display the reason so that it can help student understand what he/she did wrong (1,2,3). Additionally, the monitor should be big and bright enough so that the student won't have to squint their eyes to see what is on the display prompt (4).
+  1. UI must not operate at greater than 5 V 0.5 A because of mini-PC output rating [1].
+  2. UI must run Windows/Linux environment to run Kiosk application.
+  3. Must have HDMI or type C or USB port to connect to mini-PC.
  
 ### Schematic:
 ---
@@ -42,10 +36,21 @@ _Figure 4: Schematic of the System_
 ### Analysis:
 ---
  
-The vending machines' main interface with the students will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about whether the board has been successfully checked out or not. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. The following points were made for each one:
+The vending machines' main interface with the students will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about whether the board has been successfully checked out or not. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. 
  
- ##### Resistive Touchscreens [2]
- - Pros
+#### 1) Resistive Touchscreen [2]
+  
+The fundamental components of a resistive touch screen are two substrate layers that are spaced apart by either an inert gas or air. For the top layer, a flexible film-based substrate is always used, however for the bottom layers, either film or glass may be used as the substrate. On the inner-facing surfaces of the substrate layers, opposite the air gap, a conductive substance is deposited. There are only two operational states for a resistive touch screen: touched and not touched. The conductive substance on the top layer makes electrical contact with the conducting surface of the bottom layer when a user presses down on the top surface, indenting the film in the process. This action generates a voltage differential that the system interprets as a touch. The touch controller analyzes the action after determining the precise X and Y coordinates of this contact. A resistive touch screen is like a mechanical switch as it requires physical force to operate.
+  
+<div align="center"> 
+ 
+![image](https://user-images.githubusercontent.com/101990738/214468780-78a23f78-cd7d-4418-8cc7-d51eb093ecf4.png)
+  
+ _Figure 5: Working of Resistive Touchscreen [4]_
+  
+ <div align="left"> 
+   
+  - Pros
     - Low Cost
     - Less possibility of accidental contact
     - Can detect any object when properly pressure
@@ -58,8 +63,19 @@ The vending machines' main interface with the students will be the LCD. It will 
     - The screen is more vulnerable to scuffing and scratches.
     - Expensive to fix
     - If the screen has a minor fracture, it won't function.
- 
- ##### Capacitive Touchscreens  [2]
+
+#### 2) Capacitive Touchscreen [2]
+  
+The base of capacitive touch panels is a collection of conductors that generate an electromagnetic field. The user's conductive finger or object pulls or adds charge to the capacitive field, adjusting its strength, as they touch the screen. Based on the sort of input it receives, a touch controller measures the position of this change and then orders the system to do a certain action. Users only need to tap a capacitive touch screen for a device to recognize their input. Contrary to resistive touch displays, there is no need for physical pressure. Capacitive touch screens can support a variety of inputs, with varied motions and additional contact points instructing the system to execute a variety of actions, which is another important distinction from resistive touch technology.
+     
+<div align="center"> 
+  
+![image](https://user-images.githubusercontent.com/101990738/214468983-1e4b5614-ddcf-46fc-92c7-82a9cec24fc7.png)
+  
+ _Figure 6: Working of Capacitive Touchscreen [4]_
+  
+ <div align="left"> 
+  
  - Pros
     - Durability
     - Facilitates Customization
@@ -114,9 +130,13 @@ So to meet all the above requirements the following decision was made:
 
 ### References: 
 ---
-[1]. https://www.elecrow.com/7-inch-1024-600-hdmi-lcd-display-with-touch-screen.html
+[1]. https://resources.pcb.cadence.com/blog/2020-what-are-the-maximum-power-output-and-data-transfer-rates-for-the-usb-standards
   
-[2]. https://www.newvisiondisplay.com/capacitive-vs-resistive-touchscreen/
+[2]. https://www.elecrow.com/7-inch-1024-600-hdmi-lcd-display-with-touch-screen.html
+  
+[3]. https://www.newvisiondisplay.com/capacitive-vs-resistive-touchscreen/
+  
+[4]. https://forum.digikey.com/t/resistive-touch-vs-capacitive-touch-whats-the-difference/1063
   
 
 
