@@ -6,7 +6,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 # Constraints
 
-**• The locks must be controlled digitally.**
+**• The locks must be automated and controlled by the device.**
  
 **• The locks must be able to resist the forced entry of human force.**
 
@@ -40,13 +40,20 @@ In the case power loss and/or blackout there is little to no loss in security, s
 ### Proximity Sensors
 As both a safety precaution and security measure, there needs to be a confirmation of the door being closed and the lock being locked.
 
+![image](https://user-images.githubusercontent.com/100805322/214712598-c768a960-efea-4fbe-93c7-c0bce5f58a88.png)
+
+^Source: https://files.pepperl-fuchs.com/selector_files/navi/productInfo/pds/085298_eng.pdf
+
 To confirm the state of the locking mechanism, there will be an inductive proximity sensor installed on each level. An inductive proximity sensor only detects the presence of metallic objects, making it difficult for tampering. This proximity version of the sensor has a detection range of 4mm, allowing room for error for contact. This also prevents damage being done to the sensors every time the plunger enters the strike plate. 
 
 For the proximity sensors they will also be directly connected to the  PLC. Their connection will remained closed as long as they are in proximity of the lock plunger. The will open their connection with the PLC every time the plunger of the lock is missing from the strike plate.
 
 The proximity sensors will be installed into the sides of the opening of the cabinet doors. They will be directly aligned with the solenoid locks.
 
+### Spring Hinges
+To assist the user with identifying their cabinet door, there will be spring hinges installed. This will also help with the locks being moved away form their strikeplates, keeping the door unlocked if the user was too slow to open the cabinet door.
 
+These hinges will constantly be applying force outward to push the door open, and should be easy to close back into the locked state. While there will be slight pressser on the solenoid locks, there will not be enough to do damage to them. To assure this, adjustable spring locks will be used. This will allow the alteration of spring's tension.
 
 
 # BOM
@@ -54,5 +61,6 @@ The proximity sensors will be installed into the sides of the opening of the cab
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |11.4mm Electromagnetic Solenoid Lock| DC 12V, 1.1A | Locks | a19042500ux0016 | uxcell | 3 | $12.49 | $37.47 |
 |Proximity Sensor Switch SN04-N| 3Pcs 4mm 3-Wire 6V-36V |Locks| SN04-N |RATTMMOTOR | 1 | $13.00 | $13.00 |
-| **Total** | | | | **Total Components** | 4 | **Total Cost** | $50.47 |
+|3.5'' Self-Closing Door Hinges| Stainless Steel Adjustable 3 Pack |Locks|B08YZ2TF1F|Qkenvo| 1 | $27.99 | $27.99 |
+| **Total** | | | | **Total Components** | 5 | **Total Cost** | $78.46 |
 
