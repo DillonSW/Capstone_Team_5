@@ -17,15 +17,15 @@ When designing vending machine the main component of the machine is to get input
   
 ![image](https://user-images.githubusercontent.com/101990738/203437345-1d371ec5-7c23-4b43-86b6-ec64e5d2023c.png)
   
-_Figure 1: Dimensions of LCD [1]_
+_Figure 1: Dimensions of LCD [2]_
   
 ![image](https://user-images.githubusercontent.com/101990738/203420602-62791559-bc8c-4834-87f6-5370614b598a.png)
   
-_Figure 2: Ports on LCD [1]_
+_Figure 2: Ports on LCD [2]_
 
 ![image](https://user-images.githubusercontent.com/101990738/203436487-dcc3a30c-626c-4406-9c1c-32b90ba2831c.png)
   
-_Figure 3: Connections of LCD with mini-PC [1]_
+_Figure 3: Connections of LCD with mini-PC [2]_
   
  ![image](https://user-images.githubusercontent.com/101990738/214427528-1e055347-bf93-408f-95fb-df147eb98fa9.png)
   
@@ -38,7 +38,7 @@ _Figure 4: Schematic of the System_
  
 The vending machines' main interface with the students will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about whether the board has been successfully checked out or not. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. 
  
-#### 1) Resistive Touchscreen [2]
+#### 1) Resistive Touchscreen [3]
   
 The fundamental components of a resistive touch screen are two substrate layers that are spaced apart by either an inert gas or air. For the top layer, a flexible film-based substrate is always used, however for the bottom layers, either film or glass may be used as the substrate. On the inner-facing surfaces of the substrate layers, opposite the air gap, a conductive substance is deposited. There are only two operational states for a resistive touch screen: touched and not touched. The conductive substance on the top layer makes electrical contact with the conducting surface of the bottom layer when a user presses down on the top surface, indenting the film in the process. This action generates a voltage differential that the system interprets as a touch. The touch controller analyzes the action after determining the precise X and Y coordinates of this contact. A resistive touch screen is like a mechanical switch as it requires physical force to operate.
   
@@ -64,7 +64,7 @@ The fundamental components of a resistive touch screen are two substrate layers 
     - Expensive to fix
     - If the screen has a minor fracture, it won't function.
 
-#### 2) Capacitive Touchscreen [2]
+#### 2) Capacitive Touchscreen [3]
   
 The base of capacitive touch panels is a collection of conductors that generate an electromagnetic field. The user's conductive finger or object pulls or adds charge to the capacitive field, adjusting its strength, as they touch the screen. Based on the sort of input it receives, a touch controller measures the position of this change and then orders the system to do a certain action. Users only need to tap a capacitive touch screen for a device to recognize their input. Contrary to resistive touch displays, there is no need for physical pressure. Capacitive touch screens can support a variety of inputs, with varied motions and additional contact points instructing the system to execute a variety of actions, which is another important distinction from resistive touch technology.
      
@@ -133,10 +133,12 @@ So to meet all the above requirements the following decision was made:
 [1]. https://resources.pcb.cadence.com/blog/2020-what-are-the-maximum-power-output-and-data-transfer-rates-for-the-usb-standards
   
 [2]. https://www.elecrow.com/7-inch-1024-600-hdmi-lcd-display-with-touch-screen.html
+ 
+[3]. https://forum.digikey.com/t/resistive-touch-vs-capacitive-touch-whats-the-difference/1063
   
-[3]. https://www.newvisiondisplay.com/capacitive-vs-resistive-touchscreen/
+[4]. https://www.researchgate.net/publication/356667592_Fabrication_and_Performance_Evolution_of_AgNP_Interdigitated_Electrode_Touch_Sensor_for_Automotive_Infotainment
   
-[4]. https://forum.digikey.com/t/resistive-touch-vs-capacitive-touch-whats-the-difference/1063
+
   
 
 
