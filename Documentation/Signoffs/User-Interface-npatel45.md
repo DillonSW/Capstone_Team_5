@@ -36,7 +36,7 @@ _Figure 4: Schematic of the System_
 ### Analysis:
 ---
  
-The vending machines' main interface with the students will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about whether the board has been successfully checked out or not. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. 
+The vending machines' main interface with the students will be the LCD. It will be utilized for student feedback as well as for displaying information to students, such as messages about devices. Therefore, it will need to be touchscreen. There are two main types of touchscreens that are available: Resistive and Capacitive. 
  
 #### 1) Resistive Touchscreen [3]
   
