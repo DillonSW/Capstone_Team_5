@@ -2,7 +2,7 @@
 
 ## Subsystem Function  
 
-This Subsystem's role in the team's design is to scan barcodes on school devices before being placed and when being taken from the machine. The subsystem also includes a RFID Card Reader to verify and store students' identity. The PC will then receive information from the modules and store information in a database for our customer. 
+This Subsystem's role in the team's design is to scan barcodes on school devices before being placed and when being taken from the machine. The subsystem also includes a RFID Card Reader to verify and store students' identity. The PC will then receive information from the modules and store information in a database for our customer. The Windows PC will also be able to control the visual components like LEDs through a PLC.
 
 ## Constraints  
 
@@ -13,9 +13,7 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 * RFID Card Scanner shall be low power and consume no greater than 5 V 0.5 A   
 
-* RFID Card Scanner shall operate on 13.56 MHz commonly used for higher security access badges  
-
-* Barcode Scanners and the RFID Card reader shall be powered by a USB port to communicate with the miniPC  
+* RFID Card Scanner shall operate on 13.56 MHz commonly used for higher security access badges, like the school Eagle Cards  
 
 * A Barcode Scanner and Card Reader will be monitered by USB voltmeter to ensure correct operation  
 
@@ -25,11 +23,9 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 * The MiniPC shall occupy no larger than a 6x6 in. space to fit in the machine
 
-* The MiniPC will provide an ethernet port to communicate with the PLC
+* The MiniPC will provide an ethernet port to communicate with the PLC through a USB NIC (network interface card)  
 
-* Shall include a USB Hub to provide enough ports for modules
-
-* Shall include a port to connect to the UI system  
+* The MiniPC shall include a USB Hub to provide enough ports for modules like the UI system  
 
 ## Schematic  
 
@@ -56,6 +52,8 @@ The scanner will be used at different ranges to determine an appropriate range f
 
 To remove data from the computer for use, a program will be added to the MiniPC so when the drive is plugged in, the information is downloaded automatically. The port will be behind a locked compartment so students cannot access the data.  
 
+To connect the Computer to the PLC, a USB NIC will be needed to provide an extra Ethernet port. The PLC uses Profinet, which is a communication protocol used to collect information and control a PLC through Profibus. The Computer will use an application called TIA Portal which allows connection and communication with the PLC and functions as a controller. The program will be created in the TIA portal and loaded to the memory on the PLC. TIA portal also provides diagnostics of the PLC through the software. The PLC the team is using is called a SIMATIC S7 1200 from Siemens and requires certain types of memory card. The three options of memory for the PLC differ only by capacity. The three options for memory size are 2, 4, and 24 MB. Currently the team is considering a 4MB memory card for the PLC. Issues have arrived with a USB NIC not being recognized by TIA Portal. If the software does not recognize the NIC, the way to fix the issue is to enter the IP address manually.   
+
 ## BOM  
 
 | Name of item | Description | Subsystem | Manufacturer | Quantity | Price | Total |
@@ -65,4 +63,6 @@ To remove data from the computer for use, a program will be added to the MiniPC 
 | RFID Reader | 13.56 MHz card reader | Identification System | Vipxyc | 1 | $14.99 | $14.99 |  
 | USB Hub | 7-port | Identification System | IVETTO | 1 | $29.99 | $29.99 | 
 | MiniPC | Windows 10 Pro | Identification System | ATOPNUC | 1 | $129.99 | $129.99 | 
-|  |  |  | **Components** | 7 | **Total Cost** | $300.93 |  
+| USB Ethernet Adapter | USB NIC | Identification System | CableCreation | 1 | $15.99 | $15.99 |
+| Siemens Memory Card | SIMATIC memory card | Identification System | Allied Electronics | 1 | $90.96 | $90.96 |  
+|  |  |  | **Components** | 7 | **Total Cost** | $407.88 |  
