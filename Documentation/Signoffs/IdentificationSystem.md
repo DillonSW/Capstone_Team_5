@@ -65,4 +65,4 @@ To connect the Computer to the PLC, a USB NIC will be needed to provide an extra
 | MiniPC | Windows 10 Pro | Identification System | ATOPNUC | 1 | $129.99 | $129.99 | 
 | USB Ethernet Adapter | USB NIC | Identification System | CableCreation | 1 | $15.99 | $15.99 |
 | Siemens Memory Card | SIMATIC memory card | Identification System | Allied Electronics | 1 | $90.96 | $90.96 |  
-|  |  |  | **Components** | 7 | **Total Cost** | $407.88 |  
+|  |  |  | **Components** | 9 | **Total Cost** | $407.88 |  
