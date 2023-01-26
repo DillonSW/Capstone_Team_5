@@ -64,5 +64,5 @@ To connect the Computer to the PLC, a USB NIC will be needed to provide an extra
 | USB Hub | 7-port | Identification System | IVETTO | 1 | $29.99 | $29.99 | 
 | MiniPC | Windows 10 Pro | Identification System | ATOPNUC | 1 | $129.99 | $129.99 | 
 | USB Ethernet Adapter | USB NIC | Identification System | CableCreation | 1 | $15.99 | $15.99 |
-| Siemens Memory Card | SIMATIC memory card | Identification System | Allied Electronics          6ES7-954-8LC03-0AA0 | 1 | $90.96 | $90.96 |  
+| Siemens Memory Card | SIMATIC memory card | Identification System | Allied Electronics / 6ES7-954-8LC03-0AA0 | 1 | $90.96 | $90.96 |  
 |  |  |  | **Components** | 9 | **Total Cost** | $407.88 |  
