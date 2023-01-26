@@ -28,24 +28,36 @@ The role of the sensor subsystem is to send signals—communicating the status o
 
  
 
-* **Must send a zero signal to the PLC if there is a device in the presently forefront compartment section and a one signal if there is not.**  
+* **The distance sensor chosen must determine the presence or absence of a device by measuring whether the light emitted was reflected back from a distance shorter than the distance between the sensor and the back wall of the compartment.** 
 
-   ^ The signal may be inverted as well; the signal just needs to be able to properly communicate the state of the compartment to the ladder logic code of the PLC. 
+   ^To understand why the sensor must be a light emitting distance sensor see the analysis section       below. 
+
+   ^The sensor must not communicate the presence of a device by sensing the back wall of the compartment. 
 
  
 
-* **Have a type of sensor that is capable of identifying whether a compartment is empty or not, communicate that information through a one bit signal, and not obstruct access to the compartment.** 
+* **Must send a one signal to the PLC if there is a device in the presently forefront compartment section and a zero signal if there is not.**  
 
-   ^To specify the last part of the constraint the sensor must fit inside the palm of your hand—this should be sufficiently small and practically achievable. 
+   ^This constraint is chosen when considering the consequences in the case of the wire being cut: 
 
+If the default (zero) signal communicates that a device is present then the door could be able to be opened, upon someone trying to check a device out, because the PLC thinks there is a device there to be distributed. 
+
+If the default (zero) signal communicates that a device is not present then the door will remain locked and cannot be unlocked because the PLC thinks there is no device there to distribute. 
+
+Upon reflection the second option is the best because the devices are protected behind the locked door which will prevent theft during the time period before the wire connection is fixed. 
+
+ 
+
+* **The sensor should be small enough to fit inside the palm of your hand so as not to obstruct access to the compartment** 
+
+   ^This should be sufficiently small and practically achievable to find a sensor of such size. 
  
 
   
 
 ## Schematic  
 
-![SensorSchematic](https://user-images.githubusercontent.com/113734069/203670775-6f40ee67-78c1-44de-b468-94481cb20bdc.jpeg) 
-
+![Single_Sensor_Schematic](https://user-images.githubusercontent.com/113734069/214883677-7ab7c1b0-1888-4da5-9e76-1e29ce1e5567.jpg)
   
 
 We have designated three I/O pins—7, 8, and 9—of our PLC module to input signals from our sensors.  
