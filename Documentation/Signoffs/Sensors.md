@@ -40,11 +40,11 @@ The role of the sensor subsystem is to send signals—communicating the status o
 
    ^This constraint is chosen when considering the consequences in the case of the wire being cut: 
 
-      If the default (zero) signal communicates that a device is present then the door could be able to be opened, upon someone trying to check a device out, because         the PLC thinks there is a device there to be distributed. 
+If the default (zero) signal communicates that a device is present then the door could be able to be opened, upon someone trying to check a device out, because         the PLC thinks there is a device there to be distributed. 
 
-      If the default (zero) signal communicates that a device is not present then the door will remain locked and cannot be unlocked because the PLC thinks there is no       device there to distribute. 
+If the default (zero) signal communicates that a device is not present then the door will remain locked and cannot be unlocked because the PLC thinks there is no       device there to distribute. 
 
-      Upon reflection the second option is the best because the devices are protected behind the locked door which will prevent theft during the time period before the       wire connection is fixed. 
+Upon reflection the second option is the best because the devices are protected behind the locked door which will prevent theft during the time period before the       wire connection is fixed. 
 
  
 
