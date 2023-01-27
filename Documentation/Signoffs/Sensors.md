@@ -24,13 +24,13 @@ The role of the sensor subsystem is to send signals—communicating the status o
 
    ^The PLC module will have a limited amount of inputs and outputs to receive or send signals. All other pins will need to be allocated to receive from and or send signals to the locks, LEDs, and motor.  
 
-   ^This also makes the constraint that the sensors must send one bit signals since there will have to be three separate —one for each dial layer (which each take up one I/O pin). 
+   ^This also makes the constraint that the sensors must send one bit signals since there will have to be three separate—one for each dial layer (which each take up one I/O pin). 
 
  
 
 * **The distance sensor chosen must determine the presence or absence of a device by measuring whether the light emitted was reflected back from a distance shorter than the distance between the sensor and the back wall of the compartment.** 
 
-   ^To understand why the sensor must be a light emitting distance sensor see the analysis section       below. 
+   ^To understand why the sensor must be a light emitting distance sensor see the analysis section below. 
 
    ^The sensor must not communicate the presence of a device by sensing the back wall of the compartment. 
 
@@ -40,11 +40,11 @@ The role of the sensor subsystem is to send signals—communicating the status o
 
    ^This constraint is chosen when considering the consequences in the case of the wire being cut: 
 
-If the default (zero) signal communicates that a device is present then the door could be able to be opened, upon someone trying to check a device out, because the PLC thinks there is a device there to be distributed. 
+      If the default (zero) signal communicates that a device is present then the door could be able to be opened, upon someone trying to check a device out, because         the PLC thinks there is a device there to be distributed. 
 
-If the default (zero) signal communicates that a device is not present then the door will remain locked and cannot be unlocked because the PLC thinks there is no device there to distribute. 
+      If the default (zero) signal communicates that a device is not present then the door will remain locked and cannot be unlocked because the PLC thinks there is no       device there to distribute. 
 
-Upon reflection the second option is the best because the devices are protected behind the locked door which will prevent theft during the time period before the wire connection is fixed. 
+      Upon reflection the second option is the best because the devices are protected behind the locked door which will prevent theft during the time period before the       wire connection is fixed. 
 
  
 
@@ -57,10 +57,10 @@ Upon reflection the second option is the best because the devices are protected 
 
 ## Schematic  
 
-![Single_Sensor_Schematic](https://user-images.githubusercontent.com/113734069/214883677-7ab7c1b0-1888-4da5-9e76-1e29ce1e5567.jpg)
-  
+![SpotSensorsSchematic1](https://user-images.githubusercontent.com/113734069/215000045-7e4d8fe0-7820-4f14-8b34-5ba22decf83a.jpg)
 
-We have designated three I/O pins—7, 8, and 9—of our PLC module to input signals from our sensors.  
+
+We have designated three I/O pins—7, 8, and 9—of our PLC module to input signals from our sensors. Each of the three sensors has three wires; the signal wires (SDA) will be connected to their respective input pin of the PLC; the wires powering the sensors (AVDD) will be connected to terminal blocks--jumped together--to connect directly to the positive voltage wire of the power supply; the neutral wires of the sensors (NTRL) will also be connected to terminal blocks that are jumped together. As depicted in the diagram the top level, middle level, and bottom level sensor will be connected to pin 9, pin 8, and pin 7 of the PLC respectively. 
 
   
 
@@ -138,7 +138,7 @@ SP1 = Set Max Sensing Distance
 
 We have identified the photoelectric diffuse reflection spot sensor with background suppression to be the most ideal sensor to use for our vending machine sensor system. In particular we have chosen to use the ifm OGH580; this sensor has an operating voltage of 10-30V DC and has a sensing range of up to 200mm—This range is sufficient for covering the distance between the device in the compartment and the sensor. If placed out of but pointing at the compartment inside the vending machine, this sensor should be sufficient in identifying whether a device is present or not. This sensor is also certainly of suitable size to fit inside of the vending machine; it would not pose an obstacle to stocking or obtaining a device from the compartment. Lastly, because we will only be using three one-bit signal sensors, we will only have to allocate three I/O pins of the PLC module for our sensor system.   
 
-The sensors will be able to be grounded, be powered, and send signals through female end cord sets connecting the sensors to the power supply, PLC, and ground bar. The ifm EVC001 is a two meter long cord that is made to work with this spot sensor. Two meters is of sufficient length to connect all of our sensors to ground and each of these systems. Inside the cable jacket of this cord are four wires: a ground, neutral, power, and signal wire. The power wires will be connected to three terminal blocks that are jumped together and connected to the power supply high side. The neutral and ground wires will be connected to six terminal blocks that are jumped together and connected to ground. The signal wires will be connected straight to the 7, 8, and 9 I/O pins of the PLC.
+The sensors will be able to be grounded, be powered, and send signals through female end cord sets connecting the sensors to the power supply, PLC, and ground bar. The ifm EVC001 is a two meter long cord that is made to work with this spot sensor. Two meters is of sufficient length to connect all of our sensors to ground and each of these systems. Inside the cable jacket of this cord are three wires: a neutral, power, and signal wire. The power wires will be connected to three terminal blocks that are jumped together and connected to the power supply high side. The neutral wires will be connected to three terminal blocks that are jumped together and connected to the neutral wire of the power supply. The signal wires will be connected straight to the 7, 8, and 9 I/O pins of the PLC. (See schematic)
 
   
 
