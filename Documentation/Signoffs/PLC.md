@@ -32,11 +32,14 @@ This will be accomplished by having the GFCI in between our hardware and the pow
 
 ^ Source: http://rpa.energy.mn/wp-content/uploads/2017/03/IEC-61131-2-Programmable-controllers-Equipment-Requirements-and-Tests.pdf 
 
+* **Must be able to communicate with our PC
+^ This is discussed in other signoffs; we plan to use the ethernet ports on the PLC and a software on our PC similar to Rockwell.
+
 Schematic 
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionOne.jpg) 
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionTwo.jpg) 
  
-Above is a draft schematic of how the PLC is going to be implemented into our machine. The LED resistor values can vary depending on what voltage the PLC's output is, and what kind of LED we decide to use. The typical output voltage of a PLC is 24VDC. Of course, this will be further discussed in the signoff for indication, but typical LED forward voltage can be from 1.2 - 3.6 V, with a typical current rating of 10 – 30 mA. 
+Above is a draft schematic of how the PLC is going to be implemented into our machine. The LED resistor values can vary depending on what voltage the PLC's output is, and what kind of LED we decide to use. The typical output voltage of a PLC is 24VDC. Of course, this will be further discussed in the signoff for indication, but typical LED forward voltage can be from 1.2 - 3.6 V, with a typical current rating of 10 – 30 mA. The 2.2 kOhm resistors going to the driver are to help prevent current overflow.
 
 ^ Source: https://www.electronics-tutorials.ws/diode/diode_8.html 
 
@@ -73,6 +76,5 @@ The image above shows how the PLC is going to connect to the motor's driver. The
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 | Ethernet Cable | 5-ft, male-to-male, RJ45 Ethernet Cable | PLC | HL-001762 | Amazon Basics | 1 | $6.50 | $6.50 |
-| PDA/Serial Adaptor Cable | 1.3-ft, USB-to-RS232 (DB9) Cable | PLC | NS-PU99501 | Insignia | 1 | $19.99 | $19.99 |
-| 1766-L32BXB Allen Bradley | MicroLogix 1400 PLC | PLC | 1756-L32BXB | Allen Bradley | 1 | $601.40 | $601.40 |
-| **Total** |  |  |  | **Total Components** | 3 | **Total Cost** | $627.89 |
+| Siemens S7-1200 PLC CPU | 14 Digital Input, 10 Digital Output | PLC | 6ES7214-1BE30-0XB0 | Siemens | 1 | $464.03 | $464.03 |
+| **Total** |  |  |  | **Total Components** | 2 | **Total Cost** | $470.53 |
