@@ -56,6 +56,8 @@ To connect the Computer to the PLC, a USB NIC will be needed to provide an extra
 
 ^ Source: https://us.profinet.com/profinet-explained/  
 
+To connect the PLC to the PC, the TIA Portal software must first be purchased and downloaded. After creating a new project, the device we are using will be added from the available library. The exact CPU is listed in the PLC we received. There is also an option to detect our PLC if we cannot find the device. The portal will use a PN/IE interface and the USB NIC as the adapter for connection. To write values from the sensors, an offset is needed. The common offset of the address is 10. Our team is giving full access to the PLC for the project. Once the PLC is set up, the CPU can be started to run the program. When our program is created, there will need to be a way to give the PLC a command from our code to TIA portal. With the newer versions of TIA portal, python can send data from the program to the portal for the PLC to execute. The data will go through Modbus to reach the TIA portal. Python has libraries such as Pymodbus to connect. This will be used to control the motor and LED indicators. Data can also be read from the PLC if needed. 
+
 ## BOM  
 
 | Name of item | Description | Subsystem | Manufacturer/Part# | Quantity | Price | Total |
