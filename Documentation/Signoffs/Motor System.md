@@ -355,5 +355,5 @@ This means that the bare minimum amount of PPR, or encoder resolution, that we w
 | 10A DIN Rail Circuit Breaker | 1 Pole, 10 Amp, 230/400V AC | Motor | CADZ47-63-C10-1P | Smseace | 2 | $8.99 | $17.98 |
 | JOS 2 kΩ Resistor | 5% Tolerance, Carbon film, 1/4 Watt | Motor | 10EP5142K00  | E_Projects | 10 | $0.573 | $5.73 |
 | FAZ-D4-1-SP | Single Pole, 4 Amp, DIN Rail Mount Breaker | Motor | FAZ-D4-1-SP | Eaton | 2 | $15.00 | $30.00 |
-| **Total** |  |  |  | **Total Components** | 14 | **Total Cost** | $550.31 |
+| **Total** |  |  |  | **Total Components** | 16 | **Total Cost** | $550.31 |
 
