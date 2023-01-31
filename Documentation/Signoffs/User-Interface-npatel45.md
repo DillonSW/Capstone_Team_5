@@ -6,29 +6,29 @@ When designing vending machine the main component of the machine is to get input
 ### Specifications & Constraints:
 ---
  
-  1. UI must not operate at greater than 5 V 0.5 A because of mini-PC output rating [1].
+  1. UI must not operate at greater than 100 W because of PC output rating of USB-C [1].
   2. UI must run Windows/Linux environment to run Kiosk application.
   3. Must have HDMI or type C or USB port to connect to mini-PC.
-  4. UI must be at least 15" (diagonal) because of the application getting ran on it.
+  4. UI must be at least 15" (diagonal) because of the application getting ran on it & for better readability.
 
 ### Schematic:
 ---
 
 <div align="center">  
   
-![image](https://user-images.githubusercontent.com/101990738/203437345-1d371ec5-7c23-4b43-86b6-ec64e5d2023c.png)
+![image](https://user-images.githubusercontent.com/101990738/215674304-b6a2701a-473a-40c3-97a8-9fc48c575680.png)
   
 _Figure 1: Dimensions of LCD [2]_
   
-![image](https://user-images.githubusercontent.com/101990738/203420602-62791559-bc8c-4834-87f6-5370614b598a.png)
+![image](https://user-images.githubusercontent.com/101990738/215674342-9ff5b894-4779-438c-9b26-2b5af4de244a.png)
   
 _Figure 2: Ports on LCD [2]_
 
-![image](https://user-images.githubusercontent.com/101990738/203436487-dcc3a30c-626c-4406-9c1c-32b90ba2831c.png)
+![image](https://user-images.githubusercontent.com/101990738/215674370-4b099a6e-4a77-46d6-8714-2b03312113cf.png)
   
-_Figure 3: Connections of LCD with mini-PC [2]_
+_Figure 3: Connections of LCD with PC [2]_
   
- ![image](https://user-images.githubusercontent.com/101990738/214427528-1e055347-bf93-408f-95fb-df147eb98fa9.png)
+![image](https://user-images.githubusercontent.com/101990738/215674430-0e58f4af-66ad-416c-999e-a92762f61f65.png)
   
 _Figure 4: Schematic of the System_
 
@@ -86,10 +86,11 @@ The base of capacitive touch panels is a collection of conductors that generate 
     - Expensive compared to resistive touchscreen
     - Because it is highly sensitive, even the slightest touch can cause it to activate, which could result in inadvertent contact.
 
-It is evident from the finding that **Capacitive touch screens** outperform resistive touch displays in a variety of ways. Although more expensive, capacitive touch displays offer advantages that surpass the price, making them the better choice. Additionally, since it is used for user input it must also have sufficient screen size otherwise it will be frustrating to use that is why our team feels that 7" diagonal display measurement would be sufficient for user interaction. Also, since the mini-PC supports USB (Universal Serial Bus) interface our team has decided that a USB interface would be better because of two main reasons:-
-
-   1. The USB port would be used to supply the LCD with the power it needs (from Mini-PC)
-   1. USB offers a single interface for both cord and signal. As a result, it reduces noise and avoids using two cords.
+It is evident from the finding that Capacitive touch screens outperform resistive touch displays in a variety of ways. Although more expensive, capacitive touch displays offer advantages that surpass the price, making them the better choice. Additionally, since it is used for user input it must also have sufficient screen size otherwise it will be frustrating to use that is why our team feels that 15" diagonal display measurement would be sufficient for user interaction and also the application that we will be writing to test the User Interface for the selection of different boards. Additionally, since the PC supports USB-C (Universal Serial Bus) our team has decided that a USB-C interface would work better because of two main reasons:-
+ 
+ 1. The USB Type-C port would be used to supply the LCD with the power it needs (from PC).
+ 
+ 2. Type-C offers a single interface for both power and signal. As a result, it reduces noise and avoids using two cords.
  
 So to meet all the above requirements the following decision was made:
 
@@ -97,13 +98,14 @@ So to meet all the above requirements the following decision was made:
   
 |                 |    Details                                              |
 |:---------------:|:-------------------------------------------------------:|
-| Name/Brand      | Elecrow 7" Touch Screen LCD                             |
+| Name/Brand      | View Sonic 15.6" Touch Screen LCD                       |
+| LCD Type        | IPS (In Plane Switching Technology)                     |
 | Touchscreen     | Yes (Can also be used as external monitor through HDMI) |
-| Type            | Capacitive                                              |
-| Interface       | USB/HDMI                                                |
-| Diagonal Size   | 7"                                                      |
-| Driving Voltage | 5V @ 1A                                                 |
-| Documentation   | Mediocre                                                |
+| Type            | Projective Capacitive                                   |
+| Interface       | USB Type-C/Mini-HDMI                                    |
+| Diagonal Size   | 15.6"                                                   |
+| Consumption     | 8.6 W (Typical)        10.5 W (Max)                     |
+| Documentation   | Good                                                    |
 
 <div align="left">
   
@@ -112,28 +114,29 @@ So to meet all the above requirements the following decision was made:
   
 <div align="center">
  
-|      Part         |    Price             |
-|:-----------------:|:--------------------:|
-| Elecrow LCD       | $ 63.99              |
-| USB cable         | (-) Included         |
-| HDMI cable        | (-) Included         |
-| **Total**         | **$63.99**           |
+|      Part             |    Price             |
+|:---------------------:|:--------------------:|
+| ViewSonic LCD         | $ 269.99             |
+| USB-C to USB-C cable  | (-) Included         |
+| USB-C to USB-A cable  | (-) Included         |
+| Mini-HDMI cable       | (-) Included         |
+| Passive Touch Pen     | (-) Included         | 
+| **Total**             | **$269.99**           |
  
 <div align="left">
   
 **Link to the product:**   
   
-[1] https://www.amazon.com/ELECROW-Display-1024X600-Function-Raspberry/dp/B01GDMDFZA/ref=asc_df_B01GDMDFZA/?tag=&linkCode=df0&hvadid=309779531175&hvpos=&hvnetw=g&hvrand=10466085907421531413&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9013670&hvtargid=pla-442095369518&ref=&adgrpid=62412137260&th=1
-  
-[2] https://www.elecrow.com/7-inch-1024-600-hdmi-lcd-display-with-touch-screen.html
-  
+[1] https://www.bestbuy.com/site/viewsonic-15-6-lcd-fhd-monitor-displayport-vga-usb-hdmi/6428015.p?skuId=6428015&ref=NS&loc=101
+ 
+[2] https://www.viewsonic.com/us/td1655-15-6-portable-1080p-ips-touch-monitor-with-60w-usb-c-and-mini-hdmi.html
 
-
+ 
 ### References: 
 ---
-[1]. https://resources.pcb.cadence.com/blog/2020-what-are-the-maximum-power-output-and-data-transfer-rates-for-the-usb-standards
+[1]. https://manhattanproducts.eu/pages/usb-c-pd-charging-everything-you-need-to-know
   
-[2]. https://www.elecrow.com/7-inch-1024-600-hdmi-lcd-display-with-touch-screen.html
+[2]. https://www.viewsonic.com/us/td1655-15-6-portable-1080p-ips-touch-monitor-with-60w-usb-c-and-mini-hdmi.html
  
 [3]. https://forum.digikey.com/t/resistive-touch-vs-capacitive-touch-whats-the-difference/1063
   
