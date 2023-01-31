@@ -16,7 +16,7 @@ When designing vending machine the main component of the machine is to get input
 
 <div align="center">  
   
-![image](https://user-images.githubusercontent.com/101990738/215674304-b6a2701a-473a-40c3-97a8-9fc48c575680.png)
+![image](https://user-images.githubusercontent.com/101990738/215674304-b6a2701a-473a-40c3-97a8-9fc48c575680.png | width=600)
   
 _Figure 1: Dimensions of LCD [2]_
   
