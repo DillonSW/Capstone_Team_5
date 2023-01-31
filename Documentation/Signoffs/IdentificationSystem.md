@@ -29,7 +29,7 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Barcode-Scanner/images/ID_System.jpg?raw=true)    
 
-The Schematic above shows the layout of the ID subsystem. The PC connects to the PLC through a USB NIC, which is a USB to ethernet adapter, and is powered by the power subsystem. A USB Hub is connected to the MiniPC and allows for more modules. Two USB Voltmeters are used for a Barcode Scanner and RFID Reader. The UI system is connected to the MiniPC through the Hub as well.  
+The Schematic above shows the layout of the ID subsystem. The PC connects to the PLC through a USB NIC, which is a USB to ethernet adapter, and is powered by the power subsystem. The PC is connected to and allows for multiple modules through six USB 3.0 ports. Two USB Voltmeters are used for a Barcode Scanner and RFID Reader. The UI system is connected to the MiniPC through the HDMI on the PC.  
 
 ## Analysis  
 
@@ -54,7 +54,7 @@ To connect the Computer to the PLC, a USB NIC will be needed to provide an extra
 
 ^ Source: https://us.profinet.com/profinet-explained/, https://support.industry.siemens.com/cs/document/109784439/delivery-release-simatic-step-7-professional-basic-v17?dti=0&lc=en-WW  
 
-To retain information from the PLC and PC, an OPC UA client from Prosys will be used. The OPC client allows the PLC to connect and send/receive data to a database. The database will be accessible to the PC as well. The database will be the interface between the PC and PLC. The PC will be able to set bits high to activate the PLC, and the PLC will be able to set the bits low after completion of the job. The OPC client is designed to be used with SIMATIC S7 1200 and 1500 series PLCs, and connect to the MySQL database software. The Prosys OPC client can connect directly to the Server created in the TIA portal software and then relay the information to the database for use by the PC and vice versa.  
+To retain information from the PLC and PC, an OPC UA client from Prosys will be used. The OPC client allows the PLC to connect and send/receive data to/from the database. The database will be accessible to the PC as well. The database will be the interface between the PC and PLC. The PC will be able to set bits high to activate the PLC, and the PLC will be able to set the bits low after completion of the job. The OPC client is designed to be used with SIMATIC S7 1200 and 1500 series PLCs, and connect to the MySQL database software. The Prosys OPC client can connect directly to the Server created in the TIA portal software and then relay the information to the database for use by the PC and vice versa.  
 
 ^ Source: https://downloads.prosysopc.com/opcua/apps/JavaClient/dist/3.2.0-328/Prosys_OPC_UA_Client_UserManual.pdf  
 
@@ -68,4 +68,4 @@ To retain information from the PLC and PC, an OPC UA client from Prosys will be 
 | ThinkCentre | Windows 10 Pro | Identification System | Lenovo | 1 | $759.00 | $759.00 | 
 | USB Ethernet Adapter | USB NIC | Identification System | CableCreation | 1 | $15.99 | $15.99 |
 | Siemens Memory Card | SIMATIC memory card | Identification System | Allied Electronics / 6ES7-954-8LC03-0AA0 | 1 | $90.96 | $90.96 |  
-|  |  |  | **Components** | 8 | **Total Cost** | $1006.90 |  
+|  |  |  | **Components** | 8 | **Total Cost** | $1,006.90 |  
