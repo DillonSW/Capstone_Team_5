@@ -7,12 +7,18 @@ This subsystem's role in our design is to secure both the stored devices and int
 # Constraints
 
 **• The locks must be automated and controlled by the device.**
+
+	• Since this machinery is will be ran autonomously and unmanned, the locks must be controlled without the need of human assistance
  
 **• The locks must be able to resist the forced entry of human force.**
 
-**• The "state" of the locks must be known at all times.**
+	• The main purpose of the machine is to /contain and distribute valuable technology. 
+	• Knowing that there might be attempts to break in, the locks must be strong enough to resist the average human's strength.
 	
 **• The cabinet doors must remain lock in the case of power outage/blackout.**
+
+	• To prevent possible theft of inventory, the locks shall stay locked in all instances of power loss. 
+	• The locks shall only be unlocked if instructed by the internal operations of the device.
 
 ![image](https://user-images.githubusercontent.com/100805322/215175968-acb86932-6f9c-450f-9555-0cdeea43c83a.png)
 
@@ -43,25 +49,7 @@ In the case power loss and/or blackout there is little to no loss in security, s
 
 The Schematic above shows that the **Red Wire** will be connected directly to the PLC, and the **Black Wire** to ground.
 
-## Proximity Sensors
-As both a safety precaution and security measure, there needs to be a confirmation of the door being closed and the lock being locked.
 
-![image](https://user-images.githubusercontent.com/100805322/214712598-c768a960-efea-4fbe-93c7-c0bce5f58a88.png)
-
-^Source: https://files.pepperl-fuchs.com/selector_files/navi/productInfo/pds/085298_eng.pdf
-
-To confirm the state of the locking mechanism, there will be an inductive proximity sensor installed on each level. An inductive proximity sensor only detects the presence of metallic objects, making it difficult for tampering. This proximity version of the sensor has a detection range of 4mm, allowing room for error for contact. This also prevents damage being done to the sensors every time the plunger enters the strike plate. 
-
-For the proximity sensors they will also be directly connected to the  PLC. Their connection will remain closed as long as they are in proximity of the lock plunger. The will open their connection with the PLC every time the plunger of the lock is missing from the strike plate.
-
-The proximity sensors will be installed into the sides of the opening of the cabinet doors. They will be directly aligned with the solenoid locks.
-
-### Sensor Schematic
-![image](https://user-images.githubusercontent.com/100805322/215167070-507815db-264e-4fce-a3e6-fe238a426a55.png)
-
-The Schematic above show that **Wire 1** will be connected to ground, **Wire 2** will be connected to the power source, and **Wire 3** will be connected to the output pins of the PLC.
-
-This type of sensor is known as PNP, meaning when it is activated it produces a high signal and outputs it to the PLC, signifying the presence of the lock.
 
 ## Spring Hinges
 To assist the user with identifying their cabinet door, there will be spring hinges installed. This will also help with the locks being moved away from their strike plates, keeping the door unlocked if the user was too slow to open the cabinet door.
@@ -79,7 +67,6 @@ As shown in the diagram above, the hinges will constantly be in the "Opening Ten
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |11.4mm Electromagnetic Solenoid Lock| DC 12V, 1.1A | Locks | a19042500ux0016 | uxcell | 3 | $12.49 | $37.47 |
-|Proximity Inductive Sensor| PNP Normally Open Two-wire| Lock Sensors |NBN4-12GM60-WS-V12 | PEPPERL & FUCHS | 3 | Provided by school | N/A |
 |3.5'' Self-Closing Door Hinges| Stainless Steel Adjustable 3 Pack |Locks|B08YZ2TF1F|Qkenvo| 1 | $27.99 | $27.99 |
-| **Total** | | | | **Total Components** | 5 | **Total Cost** | $65.46 |
+| **Total** | | | | **Total Components** | 4 | **Total Cost** | $65.46 |
 
