@@ -16,19 +16,19 @@ When designing vending machine the main component of the machine is to get input
 
 <div align="center">  
   
-![image](https://user-images.githubusercontent.com/101990738/215674304-b6a2701a-473a-40c3-97a8-9fc48c575680.png | width=600)
+<img src="https://user-images.githubusercontent.com/101990738/215674304-b6a2701a-473a-40c3-97a8-9fc48c575680.png" width="700" height="500" />
   
 _Figure 1: Dimensions of LCD [2]_
   
-![image](https://user-images.githubusercontent.com/101990738/215674342-9ff5b894-4779-438c-9b26-2b5af4de244a.png)
+<img src="https://user-images.githubusercontent.com/101990738/215674342-9ff5b894-4779-438c-9b26-2b5af4de244a.png" width="800" height="400" />
   
 _Figure 2: Ports on LCD [2]_
-
-![image](https://user-images.githubusercontent.com/101990738/215674370-4b099a6e-4a77-46d6-8714-2b03312113cf.png)
+ 
+<img src="https://user-images.githubusercontent.com/101990738/215674370-4b099a6e-4a77-46d6-8714-2b03312113cf.png" width="600" height="600" />
   
 _Figure 3: Connections of LCD with PC [2]_
-  
-![image](https://user-images.githubusercontent.com/101990738/215674430-0e58f4af-66ad-416c-999e-a92762f61f65.png)
+
+<img src="https://user-images.githubusercontent.com/101990738/215674430-0e58f4af-66ad-416c-999e-a92762f61f65.png" width="600" height="600" />
   
 _Figure 4: Schematic of the System_
 
@@ -44,9 +44,9 @@ The vending machines' main interface with the students will be the LCD. It will 
 The fundamental components of a resistive touch screen are two substrate layers that are spaced apart by either an inert gas or air. For the top layer, a flexible film-based substrate is always used, however for the bottom layers, either film or glass may be used as the substrate. On the inner-facing surfaces of the substrate layers, opposite the air gap, a conductive substance is deposited. There are only two operational states for a resistive touch screen: touched and not touched. The conductive substance on the top layer makes electrical contact with the conducting surface of the bottom layer when a user presses down on the top surface, indenting the film in the process. This action generates a voltage differential that the system interprets as a touch. The touch controller analyzes the action after determining the precise X and Y coordinates of this contact. A resistive touch screen is like a mechanical switch as it requires physical force to operate.
   
 <div align="center"> 
+
+<img src="https://user-images.githubusercontent.com/101990738/214468780-78a23f78-cd7d-4418-8cc7-d51eb093ecf4.png" width="400" height="400" />
  
-![image](https://user-images.githubusercontent.com/101990738/214468780-78a23f78-cd7d-4418-8cc7-d51eb093ecf4.png)
-  
  _Figure 5: Working of Resistive Touchscreen [4]_
   
  <div align="left"> 
@@ -70,8 +70,9 @@ The fundamental components of a resistive touch screen are two substrate layers 
 The base of capacitive touch panels is a collection of conductors that generate an electromagnetic field. The user's conductive finger or object pulls or adds charge to the capacitive field, adjusting its strength, as they touch the screen. Based on the sort of input it receives, a touch controller measures the position of this change and then orders the system to do a certain action. Users only need to tap a capacitive touch screen for a device to recognize their input. Contrary to resistive touch displays, there is no need for physical pressure. Capacitive touch screens can support a variety of inputs, with varied motions and additional contact points instructing the system to execute a variety of actions, which is another important distinction from resistive touch technology.
      
 <div align="center"> 
-  
-![image](https://user-images.githubusercontent.com/101990738/214468983-1e4b5614-ddcf-46fc-92c7-82a9cec24fc7.png)
+ 
+<img src="https://user-images.githubusercontent.com/101990738/214468983-1e4b5614-ddcf-46fc-92c7-82a9cec24fc7.png" width="400" height="400" />
+
   
  _Figure 6: Working of Capacitive Touchscreen [4]_
   
