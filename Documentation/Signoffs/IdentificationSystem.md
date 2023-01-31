@@ -6,7 +6,7 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 ## Constraints  
 
-* Barcode Scanners shall be low power and consume no greater than 5 V 0.5 A. This is due to being powered by the miniPC. Common computers only output a max rating of 5 V 0.5 A.  
+* Barcode Scanners shall be low power and consume no greater than 5 V 0.5 A. This is due to being powered by the PC. Common computers only output a max rating of 5 V 0.5 A.  
 ^ Source: https://resources.pcb.cadence.com/blog/2020-what-are-the-maximum-power-output-and-data-transfer-rates-for-the-usb-standards  
 
 * Barcode Scanners shall be able to decode Code-128 barcodes 
@@ -19,19 +19,17 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 * Barcodes shall be of decent quality to follow ISO 15416 standard. Assures that the codes can be read by any scanner  
 
-* The MiniPC shall run on Windows to provide the needed applications for PLC and Database
+* The PC shall run on Windows 10 to provide the needed applications for PLC and Database
 
-* The MiniPC shall occupy no larger than a 6x6 in. space to fit in the machine
+* The PC will provide an ethernet port to communicate with the PLC through a USB NIC (network interface card)  
 
-* The MiniPC will provide an ethernet port to communicate with the PLC through a USB NIC (network interface card)  
-
-* The MiniPC shall include a USB Hub to provide enough ports for modules like the UI system  
+* The PC will provide at minimum an Intel Core i5-8400H or stronger CPU and 16GB RAM to support PLC programs
 
 ## Schematic  
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Barcode-Scanner/images/ID_System.jpg?raw=true)    
 
-The Schematic above shows the layout of the ID subsystem. The MiniPC connects to the PLC through a USB NIC, which is a USB to ethernet adapter, and is powered by the power subsystem. A USB Hub is connected to the MiniPC and allows for more modules. Two USB Voltmeters are used for a Barcode Scanner and RFID Reader. The UI system is connected to the MiniPC through the Hub as well.  
+The Schematic above shows the layout of the ID subsystem. The PC connects to the PLC through a USB NIC, which is a USB to ethernet adapter, and is powered by the power subsystem. A USB Hub is connected to the MiniPC and allows for more modules. Two USB Voltmeters are used for a Barcode Scanner and RFID Reader. The UI system is connected to the MiniPC through the Hub as well.  
 
 ## Analysis  
 
@@ -50,13 +48,15 @@ The voltmeter is able to monitor the Voltage and Current taken by the Module. A 
 
 The scanner will be used at different ranges to determine an appropriate range for a box to be placed and still be correctly read. To verify the code information, the scanner output will be compared with the expected outcome to ensure a box is not mislabeled. There will be 2 barcode scanners. One will be placed inside the machine so boxes can be loaded. Another will be outside the machine with the RFID reader to scan when a student gets a box. All the modules will be fed through a usb hub.  
 
-To remove data from the computer for use, a program will be added to the MiniPC so when the drive is plugged in, the information is downloaded automatically. The port will be behind a locked compartment so students cannot access the data.  
+To remove data from the computer for use, a program will be added to the PC so when the drive is plugged in, the information is downloaded automatically. The port will be behind a locked compartment so students cannot access the data.  
 
-To connect the Computer to the PLC, a USB NIC will be needed to provide an extra Ethernet port. The PLC uses Profinet, which is a communication protocol used to collect information and control a PLC through Profibus. The Computer will use an application called TIA Portal which allows connection and communication with the PLC and functions as a controller. The program will be created in the TIA portal and loaded to the memory on the PLC. TIA portal also provides diagnostics of the PLC through the software. The PLC the team is using is called a SIMATIC S7 1200 from Siemens and requires certain types of memory card. The three options of memory for the PLC differ only by capacity. The three options for memory size are 2, 4, and 24 MB. Currently the team is considering a 4MB memory card for the PLC. Issues have arrived with a USB NIC not being recognized by TIA Portal. If the software does not recognize the NIC, the way to fix the issue is to enter the IP address manually. 
+To connect the Computer to the PLC, a USB NIC will be needed to provide an extra Ethernet port. The PLC uses Profinet, which is a communication protocol used to collect information and control a PLC through Profibus. The Computer will use an application called TIA Portal which allows connection and communication with the PLC and functions as a controller for S7 1200 and 1500 series PLCs. To use the TIA portal software, the PLC needs a minimum of 16 GB of RAM and an Intel Core i5-8400H or stronger CPU. The ThinkCentre provides enough RAM and a strong enough CPU to handle the program. The program will be created in the TIA portal and loaded to the memory on the PLC. TIA portal also provides diagnostics of the PLC through the software. The PLC the team is using is called a SIMATIC S7 1200 from Siemens and requires certain types of memory card. The three options of memory for the PLC differ only by capacity. The three options for memory size are 2, 4, and 24 MB. The team is using a 4MB memory card for the PLC since the 2MB is out of production. Issues have arrived with a USB NIC not being recognized by TIA Portal. If the software does not recognize the NIC, the way to fix the issue is to enter the IP address manually. The TIA Portal SIMATIC Step 7 program allows the use of an OPC UA Server.
 
-^ Source: https://us.profinet.com/profinet-explained/  
+^ Source: https://us.profinet.com/profinet-explained/, https://support.industry.siemens.com/cs/document/109784439/delivery-release-simatic-step-7-professional-basic-v17?dti=0&lc=en-WW  
 
-To connect the PLC to the PC, the TIA Portal software must first be purchased and downloaded. After creating a new project, the device we are using will be added from the available library. The exact CPU is listed in the PLC we received. There is also an option to detect our PLC if we cannot find the device. The portal will use a PN/IE interface and the USB NIC as the adapter for connection. To write values from the sensors, an offset is needed. The common offset of the address is 10. Our team is giving full access to the PLC for the project. Once the PLC is set up, the CPU can be started to run the program. When our program is created, there will need to be a way to give the PLC a command from our code to TIA portal. With the newer versions of TIA portal, python can send data from the program to the portal for the PLC to execute. The data will go through Modbus to reach the TIA portal. Python has libraries such as Pymodbus to connect. This will be used to control the motor and LED indicators. Data can also be read from the PLC if needed. 
+To retain information from the PLC and PC, an OPC UA client from Prosys will be used. The OPC client allows the PLC to connect and send/receive data to a database. The database will be accessible to the PC as well. The database will be the interface between the PC and PLC. The PC will be able to set bits high to activate the PLC, and the PLC will be able to set the bits low after completion of the job. The OPC client is designed to be used with SIMATIC S7 1200 and 1500 series PLCs, and connect to the MySQL database software. The Prosys OPC client can connect directly to the Server created in the TIA portal software and then relay the information to the database for use by the PC and vice versa.  
+
+^ Source: https://downloads.prosysopc.com/opcua/apps/JavaClient/dist/3.2.0-328/Prosys_OPC_UA_Client_UserManual.pdf  
 
 ## BOM  
 
@@ -65,8 +65,7 @@ To connect the PLC to the PC, the TIA Portal software must first be purchased an
 | Eversame 2 in 1 USB Tester | Voltmeter | Identification System | Eversame | 2 | $22.99 | $45.98 |  
 | Barcode Scanner Module | 1D/2D Code Reader | Identification System | Waveshare | 2 | $39.99 | $79.98 |  
 | RFID Reader | 13.56 MHz card reader | Identification System | Vipxyc | 1 | $14.99 | $14.99 |  
-| USB Hub | 7-port | Identification System | IVETTO | 1 | $29.99 | $29.99 | 
-| MiniPC | Windows 10 Pro | Identification System | ATOPNUC | 1 | $129.99 | $129.99 | 
+| ThinkCentre | Windows 10 Pro | Identification System | Lenovo | 1 | $759.00 | $759.00 | 
 | USB Ethernet Adapter | USB NIC | Identification System | CableCreation | 1 | $15.99 | $15.99 |
 | Siemens Memory Card | SIMATIC memory card | Identification System | Allied Electronics / 6ES7-954-8LC03-0AA0 | 1 | $90.96 | $90.96 |  
-|  |  |  | **Components** | 9 | **Total Cost** | $407.88 |  
+|  |  |  | **Components** | 8 | **Total Cost** | $1006.90 |  
