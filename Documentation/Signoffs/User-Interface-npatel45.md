@@ -9,7 +9,7 @@ When designing vending machine the main component of the machine is to get input
   1. UI must not operate at greater than 5 V 0.5 A because of mini-PC output rating [1].
   2. UI must run Windows/Linux environment to run Kiosk application.
   3. Must have HDMI or type C or USB port to connect to mini-PC.
-  4. UI must be at least 7" (diagonal) for readability.
+  4. UI must be at least 15" (diagonal) because of the application getting ran on it.
 
 ### Schematic:
 ---
