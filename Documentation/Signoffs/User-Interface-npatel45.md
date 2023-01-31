@@ -26,7 +26,7 @@ _Figure 2: Ports on LCD [2]_
  
 <img src="https://user-images.githubusercontent.com/101990738/215674370-4b099a6e-4a77-46d6-8714-2b03312113cf.png" width="600" height="600" />
   
-_Figure 3: Connections of LCD with PC [2]_
+_Figure 3: Possible Connections of LCD with PC [2]_
 
 <img src="https://user-images.githubusercontent.com/101990738/215674430-0e58f4af-66ad-416c-999e-a92762f61f65.png" width="600" height="600" />
   
