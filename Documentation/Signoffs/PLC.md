@@ -37,7 +37,7 @@ This will be accomplished by having the GFCI in between our hardware and the pow
 
 Schematic 
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionTwo.jpg) 
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionThree.jpg) 
  
 Above is a draft schematic of how the PLC is going to be implemented into our machine. The LED resistor values can vary depending on what voltage the PLC's output is, and what kind of LED we decide to use. The typical output voltage of a PLC is 24VDC. Of course, this will be further discussed in the signoff for indication, but typical LED forward voltage can be from 1.2 - 3.6 V, with a typical current rating of 10 – 30 mA. The 2.2 kOhm resistors going to the driver are to help prevent current overflow.
 
@@ -47,26 +47,6 @@ The pins on the PLC are also tagged to their respective peripheral, and are spec
 
 ## Analysis 
 
-To determine what LED resistance values are acceptable and expected, edge case analysis can be conducted. The equation for LED resistance is 
-
-$Ω = (Vin – VLED)/ILED$
-
-This is derived from Ohm's law, V = IR, and the circuit for an LED with a series resistor. 
-
-![LEDCircuit](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/LEDAnalysis.jpg) 
-
-Because an LED's forward voltage acts as a set voltage drop, a Kirchhoff Current Loop will yield:
-
-$Vs - R(ILED) - VLED = 0$
-
-Reorganized 
-
-$(Vs – VLED)/ILED = R$
-
-The following table shows the edge cases for resistor values. 
-
-![ResistorValues](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/LEDResistors.jpg)
-
 ![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
 
 The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
@@ -75,6 +55,6 @@ The image above shows how the PLC is going to connect to the motor's driver. The
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| Ethernet Cable | 5-ft, male-to-male, RJ45 Ethernet Cable | PLC | HL-001762 | Amazon Basics | 1 | $6.50 | $6.50 |
+| PL8B LED | 24V AC/DC LED | PLC | PL8B-24 | AlpineTech | 3 | $5.95 | $17.85 |
 | Siemens S7-1200 PLC CPU | 14 Digital Input, 10 Digital Output | PLC | 6ES7214-1BE30-0XB0 | Siemens | 1 | $464.03 | $464.03 |
-| **Total** |  |  |  | **Total Components** | 2 | **Total Cost** | $470.53 |
+| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $481.88 |
