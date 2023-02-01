@@ -45,7 +45,8 @@ For the solenoid locks to be activated, they will require a voltage of 9V-12V an
 In the case power loss and/or blackout there is little to no loss in security, since the locks only release when the solenoid is powered.
 
 ### Solenoid Schematic
-![image](https://user-images.githubusercontent.com/100805322/215167025-d333aa8e-a9c4-4979-93f6-acc4f8bfc8fe.png)
+![image](https://user-images.githubusercontent.com/100805322/216049925-202e53f0-4333-43b1-aca9-5b09d170c1d6.png)
+
 
 The Schematic above shows that the **Red Wire** will be connected directly to the PLC, and the **Black Wire** to ground.
 
