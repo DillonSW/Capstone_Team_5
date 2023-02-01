@@ -45,11 +45,22 @@ For the solenoid locks to be activated, they will require a voltage of 9V-12V an
 In the case power loss and/or blackout there is little to no loss in security, since the locks only release when the solenoid is powered.
 
 ### Solenoid Schematic
-![image](https://user-images.githubusercontent.com/100805322/216049925-202e53f0-4333-43b1-aca9-5b09d170c1d6.png)
+![image](https://user-images.githubusercontent.com/100805322/216149455-d948fcfc-ee5f-4a63-843c-3e4c5a2c5d9b.png)
 
 
 The Schematic above shows that the **Red Wire** will be connected directly to the PLC, and the **Black Wire** to ground.
 
+
+## LEDs
+
+As a visual aid, there will LEDs next to the door present at each level. When the consumer is complete rental process, the door will pop open and the LED next to it will start blinking. While this is not a necessary function, it is a useful feature to assist the consumer.
+
+![image](https://user-images.githubusercontent.com/100805322/216144514-e63cf09c-2e2e-4bf7-96be-157c0e7b8def.png)
+
+^Source: https://www.amazon.com/Alpinetech-Metal-Signal-Indicator-Pilot/dp/B06XXPZBKQ/ref=asc_df_B06XXPZBKQ/?tag=hyprod-20&linkCode=df0&hvadid=309735769572&hvpos=&hvnetw=g&hvrand=6757627046684924141&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-568542064467&region_id=674469&th=1
+
+### LEDs Schematic
+![image](https://user-images.githubusercontent.com/100805322/216149557-b5c392fd-3d06-45e0-ab66-fa65d54c994e.png)
 
 
 ## Spring Hinges
@@ -69,5 +80,6 @@ As shown in the diagram above, the hinges will constantly be in the "Opening Ten
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |11.4mm Electromagnetic Solenoid Lock| DC 12V, 1.1A | Locks | a19042500ux0016 | uxcell | 3 | $12.49 | $37.47 |
 |3.5'' Self-Closing Door Hinges| Stainless Steel Adjustable 3 Pack |Locks|B08YZ2TF1F|Qkenvo| 1 | $27.99 | $27.99 |
-| **Total** | | | | **Total Components** | 4 | **Total Cost** | $65.46 |
+|Signal Indicator Pilot Dash Light| 8mm 5/16" 24V AC/DC LED |Locks| PL8B-24 |Alpinetech | 3 | $5.95 | $17.85 |
+| **Total** | | | | **Total Components** | 7 | **Total Cost** | $83.31 |
 
