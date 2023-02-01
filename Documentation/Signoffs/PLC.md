@@ -32,18 +32,25 @@ This will be accomplished by having the GFCI in between our hardware and the pow
 
 ^ Source: http://rpa.energy.mn/wp-content/uploads/2017/03/IEC-61131-2-Programmable-controllers-Equipment-Requirements-and-Tests.pdf 
 
-* **Must be able to communicate with our PC
-^ This is discussed in other signoffs; we plan to use the ethernet ports on the PLC and a software on our PC similar to Rockwell.
+* **Must be able to communicate with our PC**
+^ (The information about communication are also discussed in the Sensor System signoff)
+To remove data from the computer for use, a program will be added to the PC so when the drive is plugged in, the information is downloaded automatically. The port will be behind a locked compartment so students cannot access the data.
 
-Schematic 
+To connect the Computer to the PLC, a USB NIC will be needed to provide an extra Ethernet port. The PLC uses Profinet, which is a communication protocol used to collect information and control a PLC through Profibus. The Computer will use an application called TIA Portal which allows connection and communication with the PLC and functions as a controller for S7 1200 and 1500 series PLCs. To use the TIA portal software, the PLC needs a minimum of 16 GB of RAM and an Intel Core i5-8400H or stronger CPU. The ThinkCentre provides enough RAM and a strong enough CPU to handle the program. The program will be created in the TIA portal and loaded to the memory on the PLC. TIA portal also provides diagnostics of the PLC through the software. The PLC the team is using is called a SIMATIC S7 1200 from Siemens and requires certain types of memory card. The three options of memory for the PLC differ only by capacity. The three options for memory size are 2, 4, and 24 MB. The team is using a 4MB memory card for the PLC since the 2MB is out of production. Issues have arrived with a USB NIC not being recognized by TIA Portal. If the software does not recognize the NIC, the way to fix the issue is to enter the IP address manually. The TIA Portal SIMATIC Step 7 program allows the use of an OPC UA Server.
+
+^ Source: https://us.profinet.com/profinet-explained/, https://support.industry.siemens.com/cs/document/109784439/delivery-release-simatic-step-7-professional-basic-v17?dti=0&lc=en-WW
+
+To retain information from the PLC and PC, an OPC UA client from Prosys will be used. The OPC client allows the PLC to connect and send/receive data to/from the database. The database will be accessible to the PC as well. The database will be the interface between the PC and PLC. The PC will be able to set bits high to activate the PLC, and the PLC will be able to set the bits low after completion of the job. The OPC client is designed to be used with SIMATIC S7 1200 and 1500 series PLCs, and connect to the MySQL database software. The Prosys OPC client can connect directly to the Server created in the TIA portal software and then relay the information to the database for use by the PC and vice versa.
+
+^ Source: https://downloads.prosysopc.com/opcua/apps/JavaClient/dist/3.2.0-328/Prosys_OPC_UA_Client_UserManual.pdf
+
+## Schematic 
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionThree.jpg) 
  
-Above is a draft schematic of how the PLC is going to be implemented into our machine. The LED resistor values can vary depending on what voltage the PLC's output is, and what kind of LED we decide to use. The typical output voltage of a PLC is 24VDC. Of course, this will be further discussed in the signoff for indication, but typical LED forward voltage can be from 1.2 - 3.6 V, with a typical current rating of 10 – 30 mA. The 2.2 kOhm resistors going to the driver are to help prevent current overflow.
+Above is a draft schematic of how the PLC is going to be implemented into our machine. The LED's in the schematic are rated to receive 24V AC/DC. Because of this there is no need for resistors to limit current to the LEDs.
 
-^ Source: https://www.electronics-tutorials.ws/diode/diode_8.html 
-
-The pins on the PLC are also tagged to their respective peripheral, and are specified as either an input (receiving from peripheral) or output (sending to peripheral) pin. The lock system shown is just for connection references, and will most likely need 2 pins per lock, as the PLC must constantly receive the state of the lock while also being able to increase or lower the voltage to the locks. The labels for the locking system state "Pin 1, 3, or 5" and "Pin 2, 4, or 6" because this same locking system will be used for all 3 locks. This will be discussed in the Security and Locks documentation. The same goes for the Distance Sensors system, and will be discussed in the sensor system documentation.
+The pins on the PLC are also tagged to their respective peripheral. DI a/b are Digital Input ports and DQ a/b are Digital Output ports.
 
 ## Analysis 
 
