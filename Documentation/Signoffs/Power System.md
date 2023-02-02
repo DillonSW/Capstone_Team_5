@@ -72,4 +72,5 @@ We are choosing a subpanel with a width of 15in. This gives us 2.325 to 2.488in 
 | Wire Duct Cover | 1.26in Wide, 1in Depth, PVC, Flush Wire Duct Cover | Power | C1LG6-F | Panduit | 1 | $7.05 | $7.05 |
 | Enclosure | 14H x 16W x 6D (in), Wall-Mount, Single Door, Stainless Steel Clamp Enclosure | Power | SCE-1614CHSNF | Saginaw | 1 | $186.00 | $186.00 |
 | Subpanel | 13H x 15W (in), 14 Gauge, Carbon Steel Subpanel | Power | SCE-16P14 | Saginaw | 1 | $29.50 | $29.50 |
-| **Total** |  |  |  | **Total Components** | 39 | **Total Cost** | $397.94 |
+| Din rail | 19.7-inch, Slotted, Steel Din Rail | Power | 467406 | RS PRO | 1 | $4.99 | $4.99 |
+| **Total** |  |  |  | **Total Components** | 40 | **Total Cost** | $402.93 |
