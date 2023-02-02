@@ -4,7 +4,21 @@ This subsystem's function in our design is to tie all of the subsystems together
 
 ## Constraints
 
-.
+**The 120VAC wall power:**
+* **Will be protected by a GFCI cable**
+
+* **Will go through a circuit breaker as extra protection for our power system**
+^ The 120VAC will feed through a circuit breaker on the din rail, then be sent to the PC and the 120VAC to 24VDC power supply.
+
+* **Will power the PC**
+^ A mini PC or "trashcan PC" may have needed a stepped-down voltage. But because we needed more RAM to run our database and communication servers, a regular PC must be used. These PCs can handle 120VAC input power.
+
+* **Will be stepped down from 120VAC to 24VDC through the use of a power supply block**
+^ This 24VDC will be used to power the PLC and Sensor systems. From there, the PLC will also output 24VDC to control all hardware.
+
+**The 120VAC electrical components:**
+* **Will be secured and protected within an enclosure**
+^ This closure will be grounded and the components will be secured in this panel enclosure to ensure the safety of personnel and the machine.
 
 ## Schematic
 
@@ -14,7 +28,29 @@ Din rail connections, circuit breaker, 120VAC to 24VDC power supply for PLC. Thr
 
 ## Analysis
 
-.
+The din rail and the mounted components must fit within a certain space. We were told by the mechanical team that we will have roughly 35 inches of width to work with. Each component's width will be measured and a subpanel and enclosure will be chosen accordingly.
+
+**Note**
+The Hot/Neutral Terminals were rounded up from 0.244 to 0.25.
+The Ground Terminals were rounded up from 0.24 to 0.25.
+The End Covers were rounded up from 0.0866 inches to 0.1 inch, which is a roughly 15% increase. This gives the end covers a 15% pre-calculation tolerance.
+The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 5.125 inches wide. These calculations are using 5.125 inches.
+^ Source: https://www.automation24.com/siemens-cpu-1215c-6es72151ag400xb0?gclid=CjwKCAiAuOieBhAIEiwAgjCvcgl-DwwSXIfjnvM5ExyufzDYwyMGhMjmCjiGZCoLiI1Ku4H43bPSvRoC6qcQAvD_BwE
+
+
+| Component | Width (inches) | Quantity | Total Width |
+|-----------|-------|----------|------------|
+| Hot/Neutral Terminal Blocks | 0.25 | 11 | 2.75 |
+| Ground Terminal Blocks | 0.25 | 2 | 0.5 |
+| End Covers | 0.1 | 5 | 0.5 |
+| Stop Blocks (End Anchors) | 0.31 | 10 | 3.1 |
+| Circuit Breaker | 0.69 | 1 | 0.69 |
+| PLC | 5.125 | 1 | 5.125 |
+|**Total** |  | **Total Width (inches):** | 12.665 |
+
+Without rounding, the actual measurements came out to be 12.512in.
+
+We are choosing a subpanel with a width of 15in. This gives us 2.325 to 2.488in of clearance. Given how small the terminals are, there is enough room to place 7 to 8 additional terminals if needed.
 
 ## BOM
 
