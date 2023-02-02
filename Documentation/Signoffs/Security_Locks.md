@@ -74,6 +74,13 @@ These hinges will constantly be applying force outward to push the door open, an
 
 As shown in the diagram above, the hinges will constantly be in the "Opening Tension Type (SO)". Constanly trying to push outwards to open the door.
 
+## System 3D Model
+
+![image](https://user-images.githubusercontent.com/100805322/216206659-46c30a8e-67ac-40e4-947e-b54bd4f28dd0.png)
+
+Above is the current iteration of the Lock System 3D model. Sadly the hinges failed to load in at the time of this push. However, the location and mounting of the lock is final. The final 3D design is still in the works and will be updated as soon as possible.
+
+
 
 # BOM
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
