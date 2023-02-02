@@ -61,7 +61,7 @@ To proper cooling to the enclosed electronics, there will be a ventilation syste
 
 ^Source: https://topcoolingfan.com/what-is-cfm-and-how-to-calculate-cfm/
 	
-To find the CFM you need the total volume of the machine is multiplied by how often the air would need to be swapped out over the course of an hour (ACH:). Since CFM is Cubic Feet per Minute, divide the value by 60 to find the CFM.
+To find the CFM you need the total volume of the machine is multiplied by how often the air would need to be swapped out over the course of an hour (ACH: Air Change per Hour). Since CFM is Cubic Feet per Minute, divide the value of ACH by 60 to find the CFM.
 	
 	
 Based on the current 3D model we have on solid works, there is a total of 4386.27 cubic inches or 2.538 cubic feet
@@ -78,7 +78,7 @@ The Wathai EC Axial fan provides the system with an airflow of 43.6 ±10%CFM whi
 ![image](https://user-images.githubusercontent.com/100805322/216234984-543bb107-9850-457c-a734-a0b89fc0692d.png)
 
 	
-### Fan 3D Model Representation
+### Fan 3D Model Airflow Representation
 
 ![image](https://user-images.githubusercontent.com/100805322/216235024-a6837c10-03a4-4dff-b4e3-3374d2794f7a.png)
 
@@ -101,6 +101,7 @@ Since this is a large machine with many moving parts, there will need to be appr
 1926.403(g): Electrical equipment shall not be used unless the manufacturer's name, trademark, or other descriptive marking by which the organization responsible for the product may be identified is placed on the equipment and unless other markings are provided giving voltage, current, wattage, or other ratings as necessary.!
 
 1926.403(b)(2): Listed, labeled, or certified equipment shall be installed and used in accordance with instructions included in the listing, labeling, or certification.
+
 
 
 ## Component Mounting and Placement
