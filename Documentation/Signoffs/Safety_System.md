@@ -81,7 +81,31 @@ The Wathai EC Axial fan provides the system with an airflow of 43.6 ±10%CFM whi
 ### Fan 3D Model Representation
 
 ![image](https://user-images.githubusercontent.com/100805322/216235024-a6837c10-03a4-4dff-b4e3-3374d2794f7a.png)
-	
+
+
+## Clearance
+
+While there are no live parts being exposed, there is an opening on the front side of the machine. In accordance to 1926.403(i)(1)(i), there shall be at minimum of 3 feet of clearance in front of the machine.
+Also in accordance to 1926.403(i)(1)(iii), there will be at least 1 working space accessed by the large door at the front of the machine. This area will give authorized personals access to the internal loading space and the internal components of the machine. The area containing components can NOT be used for storage and must be clear of blockage as stated in 1926.403(i)(1)(ii).
+
+The machine is planned to be placed in the Eastman Lounge. It will be instructed and assured that there is clear access to the machine, with a minimum of 3 ft of space in the front.
+
+
+## Wire Protection
+
+Since this is a large machine with many moving parts, there will need to be appropriate protection for all wiring. While most of the wiring is stored beneath the motor's platform, components like the locks, sensors, and PC accessories will be in areas of high movement and will need extra protection. 
+
+
+## Visual Instructions
+
+1926.403(g): Electrical equipment shall not be used unless the manufacturer's name, trademark, or other descriptive marking by which the organization responsible for the product may be identified is placed on the equipment and unless other markings are provided giving voltage, current, wattage, or other ratings as necessary.!
+
+1926.403(b)(2): Listed, labeled, or certified equipment shall be installed and used in accordance with instructions included in the listing, labeling, or certification.
+
+
+## Component Mounting and Placement
+1926.403(d)(1): Electric equipment shall be firmly secured to the surface on which it is mounted.
+
 
 
 # BOM
