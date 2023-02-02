@@ -20,3 +20,5 @@ Din rail connections, circuit breaker, 120VAC to 24VDC power supply for PLC. Thr
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
+| Terminal Blocks | 32A, 1000V, Feed Through, Screw, 26-10 AWG | Power | 3044102 | Phoenix Contact | 11 | $1.18 | $12.98 |
+| Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 2 | $7.43 | $14.86 |
