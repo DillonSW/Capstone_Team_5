@@ -144,4 +144,4 @@ Wire duct
 |Brushless Cooling Fan| 120V AC Axial Fan | Safety | B07SDDSCY1 | Wathai | 2 | $14.99 | $29.98 |
 |Proximity Inductive Sensor| PNP Normally Open Two-wire| Safety |NBN4-12GM60-WS-V12 | PEPPERL & FUCHS | 3 | Provided by school | N/A |
 |Sticker Paper| Size 8.5''x11" A4, 30 Sheets | Safety | No Part Number Found | Gotega | 1 | $12.99 | $12.99|
-| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $42.97 |
+| **Total** |  |  |  | **Total Components** | 6 | **Total Cost** | $42.97 |
