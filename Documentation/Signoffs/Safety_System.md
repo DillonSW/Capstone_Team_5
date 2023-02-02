@@ -90,6 +90,16 @@ Also in accordance to 1926.403(i)(1)(iii), there will be at least 1 working spac
 
 The machine is planned to be placed in the Eastman Lounge. It will be instructed and assured that there is clear access to the machine, with a minimum of 3 ft of space in the front.
 
+#Placement
+![PXL_20230202_191643378](https://user-images.githubusercontent.com/100805322/216430974-0171839b-f9c9-4305-a3e7-7e309fd65e3b.jpg)
+
+Above is the current ideal placement for the vending device. This might change over the course of development.
+
+![image](https://user-images.githubusercontent.com/100805322/216431570-58efd4dd-cf05-48a7-a2b4-bcf8cd6a2dea.png)
+![image](https://user-images.githubusercontent.com/100805322/216431830-ad46a176-512e-414e-87d6-d484b33755aa.png)
+![image](https://user-images.githubusercontent.com/100805322/216432131-978258a0-4b4d-4acd-bc34-ebd5ef148ce0.png)
+
+Using a meter stick (roughtly 3 feet), the ideal location fits all the requiremnts and specifications of our machine. With a diameter of 3 feet and a clearance of another 3 feet in front, the standards are met for a clutterless work/purchase area.
 
 ## Wire Protection
 
@@ -104,7 +114,23 @@ Since this is a large machine with many moving parts, there will need to be appr
 
 To meet OSHA's requriments there will need to be several markings and documentation included with the final design. There will be a clear marking of the creators (Team 5), the nameplate rating of the voltage and wattage, and safety warnings. There will also be an manual included with the device. The manual will contain detailed schematics of the wiring, troubleshooting assitance, and functionality guides for new operators.
 
+The name plate rating will be simular to the image below. The image is of a vendening machine placed on tech campus. A clear indecator of the developers, model number, and power ratings are marked on the device.
+
+![image](https://user-images.githubusercontent.com/100805322/216433556-ead50a35-9ba2-4f1e-b2b9-20325eae4091.png)
+
 Instead of purchasing specilized markings and stickers, there will be "Sticker Paper". This will allow the team to create custom markings without the restictions of third-party sources.
+
+![image](https://user-images.githubusercontent.com/100805322/216434137-13a0dde4-189f-4e69-acd4-d93c15269a86.png)
+
+^Source: Gotega
+
+
+Since the motor being used is a stepper motor, it will not continuously rotate. Therefor there's not a Horsepower rating required for the device.
+
+>"Since stepper motors do not necessarily rotate continuously, there is no horsepower rating. If they do rotate continuously, they do not even approach a sub-fractional horsepower rated capability. They are truly small low power devices compared to other motors."
+
+^Source: Stepper Motors | AC Motors | Electronics Textbook (allaboutcircuits.com)
+
 
 ## Component Mounting and Placement
 1926.403(d)(1): Electric equipment shall be firmly secured to the surface on which it is mounted.
