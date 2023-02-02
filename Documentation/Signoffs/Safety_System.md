@@ -102,11 +102,14 @@ Since this is a large machine with many moving parts, there will need to be appr
 
 1926.403(b)(2): Listed, labeled, or certified equipment shall be installed and used in accordance with instructions included in the listing, labeling, or certification.
 
+To meet OSHA's requriments there will need to be several markings and documentation included with the final design. There will be a clear marking of the creators (Team 5), the nameplate rating of the voltage and wattage, and safety warnings. There will also be an manual included with the device. The manual will contain detailed schematics of the wiring, troubleshooting assitance, and functionality guides for new operators.
 
+Instead of purchasing specilized markings and stickers, there will be "Sticker Paper". This will allow the team to create custom markings without the restictions of third-party sources.
 
 ## Component Mounting and Placement
 1926.403(d)(1): Electric equipment shall be firmly secured to the surface on which it is mounted.
 
+Wire duct
 
 
 # BOM
@@ -114,4 +117,5 @@ Since this is a large machine with many moving parts, there will need to be appr
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |Brushless Cooling Fan| 120V AC Axial Fan | Safety | B07SDDSCY1 | Wathai | 2 | $14.99 | $29.98 |
 |Proximity Inductive Sensor| PNP Normally Open Two-wire| Safety |NBN4-12GM60-WS-V12 | PEPPERL & FUCHS | 3 | Provided by school | N/A |
-| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $29.98 |
+|Sticker Paper| Size 8.5''x11" A4, 30 Sheets | Safety | No Part Number Found | Gotega | 1 | $12.99 | $12.99|
+| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $42.97 |
