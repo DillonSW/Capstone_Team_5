@@ -32,9 +32,13 @@ The din rail and the mounted components must fit within a certain space. We were
 
 **Note**
 The Hot/Neutral Terminals were rounded up from 0.244 to 0.25.
+
 The Ground Terminals were rounded up from 0.24 to 0.25.
+
 The End Covers were rounded up from 0.0866 inches to 0.1 inch, which is a roughly 15% increase. This gives the end covers a 15% pre-calculation tolerance.
+
 The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 5.125 inches wide. These calculations are using 5.125 inches.
+
 ^ Source: https://www.automation24.com/siemens-cpu-1215c-6es72151ag400xb0?gclid=CjwKCAiAuOieBhAIEiwAgjCvcgl-DwwSXIfjnvM5ExyufzDYwyMGhMjmCjiGZCoLiI1Ku4H43bPSvRoC6qcQAvD_BwE
 
 
