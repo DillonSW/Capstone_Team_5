@@ -57,6 +57,8 @@ Upon reflection the second option is the best because the devices are protected 
 
 ## Schematic  
 
+![SensorSystemConnections](https://user-images.githubusercontent.com/113734069/216687486-de20be0d-29ca-49bc-8b9c-2d8e248c161b.jpg)
+
 ![SpotSensorsSchematic1](https://user-images.githubusercontent.com/113734069/215000045-7e4d8fe0-7820-4f14-8b34-5ba22decf83a.jpg)
 
 
