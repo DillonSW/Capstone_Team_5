@@ -105,6 +105,10 @@ Using a meter stick (roughtly 3 feet), the ideal location fits all the requiremn
 
 Since this is a large machine with many moving parts, there will need to be appropriate protection for all wiring. While most of the wiring is stored beneath the motor's platform, components like the locks, sensors, and PC accessories will be in areas of high movement and will need extra protection. 
 
+For the current design, using cable sleves will help keep wires organizied and add a layer of protection. This particular type works well with the current revoling door design.
+
+![image](https://user-images.githubusercontent.com/100805322/216502553-58e63fc3-8b8b-4762-8084-487afbaadff6.png)
+^Source: Alex Tech
 
 ## Visual Instructions
 
@@ -135,7 +139,7 @@ Since the motor being used is a stepper motor, it will not continuously rotate. 
 ## Component Mounting and Placement
 1926.403(d)(1): Electric equipment shall be firmly secured to the surface on which it is mounted.
 
-Wire duct
+Depentdent on final physical design.
 
 
 # BOM
@@ -144,4 +148,5 @@ Wire duct
 |Brushless Cooling Fan| 120V AC Axial Fan | Safety | B07SDDSCY1 | Wathai | 2 | $14.99 | $29.98 |
 |Proximity Inductive Sensor| PNP Normally Open Two-wire| Safety |NBN4-12GM60-WS-V12 | PEPPERL & FUCHS | 3 | Provided by school | N/A |
 |Sticker Paper| Size 8.5''x11" A4, 30 Sheets | Safety | No Part Number Found | Gotega | 1 | $12.99 | $12.99|
-| **Total** |  |  |  | **Total Components** | 6 | **Total Cost** | $42.97 |
+|Cable Sleeve|25ft - 1/2 inch Cord Protector Wire Loom Tubing| Safety|8541757874|Alex Tech| 1 | $14.99|$14.99|
+| **Total** |  |  |  | **Total Components** | 7 | **Total Cost** | $56.96 |
