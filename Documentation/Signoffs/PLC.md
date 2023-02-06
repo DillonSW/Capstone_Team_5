@@ -58,6 +58,8 @@ The pins on the PLC are also tagged to their respective peripheral. DI a/b are D
 
 The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
 
+![Wiring](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCWiring.jpg)
+
 ## BOM 
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
