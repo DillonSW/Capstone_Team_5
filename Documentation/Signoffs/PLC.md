@@ -52,6 +52,20 @@ The pins on the PLC are also tagged to their respective peripheral. DI a/b are D
 
 ^ This constraint was given to us by the mechanical team as the approximated space that we would have for the electircal components in the back of the vending machine. The following images will show the area that the PLC takes up. The order is length, width, height. The dimensions will also be given below each image in inches and millimeters.
 
+![PLCLength](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCLength.jpg)
+
+PLC Length: 5.125 inches (130.175 mm)
+
+![PLCDepth](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCDepth.jpg)
+
+PLC Depth: 3 inches (76.2 mm)
+
+![PLCHeight](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCHeight.jpg)
+
+PLC Height: 4 inches (101.6 mm)
+
+Given that our constraint is 3x1x1 feet, our PLC does meet this constraint.
+
 ![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
 
 The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
