@@ -20,7 +20,7 @@ The subsystem's role in our design is to control all electronic hardware (locks,
 
 From this, the input module must have at least 6 ports, and the output module must have at least 9 ports 
 
-* **Must be able to fit in a 1 square-foot area**
+* **Must be able to fit in a 3x1x1 foot area**
 
 ^ This is for clearance in the area where we are going to house all of our controllers and electronics, aside the motor. 
 
@@ -32,17 +32,7 @@ This will be accomplished by having the GFCI in between our hardware and the pow
 
 ^ Source: http://rpa.energy.mn/wp-content/uploads/2017/03/IEC-61131-2-Programmable-controllers-Equipment-Requirements-and-Tests.pdf 
 
-* **Must be able to communicate with our PC**
-^ (The information about communication are also discussed in the Sensor System signoff)
-To remove data from the computer for use, a program will be added to the PC so when the drive is plugged in, the information is downloaded automatically. The port will be behind a locked compartment so students cannot access the data.
-
-To connect the Computer to the PLC, a USB NIC will be needed to provide an extra Ethernet port. The PLC uses Profinet, which is a communication protocol used to collect information and control a PLC through Profibus. The Computer will use an application called TIA Portal which allows connection and communication with the PLC and functions as a controller for S7 1200 and 1500 series PLCs. To use the TIA portal software, the PLC needs a minimum of 16 GB of RAM and an Intel Core i5-8400H or stronger CPU. The ThinkCentre provides enough RAM and a strong enough CPU to handle the program. The program will be created in the TIA portal and loaded to the memory on the PLC. TIA portal also provides diagnostics of the PLC through the software. The PLC the team is using is called a SIMATIC S7 1200 from Siemens and requires certain types of memory card. The three options of memory for the PLC differ only by capacity. The three options for memory size are 2, 4, and 24 MB. The team is using a 4MB memory card for the PLC since the 2MB is out of production. Issues have arrived with a USB NIC not being recognized by TIA Portal. If the software does not recognize the NIC, the way to fix the issue is to enter the IP address manually. The TIA Portal SIMATIC Step 7 program allows the use of an OPC UA Server.
-
-^ Source: https://us.profinet.com/profinet-explained/, https://support.industry.siemens.com/cs/document/109784439/delivery-release-simatic-step-7-professional-basic-v17?dti=0&lc=en-WW
-
-To retain information from the PLC and PC, an OPC UA client from Prosys will be used. The OPC client allows the PLC to connect and send/receive data to/from the database. The database will be accessible to the PC as well. The database will be the interface between the PC and PLC. The PC will be able to set bits high to activate the PLC, and the PLC will be able to set the bits low after completion of the job. The OPC client is designed to be used with SIMATIC S7 1200 and 1500 series PLCs, and connect to the MySQL database software. The Prosys OPC client can connect directly to the Server created in the TIA portal software and then relay the information to the database for use by the PC and vice versa.
-
-^ Source: https://downloads.prosysopc.com/opcua/apps/JavaClient/dist/3.2.0-328/Prosys_OPC_UA_Client_UserManual.pdf
+* **Must be able to communicate with our PC and database**
 
 ## Schematic 
 
@@ -53,6 +43,14 @@ Above is a draft schematic of how the PLC is going to be implemented into our ma
 The pins on the PLC are also tagged to their respective peripheral. DI a/b are Digital Input ports and DQ a/b are Digital Output ports.
 
 ## Analysis 
+
+* Constraint: **Must be able to communicate with our PC and database**
+
+^ This constraint is discussed elsewhere. Please refer to the Identification Subsystem.
+
+* Constraint: **Must be able to fit in a 3x1x1 foot area (LxWxH)**
+
+^ This constraint was given to us by the mechanical team as the approximated space that we would have for the electircal components in the back of the vending machine. The following images will show the area that the PLC takes up. The order is length, width, height. The dimensions will also be given below each image in inches and millimeters.
 
 ![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
 
