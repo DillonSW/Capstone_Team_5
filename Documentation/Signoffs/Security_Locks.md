@@ -4,7 +4,7 @@
 This subsystem's role in our design is to secure both the stored devices and internal components of the machine. The main contributor to the security system will be the cabinet doors holding the devices. These cabinet door require digitally controlled locks, allowing access to verified users, while locking out those who would attempt to forcefully steal from the machine.
 
 
-# Constraints
+# Constraints (Working on)
 
 **• The locks must be automated and controlled by the device.**
 
@@ -20,10 +20,6 @@ This subsystem's role in our design is to secure both the stored devices and int
 	• To prevent possible theft of inventory, the locks shall stay locked in all instances of power loss. 
 	• The locks shall only be unlocked if instructed by the internal operations of the device.
 
-![image](https://user-images.githubusercontent.com/100805322/215175968-acb86932-6f9c-450f-9555-0cdeea43c83a.png)
-
-
-^Source: https://www.uxcell.com/12v-11a-114mm-electromagnetic-solenoid-lock-assembly-for-electirc-door-lock-p-1634595.html
 
 ## System 3D Model
 
@@ -40,6 +36,11 @@ When a costumer completes the rental process, the solenoid lock will release and
 # Analysis
 
 ## Locks
+
+![image](https://user-images.githubusercontent.com/100805322/215175968-acb86932-6f9c-450f-9555-0cdeea43c83a.png)
+
+^Source: https://www.uxcell.com/12v-11a-114mm-electromagnetic-solenoid-lock-assembly-for-electirc-door-lock-p-1634595.html
+
 Solenoid Locks use a small electromagnet to control the plunger of the lock. When the solenoid is unpowered, the lock's plunger rest in its extended "locked" state. However, when the solenoid is powered the lock's plunger is pulled back allowing the cabinet door to be opened. This allows us to digitally control the locking state of the cabinet doors. This process is controlled by the PLC.
 
 
