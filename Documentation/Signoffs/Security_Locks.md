@@ -25,7 +25,17 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 ^Source: https://www.uxcell.com/12v-11a-114mm-electromagnetic-solenoid-lock-assembly-for-electirc-door-lock-p-1634595.html
 
+## System 3D Model
 
+![image](https://user-images.githubusercontent.com/100805322/216899990-dc781414-58cf-4e88-948f-b522e6d15db7.png)
+
+
+![image](https://user-images.githubusercontent.com/100805322/216899967-c88bcf9e-e61c-4b12-bbfe-7d03c8625cf0.png)
+
+
+Shown above is the current design of one of the cabinet doors. The front of the machine will have 3 cabinet doors, one on each level of the rotating platforms. They act as the sole consumer accesspoint and protect the contents of the cabinet. Each door comes with a solenoid lock and an adjustable hinge.
+
+When a costumer completes the rental process, the solenoid lock will release and the spring-loaded hinge will push the door open. This allows the user to take the contents of the cabinet, their newly registered device. The user would then push the door close, returning the door back to it's original state. (Note: The machine can **NOT** continue any operation until the door is closed. For more see the [Safety System](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Safety-System/Documentation/Signoffs/Safety_System.md).)
 
 # Analysis
 
@@ -74,11 +84,7 @@ These hinges will constantly be applying force outward to push the door open, an
 
 As shown in the diagram above, the hinges will constantly be in the "Opening Tension Type (SO)". Constanly trying to push outwards to open the door.
 
-## System 3D Model
 
-![image](https://user-images.githubusercontent.com/100805322/216206659-46c30a8e-67ac-40e4-947e-b54bd4f28dd0.png)
-
-Above is the current iteration of the Lock System 3D model. Sadly the hinges failed to load in at the time of this push. However, the location and mounting of the lock is final. The final 3D design is still in the works and will be updated as soon as possible.
 
 
 
