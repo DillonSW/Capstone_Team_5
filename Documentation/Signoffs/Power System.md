@@ -72,5 +72,9 @@ We are choosing a subpanel with a width of 15in. This gives us 2.325 to 2.488in 
 | Wire Duct Cover | 1.26in Wide, 1in Depth, PVC, Flush Wire Duct Cover | Power | C1LG6-F | Panduit | 1 | $7.05 | $7.05 |
 | Enclosure | 14H x 16W x 6D (in), Wall-Mount, Single Door, Stainless Steel Clamp Enclosure | Power | SCE-1614CHSNF | Saginaw | 1 | $186.00 | $186.00 |
 | Subpanel | 13H x 15W (in), 14 Gauge, Carbon Steel Subpanel | Power | SCE-16P14 | Saginaw | 1 | $29.50 | $29.50 |
-| Din rail | 19.7-inch, Slotted, Steel Din Rail | Power | 467406 | RS PRO | 1 | $4.99 | $4.99 |
-| **Total** |  |  |  | **Total Components** | 40 | **Total Cost** | $402.93 |
+| Din Rail | 19.7-inch, Slotted, Steel Din Rail | Power | 467406 | RS PRO | 1 | $4.99 | $4.99 |
+| Power Cord | GFCI, 9-ft Length, 16 AWG, 15A, 120VAC, IEC320 Power Cable | Power | 2XYT2 | NEMA | 1 | $47.84 | $47.84 |
+| Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 1 | $26.11 | $26.11 |
+| Cable Entry Plate | 35 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/35 | Icotek | 1 | $26.11 | $26.11 |
+| M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49|
+| **Total** |  |  |  | **Total Components** | 44 | **Total Cost** | $509.48 |
