@@ -6,7 +6,7 @@ This Subsystem's role in the team's design is to scan barcodes on school devices
 
 ## Constraints  
 
-### Constraints are numbered from C1 to C9 ###  
+#### Constraints are numbered from C1 to C9 ####  
 
 * Barcode Scanners shall be low power and consume no greater than 5 V 0.5 A. This is due to being powered by the PC. Common computers only output a max rating of 5 V 0.5 A.  
 ^ Source: https://resources.pcb.cadence.com/blog/2020-what-are-the-maximum-power-output-and-data-transfer-rates-for-the-usb-standards  
