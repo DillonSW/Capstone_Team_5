@@ -61,7 +61,7 @@ We are choosing a subpanel with a width of 15in. This gives us 2.325 to 2.488in 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 | Terminal Blocks | 32A, 1000V, Feed Through, Screw, 26-10 AWG | Power | 3044102 | Phoenix Contact | 11 | $1.18 | $12.98 |
-| Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 2 | $7.43 | $14.86 |
+| Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 3 | $7.43 | $22.29 |
 | Terminal Covers | End Cover Brackets | Power | 3047028 | Phoenix Contact | 5 | $0.82 | $4.10 |
 | 2-Block Jumpers | Flat Pin Cross Connection, 2 Positions | Power | 3030161 | Phoenix Contact | 2 | $0.88 | $1.76 |
 | 3-Block Jumpers | Flat Pin Cross Connection, 3 Positions | Power | 3030174 | Phoenix Contact | 3 | $1.80 | $5.40 |
@@ -77,4 +77,4 @@ We are choosing a subpanel with a width of 15in. This gives us 2.325 to 2.488in 
 | Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 1 | $26.11 | $26.11 |
 | Cable Entry Plate | 35 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/35 | Icotek | 1 | $26.11 | $26.11 |
 | M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49|
-| **Total** |  |  |  | **Total Components** | 44 | **Total Cost** | $509.48 |
+| **Total** |  |  |  | **Total Components** | 44 | **Total Cost** | $516.91 |
