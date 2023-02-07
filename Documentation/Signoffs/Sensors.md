@@ -136,5 +136,6 @@ The sensors will be able to be powered and send signals through female-end cord 
 ## BOM  
 
 | Name of Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Totel|
+
 | | | | | | | | |
 
