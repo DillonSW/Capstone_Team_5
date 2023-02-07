@@ -62,7 +62,7 @@ Upon reflection the second option is the best because the devices are protected 
 ![SpotSensorsSchematic1](https://user-images.githubusercontent.com/113734069/215000045-7e4d8fe0-7820-4f14-8b34-5ba22decf83a.jpg)
 
 
-We have designated three I/O pins—7, 8, and 9—of our PLC module to input signals from our sensors. Each of the three sensors has three wires; the signal wires (SDA) will be connected to their respective input pin of the PLC; the wires powering the sensors (AVDD) will be connected to terminal blocks--jumped together--to connect directly to the positive voltage wire of the power supply; the neutral wires of the sensors (NTRL) will also be connected to terminal blocks that are jumped together. As depicted in the diagram the top level, middle level, and bottom level sensor will be connected to pin 9, pin 8, and pin 7 of the PLC respectively. 
+We have designated three I/O pins—10, 11, and 12—of our PLC module to input signals from our sensors. Each of the three sensors has three wires; the signal wires (SDA) will be connected to their respective input pin of the PLC; the wires powering the sensors (AVDD) will be connected to terminal blocks--jumped together--to connect directly to the positive voltage wire of the power supply; the neutral wires of the sensors (NTRL) will also be connected to terminal blocks that are jumped together. As depicted in the diagram the top level, middle level, and bottom level sensor will be connected to pin 10, pin 11, and pin 12 of the PLC respectively. 
 
   
 
@@ -76,7 +76,7 @@ There are hundreds of different sensor options to choose from, so we deliberated
 
   
 
-**Spot Sensors:**     
+**Spot Sensor Analysis:**     
 
   
 
@@ -114,27 +114,27 @@ SP1 = Set Max Sensing Distance
 
 ![Background_Suppression](https://user-images.githubusercontent.com/113734069/203670924-26edff27-894f-49f0-8af1-3afa87baff16.jpg) 
 
-  
+**ifm Spot Sensor analysis:**  
 
-We have identified the photoelectric diffuse reflection spot sensor with background suppression to be the most ideal sensor to use for our vending machine sensor system. In particular we have chosen to use the ifm OGH580; this sensor has an operating voltage of 10-30V DC and has a sensing range of up to 200mm—This range is sufficient for covering the distance between the device in the compartment and the sensor. The length of the compartment is 292mm, but the device box is 200mm meaning that if the device box is pushed to the back wall of the compartment there will be 92mm of distance between it and the edge of the compartment of the dial. The sensor mount is positioned 8mm outside of the dial but inside of the door. This means that at most the device box will be at a distance half of the sensors maximum range (100mm). If placed out of and pointing at the compartment inside the vending machine, this sensor will be sufficient in identifying whether a device is present or not. The sensor will emit photons which will reflect off of a device or the back wall and return to the sensor. Based on the time of flight calculated distance the sensor will use that information to determine if a device is present in or absent from the compartment. The sensor will be set to send a one value through the signal wire to the PLC if there is a device presently sensed, and the sensor will send a zero value through the signal wire to the PLC if there is not a device currently present. 
+We have identified the photoelectric diffuse reflection spot sensor with background suppression to be the most ideal sensor to use for our vending machine sensor system. In particular we have chosen to use the ifm OGH580; this sensor has an operating voltage of 10-30V DC and has a sensing range of up to 200mm.
 
- This sensor is also certainly of suitable size to fit inside of the vending machine; it would not pose an obstacle to stocking or obtaining a device from the compartment. On top of that, because we will only be using three one-bit signal sensors, we will only have to allocate three I/O pins of the PLC module for our sensor system. Lastly, the wiring of three sensors is practicably achievable opposed to having a sensor per each compartment.  
+The sensor will emit photons which will reflect off of a device or the back wall and return to the sensor. Based on the time of flight calculated distance the sensor will use that information to determine if a device is present in or absent from the compartment. The sensor will be set to send a one value through the signal wire to the PLC if there is a device presently sensed, and the sensor will send a zero value through the signal wire to the PLC if there is not a device currently present.
+
+This sensor is also certainly of suitable size to fit inside of the vending machine; it would not pose an obstacle to stocking or obtaining a device from the compartment. On top of that, because we will only be using three one-bit signal sensors, we will only have to allocate three I/O pins of the PLC module for our sensor system. Lastly, the wiring of three sensors is practicably achievable opposed to having a sensor per each compartment.  
 
 
-The sensors will be able to be powered and send signals through female-end cord sets connecting the sensors to the power supply and PLC. The ifm EVC001 is a two meter long cord that is made to work with this spot sensor. Two meters is of sufficient length to connect all of our sensors to both the PLC and power supply. Inside the cable jacket of this cord are three wires: a neutral, power, and signal wire. The power wires will be connected to three terminal blocks that are jumped together and connected to the power supply high side. The neutral wires will be connected to three terminal blocks that are jumped together and connected to the neutral wire of the power supply. The signal wires will be connected straight to the 7, 8, and 9 I/O pins of the PLC—see the schematic for exact layout. 
+**ifm Spot Sensor Range Analysis:**  
+
+The length of the compartment is 292mm, but the device box is 200mm meaning that if the device box is pushed to the back wall of the compartment there will be 92mm of distance between it and the edge of the compartment of the dial. The sensor mount is positioned 8mm outside of the dial but inside of the door. This means that at most the device box will be at a distance half of the sensors maximum range (100mm). If placed out of and pointing at the compartment inside the vending machine, this sensor will be sufficient in identifying whether a device is present or not.
+
+**ifm Spot Sensor Connection Analysis:**  
+
+The sensors will be able to be powered and send signals through female-end cord sets connecting the sensors to the power supply and PLC. The ifm EVC001 is a two meter long cord that is made to work with this spot sensor. Two meters is of sufficient length to connect all of our sensors to both the PLC and power supply. Inside the cable jacket of this cord are three wires: a neutral, power, and signal wire. The power wires will be connected to three terminal blocks that are jumped together and connected to the power supply high side. The neutral wires will be connected to three terminal blocks that are jumped together and connected to the neutral wire of the power supply. The signal wires will be connected straight to the 10, 11, and 12 I/O pins of the PLC—see the schematic for exact layout. 
 
   
 
 ## BOM  
 
-  
+| Name of Item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Totel|
+| | | | | | | | |
 
-| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |  
-
-|--------------|-------------|-----------|-------------|--------------|----------|-------|-------|  
-
-| OGH580 | Diffuse Reflection sensor with background suppression | Sensors | OGH-FPKG/US/CUBE  | ifm Efector inc. | 3 | $87.12 | $261.36|  
-
-| EVC001 | Female Cord set | Sensors | ADOGH040MSS0002H04 | ifm Efector inc | 3 | $11.50 | $34.50 | 
-
-| **Total** |  |  |  | **Total Components** | 6 | **Total Cost** | $295.86 |  
