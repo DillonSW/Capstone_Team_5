@@ -72,7 +72,7 @@ The image above shows how the PLC is going to connect to the motor's driver. The
 
 ![Wiring](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCWiring.jpg)
 
-The image above shows how the PLC is wired internally to its inputs and outputs, and how it will be powered. The diagram shows that from a 24VDC power supply, the V- terminal will be connected to both "M" (which can be the local ground/neutral) and the PLC's ground terminal. The V+ side will only be connected to "L".
+The image above shows how the PLC is wired internally to its inputs and outputs, and how it will be powered. The diagram shows that from a 24VDC power supply, the V- terminal will be connected to "M". The reason there are two wires is because the V- can act as the "ground" of the power supply, however it is still treated as V- and not common ground for the system. The V+ side will only be connected to "L".
 
 ^ Source: file:///C:/Users/ryanr/Downloads/technicalinfodoc_2702079%20(6).pdf
 
