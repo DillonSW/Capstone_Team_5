@@ -70,6 +70,8 @@ Given that our constraint is 3x1x1 feet, our PLC does meet this constraint.
 
 The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
 
+^ Source: https://youtu.be/8hoBHmvRutA (This video is from an automation channel and shows, in great detail, how to connect a PLC to a stpper motor driver)
+
 ![Wiring](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCWiring.jpg)
 
 The image above shows how the PLC is wired internally to its inputs and outputs, and how it will be powered. The diagram shows that from a 24VDC power supply, the V- terminal will be connected to "M". The reason there are two wires is because the V- can act as the "ground" of the power supply, however it is still treated as V- and not common ground for the system. The V+ side will only be connected to "L".
