@@ -38,9 +38,11 @@ This will be accomplished by having the GFCI in between our hardware and the pow
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionFive.jpg) 
  
-Above is a draft schematic of how the PLC is going to be implemented into our machine. The LED's in the schematic are rated to receive 24V AC/DC. Because of this there is no need for resistors to limit current to the LEDs.
+Above is a schematic of how the PLC is going to be implemented into our machine. The LED's in the schematic are rated to receive 24V AC/DC. Because of this there is no need for resistors to limit current to the LEDs.
 
 The pins on the PLC are also tagged to their respective peripheral. DI a/b are Digital Input ports and DQ a/b are Digital Output ports.
+
+**Discussed further in the power system signoff**: In order for all of the components on the 120VAC side to be protected at x1.25 their current rating, there must be at least 28A protected. The closest available circuit breaker that was found was a 32A breaker. This will ensure that the 120VAC side components will be protected in the event of a short circuit.
 
 ## Analysis 
 
