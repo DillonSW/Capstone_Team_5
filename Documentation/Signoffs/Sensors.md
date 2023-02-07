@@ -57,9 +57,9 @@ Upon reflection the second option is the best because the devices are protected 
 
 ## Schematic  
 
-![SensorSystemConnections](https://user-images.githubusercontent.com/113734069/216687486-de20be0d-29ca-49bc-8b9c-2d8e248c161b.jpg)
+![SensorSchemTwo](https://user-images.githubusercontent.com/113734069/217380138-199f1886-35f7-4af5-aea6-7a4fc8a7bff7.jpg)
 
-![SpotSensorsSchematic1](https://user-images.githubusercontent.com/113734069/215000045-7e4d8fe0-7820-4f14-8b34-5ba22decf83a.jpg)
+![SensorCloseUp](https://user-images.githubusercontent.com/113734069/217380154-e397efea-276e-494a-b7a1-fea440842e03.jpg)
 
 
 We have designated three I/O pins—10, 11, and 12—of our PLC module to input signals from our sensors. Each of the three sensors has three wires; the signal wires (SDA) will be connected to their respective input pin of the PLC; the wires powering the sensors (AVDD) will be connected to terminal blocks--jumped together--to connect directly to the positive voltage wire of the power supply; the neutral wires of the sensors (NTRL) will also be connected to terminal blocks that are jumped together. As depicted in the diagram the top level, middle level, and bottom level sensor will be connected to pin 10, pin 11, and pin 12 of the PLC respectively. 
