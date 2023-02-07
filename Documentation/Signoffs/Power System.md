@@ -49,16 +49,16 @@ The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 
 | Component | Width (inches) | Quantity | Total Width |
 |-----------|-------|----------|------------|
 | Hot/Neutral Terminal Blocks | 0.25 | 11 | 2.75 |
-| Ground Terminal Blocks | 0.25 | 2 | 0.5 |
+| Ground Terminal Blocks | 0.25 | 3 | 0.75 |
 | End Covers | 0.1 | 5 | 0.5 |
 | Stop Blocks (End Anchors) | 0.31 | 10 | 3.1 |
 | Circuit Breaker | 0.69 | 1 | 0.69 |
 | PLC | 5.125 | 1 | 5.125 |
-|**Total** |  | **Total Width (inches):** | 12.665 |
+|**Total** |  | **Total Width (inches):** | 12.915 |
 
-Without rounding, the actual measurements came out to be 12.512in.
+Without rounding, the actual measurements came out to be 12.756in.
 
-We are choosing a subpanel with a width of 15in. This gives us 2.325 to 2.488in of clearance. Given how small the terminals are, there is enough room to place 7 to 8 additional terminals if needed.
+We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.244in of clearance. Given how small the terminals are, there is enough room to place 6 to 7 additional terminals if needed.
 
 ## BOM
 
