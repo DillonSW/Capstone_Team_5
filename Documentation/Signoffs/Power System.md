@@ -8,16 +8,20 @@ This subsystem's function in our design is to tie all of the subsystems together
 * **Will be protected by a GFCI cable**
 
 * **Will go through a circuit breaker as extra protection for our power system**
+
 ^ The 120VAC will feed through a circuit breaker on the din rail, then be sent to the PC and the 120VAC to 24VDC power supply.
 
 * **Will power the PC**
-^ A mini PC or "trashcan PC" may have needed a stepped-down voltage. But because we needed more RAM to run our database and communication servers, a regular PC must be used. These PCs can handle 120VAC input power.
+
+^ A mini PC or "trashcan PC" may have needed a stepped-down voltage. **But because we needed more RAM to run our database and communication servers, a regular PC must be used. These PCs can handle 120VAC input power.**
 
 * **Will be stepped down from 120VAC to 24VDC through the use of a power supply block**
+
 ^ This 24VDC will be used to power the PLC and Sensor systems. From there, the PLC will also output 24VDC to control all hardware.
 
 **The 120VAC electrical components:**
 * **Will be secured and protected within an enclosure**
+
 ^ This closure will be grounded and the components will be secured in this panel enclosure to ensure the safety of personnel and the machine.
 
 ## Schematic
