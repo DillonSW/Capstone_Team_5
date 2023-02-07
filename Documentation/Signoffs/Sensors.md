@@ -133,7 +133,7 @@ The sensors will be able to be powered and send signals through female-end cord 
 
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|  
 
-| OGH580 | Diffuse Reflection sensor with background suppression | Sensors |OGH-FPKG/US/CUBE  | ifm Efector inc. | 3 | $87.12 | $261.36|  
+| OGH580 | Diffuse Reflection sensor with background suppression | Sensors | OGH-FPKG/US/CUBE  | ifm Efector inc. | 3 | $87.12 | $261.36|  
 
 | EVC001 | Female Cord set | Sensors | ADOGH040MSS0002H04 | ifm Efector inc | 3 | $11.50 | $34.50 | 
 
