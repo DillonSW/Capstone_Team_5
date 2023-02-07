@@ -8,9 +8,9 @@ When designing vending machine the main component of the machine is to get input
  
   1. UI must not operate at greater than 100 W because of PC output rating of USB-C [1].
   2. UI must run Windows/Linux environment to run Kiosk application.
-  3. Must have HDMI or type C or USB port to connect to mini-PC.
+  3. Must have HDMI or type C or USB port to connect to PC.
   4. UI must be at least 15.6" (diagonal) because of the TIA (Totally Integrated Automation) Portal application.
-
+  5. UI must be anchored to prevent theft problems.
 ### Schematic:
 ---
 
@@ -87,13 +87,15 @@ The base of capacitive touch panels is a collection of conductors that generate 
     - Expensive compared to resistive touchscreen
     - Because it is highly sensitive, even the slightest touch can cause it to activate, which could result in inadvertent contact.
 
-It is evident from the finding that Capacitive touch screens outperform resistive touch displays in a variety of ways. Although more expensive, capacitive touch displays offer advantages that surpass the price, making them the better choice. Additionally, since it is used for user input it must also have sufficient screen size otherwise it will be frustrating to use that is why our team feels that 15" diagonal display measurement would be sufficient for user interaction and also the application that we will be writing to test the User Interface for the selection of different boards. Additionally, since the PC supports USB-C (Universal Serial Bus) our team has decided that a USB-C interface would work better because of two main reasons:-
+It is evident from the finding that Capacitive touch screens outperform resistive touch displays in a variety of ways. Although more expensive, capacitive touch displays offer advantages that surpass the price, making them the better choice. Additionally, since it is used for user input and to meet the constaint #4 of running TIA (Totally Integrated Application) portal the LCD has to meet the 15.6" diagonal display measurement. Also,since the LCD only need power a little more than 10 W and the PC can provide more than what is needed,it satisifes the constraint #1.Additionally, since the PC supports USB-C (Universal Serial Bus) our team has decided that a USB-C interface would work better because of two main reasons (satisifies Constraint #3):-
  
  1. The USB Type-C port would be used to supply the LCD with the power it needs (from PC).
  
  2. Type-C offers a single interface for both power and signal. As a result, it reduces noise and avoids using two cords.
- 
-So to meet all the above requirements the following decision was made:
+  
+ Additonally, since the PC (ThinkCentre) that our team is going to proceed with supports Windows, and the LCD does get along with that satisfies constraint #2.And, to finally prevent LCD from getting stolen it will be mounted on wall or on top of machine using a Touch Nexus stand.
+  
+ So to meet all the above requirements the following decision was made:
 
 <div align="center"> 
   
@@ -107,6 +109,7 @@ So to meet all the above requirements the following decision was made:
 | Diagonal Size   | 15.6"                                                   |
 | Consumption     | 8.6 W (Typical)        10.5 W (Max)                     |
 | Documentation   | Good                                                    |
+| Mount Stand     | Touch Nexus                                             |
 
 <div align="left">
   
@@ -121,8 +124,9 @@ So to meet all the above requirements the following decision was made:
 | USB-C to USB-C cable  | (-) Included         |
 | USB-C to USB-A cable  | (-) Included         |
 | Mini-HDMI cable       | (-) Included         |
-| Passive Touch Pen     | (-) Included         | 
-| **Total**             | **$269.99**           |
+| Passive Touch Pen     | (-) Included         |
+| Touch Nexus Stand     | $89.95               | 
+| **Total**             | **$359.94**          |
  
 <div align="left">
   
@@ -131,6 +135,8 @@ So to meet all the above requirements the following decision was made:
 [1] https://www.bestbuy.com/site/viewsonic-15-6-lcd-fhd-monitor-displayport-vga-usb-hdmi/6428015.p?skuId=6428015&ref=NS&loc=101
  
 [2] https://www.viewsonic.com/us/td1655-15-6-portable-1080p-ips-touch-monitor-with-60w-usb-c-and-mini-hdmi.html
+ 
+[3] https://www.bosstab.com/tablet-stands/touch/nexus-wall-mount/?attribute_pa_color=black&utm_medium=ppc&utm_term=&utm_campaign=Bosstab+US+%7C+Google+Shopping+%7C+TS&utm_source=adwords&hsa_kw=&hsa_tgt=pla-1297402701073&hsa_acc=3444807616&hsa_net=adwords&hsa_src=g&hsa_ver=3&hsa_cam=16462900280&hsa_grp=129179469490&hsa_ad=585550125095&hsa_mt=&gclid=EAIaIQobChMIjveqkvqB_QIVfSCtBh0MOAovEAQYASABEgLo4_D_BwE
 
  
 ### References: 
