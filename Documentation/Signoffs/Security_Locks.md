@@ -23,7 +23,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 ## System 3D Model
 
-![image](https://user-images.githubusercontent.com/100805322/216899990-dc781414-58cf-4e88-948f-b522e6d15db7.png)
+![image](https://user-images.githubusercontent.com/100805322/217455449-d2c761a1-c7b3-4a8a-8719-1d96ef04a43b.png)
 
 
 ![image](https://user-images.githubusercontent.com/100805322/216899967-c88bcf9e-e61c-4b12-bbfe-7d03c8625cf0.png)
@@ -61,6 +61,24 @@ In the case power loss and/or blackout there is little to no loss in security, s
 
 The Schematic above shows that the **Red Wire** will be connected directly to the PLC, and the **Black Wire** to ground.
 
+## Proximity Sensors
+As both a safety precaution and security measure, there needs to be a confirmation of the door being closed and the lock being locked.
+
+![image](https://user-images.githubusercontent.com/100805322/216234552-8831e31a-b840-447b-9390-d6f44b8ad6f9.png)
+
+
+^Source: https://files.pepperl-fuchs.com/selector_files/navi/productInfo/pds/085298_eng.pdf
+
+
+To confirm the state of the locking mechanism, there will be an inductive proximity sensor installed on each level. An inductive proximity sensor only detects the presence of metallic objects, making it difficult for tampering. This proximity version of the sensor has a detection range of 4mm, allowing room for error for contact. This also prevents damage being done to the sensors every time the plunger enters the strike plate.
+The proximity sensors they will also be directly connected to the PLC. Their connection will remain open as long as they are in proximity of the lock plunger. They will close their connection with the PLC every time the plunger of the lock is missing from the strike plate.
+
+The proximity sensors will be installed into the sides of the opening of the cabinet doors. They will be directly aligned with the solenoid locks.
+
+### Sensor Schematic
+
+![image](https://user-images.githubusercontent.com/100805322/216234644-d1355bb9-bc2b-4a79-9722-932f4204abf6.png)
+
 
 ## LEDs
 
@@ -93,7 +111,8 @@ As shown in the diagram above, the hinges will constantly be in the "Opening Ten
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 |11.4mm Electromagnetic Solenoid Lock| DC 12V, 1.1A | Locks | a19042500ux0016 | uxcell | 3 | $12.49 | $37.47 |
+|Proximity Inductive Sensor| PNP Normally Open Two-wire| Safety |NBN4-12GM60-WS-V12 | PEPPERL & FUCHS | 3 | Provided by school | N/A |
 |3.5'' Self-Closing Door Hinges| Stainless Steel Adjustable 3 Pack |Locks|B08YZ2TF1F|Qkenvo| 1 | $27.99 | $27.99 |
 |Signal Indicator Pilot Dash Light| 8mm 5/16" 24V AC/DC LED |Locks| PL8B-24 |Alpinetech | 3 | $5.95 | $17.85 |
-| **Total** | | | | **Total Components** | 7 | **Total Cost** | $83.31 |
+| **Total** | | | | **Total Components** | 10 | **Total Cost** | $83.31 |
 
