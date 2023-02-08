@@ -6,19 +6,17 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 # Constraints (Working on)
 
-**• The locks must be automated and controlled by the device.**
-
-	• Since this machinery is will be ran autonomously and unmanned, the locks must be controlled without the need of human assistance
- 
-**• The locks must be able to resist the forced entry of human force.**
+**• The locks shall resist the force of resisting spring force of internal spring hinges.**
 
 	• The main purpose of the machine is to /contain and distribute valuable technology. 
 	• Knowing that there might be attempts to break in, the locks must be strong enough to resist the average human's strength.
 	
-**• The cabinet doors must remain lock in the case of power outage/blackout.**
+**• The locks shall remain extended when power is lost.**
 
 	• To prevent possible theft of inventory, the locks shall stay locked in all instances of power loss. 
 	• The locks shall only be unlocked if instructed by the internal operations of the device.
+	
+**• The inductace sensors shall inform controlling PLC of lock status at all times.**
 
 
 ## System 3D Model
@@ -29,9 +27,9 @@ This subsystem's role in our design is to secure both the stored devices and int
 ![image](https://user-images.githubusercontent.com/100805322/216899967-c88bcf9e-e61c-4b12-bbfe-7d03c8625cf0.png)
 
 
-Shown above is the current design of one of the cabinet doors. The front of the machine will have 3 cabinet doors, one on each level of the rotating platforms. They act as the sole consumer accesspoint and protect the contents of the cabinet. Each door comes with a solenoid lock and an adjustable hinge.
+Shown above is the current design of one of the cabinet doors. The front of the machine will have 3 cabinet doors, one on each level of the rotating platforms. They act as the sole consumer accesspoint and protect the contents of the cabinet. Each door comes with a solenoid lock, inductance sensor, and an adjustable hinge.
 
-When a costumer completes the rental process, the solenoid lock will release and the spring-loaded hinge will push the door open. This allows the user to take the contents of the cabinet, their newly registered device. The user would then push the door close, returning the door back to it's original state. (Note: The machine can **NOT** continue any operation until the door is closed. For more see the [Safety System](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Safety-System/Documentation/Signoffs/Safety_System.md).)
+When a costumer completes the rental process, the solenoid lock will release and the spring-loaded hinge will push the door open. This allows the user to take the contents of the cabinet, their newly registered device. The user would then push the door close, returning the door back to it's original state. This confirmed by inductance sensors placed at the strike plate of every lock. (Note: The machine can **NOT** continue any operation until the door is closed. For more see the [Safety System](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Safety-System/Documentation/Signoffs/Safety_System.md).)
 
 # Analysis
 
@@ -87,6 +85,8 @@ As a visual aid, there will LEDs next to the door present at each level. When th
 ![image](https://user-images.githubusercontent.com/100805322/216144514-e63cf09c-2e2e-4bf7-96be-157c0e7b8def.png)
 
 ^Source: https://www.amazon.com/Alpinetech-Metal-Signal-Indicator-Pilot/dp/B06XXPZBKQ/ref=asc_df_B06XXPZBKQ/?tag=hyprod-20&linkCode=df0&hvadid=309735769572&hvpos=&hvnetw=g&hvrand=6757627046684924141&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1025954&hvtargid=pla-568542064467&region_id=674469&th=1
+
+After the door has been confirmed to be closed, the LED will turn off and return to standby mode.
 
 ### LEDs Schematic
 ![image](https://user-images.githubusercontent.com/100805322/216149557-b5c392fd-3d06-45e0-ab66-fa65d54c994e.png)
