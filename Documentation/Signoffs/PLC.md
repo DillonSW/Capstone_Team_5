@@ -36,7 +36,7 @@ This will be accomplished by having the GFCI in between our hardware and the pow
 
 ## Schematic 
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionFive.jpg) 
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionSix.jpg) 
  
 Above is a schematic of how the PLC is going to be implemented into our machine. The LED's in the schematic are rated to receive 24V AC/DC. Because of this there is no need for resistors to limit current to the LEDs.
 
