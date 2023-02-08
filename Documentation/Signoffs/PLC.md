@@ -10,13 +10,11 @@ The subsystem's role in our design is to control all electronic hardware (locks,
 
 ^ These are for the 3 door locks and sensors in order to be read by the PLC.
 
-* **Must have at least 6 Digital Output pins**
+* **Must have at least 9 Digital Output pins**
 
-^ These are also for the 3 door lock and sensors in order to be commanded by the PLC.
+^ These are also for the 3 door lock and sensors in order to be commanded by the PLC, in addition to the motor driver's Pulse (PUL) and Direction (DIR) ports.
 
-* **Must have at least 3 24VDC Outputs**
-
-^ These are going to be used for the motor driver.
+^ Because all of the locks, sensors, and motor driver ports take 24VDC, the Digital Output (DO) ports will suffice for PLC commanding.
 
 From this, the input module must have at least 6 ports, and the output module must have at least 9 ports 
 
@@ -28,11 +26,13 @@ From this, the input module must have at least 6 ports, and the output module mu
 
 "When the short circuit (for a voltage output) or the open circuit (for a current output) is realized, no physical damage or abnormal phenomenon shall be detected." 
 
-This will be accomplished by having the GFCI in between our hardware and the power supply. 
+This will be accomplished by having the GFCI in between our hardware and the power supply; there will also be a fuse breaker between the 24VDC supply and components.
 
 ^ Source: http://rpa.energy.mn/wp-content/uploads/2017/03/IEC-61131-2-Programmable-controllers-Equipment-Requirements-and-Tests.pdf 
 
 * **Must be able to communicate with our PC and database**
+
+^ This is discussed elsewhere; please refer to the Identification System
 
 ## Schematic 
 
@@ -68,6 +68,19 @@ PLC Height: 4 inches (101.6 mm)
 
 Given that our constraint is 3x1x1 feet, our PLC does meet this constraint.
 
+* Constraint: **Will be in accordance with IEC-61131-2(6.4.4.3)**
+
+To protect the 120VAC side of the system, we are using a GFCI cord and circuit breaker on the din rail (This is further discussed in the Power System signoff). To protect the 24VDC side, we must calculate the amount of current that will be drawn from each component. These values are already taking into account the x1.25 storage so that the current draw will not exceed 80% of the maximum.
+
+* 24VDC Power Supply: 6.25A
+* PLC: 1.875A
+* Spot Sensors (all 3): .375A
+* PC: 6.25A
+
+This means that we must use a fuse that is rated for at least 14.75A. We found a 15A fuse breaker terminal, which is the closest current rating rounded up from 14.75A.
+
+^ Source: https://www.automation24.com/fuse-terminal-block-weidmueller-wsi-4-1886580000?gclid=CjwKCAiArY2fBhB9EiwAWqHK6hjbyVroYPsYfILZwzL5IGwYtqOeLZQqRZPGbde1RCEtwBrwLt50HxoC-qEQAvD_BwE
+
 ![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
 
 The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
@@ -85,5 +98,6 @@ The image above shows how the PLC is wired internally to its inputs and outputs,
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 | PL8B LED | 24V AC/DC LED | PLC | PL8B-24 | AlpineTech | 3 | $5.95 | $17.85 |
+| Fuse Terminal | 15A rated din rail fuse breaker | PLC | 4032248492060 | Weidmüller | 1 | $6.61 | $6.61 |
 | Siemens S7-1200 PLC CPU | 14 Digital Input, 10 Digital Output | PLC | 6ES7214-1BE30-0XB0 | Siemens | 1 | $464.03 | $464.03 |
-| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $481.88 |
+| **Total** |  |  |  | **Total Components** | 5 | **Total Cost** | $488.49 |
