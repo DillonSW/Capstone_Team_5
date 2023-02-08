@@ -35,7 +35,7 @@ Din rail connections, circuit breaker, 120VAC to 24VDC power supply for PLC. Thr
 The din rail and the mounted components must fit within a certain space. We were told by the mechanical team that we will have roughly 35 inches of width to work with. Each component's width will be measured and a subpanel and enclosure will be chosen accordingly.
 
 **Note**
-The Hot/Neutral Terminals were rounded up from 0.244 to 0.25.
+The Hot/Neutral Terminals were rounded up from 0.236 to 0.25.
 
 The Ground Terminals were rounded up from 0.24 to 0.25.
 
@@ -56,15 +56,15 @@ The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 
 | PLC | 5.125 | 1 | 5.125 |
 |**Total** |  | **Total Width (inches):** | 12.915 |
 
-Without rounding, the actual measurements came out to be 12.756in.
+Without rounding, the actual measurements came out to be 12.664in.
 
-We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.244in of clearance. Given how small the terminals are, there is enough room to place 6 to 7 additional terminals if needed.
+We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.336in of clearance. Given how small the terminals are, there is enough room to place 8 to 9 additional terminals if needed.
 
 ## BOM
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| Terminal Blocks | 32A, 1000V, Feed Through, Screw, 26-10 AWG | Power | 3044102 | Phoenix Contact | 11 | $1.18 | $12.98 |
+| Terminal Blocks | 30A, 300V, Feed Through, Screw, 26-10 AWG | Power | KN-T10GRY-20 | Konnect-It | 1 (Pack of 20) | $6.75 | $6.75 |
 | Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 3 | $7.43 | $22.29 |
 | Terminal Covers | End Cover Brackets | Power | 3047028 | Phoenix Contact | 5 | $0.82 | $4.10 |
 | 2-Block Jumpers | Flat Pin Cross Connection, 2 Positions | Power | 3030161 | Phoenix Contact | 2 | $0.88 | $1.76 |
@@ -81,4 +81,4 @@ We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.244in 
 | Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 1 | $26.11 | $26.11 |
 | Cable Entry Plate | 35 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/35 | Icotek | 1 | $26.11 | $26.11 |
 | M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49|
-| **Total** |  |  |  | **Total Components** | 44 | **Total Cost** | $516.91 |
+| **Total** |  |  |  | **Total Components** | 35 | **Total Cost** | $510.68 |
