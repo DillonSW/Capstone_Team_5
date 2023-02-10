@@ -81,6 +81,18 @@ This means that we must use a fuse that is rated for at least 14.75A. We found a
 
 ^ Source: https://www.automation24.com/fuse-terminal-block-weidmueller-wsi-4-1886580000?gclid=CjwKCAiArY2fBhB9EiwAWqHK6hjbyVroYPsYfILZwzL5IGwYtqOeLZQqRZPGbde1RCEtwBrwLt50HxoC-qEQAvD_BwE
 
+On the 120VAC side we must analyze how much current will be drawn from all of the 120VAC components. We are assuming that the PC's power will come from the 24VDC side.
+
+* 120VAC Power Supply: 25A
+
+^ The full technical description of the 120VAC to 24VDC power supply states "20 Amp at 115 Volt AC, 40 Amp at 230 Volt AC Input Current."
+
+^ Source: https://www.gordonelectricsupply.com/p/Sola-Hd-Svl524100-120W-24V-Pwr-Sply/6050226?gclid=Cj0KCQiA8t2eBhDeARIsAAVEga0Qns2PjkdzAaypkvhjHUxSOIXJpp1_wpS9YmIGWSx-VAn7_R1VF2MaAqrDEALw_wcB
+
+* Motor's Driver: 3.19A
+
+This means that we must have a circuit breaker that can withstand 28.19A of current. The closest circuit breaker that I could find, rounded up, is 32A. We must also find a power cord that can supply a similar current. The closest one I could find was a 30A power cord. **These are explained further in the Power System signoffs.**
+
 ![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
 
 The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
