@@ -28,7 +28,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 
 
-##Full Schematic
+## Full Schematic
 
 ![image](https://user-images.githubusercontent.com/100805322/218368938-986fe195-542e-4137-b127-5ed3081dfaa3.png)
 
