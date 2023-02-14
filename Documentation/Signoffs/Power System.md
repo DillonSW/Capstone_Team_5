@@ -69,6 +69,7 @@ We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.336in 
 | Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
 | 2-Block Jumpers | Screw-Down, 2 Positions | Power | KN-2J12 | Konnect-It | 1 (Pack of 25) | $10.50 | $10.50 |
 | 3-Block Jumpers | Screw-Down, 3 Positions | Power | KN-3J12 | Konnect-It | 1 (Pack of 20) | $13.00 | $13.00 |
+| 4-Block Jumpers | Screw-Down, 4 Positions | Power | KN-4J12 | Konnect-It | 1 (Pack of 15) | $16.00 | $16.00 |
 | End Anchors | Snap-On, Din Rail End Anchors | Power | 1492-EAJ35 | Allen Bradley | 10 | $2.42 | $24.20 |
 | Circuit Breaker | 1-Pole, C Curve, 240VAC/60VDC, 32A, 18-2 AWG Circuit Breaker | Power | 1492-SPM1C320 | ASI | 1 | $8.48 | $8.48 |
 | 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $74.59 | $74.59 |
