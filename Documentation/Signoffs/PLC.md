@@ -26,7 +26,7 @@ From this, the input module must have at least 6 ports, and the output module mu
 
 "When the short circuit (for a voltage output) or the open circuit (for a current output) is realized, no physical damage or abnormal phenomenon shall be detected." 
 
-This will be accomplished by having the GFCI in between our hardware and the power supply; there will also be a fuse breaker between the 24VDC supply and components.
+This will be accomplished by having a fuse breaker between the 24VDC supply and components.
 
 ^ Source: http://rpa.energy.mn/wp-content/uploads/2017/03/IEC-61131-2-Programmable-controllers-Equipment-Requirements-and-Tests.pdf 
 
@@ -34,23 +34,31 @@ This will be accomplished by having the GFCI in between our hardware and the pow
 
 ^ This is discussed elsewhere; please refer to the Identification System
 
+**These constraints will be numbered C1-C5 during Analysis**
+
 ## Schematic 
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionSix.jpg) 
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionSeven.jpg) 
  
-Above is a schematic of how the PLC is going to be implemented into our machine. The LED's in the schematic are rated to receive 24V AC/DC. Because of this there is no need for resistors to limit current to the LEDs.
+Above is a schematic of how the PLC is going to be implemented into our machine. The LED's in the schematic are rated to receive 24V AC/DC. Because of this there is no need for resistors to limit current to the LEDs. The 24VDC side is protected with a 15A fuse, and will be further discussed in Analysiss
 
 The pins on the PLC are also tagged to their respective peripheral. DI a/b are Digital Input ports and DQ a/b are Digital Output ports.
 
-**Discussed further in the power system signoff**: In order for all of the components on the 120VAC side to be protected at x1.25 their current rating, there must be at least 28A protected. The closest available circuit breaker that was found was a 32A breaker. This will ensure that the 120VAC side components will be protected in the event of a short circuit.
+**Discussion about the 120VAC side of the transformer will be in the Power System signoff. Please refer to it**
 
 ## Analysis 
 
-* Constraint: **Must be able to communicate with our PC and database**
+**Constraints C1-C2**
+
+^ The datasheet for the PLC states that it has "[Digital] 14 inputs/10 outputs"
+
+^ Source: https://cache.industry.siemens.com/dl/files/465/36932465/att_106119/v1/s71200_system_manual_en-US_en-US.pdf
+
+**Constraint C4**
 
 ^ This constraint is discussed elsewhere. Please refer to the Identification Subsystem.
 
-* Constraint: **Must be able to fit in a 3x1x1 foot area (LxWxH)**
+**Constraint C3**
 
 ^ This constraint was given to us by the mechanical team as the approximated space that we would have for the electircal components in the back of the vending machine. The following images will show the area that the PLC takes up. The order is length, width, height. The dimensions will also be given below each image in inches and millimeters.
 
@@ -82,16 +90,6 @@ This means that we must use a fuse that is rated for at least 14.75A. We found a
 ^ Source: https://www.automation24.com/fuse-terminal-block-weidmueller-wsi-4-1886580000?gclid=CjwKCAiArY2fBhB9EiwAWqHK6hjbyVroYPsYfILZwzL5IGwYtqOeLZQqRZPGbde1RCEtwBrwLt50HxoC-qEQAvD_BwE
 
 On the 120VAC side we must analyze how much current will be drawn from all of the 120VAC components. We are assuming that the PC's power will come from the 24VDC side.
-
-* 120VAC Power Supply: 25A
-
-^ The full technical description of the 120VAC to 24VDC power supply states "20 Amp at 115 Volt AC, 40 Amp at 230 Volt AC Input Current."
-
-^ Source: https://www.gordonelectricsupply.com/p/Sola-Hd-Svl524100-120W-24V-Pwr-Sply/6050226?gclid=Cj0KCQiA8t2eBhDeARIsAAVEga0Qns2PjkdzAaypkvhjHUxSOIXJpp1_wpS9YmIGWSx-VAn7_R1VF2MaAqrDEALw_wcB
-
-* Motor's Driver: 3.19A
-
-This means that we must have a circuit breaker that can withstand 28.19A of current. The closest circuit breaker that I could find, rounded up, is 32A. We must also find a power cord that can supply a similar current. The closest one I could find was a 30A power cord. **These are explained further in the Power System signoffs.**
 
 ![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
 
