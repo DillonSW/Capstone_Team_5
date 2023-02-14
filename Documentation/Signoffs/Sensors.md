@@ -20,23 +20,21 @@ The role of the sensor subsystem is to send signals—communicating the status o
 
    
 
-* **Cannot take up more than three I/O pins from the PLC**    
+* **1. Cannot take up more than eight input pins from the PLC**    
 
-   ^The PLC module will have a limited amount of inputs and outputs to receive or send signals. All other pins will need to be allocated to receive from and or send signals to the locks, LEDs, and motor.  
-
-   ^This also makes the constraint that the sensors must send one bit signals since there will have to be three separate—one for each dial layer (which each take up one I/O pin). 
+   ^The Siemens PLC module S7-1200 has fourteen input pins of which six have already been designated to inputs from other systems.
 
  
 
-* **The distance sensor chosen must determine the presence or absence of a device by measuring whether the light emitted was reflected back from a distance shorter than the distance between the sensor and the back wall of the compartment.** 
+* **2. The distance sensor chosen must determine the presence or absence of a device by measuring whether the light emitted was reflected back from a distance range of 3.75 to 7.25 inches** 
 
-   ^To understand why the sensor must be a light emitting distance sensor see the analysis section below. 
+   ^The minimum distance a device will be from the sensor is 3.75 inches, and the maximum distance a device will be positioned from the sensor is 7.25 inches.
 
-   ^The sensor must not communicate the presence of a device by sensing the back wall of the compartment. 
+   ^The sensor must not sense up more than a distance of 11.25 inches; this is the length of the compartment and the closest the sensor will be to the dial. This is to     prevent mistakenly sensing the back wall of the compartment as a device. 
 
  
 
-* **Must send a one signal to the PLC if there is a device in the presently forefront compartment section and a zero signal if there is not.**  
+* **3. Must send a one signal to the PLC if there is a device in the presently forefront compartment section and a zero signal if there is not.**  
 
    ^This constraint is chosen when considering the consequences in the case of the wire being cut: 
 
@@ -48,9 +46,10 @@ Upon reflection the second option is the best because the devices are protected 
 
  
 
-* **The sensor should be small enough to fit inside the palm of your hand so as not to obstruct access to the compartment** 
+* **4. The sensor must be mounted in the space of 3.75in. by 6in. by 0.75in that is between the door and compartment**
 
-   ^This should be sufficiently small and practically achievable to find a sensor of such size. 
+   ^The area floor space between the door and the compartment is 3.75x6.00 inches
+   ^The height from the floor space to the bottom of the door is 0.75 inches
  
 
   
@@ -61,82 +60,57 @@ Upon reflection the second option is the best because the devices are protected 
 
 ![SensorCloseUp](https://user-images.githubusercontent.com/113734069/217380154-e397efea-276e-494a-b7a1-fea440842e03.jpg)
 
+Each sensor possesses three wires; the power and neutral wires are connected to the power system, and the signal wires are connected to the PLC system.
 
-We have designated three I/O pins—10, 11, and 12—of our PLC module to input signals from our sensors. Each of the three sensors has three wires; the signal wires (SDA) will be connected to their respective input pin of the PLC; the wires powering the sensors (AVDD) will be connected to terminal blocks--jumped together--to connect directly to the positive voltage wire of the power supply; the neutral wires of the sensors (NTRL) will also be connected to terminal blocks that are jumped together. As depicted in the diagram the top level, middle level, and bottom level sensor will be connected to pin 10, pin 11, and pin 12 of the PLC respectively. 
+![SensorPosition1](https://user-images.githubusercontent.com/113734069/218870843-fcd08064-6d51-4506-af23-63962e144b81.jpg)
 
-  
+![SensorPosition2](https://user-images.githubusercontent.com/113734069/218870858-45943f5f-0281-4a83-9ad9-a2d2db802dc2.jpg)
 
-  
+![SensorPosition3](https://user-images.githubusercontent.com/113734069/218870866-d7e30379-019d-4b73-88fb-587186a5a512.jpg)
+
+![SensorPosition4](https://user-images.githubusercontent.com/113734069/218870874-adb4fdab-5fa9-480b-91c2-0637fe34debb.jpg)
+
+![SensorPosition5](https://user-images.githubusercontent.com/113734069/218870885-55f4b90c-7245-4fc8-96c1-b1d0db8a5283.jpg)
+
+The sensor has two thredded holes to mount onto the floor using screws right below the door with the emitter and receiver elements pointing towards the door. The sensor can be moved up to three inches closer to the compartment if needed to satisfy the distance range constraint.
+
+
 
 ## Analysis  
 
+**Constraint 1 - Input Pins**
+
+Using three ifm spot sensors with one bit signals will only take up three I/O pins on our PLC, which is less than the maximum of eight allowed.
+
+
+**Constraint 2 - Distance Sensing Range**
+
+Our chosen sensor measures up to a range of 0.60 inches to 7.87 inches; this will cover the 7.25 inch maximum distance requirement; this will also cover the 3.75 inch minimum distance requirement.
+The sensor is not capable of sensing the back wall because it is 11.50 inches from the beginning of the compartment which is out of the sensors range.
+The background suppression of the sensor also could be used to not sense the back wall.
+
+
+**Constraint 3 - Signaling**
+
+Our chosen sensor has negative and positive switching on the output signal, therefore the sensor is capacble of sending a positive output signal if it senses an object and a negative output signal if it does not sense an object.
+
+The sensor can be connected electrically to the power and PLC systems through the ifm OGH580 connector cord.
+
+
+**Constraint 4 - Sufficient Space and Mounting**
+
+The length of the sensor, 2.07 inches, suffices the 6.0 inch maximum.
+The width of the sensor, 1.40 inches, suffices the 3.75 inch maximum.
+The height of the sensor, 0.75 inches, suffices the 0.75 inch maximum.
+
+The OGH580 has two threaded holes to screw the sensor into the floor plate to mount.
   
-
-There are hundreds of different sensor options to choose from, so we deliberated extensively to choose the best sensor for our purposes. Through common sense, most options were easy to disregard—like sensors that would obviously be too expensive or too physically large for the scale of our project. The main sensor considerations included Weighing Sensors, Pressure Sensors, Ultrasonic sensors, and Photoelectric sensors. The sensors we ultimately decided on using were Photoelectric time of flight spot sensors. 
-
-  
-
-**Spot Sensor Analysis:**     
-
-  
-
-This sensor is just like the photo-eye sensor, being a photoelectric sensor, but the difference is that the spot sensor is a diffuse reflection sensor which means this sensor does not need mirrors to reflect the light back. The spot sensor also has background suppression; It can be calibrated to only sense up to a certain distance. With this function we could adjust the calibration to where it would not take in light reflected from the back wall of the compartment, but the sensor would still sense a closer object that could be there. The following figures illustrates this where:   
-
-  
-
-A = Sensor  
-
-  
-
-B = Object  
-
-  
-
-C = Background  
-
-  
-
-X = Distance between object and sensor  
-
-  
-
-X + Y = Distance between sensor and background  
-
-  
-
-![Object_Background_Suppression](https://user-images.githubusercontent.com/113734069/203670906-74718655-fcee-4934-bc84-a7e235f93afe.jpeg) 
-
-  
-
-SP1 = Set Max Sensing Distance  
-
-  
-
-![Background_Suppression](https://user-images.githubusercontent.com/113734069/203670924-26edff27-894f-49f0-8af1-3afa87baff16.jpg) 
-
-**ifm Spot Sensor analysis:**  
-
-We have identified the photoelectric diffuse reflection spot sensor with background suppression to be the most ideal sensor to use for our vending machine sensor system. In particular we have chosen to use the ifm OGH580; this sensor has an operating voltage of 10-30V DC and has a sensing range of up to 200mm.
-
-The sensor will emit photons which will reflect off of a device or the back wall and return to the sensor. Based on the time of flight calculated distance the sensor will use that information to determine if a device is present in or absent from the compartment. The sensor will be set to send a one value through the signal wire to the PLC if there is a device presently sensed, and the sensor will send a zero value through the signal wire to the PLC if there is not a device currently present.
-
-This sensor is also certainly of suitable size to fit inside of the vending machine; it would not pose an obstacle to stocking or obtaining a device from the compartment. On top of that, because we will only be using three one-bit signal sensors, we will only have to allocate three I/O pins of the PLC module for our sensor system. Lastly, the wiring of three sensors is practicably achievable opposed to having a sensor per each compartment.  
-
-
-**ifm Spot Sensor Range Analysis:**  
-
-The length of the compartment is 292mm, but the device box is 200mm meaning that if the device box is pushed to the back wall of the compartment there will be 92mm of distance between it and the edge of the compartment of the dial. The sensor mount is positioned 8mm outside of the dial but inside of the door. This means that at most the device box will be at a distance half of the sensors maximum range (100mm). If placed out of and pointing at the compartment inside the vending machine, this sensor will be sufficient in identifying whether a device is present or not.
-
-**ifm Spot Sensor Connection Analysis:**  
-
-The sensors will be able to be powered and send signals through female-end cord sets connecting the sensors to the power supply and PLC. The ifm EVC001 is a two meter long cord that is made to work with this spot sensor. Two meters is of sufficient length to connect all of our sensors to both the PLC and power supply. Inside the cable jacket of this cord are three wires: a neutral, power, and signal wire. The power wires will be connected to three terminal blocks that are jumped together and connected to the power supply high side. The neutral wires will be connected to three terminal blocks that are jumped together and connected to the neutral wire of the power supply. The signal wires will be connected straight to the 10, 11, and 12 I/O pins of the PLC—see the schematic for exact layout. 
-
   
 
 ## BOM  
 
-| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |    
+| Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| OGH580 | Diffuse Reflection sensor with background suppression | Sensors | OGH-FPKG/US/CUBE  | ifm Efector inc. | 3 | $87.12 | $261.36|
+| OGH580 | Diffuse Reflection sensor with background suppression | Sensors | OGH-FPKG/US/CUBE  | ifm Efector inc. | 3 | $109.00 | $327.00 |
 | EVC001 | Female Cord set | Sensors | ADOGH040MSS0002H04 | ifm Efector inc | 3 | $11.50 | $34.50 |
-| **Total** |  |  |  | **Total Components** | 6 | **Total Cost** | $295.86 |
+| **Total** |  |  |  | **Total Components** | 6 | **Total Cost** | $361.50 |
