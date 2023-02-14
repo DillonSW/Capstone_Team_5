@@ -64,11 +64,11 @@ We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.336in 
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| Terminal Blocks | 30A, 300V, Feed Through, Screw, 26-10 AWG | Power | KN-T10GRY-20 | Konnect-It | 1 (Pack of 20) | $6.75 | $6.75 |
+| Terminal Blocks | 20A, 600V, Feed Through, Screw, 26-10 AWG | Power | KN-T12GRY-20 | Konnect-It | 1 (Pack of 25) | $8.50 | $8.50 |
 | Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 3 | $7.43 | $22.29 |
-| Terminal Covers | End Cover Brackets | Power | 3047028 | Phoenix Contact | 5 | $0.82 | $4.10 |
-| 2-Block Jumpers | Flat Pin Cross Connection, 2 Positions | Power | 3030161 | Phoenix Contact | 2 | $0.88 | $1.76 |
-| 3-Block Jumpers | Flat Pin Cross Connection, 3 Positions | Power | 3030174 | Phoenix Contact | 3 | $1.80 | $5.40 |
+| Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
+| 2-Block Jumpers | Screw-Down, 2 Positions | Power | KN-2J12 | Konnect-It | 1 (Pack of 25) | $10.50 | $10.50 |
+| 3-Block Jumpers | Screw-Down, 3 Positions | Power | KN-3J12 | Konnect-It | 1 (Pack of 20) | $13.00 | $13.00 |
 | End Anchors | Snap-On, Din Rail End Anchors | Power | 1492-EAJ35 | Allen Bradley | 10 | $2.42 | $24.20 |
 | Circuit Breaker | 1-Pole, C Curve, 240VAC/60VDC, 32A, 18-2 AWG Circuit Breaker | Power | 1492-SPM1C320 | ASI | 1 | $8.48 | $8.48 |
 | 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $74.59 | $74.59 |
@@ -80,5 +80,5 @@ We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.336in 
 | Power Cord | GFCI, 9-ft Length, 16 AWG, 15A, 120VAC, IEC320 Power Cable | Power | 2XYT2 | NEMA | 1 | $47.84 | $47.84 |
 | Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 1 | $26.11 | $26.11 |
 | Cable Entry Plate | 35 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/35 | Icotek | 1 | $26.11 | $26.11 |
-| M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49|
-| **Total** |  |  |  | **Total Components** | 35 | **Total Cost** | $510.68 |
+| M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49 |
+| **Total** |  |  |  | **Total Components** | **REDO** | **Total Cost** | **REDO** |
