@@ -1,4 +1,4 @@
-# Safety System (WIP)
+# Safety System (Taking a power nap dillon))
 
 ## Subsystem Function:
 The sole purpose of this system is to secure the safety of both the users and the operators of the device. The primary functions of the system come from the consumer's cabinet restrictions. Using "SensaGuard"  non-contact Interlock technology, both the consumers and inner contents of the machine shall have an extra shield from possible harm.
