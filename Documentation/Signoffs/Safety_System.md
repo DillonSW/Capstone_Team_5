@@ -13,7 +13,6 @@ The sole purpose of this system is to secure the safety of both the users and th
 **• The system must overrule all other functions of the system. The machine shall not continue any operations while there is an error in place. (C3)**
 
 
-
 ## Subsystem 3D model
 
 ![image](https://user-images.githubusercontent.com/100805322/219275238-a8289762-a105-446a-8a5a-54a5abeedcbe.png)
@@ -31,6 +30,10 @@ The sole purpose of this system is to secure the safety of both the users and th
 # Analysis:
 
 ### Non-contact interlock switches (C1)
+
+After doing some research, it was found that using Non-contact interlock switches would work best for the vending device. Using RFID technology, these sensors have several layers of protection and are considered to be the **"Gold Standard"** for RFID coded safey sensors.
+
+    Note: The "Gold Standard" phase is sourced from Professor Jesse Roberts of Tennessee Technological University
 
 ![image](https://user-images.githubusercontent.com/100805322/219275585-d74a4bd6-3dd5-4356-bd81-1d1f2cc7a86b.png)
 
