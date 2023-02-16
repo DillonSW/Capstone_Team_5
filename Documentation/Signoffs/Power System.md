@@ -93,7 +93,7 @@ We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of c
 | 10-Block Jumpers | Screw-Down, 10 Positions | Power | KN-10J12 | Konnect-It | 1 (Pack of 5) | $10.50A | $10.50 |
 | End Anchors | Snap-On, Din Rail End Anchors | Power | 1492-EAJ35 | Allen Bradley | 10 | $2.42 | $24.20 |
 | Circuit Breaker | 1-Pole, C Curve, 240VAC/60VDC, 32A, 18-2 AWG Circuit Breaker | Power | 1492-SPM1C320 | ASI | 1 | $8.48 | $8.48 |
-| 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $74.59 | $74.59 |
+| 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $70.88 | $70.88 |
 | Wire Duct | 1.26in Wide, 1in Depth, Slotted, Lead-Free PVC, Screw Mount Wire Duct | Power | F1X1LG6-A | Panduit | 1 | $29.02 | $29.02 |
 | Wire Duct Cover | 1.26in Wide, 1in Depth, PVC, Flush Wire Duct Cover | Power | C1LG6-F | Panduit | 1 | $7.05 | $7.05 |
 | Enclosure | 14H x 16W x 6D (in), Wall-Mount, Single Door, Stainless Steel Clamp Enclosure | Power | SCE-1614CHSNF | Saginaw | 1 | $186.00 | $186.00 |
