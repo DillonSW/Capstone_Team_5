@@ -86,7 +86,7 @@ We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of c
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 | Terminal Blocks | 20A, 600V, Feed Through, Screw, 26-10 AWG | Power | KN-T12GRY-25 | Konnect-It | 1 (Pack of 25) | $8.50 | $8.50 |
-| Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 3 | $7.43 | $22.29 |
+| Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 3 | $4.27 | $12.81 |
 | Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
 | 2-Block Jumpers | Screw-Down, 2 Positions | Power | KN-2J12 | Konnect-It | 1 (Pack of 25) | $10.50 | $10.50 |
 | 3-Block Jumpers | Screw-Down, 3 Positions | Power | KN-3J12 | Konnect-It | 1 (Pack of 20) | $13.00 | $13.00 |
