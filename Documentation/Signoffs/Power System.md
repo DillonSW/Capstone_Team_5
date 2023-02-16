@@ -48,6 +48,8 @@ Also, the **Motor Driver**, **Sensors**, and **Safety Sensors** have been heavil
 
 The schematic above shows how the power system will tie every subsystem together. The terminal blocks that are larger than 1x1 indicate that they have been jumped together. The wires feeding into and out of the terminal blocks are also labeled based on what component they are connected to. For consistency, the top wire will be labeled [Name]-1 and the bottom wire will be labeled [Name]-2.
 
+The larger terminal blocks, as stated before, are connected through jumpers. We are buying these jumpers as 10-position connectors. The framework for these jumpers are made of metal. We will cut down the 10-position ones into smaller positions as needed (ex: 2 or 3) with the help of the tools in our machine shops.
+
 ## Analysis
 
 The din rail and the mounted components must fit within a certain space. We were told by the mechanical team that we will have roughly 35 inches of width to work with. Each component's width will be measured and a subpanel and enclosure will be chosen accordingly.
@@ -88,9 +90,7 @@ We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of c
 | Terminal Blocks | 20A, 600V, Feed Through, Screw, 26-10 AWG | Power | KN-T12GRY-25 | Konnect-It | 1 (Pack of 25) | $8.50 | $8.50 |
 | Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 3 | $4.27 | $12.81 |
 | Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
-| 2-Block Jumpers | Screw-Down, 2 Positions | Power | KN-2J12 | Konnect-It | 1 (Pack of 25) | $10.50 | $10.50 |
-| 3-Block Jumpers | Screw-Down, 3 Positions | Power | KN-3J12 | Konnect-It | 1 (Pack of 20) | $13.00 | $13.00 |
-| 4-Block Jumpers | Screw-Down, 4 Positions | Power | KN-4J12 | Konnect-It | 1 (Pack of 15) | $16.00 | $16.00 |
+| 10-Block Jumpers | Screw-Down, 10 Positions | Power | KN-10J12 | Konnect-It | 1 (Pack of 5) | $10.50A | $10.50 |
 | End Anchors | Snap-On, Din Rail End Anchors | Power | 1492-EAJ35 | Allen Bradley | 10 | $2.42 | $24.20 |
 | Circuit Breaker | 1-Pole, C Curve, 240VAC/60VDC, 32A, 18-2 AWG Circuit Breaker | Power | 1492-SPM1C320 | ASI | 1 | $8.48 | $8.48 |
 | 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $74.59 | $74.59 |
