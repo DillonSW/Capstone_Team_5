@@ -5,11 +5,9 @@ This subsystem's function in our design is to tie all of the subsystems together
 ## Constraints
 
 **The 120VAC wall power:**
-* **Will be protected by a GFCI cable**
-
 * **Will go through a circuit breaker as extra protection for our power system**
 
-^ The 120VAC will feed through a circuit breaker on the din rail, then be sent to the PC and the 120VAC to 24VDC power supply.
+^ The 120VAC will feed through a circuit breaker on the din rail, then be sent to the PC, motor driver, and the 120VAC to 24VDC power supply.
 
 * **Will power the PC**
 
@@ -22,24 +20,42 @@ This subsystem's function in our design is to tie all of the subsystems together
 **The 120VAC electrical components:**
 * **Will be secured and protected within an enclosure**
 
-^ This closure will be grounded and the components will be secured in this panel enclosure to ensure the safety of personnel and the machine.
+^ This closure will be grounded and the components will be secured on a din rail, attached to the subpanel, in the enclosure to ensure the safety of personnel and the machine.
+
+**All of the components**
+* **Must be able to fit within an enclosure that can fit within a 35-inch wide space.**
+
+This is the width that we were given by the mechanical team for housing our electrical components.
+
+**The enclosure**
+* **Will be grounded and serve in accordance with NEC 250.109**
+
+^ This NEC standard states that "Metal enclosures shall be permitted to be used to connect bonding jumpers or equipment grounding conductors, or both, together to become a part of an effective ground-fault current path. Metal covers and metal fittings attached to these metal enclosures shall be considered as being connected to bonding jumpers or equipment grounding conductors, or both."
+
+^ Source: https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=870.0
+
+This means that we will be able to use our enclosure as an effective ground-fault to protect users, administrators, and maintenance personnel that may be working near the electrical components.
+
+**These constraints will be labeled C1-C6 in the Analysis section**
 
 ## Schematic
 
 ![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Power-Subsystem/images/PowerSchemOne.jpg)
 
-Din rail connections, circuit breaker, 120VAC to 24VDC power supply for PLC. Three 24VDC hots are jumped and three 24VDC neutrals are jumped and going to the sensor system.
+The schematic above shows how the power system will tie every subsystem together. The terminal blocks that are larger than 1x1 indicate that they have been jumped together. The wires feeding into and out of the terminal blocks are also labeled based on what component they are connected to. For consistency, the top wire will be labeled [Name]-1 and the bottom wire will be labeled [Name]-2.
 
 ## Analysis
 
 The din rail and the mounted components must fit within a certain space. We were told by the mechanical team that we will have roughly 35 inches of width to work with. Each component's width will be measured and a subpanel and enclosure will be chosen accordingly.
 
 **Note**
-The Hot/Neutral Terminals were rounded up from 0.236 to 0.25.
+The Hot/Neutral Terminals were rounded up from 0.20 inches to 0.25 inches, a 25% increase for tolerance.
 
-The Ground Terminals were rounded up from 0.24 to 0.25.
+The Ground Terminals were rounded up from 0.24 inches to 0.25 inches.
 
 The End Covers were rounded up from 0.0866 inches to 0.1 inch, which is a roughly 15% increase. This gives the end covers a 15% pre-calculation tolerance.
+
+The fuse terminal is 8mm (or 0.315 inches), which will be rounded up to .320 inches.
 
 The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 5.125 inches wide. These calculations are using 5.125 inches.
 
@@ -48,23 +64,24 @@ The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 
 
 | Component | Width (inches) | Quantity | Total Width |
 |-----------|-------|----------|------------|
-| Hot/Neutral Terminal Blocks | 0.25 | 11 | 2.75 |
+| Hot/Neutral Terminal Blocks | 0.25 | 14 | 3.5 |
 | Ground Terminal Blocks | 0.25 | 3 | 0.75 |
 | End Covers | 0.1 | 5 | 0.5 |
 | Stop Blocks (End Anchors) | 0.31 | 10 | 3.1 |
 | Circuit Breaker | 0.69 | 1 | 0.69 |
 | PLC | 5.125 | 1 | 5.125 |
-|**Total** |  | **Total Width (inches):** | 12.915 |
+| Fuse Block | .320 | 1 | .320 |
+|**Total** |  | **Total Width (inches):** | 13.985 |
 
-Without rounding, the actual measurements came out to be 12.664in.
+Without rounding, the actual measurements came out to be 13.183 inches.
 
-We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.336in of clearance. Given how small the terminals are, there is enough room to place 8 to 9 additional terminals if needed.
+We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of clearance. With rounding, we have 1.817 inches. Given how small the terminals are, there is enough room to place 5 or 9 additional terminal blocks respectively.
 
 ## BOM
 
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-| Terminal Blocks | 20A, 600V, Feed Through, Screw, 26-10 AWG | Power | KN-T12GRY-20 | Konnect-It | 1 (Pack of 25) | $8.50 | $8.50 |
+| Terminal Blocks | 20A, 600V, Feed Through, Screw, 26-10 AWG | Power | KN-T12GRY-25 | Konnect-It | 1 (Pack of 25) | $8.50 | $8.50 |
 | Ground Terminals | 800V, Feed Through, Screw, 26-10 AWG | Power | 1010100000 | Weidmuller | 3 | $7.43 | $22.29 |
 | Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
 | 2-Block Jumpers | Screw-Down, 2 Positions | Power | KN-2J12 | Konnect-It | 1 (Pack of 25) | $10.50 | $10.50 |
@@ -81,4 +98,5 @@ We are choosing a subpanel with a width of 15in. This gives us 2.085 to 2.336in 
 | Power Cord | GFCI, 9-ft Length, 16 AWG, 15A, 120VAC, IEC320 Power Cable | Power | 2XYT2 | NEMA | 1 | $47.84 | $47.84 |
 | Cable Entry Plate | 35 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/35 | Icotek | 2 | $26.11 | $52.22 |
 | M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49 |
+| Danger Sign | 120V OSHA Danger Sign, 3.5" x 5" | Power | S-2260 | MySafetySign | 1 | $5.20 | $5.20 |
 | **Total** |  |  |  | **Total Components** | **REDO** | **Total Cost** | **REDO** |
