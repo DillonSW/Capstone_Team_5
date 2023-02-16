@@ -102,5 +102,6 @@ We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of c
 | Power Cord | GFCI, 9-ft Length, 16 AWG, 15A, 120VAC, IEC320 Power Cable | Power | 2XYT2 | NEMA | 1 | $47.84 | $47.84 |
 | Cable Entry Plate | 35 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/35 | Icotek | 2 | $26.11 | $52.22 |
 | M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49 |
+| Fuse Terminal | W-Series Fuse Block | Power | 402363 | Weidmüller | 1 | $6.61 | $6.61 |
 | Danger Sign | 120V OSHA Danger Sign, 3.5" x 5" | Power | S-2260 | MySafetySign | 1 | $5.20 | $5.20 |
 | **Total** |  |  |  | **Total Components** | **REDO** | **Total Cost** | **REDO** |
