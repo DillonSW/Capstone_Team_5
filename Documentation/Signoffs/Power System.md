@@ -40,7 +40,11 @@ This means that we will be able to use our enclosure as an effective ground-faul
 
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Power-Subsystem/images/PowerSchemOne.jpg)
+**Note: The wires are labeled as the terminal block or component that they are feeding TO, not FROM. Ex. TB02-1 or PLC24L-1.**
+
+Also, the **Motor Driver**, **Sensors**, and **Safety Sensors** have been heavily simplified for convenience of the power system wiring. To see the schematics of the simplified components, please refer to the **Motor System**, **Sensor System**, and **Safety System**.
+
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Power-Subsystem/images/PowerSchemTwo.jpg)
 
 The schematic above shows how the power system will tie every subsystem together. The terminal blocks that are larger than 1x1 indicate that they have been jumped together. The wires feeding into and out of the terminal blocks are also labeled based on what component they are connected to. For consistency, the top wire will be labeled [Name]-1 and the bottom wire will be labeled [Name]-2.
 
