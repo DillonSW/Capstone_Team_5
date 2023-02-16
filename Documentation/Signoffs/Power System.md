@@ -63,6 +63,12 @@ The larger terminal blocks, as stated before, are connected through jumpers. We 
 
 ## Analysis
 
+## Constraints C3, C4, C6
+
+These constraints are fulfilled through our enclosure and subpanel design. The KiCAD schematics above confirm that we will be using stepping down our 120VAC voltage (**C6**) and that the enclosure will be grounded (**C3**). The AutoCAD and SolidWorks schematics confirm that we will be using an enclosure (**C4**).
+
+## Constraint C5
+
 The din rail and the mounted components must fit within a certain space. We were told by the mechanical team that we will have roughly 35 inches of width to work with. Each component's width will be measured and a subpanel and enclosure will be chosen accordingly.
 
 **Note**
@@ -93,6 +99,8 @@ The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 
 Without rounding, the actual measurements came out to be 13.183 inches.
 
 We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of clearance. With rounding, we have 1.817 inches. Given how small the terminals are, there is enough room to place 5 or 9 additional terminal blocks respectively.
+
+## Constraints C1 and C2
 
 **Analysis for 120V-side current draw**
 
