@@ -78,18 +78,7 @@ Given that our constraint is 3x1x1 feet, our PLC does meet this constraint.
 
 * Constraint: **Will be in accordance with IEC-61131-2(6.4.4.3)**
 
-To protect the 120VAC side of the system, we are using a GFCI cord and circuit breaker on the din rail (This is further discussed in the Power System signoff). To protect the 24VDC side, we must calculate the amount of current that will be drawn from each component. These values are already taking into account the x1.25 storage so that the current draw will not exceed 80% of the maximum.
-
-* 24VDC Power Supply: 6.25A
-* PLC: 1.875A
-* Spot Sensors (all 3): .375A
-* PC: 6.25A
-
-This means that we must use a fuse that is rated for at least 14.75A. We found a 15A fuse breaker terminal, which is the closest current rating rounded up from 14.75A.
-
-^ Source: https://www.automation24.com/fuse-terminal-block-weidmueller-wsi-4-1886580000?gclid=CjwKCAiArY2fBhB9EiwAWqHK6hjbyVroYPsYfILZwzL5IGwYtqOeLZQqRZPGbde1RCEtwBrwLt50HxoC-qEQAvD_BwE
-
-On the 120VAC side we must analyze how much current will be drawn from all of the 120VAC components. We are assuming that the PC's power will come from the 24VDC side.
+To protect the 120VAC side of the system, we are using a GFCI cord and circuit breaker on the din rail (This is further discussed in the Power System signoff). To protect the 24VDC side, we must calculate the amount of current that will be drawn from each component. These values are already taking into account the x1.25 storage so that the current draw will not exceed 80% of the maximum. (Again, please refer to the Power System Signoff).
 
 ![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
 
@@ -108,6 +97,5 @@ The image above shows how the PLC is wired internally to its inputs and outputs,
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
 | PL8B LED | 24V AC/DC LED | PLC | PL8B-24 | AlpineTech | 3 | $5.95 | $17.85 |
-| Fuse Terminal | 15A rated din rail fuse breaker | PLC | 4032248492060 | Weidmüller | 1 | $6.61 | $6.61 |
 | Siemens S7-1200 PLC CPU | 14 Digital Input, 10 Digital Output | PLC | 6ES7214-1BE30-0XB0 | Siemens | 1 | $464.03 | $464.03 |
-| **Total** |  |  |  | **Total Components** | 5 | **Total Cost** | $488.49 |
+| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $481.88 |
