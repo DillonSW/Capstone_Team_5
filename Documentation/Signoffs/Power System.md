@@ -40,6 +40,17 @@ This means that we will be able to use our enclosure as an effective ground-faul
 
 ## Schematic
 
+![EnclosurePosition1](https://user-images.githubusercontent.com/113734069/219280985-e76c1219-3334-4040-b722-47e2a1459e6f.jpg)
+![EnclosurePosition2](https://user-images.githubusercontent.com/113734069/219280999-b0b13ac5-40e4-4450-a575-0c6b3cf87040.jpg)
+![EnclosurePosition3](https://user-images.githubusercontent.com/113734069/219281010-9f2259ca-2599-4fce-b3e5-4c555603b9e6.jpg)
+![EnclosurePosition4](https://user-images.githubusercontent.com/113734069/219281020-d15d8dc8-8d0c-407b-9819-c46f2a80dfa4.jpg)
+
+![Dinrail_Layout](https://user-images.githubusercontent.com/113734069/219281039-ca8d7a82-879d-47a6-bf2b-7a8fdc0cf0a2.jpg)
+![RailLayout_Left](https://user-images.githubusercontent.com/113734069/219281047-c0387b83-931b-4a76-b368-753b8338ceca.jpg)
+![RailLayout_Mid](https://user-images.githubusercontent.com/113734069/219281056-31ba6f4f-c1c3-4ce2-8006-d8e13b2c9872.jpg)
+![RailLayout_Right](https://user-images.githubusercontent.com/113734069/219281063-6418875c-b393-4724-9358-cc104df3ed8c.jpg)
+
+
 **Note: The wires are labeled as the terminal block or component that they are feeding TO, not FROM. Ex. TB02-1 or PLC24L-1.**
 
 Also, the **Motor Driver**, **Sensors**, and **Safety Sensors** have been heavily simplified for convenience of the power system wiring. To see the schematics of the simplified components, please refer to the **Motor System**, **Sensor System**, and **Safety System**.
