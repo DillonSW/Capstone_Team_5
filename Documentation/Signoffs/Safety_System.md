@@ -1,74 +1,71 @@
 # Safety System (WIP)
 
-Subsystem Function:
-The sole purpose of this system is to secure the safety of both the users and the operators of the device. The primary functions of the system come from cabinet restrictions. Using RFID technology, the state of the cabinet door shall be reported anytime the machine wishes to continue operation.
-
-Constraints:
-
-Sensors:
-Shall be powered by:
-
-Shall be ran in parallel to the main operating system, not in tandem.
-
-Shall be ran every checkout cycle
-
-Scanner shall only recognize the presence of assigned RFID tags, all running at 13.56MHz
-
-Shall meet the standards listed in ISO 14443A (Range less than 10 cm) (Operating Frequency 13.56MHz)
-
-Tags:
-Shall be compatible with selected sensors
+## Subsystem Function:
+The sole purpose of this system is to secure the safety of both the users and the operators of the device. The primary functions of the system come from the consumer's cabinet restrictions. Using "SensaGuard"  non-contact Interlock technology, both the consumers and inner contents of the machine shall have an extra shield from possible harm.
 
 
-Controller:
-Shall meet all requirements of selected RFID sensors.
+## Constraints:
 
-Shall receive digital input from PLC
+The sensors shall be aware if the "state" of the cabinet door at all times.
 
-Shall output signal to PLC
+The system must be completely separate from the normal operations of the device.
 
+The system must **overrule** all other functions of the system. The machine shall not continue any operations while there is an error in place.
 
+## Subsystem 3D model
 
-![image](https://user-images.githubusercontent.com/100805322/217458056-5c594a7e-693d-4731-baea-a1db60da5011.png)
+![image](https://user-images.githubusercontent.com/100805322/219275238-a8289762-a105-446a-8a5a-54a5abeedcbe.png)
 
+## Subsystem Schematic
 
-System Design:
-
-Each door will have an RFID configuration comprising of an RFID chip and it's parried sensor. The chip is attached to the roof of the door and the sensor is attached to the top of the door frame, both out of sight. Instead of a constant scan like the inductance sensor (See Lock System), these will be activated during the safety check. Every time the lock sensor confirms the door is closed (i.e. the lock is locked), a safety check is ran to see is all the RFID chips can be sensed. If any of the chips are missing during the check, the system goes into "restricted mode". The machine will need to be inspected by a system administrator and reset for the system to continue functions.
-
-The sensors will be ran using a Arduino ATMega. This code will be ran every time the system is alerted to start.
-
-The RFID chips each have a unique id that is assigned to be read by each sensor.
+![image](https://user-images.githubusercontent.com/100805322/219275364-542d2202-e404-418b-a029-dc6810c77acd.png)
 
 
-Analysis
+When an actuator moves out of the detection range, the signal from the sensors is lost alerting the PLC. While this value is reported as "low" the motor system shall lose all functionality, until the signal reports "high". The PLC will also know the state of the locks for each door. These 2 values will always be crossed referenced anytime a change is detected. If the inductive proximity sensors report the lock is in place, but the safety switch cannot sense the actuator, the system will report an error. This error must be checked and cleared by an administrator before it can return to normal functions.
 
-![image](https://user-images.githubusercontent.com/100805322/217458089-41d77e88-9e2f-43ff-8086-64d8a8be8eee.png)
+# Analysis:
 
+## Non-contact interlock switches
 
-^Source: RC522 RFID Module Pinout, Features, Specs & How to Use It (components101.com)
+![image](https://user-images.githubusercontent.com/100805322/219275585-d74a4bd6-3dd5-4356-bd81-1d1f2cc7a86b.png)
 
+^Source: https://us.idec.com/medias/safety04-03-eng.jpg?context=bWFzdGVyfHJvb3R8NDgwNTF8aW1hZ2UvanBlZ3xoMzcvaDJmLzkxNjc2NjEyMzYyNTQuanBnfDZiY2Y3NGVjMWI3ZTAwMTljOWQwNTJkOTI0OWQ1YWI1ODFiYmZjMjBjMDNiOTIzYWMyOWI5OTlmN2UyOWRjZTI
 
-All required specs can be found in the seller's product description and on developer's datasheet.
+A non-contact interlock switch is a device that uses a sensor head to detect the distance between an actuator mounted to the door and a sensor head mounted to the machine and to detect information from the actuator without any direct contact between the actuator and the sensor head, and transmits the signal as door open/close information.
 
-The RFID sensors selected are low powered and is easy to control. The MFRC522 is a highly integrated read/write chip that runs at the required 13.56MHz and has a limited range of 5cm max (3cm tested). These values fall within the range required of the ISO 14443 standards for Type A cards.
+^Source: https://us.idec.com/idec-us/en/USD/RD/safety/guide/safety04#:~:text=A%20non-contact%20interlock%20switch%20is%20a%20device%20that,and%20transmits%20the%20signal%20as%20door%20open%2Fclose%20information.
 
-The MFRC522 also supports non-contact, two-way data transmission rate up to 848kbit/s.
+Since the sensors are "non-contact" they will not gain much wear and tear. However, it is recommended to inspect the sensor every month for any oddities. 
 
-Operating current :13-26mA/DC 3.3V
+**Anti-tampering Function**
+There are two types of RFID type anti-tampering functions: unicode type and multi-code type. The ___ uses the Unicode method. This means that there is single specific code matched between the sensor and actuator. There is also a feature for pairing the new actuator to the sensor after purchase.
 
+![image](https://user-images.githubusercontent.com/100805322/219281038-b7c2bbf9-96e0-44d7-8086-9a81abfa7b8b.png)
 
-The Elegoo MEGA2560 R3 requires a 5V input voltage (7-12V input voltage max)
-Allows the usage of a single I/O pin for operation
+^Source: https://us.idec.com/medias/safety04-07-en.jpg?context=bWFzdGVyfHJvb3R8NDM4NzR8aW1hZ2UvanBlZ3xoOWMvaDRlLzkxMjgxMzg1MDYyNzAuanBnfDI0ZWEwNDMzZDUyZWE5MmFkNGY4YjYwZWRmNmFjYWQ3MDY2OTlhODA4MzY0MjZhZGZlZjFlNGIzOTBjYTJlZWY
 
-If any chip is missing or out of place, the MEGA shall return a low signal to the PLC
+## Adaptation
 
-Amazon.com: HiLetgo 3pcs RFID Kit - Mifare RC522 RF IC Card Sensor Module + S50 Blank Card + Key Ring for Arduino Raspberry Pi : Electronics
+![image](https://user-images.githubusercontent.com/100805322/219279087-0f7633c4-b6c9-44d6-9171-55ad80ad1205.png)
+
+As seen in the diagram above, the output cable has a total of 8-pins. Each of these pins need to be connected to seperate parts of our system to be properly utilized. Also to simplify the process, the sensors will be connected in series. By doing this if any of the sensors are missing their aucuator or are out of line, the system will report 0V to the PLC. Using Kicad a wiring model was constructed based on the sample model provided by the manufacturer. Sample seen below:
+
+![image](https://user-images.githubusercontent.com/100805322/219280921-13addd1a-f63f-4eae-a950-8e0f9d8fa89e.png)
+
+## Placement and Alligenment 
+
+Each sensor will be placed on the inner side of the door frame, below the induction sensors (See Locks). The sensor component and actuator require a minimum distance of 1.97" of space betwix them.  
+![image](https://user-images.githubusercontent.com/100805322/219282123-7ae174f9-8a01-4e61-8e12-526d95e35f2f.png)
+
+^
+
+![image](https://user-images.githubusercontent.com/100805322/219282149-cdba0efb-5ba5-4401-8828-22926a7aeb31.png)
+
+![image](https://user-images.githubusercontent.com/100805322/219282538-918d2b68-e11e-44e6-b848-c553e211fd4e.png)
 
 
 # BOM
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-|RFID Kit|RC522 RF IC Card Sensor Module + S50 Blank Card | Safety | B07VLDSYRW | B07VLDSYRW | 1 | $9.99 | $9.99|
-|ELEGOO MEGA R3 Board|ATmega+2560 micro-controller board| Safety|B01H4ZLZLQ|ELEGOO| 1 |Provided by student | N/A|
-| **Total** |  |  |  | **Total Components** | 1 | **Total Cost** | $9.99 |
+|SensaGuard 440N-Z21SS2A|Non-contact switch| Safety | 440NZ21SS2A | ALLEN-BRADLEY | 3 | $155.01 | $465.03|
+| **Total** |  |  |  | **Total Components** | 3 | **Total Cost** | $465.03 |
