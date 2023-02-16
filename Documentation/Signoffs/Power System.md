@@ -34,7 +34,7 @@ This is the width that we were given by the mechanical team for housing our elec
 
 ^ Source: https://www.electricallicenserenewal.com/Electrical-Continuing-Education-Courses/NEC-Content.php?sectionID=870.0
 
-This means that we will be able to use our enclosure as an effective ground-fault to protect users, administrators, and maintenance personnel that may be working near the electrical components.
+This means that we will be able to use our enclosure as an effective ground-fault to protect users, administrators, and maintenance personnel that may be working near the electrical components. We will also have a GFCI power cord for additional safety.
 
 **These constraints will be labeled C1-C6 in the Analysis section**
 
@@ -93,6 +93,61 @@ The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 
 Without rounding, the actual measurements came out to be 13.183 inches.
 
 We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of clearance. With rounding, we have 1.817 inches. Given how small the terminals are, there is enough room to place 5 or 9 additional terminal blocks respectively.
+
+**Analysis for 120V-side current draw**
+
+To determine the power cord and circuit breaker, we must analyze how much current each 120VAC component will draw. The following is a list of the components and their draws.
+
+* 120VAC to 24VDC Power Supply (120 Side): **1A**
+$V1 * I1 = V2 * I2$
+
+$V1 = 120$, $I2(Max) = 5A$, $V * I = 120W$
+
+$120 * I1 = 120$
+
+These equations give that the 120V side will draw, at max, 1A. The 24V side will draw, at max, 5A. **The 24V side will be further analyzed to see how much current it will actually draw**
+
+* PC: **700mA**
+
+The ThinkCentre PC stickers show that the PC-side of the power block draws 20V, 3.5A.
+
+$120V * I1 = 20V * 3.5A$
+
+$I1 = .7A$
+
+* Motor Driver: **2.5A**
+
+The motor driver datasheet states that it will draw 2.5A. Please refer to the Motor System branch to find the datasheet.
+
+**Total 120V-side current draw**
+
+$1 + .7 + 2.5 = 4.2A$
+
+Assuming that 4.2A is 80% of max capacity, we must have a circuit breaker that is at least 5.25A. We will use a 6A circuit breaker.
+
+We also want the circuit breaker to be higher rated than the power cord. We will use a 5A GFCI power cord.
+
+**Analysis for 24-side current draw**
+
+To determine the fuse breaker protecting the 24VDC components, we must analyze their current draw of all of the components.
+
+* PLC: **1.5A**
+
+The side of the PLC states that it will draw 1.5A.
+
+* Box Sensors: **.025A each**
+
+There are 3 box sensors (top, middle, bottom). Therefore the total current draw will be **.075A**.
+
+* Safety Sensors: **.2A each**
+
+There are also 3 safety sensors (top, middle, bottom). Therefore the total current draw will be **.6A**.
+
+**Total 24V-side current draw**
+
+$1.5 + .075 + .6 = 2.175$
+
+Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is at least 2.72A. We will use a 3A fuse breaker.
 
 ## BOM
 
