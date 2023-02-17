@@ -133,9 +133,9 @@ Since there will be spring hinges installed on each door, the risk of handles ca
 # BOM
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-|11.4mm Electromagnetic Solenoid Lock| DC 12V, 1.1A | Locks | a19042500ux0016 | uxcell | 3 | $12.49 | $37.47 |
+|11.4mm Electromagnetic Solenoid Lock| DC 12V, 0.6A | Locks | a19042500ux0014 | uxcell | 3 | $14.99 | $44.97 |
 |Proximity Inductive Sensor| PNP Normally Open Two-wire| Safety |NBN4-12GM60-WS-V12 | PEPPERL & FUCHS | 3 | Provided by school | N/A |
 |3.5'' Self-Closing Door Hinges| Stainless Steel Adjustable 3 Pack |Locks|B08YZ2TF1F|Qkenvo| 1 | $27.99 | $27.99 |
 |Signal Indicator Pilot Dash Light| 8mm 5/16" 24V AC/DC LED |Locks| PL8B-24 |Alpinetech | 3 | $5.95 | $17.85 |
-| **Total** | | | | **Total Components** | 10 | **Total Cost** | $83.31 |
+| **Total** | | | | **Total Components** | 10 | **Total Cost** | $90.81 |
 
