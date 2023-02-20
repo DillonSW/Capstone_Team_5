@@ -6,13 +6,14 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ## Constraints:
 
-**• The sensors shall be aware if the "state" of each cabinet door at all times. (C1)**
+**• The relay shall be aware if the "state" of each cabinet door the power state of the stepper-motor at all times. (C1)**
 
 **• The system shall be redundant and separate from the normal operations of the PLC. (C2)**
 
 **• The system must overrule all other functions of the system. The machine shall not continue any operations while there is an error in place. (C3)**
 
-*Reset button must be pressed
+**• There shall be administrative control over the safety system. (C4)**
+
 
 
 ## Subsystem 3D model
@@ -21,13 +22,18 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ## Subsystem Schematic
 
-![image](https://user-images.githubusercontent.com/100805322/220061514-7c38ad18-dd22-42c4-b2b8-a78aaa7d3078.png)
+![image](https://user-images.githubusercontent.com/100805322/220079283-5a2a7cca-7deb-4c55-bc44-c42f5ebac6a4.png)
+
+![image](https://user-images.githubusercontent.com/100805322/220079351-286037d7-2409-4d57-85b8-3ca33aa6b8d1.png)
+
 
 ## System Design:
 
-  At the frame of each door there will be a safety sensor and it's paired actuator. These sensors are then wired in series and connected to a Safety Relay to be monitored.
-
-  When an actuator moves out of the detection range, the signal from the sensors is lost alerting the relay. While this value is reported as "low" the motor system shall lose all functionality, until the reset button is pressed.  **(C3)**
+  At the frame of each door there will be a safety sensor and it's paired actuator. These sensors are then wired in series and connected to a Safety Relay to be monitored. Also, the relay will know any time the motor is given power since it is directly connected to the motor's power supply. If at any moment these 2 channels activate the relay, a signal will be sent to immediately shut down the system. **(C1)**
+  
+  This system will work in parallel to the main system's functions, and operate seperatly from the main operations of the machine. The system is designed to be redundant to ensure the safety of the users. **(C2)**
+  
+  Clearly there needs to be a way to turn off the power supply of the PLC, so that is in the works.
 
 # Analysis:
 
@@ -35,15 +41,15 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ![image](https://user-images.githubusercontent.com/100805322/220069237-251fcc47-ca8b-4f98-9b06-cf5fd7e19ec3.png)
 
-  A safety relay is a relay made specificly to monitor the safety of a machine. The safety relay will be connected to the non-contact interlock switches, and will report when any switch is missing the signal of their actuator. In the case the system's motor starts while the safey report is going off, it will trigger an immediate shut down of the system's functions.
+  A safety relay is a relay made specificly to monitor the safety of a machine. The safety relay will be connected to the non-contact interlock switches, and will report when any switch is missing the signal of their actuator. In the case the system's motor starts while the safey report is going off, it will trigger an immediate shut down of the system's functions. **(C3)**
   
-  The hardware chosen for the device meets the standards required by ISO 13849-1 (Safety of Machinery) and IEC 61508/IEC 62061 (Functional Safety of Electronic Safety-related Systems), and meet all the specifications of our system.
+  The hardware chosen for the device meets the standards required by ISO 13849-1 (Safety of Machinery) and IEC 61508/IEC 62061 (Functional Safety of Electronic Safety-related Systems), and meet all the specifications of the system.
 
   In conjunction with the safety relay will be a manual RESET switch. It was decided that it would be better to have a manual switch in place of an automated variant. While there are sensors that can confirm if the doors where closed, there is no absolute way to know if the space is clear of any objects. Also, if the relay ever forces a system shutdown, it will need to be inpected by an administrator. It will be inspected for any hardware issuse and possible tamperage. 
 
-  After the all clear is given, the administrator will unlock the interal machine lock and press the RESET switch. 
+  After the all clear is given, the administrator will unlock the interal machine lock and press the RESET switch. **(C4)**
 
-### Non-contact interlock switches (C1)
+### Non-contact interlock switches
 
 After doing some research, it was found that using Non-contact interlock switches would work best for the vending device. Using RFID technology, these sensors have several layers of protection and are considered to be the **"Gold Standard"** for RFID coded safey sensors.
 
@@ -110,5 +116,6 @@ These conditions are reflected in the mock up 3D model shown below. (Full model 
 # BOM
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
+|Allen-Bradley Safety Relay| 440R-N23132 Guard Master| Safety| MSR127TP|ALLEN-BRADLEY| 1 | $85.00 | $85.00 |
 |SensaGuard 440N-Z21SS2A|Non-contact switch| Safety | 440NZ21SS2A | ALLEN-BRADLEY | 3 | $155.01 | $465.03|
-| **Total** |  |  |  | **Total Components** | 3 | **Total Cost** | $465.03 |
+| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $550.03 |
