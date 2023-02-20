@@ -8,9 +8,11 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 **• The sensors shall be aware if the "state" of each cabinet door at all times. (C1)**
 
-**• The system must be completely separate from the normal operations of the device. (C2)**
+**• The system shall be redundant and separate from the normal operations of the PLC. (C2)**
 
 **• The system must overrule all other functions of the system. The machine shall not continue any operations while there is an error in place. (C3)**
+
+*Reset button must be pressed
 
 
 ## Subsystem 3D model
@@ -19,15 +21,27 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ## Subsystem Schematic
 
-![image](https://user-images.githubusercontent.com/100805322/219275364-542d2202-e404-418b-a029-dc6810c77acd.png)
-
+![image](https://user-images.githubusercontent.com/100805322/220061514-7c38ad18-dd22-42c4-b2b8-a78aaa7d3078.png)
 
 ## System Design:
 
+  At the frame of each door there will be a safety sensor and it's paired actuator. These sensors are then wired in series and connected to a Safety Relay to be monitored.
 
-  When an actuator moves out of the detection range, the signal from the sensors is lost alerting the PLC. While this value is reported as "low" the motor system shall lose all functionality, until the signal reports "high". The PLC will also know the state of the locks for each door. These 2 values will always be crossed referenced anytime a change is detected. If the inductive proximity sensors report the lock is in place, but the safety switch cannot sense the actuator, the system will report an error. This error must be checked and cleared by an administrator before it can return to normal functions. **(C3)**
+  When an actuator moves out of the detection range, the signal from the sensors is lost alerting the relay. While this value is reported as "low" the motor system shall lose all functionality, until the reset button is pressed.  **(C3)**
 
 # Analysis:
+
+### Safety Relay
+
+![image](https://user-images.githubusercontent.com/100805322/220069237-251fcc47-ca8b-4f98-9b06-cf5fd7e19ec3.png)
+
+  A safety relay is a relay made specificly to monitor the safety of a machine. The safety relay will be connected to the non-contact interlock switches, and will report when any switch is missing the signal of their actuator. In the case the system's motor starts while the safey report is going off, it will trigger an immediate shut down of the system's functions.
+  
+  The hardware chosen for the device meets the standards required by ISO 13849-1 (Safety of Machinery) and IEC 61508/IEC 62061 (Functional Safety of Electronic Safety-related Systems), and meet all the specifications of our system.
+
+  In conjunction with the safety relay will be a manual RESET switch. It was decided that it would be better to have a manual switch in place of an automated variant. While there are sensors that can confirm if the doors where closed, there is no absolute way to know if the space is clear of any objects. Also, if the relay ever forces a system shutdown, it will need to be inpected by an administrator. It will be inspected for any hardware issuse and possible tamperage. 
+
+  After the all clear is given, the administrator will unlock the interal machine lock and press the RESET switch. 
 
 ### Non-contact interlock switches (C1)
 
@@ -64,7 +78,7 @@ And as stated in the System Design, the state of the safety sensors will be cros
 
 *^Tabel 2*
 
-As seen in the diagram above, the output cable has a total of 8-pins. Each of these pins need to be connected to separate parts of our system to be properly utilized. Also, to simplify the process the sensors will be connected in series. By doing this if any of the sensors are missing their actuator or are out of line, the system will report 0V to the PLC. Using Kicad a wiring model was constructed based on the sample model provided by the manufacturer. Sample seen below:
+As seen in the diagram above, the output cable has a total of 8-pins. Each of these pins need to be connected to separate parts of our system to be properly utilized. Also, to simplify the process the sensors will be connected in series. By doing this if any of the sensors are missing their actuator or are out of line, the system will report 0V to the Safety Relay. Using Kicad a wiring model was constructed based on the sample model provided by the manufacturer. Sample seen below:
 
 ![image](https://user-images.githubusercontent.com/100805322/219280921-13addd1a-f63f-4eae-a950-8e0f9d8fa89e.png)
 
