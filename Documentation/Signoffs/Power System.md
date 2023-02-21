@@ -171,7 +171,7 @@ Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is
 | 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $70.88 | $70.88 |
 | Wire Duct | 1.26in Wide, 1in Depth, Slotted, Lead-Free PVC, Screw Mount Wire Duct | Power | F1X1LG6-A | Panduit | 1 | $29.02 | $29.02 |
 | Wire Duct Cover | 1.26in Wide, 1in Depth, PVC, Flush Wire Duct Cover | Power | C1LG6-F | Panduit | 1 | $7.05 | $7.05 |
-| Enclosure | 12H x 10 x 6D (in), Wall-Mount, Single Door, Carbon Steel Enclosure | Power | SCE-1210ELJ | Saginaw | 1 | $107.00 | $107.00 |
+| Enclosure | 12H x 10W x 6D (in), Wall-Mount, Single Door, Carbon Steel Enclosure | Power | SCE-1210ELJ | Saginaw | 1 | $107.00 | $107.00 |
 | Subpanel | 12H x 9W (in), 14 Gauge, Carbon Steel Subpanel | Power | SCE-12P10 | Saginaw | 1 | $11.50 | $11.50 |
 | Din Rail | 19.7-inch, Slotted, Steel Din Rail | Power | 467406 | RS PRO | 1 | $4.99 | $4.99 |
 | Power Cord | GFCI, 10-ft, In-Line, Vending Machine Cord | Power | 30376018-01 | Tower Manufacturing Corporation | 1 | $77.76 | $77.76 |
