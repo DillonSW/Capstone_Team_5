@@ -6,13 +6,11 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ## Constraints:
 
-**• The relay shall be aware if the "state" of each cabinet door the power state of the stepper-motor at all times. (C1)**
+**• The relay shall be aware of the state of each cabinet door all times. (C1)**
 
 **• The system shall be redundant and separate from the normal operations of the PLC. (C2)**
 
-**• The system must overrule all other functions of the system. The machine shall not continue any operations while there is an error in place. (C3)**
-
-**• There shall be administrative control over the safety system. (C4)**
+**• The system must overrule all other functions of the system. The motor shall not have any motion while there is an error in place. (C3)**
 
 
 
@@ -22,32 +20,26 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ## Subsystem Schematic
 
-![image](https://user-images.githubusercontent.com/100805322/220079283-5a2a7cca-7deb-4c55-bc44-c42f5ebac6a4.png)
+![image](https://user-images.githubusercontent.com/100805322/220266587-61a7dbbb-762b-4be1-8fab-ddcc6aab9885.png)
 
-![image](https://user-images.githubusercontent.com/100805322/220079351-286037d7-2409-4d57-85b8-3ca33aa6b8d1.png)
+
+  **Note: For alternative design with no non-contact interlock switches, please refer to the schematic found [here](https://github.com/DillonSW/Capstone_Team_5/blob/4dd55fb676e405559dcd8b679fd0daf48392436e/images/SafetySystem_Schematic_ACTUAL.png).**
+
 
 
 ## System Design:
 
-  At the frame of each door there will be a safety sensor and it's paired actuator. These sensors are then wired in series and connected to a Safety Relay to be monitored. Also, the relay will know any time the motor is given power since it is directly connected to the motor's power supply. If at any moment these 2 channels activate the relay, a signal will be sent to immediately shut down the system. **(C1)**
+  At the frame of each door there will be a safety sensor and it's paired actuator. These sensors are then wired in series and connected to the Dual-Check Relay System to be monitored. Also, the relay will control when the motor will be given power since it is directly connected to the motor's power supply. **(C1)**
   
-  This system will work in parallel to the main system's functions, and operate seperatly from the main operations of the machine. The system is designed to be redundant to ensure the safety of the users. **(C2)**
-  
-  Clearly there needs to be a way to turn off the power supply of the PLC, so that is in the works.
+  This system will work in parallel to the main system's functions, and operate seperatly from the main operations of the machine. The system is designed to be redundant to ensure the safety of the users. 
 
 # Analysis:
 
-### Safety Relay
+### Dual-Check Relay System
 
-![image](https://user-images.githubusercontent.com/100805322/220069237-251fcc47-ca8b-4f98-9b06-cf5fd7e19ec3.png)
+![image](https://user-images.githubusercontent.com/100805322/220256330-4dcdd449-0aac-4013-ad56-ad2000c6fa7c.png)
 
-  A safety relay is a relay made specificly to monitor the safety of a machine. The safety relay will be connected to the non-contact interlock switches, and will report when any switch is missing the signal of their actuator. In the case the system's motor starts while the safey report is going off, it will trigger an immediate shut down of the system's functions. **(C3)**
-  
-  The hardware chosen for the device meets the standards required by ISO 13849-1 (Safety of Machinery) and IEC 61508/IEC 62061 (Functional Safety of Electronic Safety-related Systems), and meet all the specifications of the system.
-
-  In conjunction with the safety relay will be a manual RESET switch. It was decided that it would be better to have a manual switch in place of an automated variant. While there are sensors that can confirm if the doors where closed, there is no absolute way to know if the space is clear of any objects. Also, if the relay ever forces a system shutdown, it will need to be inpected by an administrator. It will be inspected for any hardware issuse and possible tamperage. 
-
-  After the all clear is given, the administrator will unlock the interal machine lock and press the RESET switch. **(C4)**
+  The Dual-Check Relay System is comprised of two terminal block relays connecting the power of the motor in series. The relays will be connected to the outputs of the non-contact interlock switches, and will report when any switch is missing the signal of their actuator. Relay_1 will be connected to the OSSD 1 Output, and Relay_2 will read in the OSSD 2 output. If either of the sensor signals are lost, the power of the motor is disconnected and will be unable to function.
 
 ### Non-contact interlock switches
 
@@ -67,8 +59,10 @@ After doing some research, it was found that using Non-contact interlock switche
 
     Note: Since the sensors are "non-contact" they will not gain much wear and tear. 
     However, it is recommended to inspect the sensor every month for any oddities. 
+    
+These sensors will "report" the state of the cabinet door by have constant connection to their actuators. Whenever the sensor loses this reading, the signal connected to the relay will disapear and the relay will release the connection to the motor's power supply. **(C3)**
 
-### Anti-tampering Function (C2)
+### Anti-tampering Function
 
 There are two types of RFID type anti-tampering functions: Unicode type and Multi-code type. The SensaGuard uses the Unicode method. This means that there is single specific code matched between the sensor and actuator. There is also a feature for pairing the new actuator to the sensor after purchase.
 
@@ -76,7 +70,7 @@ There are two types of RFID type anti-tampering functions: Unicode type and Mult
 
 ^Source: https://us.idec.com/medias/safety04-07-en.jpg?context=bWFzdGVyfHJvb3R8NDM4NzR8aW1hZ2UvanBlZ3xoOWMvaDRlLzkxMjgxMzg1MDYyNzAuanBnfDI0ZWEwNDMzZDUyZWE5MmFkNGY4YjYwZWRmNmFjYWQ3MDY2OTlhODA4MzY0MjZhZGZlZjFlNGIzOTBjYTJlZWY
 
-And as stated in the System Design, the state of the safety sensors will be cross referenced with the induction sensors. The induction sensors are a part of the normal system functions, while the safety sensors act as a monitor of the door. The induction sensors can be tampered with nearly any piece of metal, meaning the safety sensor's coded RFID is the real line of defense. **(C2)**
+And as stated in the System Design, the state of the safety sensors will work in parallel with the induction sensors. The induction sensors are a part of the normal system functions, while the safety sensors act as a monitor of the door. The induction sensors can be tampered with nearly any piece of metal, meaning the safety sensor's coded RFID is the real line of defense. **(C2)**
 
 ### Adaptation
 
@@ -116,6 +110,6 @@ These conditions are reflected in the mock up 3D model shown below. (Full model 
 # BOM
 | Name of item | Description | Subsystem | Part Number | Manufacturer | Quantity | Price | Total |
 |--------------|-------------|-----------|-------------|--------------|----------|-------|-------|
-|Allen-Bradley Safety Relay| 440R-N23132 Guard Master| Safety| MSR127TP|ALLEN-BRADLEY| 1 | $85.00 | $85.00 |
+|Terminal Block Relay|24V AC/DC Input, DIN Rail Mount| Safety | X766842 | ASI | 2 | $11.96 | $23.92|
 |SensaGuard 440N-Z21SS2A|Non-contact switch| Safety | 440NZ21SS2A | ALLEN-BRADLEY | 3 | $155.01 | $465.03|
-| **Total** |  |  |  | **Total Components** | 4 | **Total Cost** | $550.03 |
+| **Total** |  |  |  | **Total Components** | 5 | **Total Cost** | $488.95 |
