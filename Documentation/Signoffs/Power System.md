@@ -166,15 +166,18 @@ Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is
 | Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
 | 10-Block Jumpers | Screw-Down, 10 Positions | Power | KN-10J12 | Konnect-It | 1 (Pack of 5) | $10.50A | $10.50 |
 | End Anchors | Snap-On, Din Rail End Anchors | Power | 1492-EAJ35 | Allen Bradley | 10 | $2.42 | $24.20 |
-| Circuit Breaker | 1-Pole, C Curve, 277VAC/48VDC, Circuit Breaker | Power | FAZ-C6-1-NA-SP | Eaton | 1 | $29.00 | $29.00 |
+| Circuit Breaker | 1-Pole, C Curve, 277VAC/48VDC, 2Amp Circuit Breaker | Power | FAZ-C6-1-NA-SP | Eaton | 1 | $29.00 | $29.00 |
+| Circuit Breaker | 1-Pole, D Curve, 277VAC/48VDC, 2Amp Circuit Breaker | Power | FAZ-D2-1-SP | Eaton | 1 | $15.00 | $15.00 |
 | 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $70.88 | $70.88 |
 | Wire Duct | 1.26in Wide, 1in Depth, Slotted, Lead-Free PVC, Screw Mount Wire Duct | Power | F1X1LG6-A | Panduit | 1 | $29.02 | $29.02 |
 | Wire Duct Cover | 1.26in Wide, 1in Depth, PVC, Flush Wire Duct Cover | Power | C1LG6-F | Panduit | 1 | $7.05 | $7.05 |
-| Enclosure | 14H x 16W x 6D (in), Wall-Mount, Single Door, Stainless Steel Clamp Enclosure | Power | SCE-1614CHSNF | Saginaw | 1 | $186.00 | $186.00 |
-| Subpanel | 13H x 15W (in), 14 Gauge, Carbon Steel Subpanel | Power | SCE-16P14 | Saginaw | 1 | $29.50 | $29.50 |
+| Enclosure | 12H x 10 x 6D (in), Wall-Mount, Single Door, Carbon Steel Enclosure | Power | SCE-1210ELJ | Saginaw | 1 | $107.00 | $107.00 |
+| Subpanel | 12H x 9W (in), 14 Gauge, Carbon Steel Subpanel | Power | SCE-12P10 | Saginaw | 1 | $11.50 | $11.50 |
 | Din Rail | 19.7-inch, Slotted, Steel Din Rail | Power | 467406 | RS PRO | 1 | $4.99 | $4.99 |
 | Power Cord | GFCI, 10-ft, In-Line, Vending Machine Cord | Power | 30376018-01 | Tower Manufacturing Corporation | 1 | $77.76 | $77.76 |
-| Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 2 | $26.11 | $52.22 |
+| Power Splitter | 2-ft, 14 AWG, 3-Splitter Power Extension | Power | PW163-1324 | Nema | 1 | $6.80 | $6.80 |
+| Splitter Cords | 6-ft, 14 AWG Power Cord | Power | PW116-1206 | Nema | 3 | $4.74 | $14.22 |
+| Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 1 | $26.11 | $26.11 |
 | M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 2 | $6.49 | $12.98 |
 | Fuse Terminal | W-Series Fuse Block | Power | 402363 | Weidmüller | 1 | $6.61 | $6.61 |
 | Fuse | Fast-Acting 3A Fuse Breaker | Power | A-02-GSZ-7-DB | Eaton Bussman | 1 (Pack of 4) | $9.99 | $9.99 |
