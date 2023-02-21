@@ -174,9 +174,9 @@ Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is
 | Subpanel | 13H x 15W (in), 14 Gauge, Carbon Steel Subpanel | Power | SCE-16P14 | Saginaw | 1 | $29.50 | $29.50 |
 | Din Rail | 19.7-inch, Slotted, Steel Din Rail | Power | 467406 | RS PRO | 1 | $4.99 | $4.99 |
 | Power Cord | GFCI, 10-ft, In-Line, Vending Machine Cord | Power | 30376018-01 | Tower Manufacturing Corporation | 1 | $77.76 | $77.76 |
-| Cable Entry Plate | 35 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/35 | Icotek | 2 | $26.11 | $52.22 |
-| M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 1 | $6.49 | $6.49 |
+| Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 2 | $26.11 | $52.22 |
+| M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 2 | $6.49 | $12.98 |
 | Fuse Terminal | W-Series Fuse Block | Power | 402363 | Weidmüller | 1 | $6.61 | $6.61 |
 | Fuse | Fast-Acting 3A Fuse Breaker | Power | A-02-GSZ-7-DB | Eaton Bussman | 1 (Pack of 4) | $9.99 | $9.99 |
 | Danger Sign | 120V OSHA Danger Sign, 3.5" x 5" | Power | S-2260 | MySafetySign | 1 | $5.20 | $5.20 |
-| **Total** |  |  |  | **Total Components** | 30 | **Total Cost** | $581.70 |
+| **Total** |  |  |  | **Total Components** | 31 | **Total Cost** | $588.19 |
