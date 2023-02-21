@@ -1,7 +1,7 @@
 # Safety System
 
 ## Subsystem Function:
-The sole purpose of this system is to secure the safety of both the users and the operators of the device. The primary functions of the system come from the consumer's cabinet restrictions. Using "SensaGuard" non-contact Interlock technology, both the consumers and inner contents of the machine shall have an extra shield from possible harm. This shall also protect the integrty of the vending device's processes, it can be considered a type of oversheilding for the devices functions.
+The sole purpose of this system is to secure the safety of both the users and the operators of the device. The primary functions of the system come from the consumer's cabinet restrictions. Using "SensaGuard" non-contact Interlock technology, both the consumers and inner contents of the machine shall have an extra shield from possible harm. This shall also protect the integrity of the vending device's processes, it can be considered a type of oversheilding for the device's functions.
 
 
 ## Constraints:
@@ -29,9 +29,9 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ## System Design:
 
-  At the frame of each door there will be a safety sensor and it's paired actuator. These sensors are then wired in series and connected to the Dual-Check Relay System to be monitored. Also, the relay will control when the motor will be given power since it is directly connected to the motor's power supply. **(C1)**
+  At the frame of each door there will be a safety sensor and its paired actuator. These sensors are then wired in series and connected to the Dual-Check Relay System to be monitored. Also, the relay will control when the motor will be given power since it is directly connected to the motor's power supply. **(C1)**
   
-  This system will work in parallel to the main system's functions, and operate seperatly from the main operations of the machine. The system is designed to be redundant to ensure the safety of the users. 
+  This system will work in parallel to the main system's functions, and operate separately from the main operations of the machine. The system is designed to be redundant to ensure the safety of the users. 
 
 # Analysis:
 
@@ -43,7 +43,7 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ### Non-contact interlock switches
 
-After doing some research, it was found that using Non-contact interlock switches would work best for the vending device. Using RFID technology, these sensors have several layers of protection and are considered to be the **"Gold Standard"** for RFID coded safey sensors.
+After doing some research, it was found that using Non-contact interlock switches would work best for the vending device. Using RFID technology, these sensors have several layers of protection and are considered to be the **"Gold Standard"** for RFID coded safety sensors.
 
     Note: The "Gold Standard" phase is sourced from Professor Jesse Roberts of Tennessee Technological University
 
@@ -60,7 +60,7 @@ After doing some research, it was found that using Non-contact interlock switche
     Note: Since the sensors are "non-contact" they will not gain much wear and tear. 
     However, it is recommended to inspect the sensor every month for any oddities. 
     
-These sensors will "report" the state of the cabinet door by have constant connection to their actuators. Whenever the sensor loses this reading, the signal connected to the relay will disapear and the relay will release the connection to the motor's power supply. **(C3)**
+These sensors will "report" the state of the cabinet door by have constant connection to their actuators. Whenever the sensor loses this reading, the signal connected to the relay will disappear and the relay will release the connection to the motor's power supply. **(C3)**
 
 ### Anti-tampering Function
 
@@ -76,7 +76,7 @@ And as stated in the System Design, the state of the safety sensors will work in
 
 ![image](https://user-images.githubusercontent.com/100805322/219279087-0f7633c4-b6c9-44d6-9171-55ad80ad1205.png)
 
-*^Tabel 2*
+*^Table 2*
 
 As seen in the diagram above, the output cable has a total of 8-pins. Each of these pins need to be connected to separate parts of our system to be properly utilized. Also, to simplify the process the sensors will be connected in series. By doing this if any of the sensors are missing their actuator or are out of line, the system will report 0V to the Safety Relay. Using Kicad a wiring model was constructed based on the sample model provided by the manufacturer. Sample seen below:
 
@@ -93,7 +93,7 @@ Each sensor will be placed on the inner side of the door frame, below the induct
 ![image](https://user-images.githubusercontent.com/100805322/219282149-cdba0efb-5ba5-4401-8828-22926a7aeb31.png)
 
 
-The sensor component and actuator require a minimum distance of 1.97" of space betwix them. This is shown in *Figure 3* from the user manual on the manufacturer's website.
+The sensor component and actuator require a minimum distance of 1.97" of space betwixt them. This is shown in *Figure 3* from the user manual on the manufacturer's website.
 
 ![image](https://user-images.githubusercontent.com/100805322/219317607-ba010073-7c85-412f-9d6a-a4de02f399b3.png)
 
