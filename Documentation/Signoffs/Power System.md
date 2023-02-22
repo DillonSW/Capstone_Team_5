@@ -166,7 +166,7 @@ Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is
 | Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
 | 10-Block Jumpers | Screw-Down, 10 Positions | Power | KN-10J12 | Konnect-It | 1 (Pack of 5) | $10.50A | $10.50 |
 | End Anchors | Snap-On, Din Rail End Anchors | Power | 1492-EAJ35 | Allen Bradley | 10 | $2.42 | $24.20 |
-| Circuit Breaker | 1-Pole, C Curve, 277VAC/48VDC, 6Amp Circuit Breaker | Power | FAZ-C6-1-NA-SP | Eaton | 1 | $29.00 | $29.00 |
+| Circuit Breaker | 1-Pole, C Curve, 277VAC/48VDC, 4Amp Circuit Breaker | Power | FAZ-D4-1-SP | Eaton | 1 | $15.00 | $15.00 |
 | Circuit Breaker | 1-Pole, D Curve, 277VAC/48VDC, 2Amp Circuit Breaker | Power | FAZ-D2-1-SP | Eaton | 1 | $15.00 | $15.00 |
 | 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $70.88 | $70.88 |
 | Wire Duct | 1.26in Wide, 1in Depth, Slotted, Lead-Free PVC, Screw Mount Wire Duct | Power | F1X1LG6-A | Panduit | 1 | $29.02 | $29.02 |
