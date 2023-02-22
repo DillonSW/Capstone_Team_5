@@ -55,9 +55,9 @@ This means that we will be able to use our enclosure as an effective ground-faul
 
 Also, the **Motor Driver**, **Sensors**, and **Safety Sensors** have been heavily simplified for convenience of the power system wiring. To see the schematics of the simplified components, please refer to the **Motor System**, **Sensor System**, and **Safety System**.
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Power-Subsystem/images/PowerSchemTwo.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Power-Subsystem/images/PowerSchemFour.jpg)
 
-The schematic above shows how the power system will tie every subsystem together. The terminal blocks that are larger than 1x1 indicate that they have been jumped together. The wires feeding into and out of the terminal blocks are also labeled based on what component they are connected to. For consistency, the top wire will be labeled [Name]-1 and the bottom wire will be labeled [Name]-2.
+The schematic above shows how the power system will tie every subsystem together. The terminal blocks that are larger than 1x1 indicate that they have been jumped together.
 
 The larger terminal blocks, as stated before, are connected through jumpers. We are buying these jumpers as 10-position connectors. The framework for these jumpers are made of metal. We will cut down the 10-position ones into smaller positions as needed (ex: 2 or 3) with the help of the tools in our machine shops.
 
@@ -180,6 +180,6 @@ Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is
 | Cable Entry Plate | 14 Entry, Screw Mounting Cable Entry | Power | KEL-DPZ 63/14 | Icotek | 1 | $26.11 | $26.11 |
 | M12 Cable Gland | M12, Waterproof, Adjustable, Locknut, 3-6mm, Nylon Cable Gland | Power | A16101800ux0286 | uxcell | 2 | $6.49 | $12.98 |
 | Fuse Terminal | W-Series Fuse Block | Power | 402363 | Weidmüller | 1 | $6.61 | $6.61 |
-| Fuse | Fast-Acting 3A Fuse Breaker | Power | A-02-GSZ-7-DB | Eaton Bussman | 1 (Pack of 4) | $9.99 | $9.99 |
+| Fuse | Fast-Acting 4A Fuse Breaker | Power | 5ST 4-R | Bel Fuse Inc. | 1 | $9.99 | $9.99 |
 | Danger Sign | 120V OSHA Danger Sign, 3.5" x 5" | Power | S-2260 | MySafetySign | 1 | $5.20 | $5.20 |
 | **Total** |  |  |  | **Total Components** | 31 | **Total Cost** | $588.19 |
