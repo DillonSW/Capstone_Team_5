@@ -115,23 +115,17 @@ $120 * I1 = 120$
 
 These equations give that the 120V side will draw, at max, 1A. The 24V side will draw, at max, 5A. **The 24V side will be further analyzed to see how much current it will actually draw**
 
-* PC: **700mA**
+* PC: **Consumer Rated**
 
-The ThinkCentre PC stickers show that the PC-side of the power block draws 20V, 3.5A.
-
-$120V * I1 = 20V * 3.5A$
-
-$I1 = .7A$
+We will be using a power splitter cord to redirect the 120VAC to the PC, located outside our enclosure. Because the PC is consumer-rated, there is not a need to protect it.
 
 * Motor Driver: **2.5A**
 
 The motor driver datasheet states that it will draw 2.5A. Please refer to the Motor System branch to find the datasheet.
 
-**Total 120V-side current draw**
+We want the motor to be secured by a safety system. We will be using a system of relays to create a redundant system. Please refer to the Safety System documentation to see the schematic.
 
-$1 + .7 + 2.5 = 4.2A$
-
-Assuming that 4.2A is 80% of max capacity, we must have a circuit breaker that is at least 5.25A. We will use a 6A circuit breaker.
+So, assuming we will only fill to 80% of the current limit, we will need at least a 1.25A circuit breaker for the power supply, and a 3.125A for the motor driver. We are going to use a 2A circuit breaker for the power supply, and a 4A circuit breaker for the motor driver.
 
 We also want the circuit breaker to be higher rated than the power cord. We will use a 5A GFCI power cord.
 
@@ -149,13 +143,13 @@ There are 3 box sensors (top, middle, bottom). Therefore the total current draw 
 
 * Safety Sensors: **.2A each**
 
-There are also 3 safety sensors (top, middle, bottom). Therefore the total current draw will be **.6A**.
+There are also 6 safety sensors (top, middle, bottom; two on each level). Therefore the total current draw will be **1.2A**.
 
 **Total 24V-side current draw**
 
-$1.5 + .075 + .6 = 2.175$
+$1.5 + .075 + 1.2 = 2.775$
 
-Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is at least 2.72A. We will use a 3A fuse breaker.
+Assuming that 2.775A is 80% of max capacity, we must have a fuse breaker that is at least 3.468A. We will use a 4A fuse breaker.
 
 ## BOM
 
@@ -166,7 +160,7 @@ Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is
 | Terminal Covers | End Cover Brackets | Power | KN-ST1GRY | Konnect-It | 1 (Pack of 25) | $11.00 | $11.00 |
 | 10-Block Jumpers | Screw-Down, 10 Positions | Power | KN-10J12 | Konnect-It | 1 (Pack of 5) | $10.50A | $10.50 |
 | End Anchors | Snap-On, Din Rail End Anchors | Power | 1492-EAJ35 | Allen Bradley | 10 | $2.42 | $24.20 |
-| Circuit Breaker | 1-Pole, C Curve, 277VAC/48VDC, 4Amp Circuit Breaker | Power | FAZ-D4-1-SP | Eaton | 1 | $15.00 | $15.00 |
+| Circuit Breaker | 1-Pole, C Curve, 277VAC/48VDC, 4Amp Circuit Breaker | Power | FAZ-D4-1-SP | Eaton | 2 | $15.00 | $30.00 |
 | Circuit Breaker | 1-Pole, D Curve, 277VAC/48VDC, 2Amp Circuit Breaker | Power | FAZ-D2-1-SP | Eaton | 1 | $15.00 | $15.00 |
 | 24VDC Power supply | 120VAC to 120W, 24V, Din Rail Power Supply | Power | SVL524100 | Sola-HD | 1 | $70.88 | $70.88 |
 | Wire Duct | 1.26in Wide, 1in Depth, Slotted, Lead-Free PVC, Screw Mount Wire Duct | Power | F1X1LG6-A | Panduit | 1 | $29.02 | $29.02 |
@@ -182,4 +176,4 @@ Assuming that 2.175A is 80% of max capacity, we must have a fuse breaker that is
 | Fuse Terminal | W-Series Fuse Block | Power | 402363 | Weidmüller | 1 | $6.61 | $6.61 |
 | Fuse | Fast-Acting 4A Fuse Breaker | Power | 5ST 4-R | Bel Fuse Inc. | 1 | $9.99 | $9.99 |
 | Danger Sign | 120V OSHA Danger Sign, 3.5" x 5" | Power | S-2260 | MySafetySign | 1 | $5.20 | $5.20 |
-| **Total** |  |  |  | **Total Components** | 31 | **Total Cost** | $588.19 |
+| **Total** |  |  |  | **Total Components** | 36 | **Total Cost** | $502.12 |
