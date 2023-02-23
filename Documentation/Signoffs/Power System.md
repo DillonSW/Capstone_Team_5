@@ -78,27 +78,25 @@ The Ground Terminals were rounded up from 0.24 inches to 0.25 inches.
 
 The End Covers were rounded up from 0.0866 inches to 0.1 inch, which is a roughly 15% increase. This gives the end covers a 15% pre-calculation tolerance.
 
-The fuse terminal is 8mm (or 0.315 inches), which will be rounded up to .320 inches.
-
-The PLC dimensions claim to be 3.937 inches wide. Hand-measured dimensions were 5.125 inches wide. These calculations are using 5.125 inches.
+The Relays were rounded up from 0.244 inches to 0.25 inches.
 
 ^ Source: https://www.automation24.com/siemens-cpu-1215c-6es72151ag400xb0?gclid=CjwKCAiAuOieBhAIEiwAgjCvcgl-DwwSXIfjnvM5ExyufzDYwyMGhMjmCjiGZCoLiI1Ku4H43bPSvRoC6qcQAvD_BwE
 
 
 | Component | Width (inches) | Quantity | Total Width |
 |-----------|-------|----------|------------|
-| Hot/Neutral Terminal Blocks | 0.25 | 14 | 3.5 |
-| Ground Terminal Blocks | 0.25 | 3 | 0.75 |
-| End Covers | 0.1 | 5 | 0.5 |
-| Stop Blocks (End Anchors) | 0.31 | 10 | 3.1 |
-| Circuit Breaker | 0.69 | 1 | 0.69 |
-| PLC | 5.125 | 1 | 5.125 |
-| Fuse Block | .320 | 1 | .320 |
-|**Total** |  | **Total Width (inches):** | 13.985 |
+| Hot/Neutral Terminal Blocks | 0.25 | 2 | .5 |
+| Ground Terminal Blocks | 0.25 | 4 | 1 |
+| End Covers | 0.1 | 1 | 0.1 |
+| Stop Blocks (End Anchors) | 0.31 | 7 | 2.17 |
+| Circuit Breaker | 0.69 | 2 | 1.38 |
+| Power Supply | 1.57 | 1 | 1.57 |
+| Relays | 0.25 | 2 | .5 |
+|**Total** |  | **Total Width (inches):** | 7.22 |
 
-Without rounding, the actual measurements came out to be 13.183 inches.
+Without rounding, the actual measurements came out to be 7.055 inches.
 
-We are choosing a subpanel with a width of 15in. This gives us 1.015 inches of clearance. With rounding, we have 1.817 inches. Given how small the terminals are, there is enough room to place 5 or 9 additional terminal blocks respectively.
+We are choosing a subpanel with a width of 9in. This gives us 1.945 inches of clearance. With rounding, we have 1.78 inches.
 
 ## Constraints C1 and C2
 
