@@ -43,10 +43,20 @@ A total of 10 random students were entered into the database along with 15 rando
 
 ### Purpose of the subsystem
 ---
+The purpose of the graphic user insterface is to take information from the user and store it into the database through the ID subsystem. The interface allows for a convenient way to rent a device for a class and provides error checking to verify information is in the correct format.
+
+The interface is able to let a user input information into the ID subsystem and provide the student with notifications while renting a device. The GUI must follow certain constraints determined during the design of the project. The team was not able to order a touchscreen for the project, but received a ubuntu 20.04 computer from the school IT department instead. 
+
+Constraints C1-C3 are satisfied by the computer provided to the team by the IT department. 
+
+Constraint C4 was satisfied by a personal laptop of a team member, where he programmed a custom PLC ladder logic program. 
+
+Constraint C5 will need to be improved upon in the next rendition of the design by a future capstone team. Due to a lack of parts, the machine will not be moved into the Brown student lounge, so an anchored PC was not needed. 
 
 ---
 ### Experimental Procedure
 ---
+
 
 ---
 ### Expected Results
