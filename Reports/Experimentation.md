@@ -56,15 +56,18 @@ Constraint C5 will need to be improved upon in the next rendition of the design 
 ---
 ### Experimental Procedure
 ---
-
+To test this subsystem, a user entered incorrect data and correct data into the UI to verify the operation of error checking. The UI will provide popups whenever it detects and error, and will not take any data until the error is resolved. The data will be checked to make sure incorrect data was not entered into the database. There is operations in the code to prevent SQL injection into the database, which will be verified by trying to inject through the GUI input box. There is a command that will shut down the program as well and will be tested after data is entered. 
 
 ---
 ### Expected Results
 ---
+The team expected to see all errors popup during the correct time and allow data storage when the GUI was not faced with an error. The GUI was also expected to prevent incorrect data from being stored during an error and prevent injection through the input box located on the screen. Every error was checked by first entering correct data, then inputting incorrect data to the ID system through the GUI. The team also attempted to inject a query through each input box twice in case a first attempt catches an error. 
 
 ---
 ### Collected Data
 ---
+
+
 
 ---
 ### Data Interpretation
