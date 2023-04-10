@@ -31,4 +31,36 @@ A total of 10 random students were entered into the database along with 15 rando
 ### Collected Data
 ---
 
+---
+### Data Interpretation
+---
+
+---
+### Future Improvements
+---
+
+## GUI Subsystem
+
+### Purpose of the subsystem
+---
+
+---
+### Experimental Procedure
+---
+
+---
+### Expected Results
+---
+
+---
+### Collected Data
+---
+
+---
+### Data Interpretation
+---
+
+---
+### Future Improvements
+---
 
