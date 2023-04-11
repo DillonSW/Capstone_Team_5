@@ -81,15 +81,25 @@ Picture ?
 
 ### Purpose of the Subsystem
 ---
-Insert Purpose and Constraints being satisfied
+The purpose of the PLC system is to be the middle-man between our database and our physical peripherals such as the motor and LEDs. The reason we chose to use a PLC in addition to a Linux PC is because PLCs are designed to handle physical control faster and more efficiently than a PC.
+
+Constraints C1 and C2 required us to have the memory card for our PLC, which does satisfy these constraints. But, due to ordering issues, we are using the PLCs in our PLC lab, which have 8 digital input and outputs. So, with what we have, C1 is satisfied but C2 is not.
+
+Constraint C3 is satisfied, even with the ordering issues. The PLC setup that we are using is 24-inches long, and less than 6-inches deep and tall. So, our system will fit within a 3x1x1 foot area, and C3 is satisfied.
+
+Constaint C4 is satisfied with the PLC we are using. The PLCs in the lab have two 48V fuses, one that is rated for 2A and the other for 4A. This satisfies IEC-61131-2(6.4.4.3) for protection from physical damage.
+
+Constraint C5 is satisfied by the use of a custom OPC client that can read-from and write-to the PLC.
 
 ---
 ### Experimental Procedure
 ---
+To test this subsystem, we connected the only peripheral we have available to us, the motor driver, and aliased its inputs (STEP, DIR) with tags in the PLC. When these tags are energized and unenergized, the motor should be able to step and change direction based on the state of their respective tags. Because most of the constraints revolving around the PLC are about its peripherals, there are not many constraints that can be experimented on in this section.
 
 ---
 ### Expected Results
 ---
+If everything is connected properly, and the OPC client can ping to the PLC, the OPC should be able to change the state of a tag and read its state. The PLC should also be able to revert the state of the tag changed by the OPC for the next run.
 
 ---
 ### Collected Data
