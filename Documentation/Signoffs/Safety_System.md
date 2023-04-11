@@ -6,7 +6,7 @@ The sole purpose of this system is to secure the safety of both the users and th
 
 ## Constraints:
 
-**• The relay shall be aware of the state of each cabinet door all times. (C1)**
+**• The relay shall be aware of the state of each cabinet door at all times. (C1)**
 
 **• The system shall be redundant and separate from the normal operations of the PLC. (C2)**
 
