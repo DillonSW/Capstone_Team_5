@@ -67,7 +67,7 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
-
+Picture ?
 
 ---
 ### Data Interpretation
