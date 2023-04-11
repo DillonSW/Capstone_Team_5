@@ -77,3 +77,46 @@ The team expected to see all errors popup during the correct time and allow data
 ### Future Improvements
 ---
 
+## PLC System
+
+### Purpose of the Subsystem
+---
+Insert Purpose and Constraints being satisfied
+
+---
+### Experimental Procedure
+---
+
+---
+### Expected Results
+---
+
+---
+### Collected Data
+---
+
+---
+Further Improvements
+---
+
+## Motor System
+
+### Purpose of the Subsystem
+---
+
+---
+### Experimental Procedure
+---
+
+---
+### Expected Results
+---
+
+---
+### Collected Data
+---
+
+---
+### Further Improvements
+---
+
