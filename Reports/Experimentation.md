@@ -99,6 +99,27 @@ Insert Purpose and Constraints being satisfied
 ### Further Improvements
 ---
 
+## Safety System
+
+### Purpose of the Subsystem
+---
+
+---
+### Experimental Procedure
+---
+
+---
+### Expected Results
+---
+
+---
+### Collected Data
+---
+
+---
+### Further Improvements
+---
+
 ## Motor System
 
 ### Purpose of the Subsystem
@@ -120,3 +141,23 @@ Insert Purpose and Constraints being satisfied
 ### Further Improvements
 ---
 
+## Secuirty and Locks System
+
+### Purpose of the Subsystem
+---
+
+---
+### Experimental Procedure
+---
+
+---
+### Expected Results
+---
+
+---
+### Collected Data
+---
+
+---
+### Further Improvements
+---
