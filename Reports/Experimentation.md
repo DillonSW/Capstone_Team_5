@@ -10,6 +10,29 @@ The customer required the program to do a few things: store the student ID, name
 
 Most of the constraints enumerated in the signoff have not been met due to parts never arriving for the team, however, the constraints have been partially satisfied by substituting the needed hardware with software. Any other constraints where parts were not received and not able to be programmed are considered out of the scope of this project.  
 
+---
+### Constraints/Specifications
+---
+Below is a list of the constraints for the ID system. They are numbered C1 to C9
+
+C1: Barcode Scanners shall be low power and consume no greater than 5 V 0.5 A.  
+
+C2: Barcode Scanners shall be able to decode Code-128 barcodes  
+
+C3: Barcodes shall be of decent quality to follow ISO 15416 standard. Assures that the codes can be read by any scanner  
+
+C4: RFID Card Scanner shall be low power and consume no greater than 5 V 0.5 A
+
+C5: RFID Card Scanner shall operate on 13.56 MHz commonly used for higher security access badges, like the school Eagle Cards  
+
+C6: A Barcode Scanner and Card Reader will be monitered by USB voltmeter to ensure correct operation  
+
+C7: The PC shall run on Windows 10 to provide the needed applications for PLC and Database  
+
+C8: The PC will provide an ethernet port to communicate with the PLC through a USB NIC (network interface card)  
+
+C9: The PC will provide at minimum an Intel Core i5-8400H or stronger CPU and 16GB RAM to support PLC programs  
+
 Constraints C1-C3 required a barcode scanner that could scan the boxes and use a required rating of 5V, 0.5A. Since the scanner was never received by the team, the application now allows the customer to enter codes manually through the GUI application. The program still automatically assigns the board as originally required. 
 
 Constraints C4-C6 required the RFID scanner to read data off the school ID card and automatically fill the database with the student ID. Since the scanner was never received, the program now has the student enter his/her own ID and error checking the entered information and the Voltmeter is no longer required without the 2 scanners. 
