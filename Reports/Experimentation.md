@@ -128,13 +128,16 @@ Constraint C3 has been fulfilled by using relays to control the enable state of 
 ---
 ### Experimental Procedure
 ---
+
 To properly test this system, the sensors and relay system was wired and tested using in-lab power supply and DMM. The sensors were originally tested on aluminum material, and has since been experimented with other ferrous material as listed on the datasheet. After wiring the sensors and relay to match the required logic. The logic prepared resembles that of a simple AND gate, meaning all of the sensors must be activated for a signal to be sent to the motor driver. 
+
 ---
 ### Expected Results
 ---
 When all the sensors detect the presence of metal, the power should flow through and enable the motor to spin. When any of the sensors don’t detect any metal, this would cut power being sent to the enable, disabling the motor.
 
-The expected outcome is rather straightforward. The sensors will either detect the theoretical door enabling the motor, or not detect anything and disabling the motor. 
+The expected outcome is rather straightforward. The sensors will either detect the theoretical door enabling the motor, or not detect anything and disabling the motor.
+
 ---
 ### Collected Data
 ---
@@ -152,6 +155,8 @@ The final configuration is similar to the diagram shown above, with the only dif
 Due to the change in the configuration for the sensors and relay, the logic being used also had to be adjusted. The AND logic described before no longer worked, and DeMorgan’s Law can into play. As shown below, the logic became NOT (A AND B) which is converted to NOT A OR NOT B.
 
 ![image](https://user-images.githubusercontent.com/100805322/231349890-56891dc2-6194-4a68-bf19-fbf86c155de0.png)
+
+After these adjustments, the results were as expected. Whenever one of the sensors does not sense their door, the motor will cease movement and will not move until everything is in place.
 
 ---
 ### Further Improvements
