@@ -113,23 +113,53 @@ If everything is connected properly, and the OPC client can ping to the PLC, the
 
 ### Purpose of the Subsystem
 ---
+The sole purpose of this system is to secure the safety of the users and the internal components of the device. The primary functions of the system come from the consumer's cabinet restrictions. Using non-contact Inductance Proximity sensors, both the consumers and inner contents of the machine shall have an extra shield from possible harm. This shall also prevent any potential damage and interference in the system’s operations.
+
+In contrary of the original design using “RFID Coded Safety Sensors”, for budgetary reasons it was substituted for a closed loop Proximity Sensor system. As shown below, the safety system functions outside of the normal operation cycle of the machine. This allows the machine to have a “double check” in the case of tampering with one of the lock sensors. This also overrules if there are any issues with the PLC. Both the Security System sensors and Safety System sensors are required to continue operation of the device.
+
+![image](https://user-images.githubusercontent.com/100805322/231349541-72ff11b9-4564-420f-a1ef-29ab174c4538.png)
+
+Constraint C1 has been fulfilled by the general functionality of the proximity sensors. Since there are no doors to be sensed, the sensors have been thoroughly tested with other metallic objects.
+
+Constraint C2 has been resolved by using a closed loop system as shown above. If this project is carried over to another team, the original system design using RDIF Safety Sensors is still viable.
+
+Constraint C3 has been fulfilled by using relays to control the enable state of the motor driver.
 
 ---
 ### Experimental Procedure
 ---
-
+To properly test this system, the sensors and relay system was wired and tested using in-lab power supply and DMM. The sensors were originally tested on aluminum material, and has since been experimented with other ferrous material as listed on the datasheet. After wiring the sensors and relay to match the required logic. The logic prepared resembles that of a simple AND gate, meaning all of the sensors must be activated for a signal to be sent to the motor driver. 
 ---
 ### Expected Results
 ---
+When all the sensors detect the presence of metal, the power should flow through and enable the motor to spin. When any of the sensors don’t detect any metal, this would cut power being sent to the enable, disabling the motor.
 
+The expected outcome is rather straightforward. The sensors will either detect the theoretical door enabling the motor, or not detect anything and disabling the motor. 
 ---
 ### Collected Data
 ---
+While the overall results of the experimentation nearly match the expected results, the process of reaching these conclusions was bumpy.
+
+The first issue we ran into was the functionality of the motor driver’s enable.
+
+Unlike most motor drivers, the enable for the STP-DRVAC-24025 has the negative and positive modules in parallel connected to the power supply. With the connection of the negative and ground being break in the circuit. (image for reference) 
+
+![image](https://user-images.githubusercontent.com/100805322/231349928-ffdb728b-9291-409a-8d18-7b4590112557.png)
+
+
+The final configuration is similar to the diagram shown above, with the only difference being the positive line having the break for control. So, when the Positive enable is receiving 24V of power, it ceases function.
+
+Due to the change in the configuration for the sensors and relay, the logic being used also had to be adjusted. The AND logic described before no longer worked, and DeMorgan’s Law can into play. As shown below, the logic became NOT (A AND B) which is converted to NOT A OR NOT B.
+
+![image](https://user-images.githubusercontent.com/100805322/231349890-56891dc2-6194-4a68-bf19-fbf86c155de0.png)
 
 ---
 ### Further Improvements
 ---
+It is suggested that the team would move forward with using the proximity sensors since the system is already in place, and the materials are already collected.
+However, if possible the RFID Safety Sensors would be a vast improvement to the overall efficiency of the system. These sensors would provide greater protection and have a greater resistance to any vandalism. Another perk is the compatibility of the sensors with one another, not needing any addition components to function properly.
 
+---
 ## Motor System
 
 ### Purpose of the Subsystem
