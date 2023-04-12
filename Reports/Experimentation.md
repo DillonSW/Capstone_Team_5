@@ -206,3 +206,37 @@ However, if possible the RFID Safety Sensors would be a vast improvement to the 
 ---
 ### Further Improvements
 ---
+
+## Power Subsystem 
+
+### Purpose of the subsystem  
+---
+The purpose of the subsystem is to provide the required voltage and amperage for all electrical apparatus in every subsystem, so that all of the systems of the vending machine can properly perform their functions.
+
+The customer required the program to do a few things: store the student ID, name, email, class, and term, before ordering the machine to bring the appropriate device to the door.  
+
+Constraint C1 requires the power system to be protect against a power surge through the use of a ground fault current interrupter. We met this constraint by powering the vending machine with a 120V power cord that has a built in GFCI; the wall outlets of Brown have built in GFCI's as well.
+
+Constraint C2 requires the power system to convert the 120V AC voltage to what ever lower potential needed; in our case we only needed 24V. This constraint was not met exactly as that we did not have our power supply to transform the 120V into 24V, however, we were able to use the 24V power supply in the PLC lab to aquire the proper voltage we needed to cover all of our electrical apparatus.
+
+Constraint C3 requires our power system to have an emergency stop button. This constraint is met for the GFCI power cord is connected to an exposed outlet and can easily be pulled.
+
+---
+### Experimental Procedure  
+---
+
+---
+### Expected Results  
+---
+
+---
+### Collected Data
+---
+
+---
+### Data Interpretation
+---
+
+---
+### Future Improvements
+---
