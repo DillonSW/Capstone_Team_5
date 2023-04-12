@@ -8,7 +8,7 @@ The purpose of the subsystem is to store student information into a database and
 
 The customer required the program to do a few things: store the student ID, name, email, class, and term, before ordering the machine to bring the appropriate device to the door.  
 
-Most of the constraints enumerated in the signoff have not been met due to original desires because parts never arriving for the team, however, the constraints have been partially satisfied by substituting the needed hardware with software.  
+Most of the constraints enumerated in the signoff have not been met due to parts never arriving for the team, however, the constraints have been partially satisfied by substituting the needed hardware with software. Any other constraints where parts were not received and not able to be programmed are considered out of the scope of this project.  
 
 Constraints C1-C3 required a barcode scanner that could scan the boxes and use a required rating of 5V, 0.5A. Since the scanner was never received by the team, the application now allows the customer to enter codes manually through the GUI application. The program still automatically assigns the board as originally required. 
 
@@ -30,6 +30,7 @@ A total of 10 random students were entered into the database along with 15 rando
 ---
 ### Collected Data
 ---
+
 
 ---
 ### Data Interpretation
@@ -67,7 +68,7 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
-Picture ?
+
 
 ---
 ### Data Interpretation
