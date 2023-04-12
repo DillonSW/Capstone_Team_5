@@ -53,10 +53,15 @@ A total of 10 random students were entered into the database along with 15 rando
 ---
 ### Collected Data
 ---
+For testing C9, the team went into the specifications of the PC provided by the college to verify that the CPU and Memory. 
 
 ![SpecsPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/CapstonePC_Specs.png)  
+
+As you can see in the photo above, the CPU is stronger than an Intel Core i5 and the Memory is 16 GB. These are enough to satisfy constraint C9 and run the program for the PLC system. Although it is strong enough, the PLC was never used with the computer due to the lack of a memory card which was never delivered.  
+
 ![Students_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Students_Results.png)  
 ![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)  
+
 
 ---
 ### Data Interpretation
