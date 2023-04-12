@@ -54,6 +54,9 @@ A total of 10 random students were entered into the database along with 15 rando
 ### Collected Data
 ---
 
+![SpecsPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/CapstonePC_Specs.png)  
+![Students_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Students_Results.png)  
+![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)  
 
 ---
 ### Data Interpretation
