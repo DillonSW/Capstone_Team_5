@@ -53,15 +53,29 @@ A total of 10 random students were entered into the database along with 15 rando
 ---
 ### Collected Data
 ---
+Constraint C1 is unable to be met in the original way to do unforseen ordering circumstances. Instead, the team has allowed the manual entry of boxnumbers through the GUI system. The results can be shown in the third figure below where the numbers are inside of the database after entry.  
+
+Constraint C2 has been deemed out of scope by the team due to never receiving the barcode scanner as mentioned for C1.  
+
+For Constraint C3, barcodes were never made since the barcode scanner was not received. The devices can instead be entered by the boxnumber written on the device.  
+
+Constraint C4 is unable to be met in the original way to do unforseen ordering circumstances. Instead, the team has allowed the manual entry of Student ID numbers through the GUI system. The results can be shown in the second figure below where the IDs are inside of the database after entry.  
+
+Continue Here...  
+
 For testing C9, the team went into the specifications of the PC provided by the college to verify that the CPU and Memory. 
 
 ![SpecsPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/CapstonePC_Specs.png)  
 
-As you can see in the photo above, the CPU is stronger than an Intel Core i5 and the Memory is 16 GB. These are enough to satisfy constraint C9 and run the program for the PLC system. Although it is strong enough, the PLC was never used with the computer due to the lack of a memory card which was never delivered.  
+As you can see in the photo above, the CPU is stronger than an Intel Core i5 and the Memory is 16 GB.
+
+Below you can see the results of running the database program while taking input from the GUI. The database needed to hold all 10 test entries in the student database and keep track of the rented device and student information. 
 
 ![Students_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Students_Results.png)  
-![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)  
 
+Below you can see the results of the inventory table after testing the entry of 15 devices and the renting of 10. The devices should be removed in order of entry into the machine.  
+
+![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)  
 
 ---
 ### Data Interpretation
