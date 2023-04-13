@@ -364,7 +364,7 @@ The table above shows the 30 tests we ran on the motor to see if it could rotate
 ---
 A future improvement could be finding a way to safely measure the current going to the motor. It may be difficult since almost all of the motor system's wirings are within the 120VAC enclosure that **must** be closed when powered. Another improvement could be finding a way to actually place 85 lbs worth of material on the motor shaft to measure torque. Maybe it can be done once the mechanical housing is complete.
 
-## Secuirty and Locks System
+## Security and Locks System
 
 ### Purpose of the Subsystem
 ---
@@ -386,7 +386,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 **• The locks shall resist the force of resisting spring force of internal spring hinges. (CS-2)**
 	
-**• Unauthorized users of the device shall not be able to access internal contents. (CD-1)**
+**• Unauthorized users of the device shall not be able to access internal content. (CD-1)**
 
 
 Constraints for the Locks (CL-1, CL-2), LEDs (CI-1), Spring Hinges (CS-1, CS-2), and Doors (CD-1) are now considered out of the scope of this project. Due to ordering issues, these parts were not received and therefore cannot be implemented.
@@ -396,18 +396,34 @@ The only Constraint still in scope is CP-1, which states “The inductance senso
 ---
 ### Experimental Procedure
 ---
-Since these sensors are also implemented in the Safety System, their experimental process is nearly identical.
+
+#### Inductance Sensors
+Since these sensors are also implemented in the Safety System, their experimental process is practically identical. The sensors and relay systems were wired and tested using in-lab power supply and DMM. The sensors were originally tested on aluminum material, and has since been experimented with other ferrous material as listed on the datasheet.
+
+#### Solenoid Locks
+To properly test the solenoid locks, their connection and responsiveness to commands from the PLC would be examined. While these locks have rated voltage and current draw, they would still be tested for their accuracy and efficiency.
+
+#### Spring Hinges
+Since the selected hinges have adjustable springs, they would be tested for the outward force and stiffness. The Optimal value would allow the door to open without external assistance, but also loose enough for the user to close it back. They would also be tested with the resistant force value of the solenoid locks, as they are the force holding the doors shut.
+
+#### LEDs
+The LEDs would be tested for their responsiveness and longevity. They would also need to be tested with the PLC, assuring they're compatible and can be controlled.
+
 ---
 ### Expected Results
 ---
-
+It is assumed that the components would function properly and be compatible with one another. 
 ---
 ### Collected Data
 ---
+The only data that could be collected was that of the inductance proximity sensors, which discussed in depth in the Safety System.
 
+The data from the other components cannot be collected since they are not in our possession.
 ---
 ### Further Improvements
 ---
+As the system is currently designed, it should be fully functional and meet the listed constraints. However, this is only in theory and needs to be tested further for confirmation of functionality. Once the components are collected, they should be tested and put to use.
+
 
 ## Power Subsystem 
 
