@@ -157,9 +157,16 @@ If everything is connected properly, and the OPC client can ping to the PLC, the
 ### Collected Data
 ---
 
+
+---
+## Data Interpretation
+---
+
+
 ---
 ### Further Improvements
 ---
+
 
 ## Safety System
 
@@ -251,17 +258,26 @@ However, if possible the RFID Safety Sensors would be a vast improvement to the 
 ### Purpose of the Subsystem
 ---
 
+
+---
+### Specifications/Constraints
+---
+
+
 ---
 ### Experimental Procedure
 ---
+
 
 ---
 ### Expected Results
 ---
 
+
 ---
 ### Collected Data
 ---
+
 
 ---
 ### Further Improvements
