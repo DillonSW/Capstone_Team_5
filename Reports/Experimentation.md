@@ -185,7 +185,7 @@ The video collected above shows how constraint C5 was satisfied through our OPC 
 ---
 ### Further Improvements
 ---
-
+The main point that can be said about future improvements is ordering the peripherals and writing the code to control them. Another improvement that could be made is to the pulsing sequence for stepping. Currently it is two TON timers that read the .DN boolean of the other timer. There is a way to make a rising-edge detection sequence using only one timer, but I do not rememeber how. If this was implemented, the code would look cleaner and allow for more efficient pulse width modulation.
 
 ## Safety System
 
