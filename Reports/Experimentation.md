@@ -345,7 +345,7 @@ Constraint C2 is no longer within the scope of this project as we did not receiv
 
 Constraint C3 is satisfied due to the motor and driver being consumer-rated, so their wire gauges have been properly chosen by the manufacturer.
 
-![MotorSpeed](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Motor_Speed_Average.png)
+![MotorSpeed](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Motor_Speed_Average.jpg)
 
 The table above shows the 30 tests we ran on the motor to see if it could rotate 200 steps (or one rotation) within a reasonable time. The average for one rotation was aroudn 20 seconds, meaning in order to rotate 10 steps, the motor would need 1 second. This is more than reasonable for motor speed, which we thought the stepper motor could easily reach.
 
