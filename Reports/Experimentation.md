@@ -129,9 +129,12 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
-![Delete]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png") | ![Agree]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png") | 
-![Email]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Email_Error.png") | ![Field]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Field_Error.png")
-
+| | | 
+|:--------------------:|:--------------------:|
+![Delete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png) Figure 1: Admin_Delete| ![Agree](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png) Figure 2: Agreement_Error| 
+![Email](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Email_Error.png) Figure 3: Email_Error| ![Field](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Field_Error.png) Figure 4: Field_Error|
+![ID_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/ID_Error.png) Figure 5: ID_Error| ![Load_Complete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Complete.png) Figure 6: Load_Complete| 
+![Load_Mode](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Mode.png) Figure 7: Load_Mode| ![Name_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Name_Error.png) Figure 8: Name_Error| 
 
 
 
