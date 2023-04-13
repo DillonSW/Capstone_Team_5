@@ -139,7 +139,7 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
-Below is the all the data that was collected for input validation for different fields if a student were to mistype some of the input fields or they skip some fields and hit the submit button directly.
+Below is the all the data that was collected for input validation for different fields if a student were to mistype some of the input fields or if they were to skip some fields and hit the submit button directly.
 
 | | | 
 |:--------------------:|:--------------------:|
