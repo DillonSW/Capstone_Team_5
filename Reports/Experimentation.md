@@ -152,17 +152,23 @@ Below is the all the data that was collected for input validation for different 
 ### Data Interpretation
 ---
 
-For C2, you can clearly see that the computer was able to run the GUI written using python in Linux Environment. Also, we can see that different errors were generated for different input fields in the pictures listed above.
+For C2, we can clearly see that the computer provided by IT departmnent was able to run the GUI written using python in Linux Environment. Also, we can see that different errors were generated for different input fields in the pictures listed above.
 
-If needed to delete the database by an associate then the command that is set to do so is "delete" in ID field and "admin" in name field. This keywords can be changed anytime as per the needs of associate, and if did so correctly then the figure 1 depicts what it would return.
+If needed to delete the database by an associate then the command that is set to do so is "delete" in ID field and "admin" in name field. This keywords can be changed anytime as per the needs of associate, and if did so correctly then the figure 1 depicts what it would return and will delete the information stored in database.
 
-For the load mode, the keyword to enter the boards is "load" in ID field and "admin" in name field. If did correctly, it would open a prompt where an associate would type in the boards manually. This was done as a substitute because of the barrring ordering issues. The boards loaded propertly in the database can be seen in ID subsystem.
+For the load mode, the keyword to enter the number of boards is "load" in ID field and "admin" in name field. If did correctly, it would open a prompt where an associate would type in the boards manually. This was done as a substitute because of the barrring ordering issues and parts not arriving on time. The boards loaded propertly in the database can be seen in ID subsystem (figure 3).
 
+For different input fields, different errors can be seen as shown in table above.If a student were to input the email address incorrectly, then the popup shown in figure 3 would let the student know that they are typing the email wrong. If the name entered by the student in the name field doesn't have first and last name then the program would throw an error to them saying they need to type the first and last name as shown in figure 8. If for some reason, a student forgot to type the T in the ID field then the program would tell the user that they need to enter "T" before the ID as seen in figure 5. If a student were to skip one of the input fields and agree to the terms and conditions and try to submit the information then figure 4 shows that it would throw an error message asking the user to fill all input fields.
 
+At last, if the student filled all the information, but failed to agree to the terms and conditions and tried to submit the information then the program wouldn't let it do so and ask the user to select and go over it as shown in figure 2. All these validations are also protected against SQL injection as each entry field is looking for specific keyword. For example, ID has to start with "T", name field is looking for only two words i.e. First and Last Name, for email the entered username has to end with Techs domain of tntech.edu, and at last the drop down menus are read only so the students don't have any way to inject queries and extract information of students.
+
+To protect students from accidentally closing the program we implemented a special keybinding so that students don't close it intentionally or unintentionally and access the student information. To do so, the program is set to close with the keybinding of "Alt + Z" as our team thinks that this combination wouldn't be used that frequently.This keybinding can be changed like other commands by associates if needed.
 
 ---
 ### Future Improvements
 ---
+
+Several improvements can be done to this subsystem. In future, if the IT department allows to order the Touchscreen UI as originally proposed then that can be used for GUI as that would get rid off extra hardware. Also, another improvement would be making the GUI more intuitive so students or associates could navigate it easily, also  if the future capstone team were to get SD card for PLC then they could integrate the PLC with the program so that they both can perform synchronously, and at last the machine is made up to hold one board but in case if they students were to expand the design so that the machine can hold multiple boards then some modifications would have to be done for GUI with some additonal details.
 
 ## PLC System
 
@@ -194,10 +200,6 @@ Constraint C5 is satisfied by the use of a custom OPC client that can read-from 
 https://user-images.githubusercontent.com/100802994/231836664-d108fc11-3d49-4a41-928a-dcc6a42da2b6.mov
 
 Above is a video recording of us using the OPC client to control the PLC, which is controlling the motor driver.
-
-![OPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_OPC.jpeg)
-
-The image above is of the OPC client running on our Linux VM. The client first reads the value of the controller tag, then changes it to "true" or "energized" and reads it again. This along with the video show that the OPC is able to communicate with the PLC.
 
 ---
 ## Data Interpretation
@@ -362,35 +364,11 @@ A future improvement could be finding a way to safely measure the current going 
 
 ### Purpose of the Subsystem
 ---
-This subsystem's role in our design is to secure both the stored devices and internal components of the machine. The main contributor to the security system will be the cabinet doors holding the devices. These cabinet doors require digitally controlled locks, allowing access to verified users, while locking out those who would attempt to forcefully steal from the machine.
-
----
-### Constraints/Specifications
----
-
-**• The locks shall respond to the commands of the PLC. (CL-1)**
-	
-**• The locks shall remain extended when power is lost. (CL-2)**
-
-**• The inductance sensors shall inform controlling PLC of lock status at all times. (CP-1)**
-
-**• There shall be visual indicators to inform the user of the location of their device. (CI-1)**
-
-**• The door shall open as soon as locks are released, preventing the door re-locking before device is removed. (CS-1)**
-
-**• The locks shall resist the force of resisting spring force of internal spring hinges. (CS-2)**
-	
-**• Unauthorized users of the device shall not be able to access internal contents. (CD-1)**
-
-
-Constraints for the Locks (CL-1, CL-2), LEDs (CI-1), Spring Hinges (CS-1, CS-2), and Doors (CD-1) are now considered out of the scope of this project. Due to ordering issues, these parts were not received and therefore cannot be implemented.
-
-The only Constraint still in scope is CP-1, which states “The inductance sensors shall inform controlling PLC of lock status at all times.”
 
 ---
 ### Experimental Procedure
 ---
-Since these sensors are also implemented in the Safety System, their experimental process is nearly identical.
+
 ---
 ### Expected Results
 ---
@@ -442,15 +420,10 @@ The PLC has a varying current draw between 9.5 and 9.7 mA
 ---
 ### Data Interpretation
 ---
-The current Amperage data that we aquired fell far short from our maximum set current draws, therefore, Constraint C3 was satisfied.
+The current Amperage data that we aquired fell far short from our maximum set current draws.
 Both systems combined would draw at most 16.7mA.
 With a maximum allowed current draw of 4000mA (otherwise our circuit breaker would open the circuit), there is no worry of too much power draw by our PLC and Safety systems.
-
-Constraint C1 was satisfied by the use of a GFCI cord for the motor driver enclosure.  
-
-Constraint C2 is no longer within the scope of this version due to unforseen circumstances with ordering. 
 
 ---
 ### Future Improvements
 ---
-In the next version of the machine, the missing parts that could not be received need to be ordered and can be installed according to the signoff. The entire din rail must be constructed and the blocks must be installed along with circuit breakers. 
