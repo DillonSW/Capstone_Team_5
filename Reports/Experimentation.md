@@ -109,16 +109,6 @@ The purpose of the graphic user insterface is to take information from the user 
 
 The interface is able to let a user input information into the ID subsystem and provide the student with notifications while renting a device. The GUI must follow certain constraints determined during the design of the project. The team was not able to order a touchscreen for the project, but received a ubuntu 20.04 computer from the school IT department instead. 
 
----
-### Constraints/Specifications
----
-Below is a list of the constraints for the GUI system.
- 1. UI must not operate at greater than 100 W because of PC output rating of USB-C [1].
- 2. UI must run Windows/Linux environment to run Kiosk application.
- 3. Must have HDMI or type C or USB port to connect to PC.
- 4. UI must be at least 15.6" (diagonal) because of the TIA (Totally Integrated Automation) Portal application.
- 5. UI must be anchored to prevent theft problems.
-
 Constraints C1-C3 are satisfied by the computer provided to the team by the IT department. 
 
 Constraint C4 was satisfied by a personal laptop of a team member, where he programmed a custom PLC ladder logic program. 
@@ -155,14 +145,6 @@ The team expected to see all errors popup during the correct time and allow data
 ---
 The purpose of the PLC system is to be the middle-man between our database and our physical peripherals such as the motor and LEDs. The reason we chose to use a PLC in addition to a Linux PC is because PLCs are designed to handle physical control faster and more efficiently than a PC.
 
-Constraints C1 and C2 required us to have the memory card for our PLC, which does satisfy these constraints. But, due to ordering issues, we are using the PLCs in our PLC lab, which have 8 digital input and outputs. So, with what we have, C1 is satisfied but C2 is not.
-
-Constraint C3 is satisfied, even with the ordering issues. The PLC setup that we are using is 24-inches long, and less than 6-inches deep and tall. So, our system will fit within a 3x1x1 foot area, and C3 is satisfied.
-
-Constaint C4 is satisfied with the PLC we are using. The PLCs in the lab have two 48V fuses, one that is rated for 2A and the other for 4A. This satisfies IEC-61131-2(6.4.4.3) for protection from physical damage.
-
-Constraint C5 is satisfied by the use of a custom OPC client that can read-from and write-to the PLC.
-
 ---
 ### Experimental Procedure
 ---
@@ -176,12 +158,22 @@ If everything is connected properly, and the OPC client can ping to the PLC, the
 ---
 ### Collected Data
 ---
+Constraints C1 and C2 required us to have the memory card for our PLC, which does satisfy these constraints. But, due to ordering issues, we are using the PLCs in our PLC lab, which have 8 digital input and outputs. So, with what we have, C1 is satisfied but C2 is not.
 
+Constraint C3 is satisfied, even with the ordering issues. The PLC setup that we are using is 24-inches long, and less than 6-inches deep and tall. So, our system will fit within a 3x1x1 foot area, and C3 is satisfied.
+
+Constaint C4 is satisfied with the PLC we are using. The PLCs in the lab have two 48V fuses, one that is rated for 2A and the other for 4A. This satisfies IEC-61131-2(6.4.4.3) for protection from physical damage.
+
+Constraint C5 is satisfied by the use of a custom OPC client that can read-from and write-to the PLC.
+
+https://user-images.githubusercontent.com/100802994/231836664-d108fc11-3d49-4a41-928a-dcc6a42da2b6.mov
+
+Above is a video recording of us using the OPC client to control the PLC, which is controlling the motor driver.
 
 ---
 ## Data Interpretation
 ---
-
+The video collected above shows how constraint C5 was satisfied through our OPC client. When the client is ran, it energizes a controller tag associated with stepping the motor. As will be shown (as best as we can) in the motor system analysis section, we did not touch the PLC code in our Studio 5000 software. Instead we had a stopwatch up on the screen to time how long it took the motor to complete a full rotation.
 
 ---
 ### Further Improvements
