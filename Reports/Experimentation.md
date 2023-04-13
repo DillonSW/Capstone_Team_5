@@ -129,7 +129,7 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
-![Delete]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png") | ![Agree]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png")
+![Delete]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png") | ![Agree]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png") | 
 ![Email]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Email_Error.png") | ![Field]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Field_Error.png")
 
 
