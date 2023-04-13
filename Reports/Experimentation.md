@@ -61,7 +61,13 @@ For Constraint C3, barcodes were never made since the barcode scanner was not re
 
 Constraint C4 is unable to be met in the original way to do unforseen ordering circumstances. Instead, the team has allowed the manual entry of Student ID numbers through the GUI system. The results can be shown in the second figure below where the IDs are inside of the database after entry.  
 
-Continue Here...  
+Constraint C5 has been deemed out of scope by the team due to never receiving the Card reader as mentioned for C4.  
+
+The USB Voltmeter was never received and therefore C6 cannot be tested. 
+
+Constraint C7 is not met due to ordering restrictions with the IT department. Instead, a Linux PC with the appropriate specifications was provided by the college.  
+
+Constraint C8 has been deemed out of scope due to never receiving the USB NIC from the placed order forms. 
 
 For testing C9, the team went into the specifications of the PC provided by the college to verify that the CPU and Memory. 
 
