@@ -162,7 +162,7 @@ If everything is connected properly, and the OPC client can ping to the PLC, the
 ---
 ### Collected Data
 ---
-Constraints C1 and C2 required us to have the memory card for our PLC, which does satisfy these constraints. But, due to ordering issues, we are using the PLCs in our PLC lab, which have 8 digital input and outputs. So, with what we have, C1 is satisfied but C2 is not.
+Constraints C1 and C2 required us to have the memory card for our PLC, which does satisfy these constraints. But, due to ordering issues, we are using the PLCs in our PLC lab, which have 8 digital input and outputs. So, with what we have, C1 is satisfied. However Constraint C2 is no longer within the scope of this project due to us swtiching to a PLC with 8 digital inputs and outputs.
 
 Constraint C3 is satisfied, even with the ordering issues. The PLC setup that we are using is 24-inches long, and less than 6-inches deep and tall. So, our system will fit within a 3x1x1 foot area, and C3 is satisfied.
 
