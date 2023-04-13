@@ -453,3 +453,4 @@ Constraint C2 is no longer within the scope of this version due to unforseen cir
 ---
 ### Future Improvements
 ---
+In the next version of the machine, the missing parts that could not be received need to be ordered and can be installed according to the signoff. The entire din rail must be constructed and the blocks must be installed along with circuit breakers. 
