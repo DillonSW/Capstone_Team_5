@@ -294,27 +294,56 @@ However, if possible the RFID Safety Sensors would be a vast improvement to the 
 
 ### Purpose of the Subsystem
 ---
-
+The purpose of the motor system is to rotate the platforms holding the boards for check out. It was decided that the motor should be a hybrid stepper motor due to their high precision and accuracy, as well as having high torque. This motor system is controlled by the PLC communicating with the motor driver; the driver will send pulses to the motor's phases (A+/-, B+/-) to make it step. Because the motor can operate at many different resolutions (or steps per revolution), we chose to do full-stepping or 1.8 degrees per step. This is because we planned to have 20 boards on each platform, meaning there are 18 degrees between each board. If we full-step the motor, we can reach the next board in 10 steps.
 
 ---
 ### Specifications/Constraints
 ---
+The list of constraints on specifically the **MOTOR** are listed below. In the Motor System signoff, there are many constraints listed before the motor is even mentioned. This is because there had to be concrete information and constraining of the platform material and the boards to best decide which motor we needed to use. (Weight, strength, dimensions, quantity, etc). Some of these constraints were also given to the mechanical team so they could use them as constraints on the framework.
 
+C1: The motor shall be able to rotate a mass weighing a total of 70.858 lbs. Assuming roughly 20% tolerance for error, it must be able to rotate 85 lbs.
+
+C2: The motor shall be protected at 125% of the nameplate current rating, or be protected at 3.19A.
+
+C3: The motor system shall follow the NEC 310-16 Table for wiring.
 
 ---
 ### Experimental Procedure
 ---
+The hardest constraint to analyze is C1. We did not have access to the housing for our electrical components, and we could not feasibly find 85 lbs worth of materials that could rest on the motor's shaft. But there are calculations that we can perform to make an estimate of how much weight the motor can turn.
 
+In addition, we can run a test to see if the motor can truly reach 200 steps/revolution. Our PLC has a count-up accumulator that counts to 200 and stops the motor once it is reached.
 
 ---
 ### Expected Results
 ---
-
+The expected results of this procedure are the motor being able to complete a full rotation in 200 steps and in a reasonable time. This was done with the aid of recording software and also slowing down the motor to a speed so that one could reliably count the steps. If 200 steps is truly a full rotation, then 10 steps would make the motor rotate 18 degrees, which is how far we want. Assuming there is at least 1 minute between two students checking out a board, the motor must be able to step 10 times in 1 minute, or 200 times in 20 minutes.
 
 ---
 ### Collected Data
 ---
+A stepper motor's torque (T), torque constant (Kt), and input current (i) are related by the equation:
 
+$T = Kt * i$
+
+Currently we have 1A being sent to the motor. According to the motor's datasheet, we can reach we can reach up to 1841 oz-in (or 13 Nm) of torque. This means that at 1A of current, we have a torque constant of 13 Nm/A.
+
+According to this table:
+
+|  t(s)  |        |∆N (rpm)|        |  
+|--------|--------|--------|--------|
+|        |    1   |    2   |    3   |
+|  0.25  | 2.0164 | 6.0491 | 10.0818 |
+|  0.5   | 1.0082 | 3.0245 | 5.0409 |
+|    1   | 0.5041 | 1.5123 | 2.5205 |  
+
+At *maximum*, we would need to output 10.0818 Nm of torque. At 1A, we can output 13Nm. Considering that 1) We are not planning on accelerating the load this quick and 2) We can increase the input current to 2.5A, Constraint C1 is theoretically satisfied.
+
+We cannot safely test the current that is going into the motor. Our enclosure's grummet holes are not large enough to fit a DMM's prongs, and the driver (and motor leads) must be enclosed whenever we are powering the driver.
+
+Constraint C2 is no longer within the scope of this project as we did not receive the fuse breakers required to protect the driver. **But** the motor driver can sense overcurrent and shut everything off if that threshold is reached.
+
+Constraint C3 is satisfied due to the motor and driver being consumer-rated, so their wire gauges have been properly chosen by the manufacturer.
 
 ---
 ### Further Improvements
