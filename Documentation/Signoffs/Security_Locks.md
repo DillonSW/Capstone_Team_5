@@ -13,7 +13,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 	• To prevent possible theft of inventory, the locks shall stay locked in all instances of power loss. 
 	• The locks shall only be unlocked if instructed by the internal operations of the device.
 
-**• The inductace sensors shall inform controlling PLC of lock status at all times. (CP-1)**
+**• The inductance sensors shall inform controlling PLC of lock status at all times. (CP-1)**
 
 **• There shall be visual indicators to inform the user of the location of their device. (CI-1)**
 
@@ -28,7 +28,7 @@ This subsystem's role in our design is to secure both the stored devices and int
 
 
 
-##Full Schematic
+## Full Schematic
 
 ![image](https://user-images.githubusercontent.com/100805322/218368938-986fe195-542e-4137-b127-5ed3081dfaa3.png)
 
