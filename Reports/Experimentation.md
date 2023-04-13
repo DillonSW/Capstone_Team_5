@@ -358,11 +358,35 @@ A future improvement could be finding a way to safely measure the current going 
 
 ### Purpose of the Subsystem
 ---
+This subsystem's role in our design is to secure both the stored devices and internal components of the machine. The main contributor to the security system will be the cabinet doors holding the devices. These cabinet doors require digitally controlled locks, allowing access to verified users, while locking out those who would attempt to forcefully steal from the machine.
+
+---
+### Constraints/Specifications
+---
+
+**• The locks shall respond to the commands of the PLC. (CL-1)**
+	
+**• The locks shall remain extended when power is lost. (CL-2)**
+
+**• The inductance sensors shall inform controlling PLC of lock status at all times. (CP-1)**
+
+**• There shall be visual indicators to inform the user of the location of their device. (CI-1)**
+
+**• The door shall open as soon as locks are released, preventing the door re-locking before device is removed. (CS-1)**
+
+**• The locks shall resist the force of resisting spring force of internal spring hinges. (CS-2)**
+	
+**• Unauthorized users of the device shall not be able to access internal contents. (CD-1)**
+
+
+Constraints for the Locks (CL-1, CL-2), LEDs (CI-1), Spring Hinges (CS-1, CS-2), and Doors (CD-1) are now considered out of the scope of this project. Due to ordering issues, these parts were not received and therefore cannot be implemented.
+
+The only Constraint still in scope is CP-1, which states “The inductance sensors shall inform controlling PLC of lock status at all times.”
 
 ---
 ### Experimental Procedure
 ---
-
+Since these sensors are also implemented in the Safety System, their experimental process is nearly identical.
 ---
 ### Expected Results
 ---
