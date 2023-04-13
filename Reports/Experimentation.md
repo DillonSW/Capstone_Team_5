@@ -129,6 +129,10 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
+![Delete]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png") | ![Agree]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png")
+![Email]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Email_Error.png") | ![Field]("https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Field_Error.png")
+
+
 
 
 ---
@@ -158,25 +162,13 @@ If everything is connected properly, and the OPC client can ping to the PLC, the
 ---
 ### Collected Data
 ---
-Constraints C1 and C2 required us to have the memory card for our PLC, which does satisfy these constraints. But due to ordering issues, we are using the PLCs in our PLC lab, which have 8 digital input and outputs. So with what we have, C1 is satisfied but C2 is not.
+Constraints C1 and C2 required us to have the memory card for our PLC, which does satisfy these constraints. But, due to ordering issues, we are using the PLCs in our PLC lab, which have 8 digital input and outputs. So, with what we have, C1 is satisfied but C2 is not.
 
 Constraint C3 is satisfied, even with the ordering issues. The PLC setup that we are using is 24-inches long, and less than 6-inches deep and tall. So, our system will fit within a 3x1x1 foot area, and C3 is satisfied.
 
 Constaint C4 is satisfied with the PLC we are using. The PLCs in the lab have two 48V fuses, one that is rated for 2A and the other for 4A. This satisfies IEC-61131-2(6.4.4.3) for protection from physical damage.
 
 Constraint C5 is satisfied by the use of a custom OPC client that can read-from and write-to the PLC.
-
-![PLC_Code](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_Code.png)
-
-The image above (Figure 1) shows the PLC code for controlling the motor.
-
-![PLC_Local](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_LocalTags.png)
-
-The image above (Figure 2) shows the local tags within our code. This is where we can alias tags with I/O ports.
-
-![PLC_Controller](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_ControllerTags.png)
-
-The image above (Figure 3) shows the controller tags within our code. This is where the OPC can read-from and write-to.
 
 https://user-images.githubusercontent.com/100802994/231836664-d108fc11-3d49-4a41-928a-dcc6a42da2b6.mov
 
@@ -185,16 +177,12 @@ Above is a video recording of us using the OPC client to control the PLC, which 
 ---
 ## Data Interpretation
 ---
-Figures 1 and 3 show how the OPC communicates with the PLC. The OPC can change the state of a controller tag, so we had the client energize the "OPC" tag, allowing the code to begin.
-
-Figure 2 shows how the PLC can control its peripherals. Since we only received the motor and its driver from our orders, that is the only peripheral we had to try to control. The tags that are associated with a Local:1:O.Data bit are those connected with the motor. Because of how the TONs sense when one of them is done, the Step_CW tag is able to be controlled with a 50% duty cycle signal. Changing the TON presets can change the PWM of the signal.
-
 The video collected above shows how constraint C5 was satisfied through our OPC client. When the client is ran, it energizes a controller tag associated with stepping the motor. As will be shown (as best as we can) in the motor system analysis section, we did not touch the PLC code in our Studio 5000 software. Instead we had a stopwatch up on the screen to time how long it took the motor to complete a full rotation.
 
 ---
 ### Further Improvements
 ---
-Obviously, an improvement could be writing code for the other peripherals that were going to be in the prototope (LEDs, etc). Another way that this can be improved is changing how the pulses are sent to the driver. In the PLC Lab course, we are taught how to create a rising-edge detection ladder sequence. I have since forgotten how to implement that, and using two TONs is the way I know. But, with a rising-edge detection sequence, the pulses can be sent quicker.
+
 
 ## Safety System
 
