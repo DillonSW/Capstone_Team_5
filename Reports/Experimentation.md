@@ -129,6 +129,8 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
+Below is the all the data that was collected for input validation for different fields if a student were to mistype some of the input fields or they skip some fields and hit the submit button directly.
+
 | | | 
 |:--------------------:|:--------------------:|
 ![Delete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png) Figure 1: Admin_Delete| ![Agree](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png) Figure 2: Agreement_Error| 
