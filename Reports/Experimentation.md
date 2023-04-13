@@ -210,6 +210,16 @@ Due to the change in the configuration for the sensors and relay, the logic bein
 
 After these adjustments, the results were as expected. Whenever one of the sensors does not sense their door, the motor will cease movement and will not move until everything is in place.
 
+
+https://user-images.githubusercontent.com/100805322/231724287-a65690ac-44f0-45db-8140-a93368bf456c.mp4
+
+
+As shown in the video above, when the inductance sensor is within the range of a metallic object, the internal switch activates allowing current to flow through the output pin. This connection is indicated by the lights attached to the sensor. Since the metal being assessed in the video is mostly comprised of aluminum. As shown on the data sheet of the IFS240 proximity sensor, the correction factor for detecting aluminum is 0.4. The correction factor is how much the sensing range of the sensor is affected by the type of material being sensed. So, the max sensing range is reduced from 4mm to 1.6mm.
+
+![image](https://user-images.githubusercontent.com/100805322/231723416-d378c078-7af5-4b55-a2c8-595442055ed7.png)
+
+The material of theoretical solenoid locks would be made of stainless steel, meaning the max sensing range would be 2.8mm. The design would have the plunger of the lock well within this range.
+
 ---
 ### Further Improvements
 ---
