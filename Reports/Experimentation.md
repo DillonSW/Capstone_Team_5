@@ -442,9 +442,13 @@ The PLC has a varying current draw between 9.5 and 9.7 mA
 ---
 ### Data Interpretation
 ---
-The current Amperage data that we aquired fell far short from our maximum set current draws.
+The current Amperage data that we aquired fell far short from our maximum set current draws, therefore, Constraint C3 was satisfied.
 Both systems combined would draw at most 16.7mA.
 With a maximum allowed current draw of 4000mA (otherwise our circuit breaker would open the circuit), there is no worry of too much power draw by our PLC and Safety systems.
+
+Constraint C1 was satisfied by the use of a GFCI cord for the motor driver enclosure.  
+
+Constraint C2 is no longer within the scope of this version due to unforseen circumstances with ordering. 
 
 ---
 ### Future Improvements
