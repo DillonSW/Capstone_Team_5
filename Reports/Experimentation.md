@@ -337,7 +337,7 @@ According to this table:
 |  0.5   | 1.0082 | 3.0245 | 5.0409 |
 |    1   | 0.5041 | 1.5123 | 2.5205 |  
 
-At *maximum*, we would need to output 10.0818 Nm of torque. At 1A, we can output 13Nm. Considering that 1) We are not planning on accelerating the load this quick and 2) We can increase the input current to 2.5A, Constraint C1 is theoretically satisfied.
+At *maximum*, we would need to output 10.0818 Nm of torque. At 1A, we can output 13Nm. Considering that 1) We are not planning on accelerating the load this quick and 2) We can increase the input current to 2.5A, Constraint C1 is satisfied.
 
 We cannot safely test the current that is going into the motor. Our enclosure's grummet holes are not large enough to fit a DMM's prongs, and the driver (and motor leads) must be enclosed whenever we are powering the driver.
 
@@ -348,6 +348,7 @@ Constraint C3 is satisfied due to the motor and driver being consumer-rated, so 
 ---
 ### Further Improvements
 ---
+A future improvement could be finding a way to safely measure the current going to the motor. It may be difficult since almost all of the motor system's wirings are within the 120VAC enclosure that **must** be closed when powered. Another improvement could be finding a way to actually place 85 lbs worth of material on the motor shaft to measure torque. Maybe it can be done once the mechanical housing is complete.
 
 ## Secuirty and Locks System
 
