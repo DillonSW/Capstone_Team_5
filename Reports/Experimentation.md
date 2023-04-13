@@ -310,29 +310,42 @@ However, if possible the RFID Safety Sensors would be a vast improvement to the 
 ---
 The purpose of the subsystem is to provide the required voltage and amperage for all electrical apparatus in every subsystem (this includes the PLC, Safety Sensors, Photoelectric Sensors, Motor and Driver, and the PC), so that all of the systems of the vending machine can properly perform their functions.
 
-The customer required the program to do a few things: store the student ID, name, email, class, and term, before ordering the machine to bring the appropriate device to the door.  
+### Constraints/Specifications
+---
 
 Constraint C1 requires the power system to be protect against a power surge through the use of a ground fault current interrupter. We met this constraint by powering the vending machine with a 120V power cord that has a built in GFCI; the wall outlets of Brown have built in GFCI's as well.
 
-Constraint C2 requires the power system to convert the 120V AC voltage to what ever lower potential needed; in our case we only needed 24V. This constraint was not met exactly as that we did not have our power supply to transform the 120V into 24V, however, we were able to use the 24V power supply in the PLC lab to aquire the proper voltage we needed to supply to the PLC and Safety System.
+Constraint C2 requires the power system to convert the 120V AC voltage to what ever lower potential needed; in our case we only needed 24V. This constraint was not met exactly as that we did not have our power supply to transform the 120V into 24V, however, we were able to use the 24V power supply in the PLC lab to aquire the proper voltage and current we needed to supply to the PLC and Safety System.
 
 Constraint C3 requires our power system to have an emergency stop button. This constraint is met for the GFCI power cord is connected to an exposed outlet and can easily be pulled.
 
 ---
 ### Experimental Procedure  
 ---
+In order to meet constraint C3 we tested whether the power system was supplying current but not to much current, we measured the current drawn by the PLC and safety system inductance sensors with a multimeter. 
 
 ---
 ### Expected Results  
 ---
+We expected the Inductance sensor to have a current below the maximum current draw of 200mA.
+
+We expected the PLC to have a current below the maximum current draw of 1500mA.
 
 ---
 ### Collected Data
 ---
+The safety system inductance sensors has varying a current draw between 6.5 and 7.0 mA.
+![SafetyCurrentDrawPlot](https://user-images.githubusercontent.com/113734069/231815847-94ed3ced-dea6-435d-9fa7-bb249657869a.png)
+
+The PLC has a varying current draw between 9.5 and 9.7 mA
+![PLCCurrentDrawPlot](https://user-images.githubusercontent.com/113734069/231815879-9e4665be-1966-4872-80d1-52187643fe99.png)
 
 ---
 ### Data Interpretation
 ---
+The current Amperage data that we aquired fell far short from our maximum set current draws.
+Both systems combined would draw at most 16.7mA.
+With a maximum allowed current draw of 4000mA (otherwise our circuit breaker would open the circuit), there is no worry of too much power draw by our PLC and Safety systems.
 
 ---
 ### Future Improvements
