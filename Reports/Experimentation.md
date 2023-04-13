@@ -195,7 +195,7 @@ https://user-images.githubusercontent.com/100802994/231836664-d108fc11-3d49-4a41
 
 Above is a video recording of us using the OPC client to control the PLC, which is controlling the motor driver.
 
-![OPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_OPC.png)
+![OPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_OPC.jpeg)
 
 The image above is of the OPC client running on our Linux VM. The client first reads the value of the controller tag, then changes it to "true" or "energized" and reads it again. This along with the video show that the OPC is able to communicate with the PLC.
 
