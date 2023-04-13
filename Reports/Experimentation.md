@@ -112,7 +112,7 @@ The interface is able to let a user input information into the ID subsystem and 
 ---
 ### Constraints/Specifications
 ---
-
+Below is a list of the constraints for the GUI system.
  1. UI must not operate at greater than 100 W because of PC output rating of USB-C [1].
  2. UI must run Windows/Linux environment to run Kiosk application.
  3. Must have HDMI or type C or USB port to connect to PC.
