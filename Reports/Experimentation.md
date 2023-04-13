@@ -201,6 +201,10 @@ https://user-images.githubusercontent.com/100802994/231836664-d108fc11-3d49-4a41
 
 Above is a video recording of us using the OPC client to control the PLC, which is controlling the motor driver.
 
+![OPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_OPC.jpeg)
+
+The image above is of the OPC client running on our Linux VM. The client first reads the value of the controller tag, then changes it to "true" or "energized" and reads it again. This along with the video show that the OPC is able to communicate with the PLC.  
+
 ---
 ## Data Interpretation
 ---
@@ -364,11 +368,35 @@ A future improvement could be finding a way to safely measure the current going 
 
 ### Purpose of the Subsystem
 ---
+This subsystem's role in our design is to secure both the stored devices and internal components of the machine. The main contributor to the security system will be the cabinet doors holding the devices. These cabinet doors require digitally controlled locks, allowing access to verified users, while locking out those who would attempt to forcefully steal from the machine.
+
+---
+### Constraints/Specifications
+---
+
+**• The locks shall respond to the commands of the PLC. (CL-1)**
+	
+**• The locks shall remain extended when power is lost. (CL-2)**
+
+**• The inductance sensors shall inform controlling PLC of lock status at all times. (CP-1)**
+
+**• There shall be visual indicators to inform the user of the location of their device. (CI-1)**
+
+**• The door shall open as soon as locks are released, preventing the door re-locking before device is removed. (CS-1)**
+
+**• The locks shall resist the force of resisting spring force of internal spring hinges. (CS-2)**
+	
+**• Unauthorized users of the device shall not be able to access internal contents. (CD-1)**
+
+
+Constraints for the Locks (CL-1, CL-2), LEDs (CI-1), Spring Hinges (CS-1, CS-2), and Doors (CD-1) are now considered out of the scope of this project. Due to ordering issues, these parts were not received and therefore cannot be implemented.
+
+The only Constraint still in scope is CP-1, which states “The inductance sensors shall inform controlling PLC of lock status at all times.”
 
 ---
 ### Experimental Procedure
 ---
-
+Since these sensors are also implemented in the Safety System, their experimental process is nearly identical.
 ---
 ### Expected Results
 ---
@@ -387,6 +415,7 @@ A future improvement could be finding a way to safely measure the current going 
 ---
 The purpose of the subsystem is to provide the required voltage and amperage for all electrical apparatus in every subsystem (this includes the PLC, Safety Sensors, Photoelectric Sensors, Motor and Driver, and the PC), so that all of the systems of the vending machine can properly perform their functions.
 
+---
 ### Constraints/Specifications
 ---
 
@@ -424,6 +453,11 @@ The current Amperage data that we aquired fell far short from our maximum set cu
 Both systems combined would draw at most 16.7mA.
 With a maximum allowed current draw of 4000mA (otherwise our circuit breaker would open the circuit), there is no worry of too much power draw by our PLC and Safety systems.
 
+Constraint C1 was satisfied by the use of a GFCI cord for the motor driver enclosure.  
+
+Constraint C2 is no longer within the scope of this version due to unforseen circumstances with ordering. 
+
 ---
 ### Future Improvements
 ---
+In the next version of the machine, the missing parts that could not be received need to be ordered and can be installed according to the signoff. The entire din rail must be constructed and the blocks must be installed along with circuit breakers. 
