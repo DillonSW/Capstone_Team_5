@@ -109,6 +109,16 @@ The purpose of the graphic user insterface is to take information from the user 
 
 The interface is able to let a user input information into the ID subsystem and provide the student with notifications while renting a device. The GUI must follow certain constraints determined during the design of the project. The team was not able to order a touchscreen for the project, but received a ubuntu 20.04 computer from the school IT department instead. 
 
+---
+### Constraints/Specifications
+---
+
+  1. UI must not operate at greater than 100 W because of PC output rating of USB-C.
+  2. UI must run Windows/Linux environment to run Kiosk application.
+  3. Must have HDMI or type C or USB port to connect to PC.
+  4. UI must be at least 15.6" (diagonal) because of the TIA (Totally Integrated Automation) Portal application.
+  5. UI must be anchored to prevent theft problems.
+
 Constraints C1-C3 are satisfied by the computer provided to the team by the IT department. 
 
 Constraint C4 was satisfied by a personal laptop of a team member, where he programmed a custom PLC ladder logic program. 
@@ -129,6 +139,8 @@ The team expected to see all errors popup during the correct time and allow data
 ### Collected Data
 ---
 
+Below is the all the data that was collected for input validation for different fields if a student were to mistype some of the input fields or they skip some fields and hit the submit button directly.
+
 | | | 
 |:--------------------:|:--------------------:|
 ![Delete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png) Figure 1: Admin_Delete| ![Agree](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png) Figure 2: Agreement_Error| 
@@ -136,11 +148,17 @@ The team expected to see all errors popup during the correct time and allow data
 ![ID_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/ID_Error.png) Figure 5: ID_Error| ![Load_Complete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Complete.png) Figure 6: Load_Complete| 
 ![Load_Mode](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Mode.png) Figure 7: Load_Mode| ![Name_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Name_Error.png) Figure 8: Name_Error| 
 
-
-
 ---
 ### Data Interpretation
 ---
+
+For C2, you can clearly see that the computer was able to run the GUI written using python in Linux Environment. Also, we can see that different errors were generated for different input fields in the pictures listed above.
+
+If needed to delete the database by an associate then the command that is set to do so is "delete" in ID field and "admin" in name field. This keywords can be changed anytime as per the needs of associate, and if did so correctly then the figure 1 depicts what it would return.
+
+For the load mode, the keyword to enter the boards is "load" in ID field and "admin" in name field. If did correctly, it would open a prompt where an associate would type in the boards manually. This was done as a substitute because of the barrring ordering issues. The boards loaded propertly in the database can be seen in ID subsystem.
+
+
 
 ---
 ### Future Improvements
@@ -276,56 +294,27 @@ However, if possible the RFID Safety Sensors would be a vast improvement to the 
 
 ### Purpose of the Subsystem
 ---
-The purpose of the motor system is to rotate the platforms holding the boards for check out. It was decided that the motor should be a hybrid stepper motor due to their high precision and accuracy, as well as having high torque. This motor system is controlled by the PLC communicating with the motor driver; the driver will send pulses to the motor's phases (A+/-, B+/-) to make it step. Because the motor can operate at many different resolutions (or steps per revolution), we chose to do full-stepping or 1.8 degrees per step. This is because we planned to have 20 boards on each platform, meaning there are 18 degrees between each board. If we full-step the motor, we can reach the next board in 10 steps.
+
 
 ---
 ### Specifications/Constraints
 ---
-The list of constraints on specifically the **MOTOR** are listed below. In the Motor System signoff, there are many constraints listed before the motor is even mentioned. This is because there had to be concrete information and constraining of the platform material and the boards to best decide which motor we needed to use. (Weight, strength, dimensions, quantity, etc). Some of these constraints were also given to the mechanical team so they could use them as constraints on the framework.
 
-C1: The motor shall be able to rotate a mass weighing a total of 70.858 lbs. Assuming roughly 20% tolerance for error, it must be able to rotate 85 lbs.
-
-C2: The motor shall be protected at 125% of the nameplate current rating, or be protected at 3.19A.
-
-C3: The motor system shall follow the NEC 310-16 Table for wiring.
 
 ---
 ### Experimental Procedure
 ---
-The hardest constraint to analyze is C1. We did not have access to the housing for our electrical components, and we could not feasibly find 85 lbs worth of materials that could rest on the motor's shaft. But there are calculations that we can perform to make an estimate of how much weight the motor can turn.
 
-In addition, we can run a test to see if the motor can truly reach 200 steps/revolution. Our PLC has a count-up accumulator that counts to 200 and stops the motor once it is reached.
 
 ---
 ### Expected Results
 ---
-The expected results of this procedure are the motor being able to complete a full rotation in 200 steps and in a reasonable time. This was done with the aid of recording software and also slowing down the motor to a speed so that one could reliably count the steps. If 200 steps is truly a full rotation, then 10 steps would make the motor rotate 18 degrees, which is how far we want. Assuming there is at least 1 minute between two students checking out a board, the motor must be able to step 10 times in 1 minute, or 200 times in 20 minutes.
+
 
 ---
 ### Collected Data
 ---
-A stepper motor's torque (T), torque constant (Kt), and input current (i) are related by the equation:
 
-$T = Kt * i$
-
-Currently we have 1A being sent to the motor. According to the motor's datasheet, we can reach we can reach up to 1841 oz-in (or 13 Nm) of torque. This means that at 1A of current, we have a torque constant of 13 Nm/A.
-
-According to this table:
-
-|  t(s)  |        |∆N (rpm)|        |  
-|--------|--------|--------|--------|
-|        |    1   |    2   |    3   |
-|  0.25  | 2.0164 | 6.0491 | 10.0818 |
-|  0.5   | 1.0082 | 3.0245 | 5.0409 |
-|    1   | 0.5041 | 1.5123 | 2.5205 |  
-
-At *maximum*, we would need to output 10.0818 Nm of torque. At 1A, we can output 13Nm. Considering that 1) We are not planning on accelerating the load this quick and 2) We can increase the input current to 2.5A, Constraint C1 is theoretically satisfied.
-
-We cannot safely test the current that is going into the motor. Our enclosure's grummet holes are not large enough to fit a DMM's prongs, and the driver (and motor leads) must be enclosed whenever we are powering the driver.
-
-Constraint C2 is no longer within the scope of this project as we did not receive the fuse breakers required to protect the driver. **But** the motor driver can sense overcurrent and shut everything off if that threshold is reached.
-
-Constraint C3 is satisfied due to the motor and driver being consumer-rated, so their wire gauges have been properly chosen by the manufacturer.
 
 ---
 ### Further Improvements
