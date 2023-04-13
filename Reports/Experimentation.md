@@ -86,10 +86,20 @@ Below you can see the results of the inventory table after testing the entry of 
 ---
 ### Data Interpretation
 ---
+For C1, you can see in the third figure that the boxnumbers were correctly taken in by the database along with the rented and stored dates. This is the result the team expected to see when entering through the database.  
+
+Constraint C4 is satisfied by allowing the user to enter his or her ID into the GUI. As you can see the data entered in figure 2 is all present in the database as expected.  
+
+Given that the PC has a Core i7 and 16GB of RAM, the comupter specs are decent enough to run the PLC application needed for programming. This satisfies constraint C7 and C9 in the list.   
+
+In figure 2, the student data was entered and stored in the correct format. All required information from our customer is provided through the GUI and stored after error checking procedures.  
+
+In figure 3, the device information was stored correctly after being entered by an administrator. Students are not allowed to decide the board received and therefore the device location is also stored in the database. 
 
 ---
 ### Future Improvements
 ---
+Several improvements can be made on this system because parts need to be installed in a future version, and the database can be expanded. The next team that receives the project must make sure to install the barcode scanner and card reader to the machine. The card reader is needed because, as of now, the student can enter any correctly formatted T#. The system should take information from the card so a student cannot fake information. The voltmeter must also be acquired to monitor the operation of the barcode and card scanners.  
 
 ## GUI Subsystem
 
