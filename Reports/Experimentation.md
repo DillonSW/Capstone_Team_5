@@ -178,6 +178,25 @@ Constraint C2 has been resolved by using a closed loop system as shown above. If
 Constraint C3 has been fulfilled by using relays to control the enable state of the motor driver.
 
 ---
+### Constraints/Specifications
+---
+
+The design constrants are as followed:
+
+**• The relay shall be aware of the state of each cabinet door all times. (C1)**
+
+**• The system shall be redundant and separate from the normal operations of the PLC. (C2)**
+
+**• The system must overrule all other functions of the system. The motor shall not have any motion while there is an error in place. (C3)**
+
+
+Constraint C1 has been fulfilled by the general functionality of the proximity sensors. Since there are no doors to be sensed, the sensors have been thoroughly tested with other metallic objects.
+
+Constraint C2 has been resolved by using a closed loop system as shown above. If this project is carried over to another team, the original system design using RDIF Safety Sensors is still viable.
+
+Constraint C3 has been fulfilled by using relays to control the enable state of the motor driver.
+
+---
 ### Experimental Procedure
 ---
 
