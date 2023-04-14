@@ -477,3 +477,46 @@ Constraint C2 is no longer within the scope of this version due to unforseen cir
 ### Future Improvements
 ---
 In the next version of the machine, the missing parts that could not be received need to be ordered and can be installed according to the signoff. The entire din rail must be constructed and the blocks must be installed along with circuit breakers. 
+
+
+## Sensor Subsystem 
+
+### Purpose of the subsystem  
+---
+The role of the sensor subsystem is to send signals—communicating the status of the device occupancy of the presently forefront compartment sections on all three dial layers—to the PLC to update certain tags, so that the PLC's ladder logic code can properly use that information ad hoc.
+
+---
+### Constraints/Specifications
+---
+Constraint C1 requires the sensor system to not take up more than eight input pins from the PLC. This constraint is easily met as only three pins are used by all of the sensors combined.
+
+Constraint C2 requires that the distance sensor chosen must determine the presence or absence of a device by measuring whether the light emitted was reflected back from a distance range of 3.75 to 7.25 inches. This constraint also requires that the sensor does not sense more than up to 11.25in so as not to sense the back side of the compartment.
+
+Constraint C3 requires the sensors to send a one signal to the PLC if there is a device in the presently forefront compartment section and a zero signal if there is not.
+
+---
+### Experimental Procedure  
+---
+ To test for C2 and C3, we would calibrate the sensor to sense up to its max range and use a voltmeter to determine whether the sensor sends a signal or not at varying distances between 1 and 12 inches.
+
+---
+### Expected Results  
+---
+We expect to read a voltage between the sensors range of 0.60 inches to 7.87 inches which covers the max distance of 7.25in that must be covered.
+We would expect the sensor to not sense past 8in which means the back wall would not be picked up by the sensor.
+We would expect to read a voltage when the sensor sees and object and not see a voltage when it does not see and object within its range.
+
+---
+### Collected Data
+---
+n/a
+
+---
+### Data Interpretation
+---
+n/a
+
+---
+### Future Improvements
+---
+In the next version of the machine, the missing parts that could not be received need to be ordered and can be installed according to the signoff. These parts must than be wired up and calibrated to meet desired specifications.
