@@ -509,12 +509,12 @@ We would expect to read a voltage when the sensor sees and object and not see a 
 ---
 ### Collected Data
 ---
-n/a
+No data could be collected due to never receiving the parts to this system. 
 
 ---
 ### Data Interpretation
 ---
-n/a
+Since no data could be collected, there is no interpretation of the data. 
 
 ---
 ### Future Improvements
