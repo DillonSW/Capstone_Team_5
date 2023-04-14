@@ -48,7 +48,7 @@ To test this subsystem, a user entered data through the GUI and it was verified 
 ### Expected Results  
 ---
 The team expected the student data to be in the database in alphabetical order along with the rented board determined by the step count handled by the program. The inventory was also expected to be present with its rented and stored date because a student cannot rent without a device in the machine.
-A total of 10 random students were entered into the database along with 15 random devices. 
+A total of 10 random students were entered into the database along with 15 random devices.
 
 ---
 ### Collected Data
@@ -81,7 +81,9 @@ Below you can see the results of running the database program while taking input
 
 Below you can see the results of the inventory table after testing the entry of 15 devices and the renting of 10. The devices should be removed in order of entry into the machine.  
 
-![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)  
+![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)
+
+Video of data collection: https://youtu.be/LkNtLlUZSTo
 
 ---
 ### Data Interpretation
@@ -148,6 +150,8 @@ Below is the all the data that was collected for input validation for different 
 ![ID_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/ID_Error.png) Figure 5: ID_Error| ![Load_Complete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Complete.png) Figure 6: Load_Complete| 
 ![Load_Mode](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Mode.png) Figure 7: Load_Mode| ![Name_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Name_Error.png) Figure 8: Name_Error| 
 
+Video of Collected Data: https://youtu.be/VZnFoWEEd3s
+
 ---
 ### Data Interpretation
 ---
@@ -204,6 +208,8 @@ Above is a video recording of us using the OPC client to control the PLC, which 
 ![OPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_OPC.jpeg)
 
 The image above is of the OPC client running on our Linux VM. The client first reads the value of the controller tag, then changes it to "true" or "energized" and reads it again. This along with the video show that the OPC is able to communicate with the PLC.  
+
+Video of Collected Data: https://youtu.be/f2e1zKOUCzw
 
 ---
 ## Data Interpretation
@@ -358,6 +364,10 @@ Constraint C3 is satisfied due to the motor and driver being consumer-rated, so 
 ![MotorSpeed](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Motor_Speed_Average.jpg)
 
 The table above shows the 30 tests we ran on the motor to see if it could rotate 200 steps (or one rotation) within a reasonable time. The average for one rotation was aroudn 20 seconds, meaning in order to rotate 10 steps, the motor would need 1 second. This is more than reasonable for motor speed, which we thought the stepper motor could easily reach.
+
+Video of Collected Data: https://youtu.be/f2e1zKOUCzw
+
+**Note**: The video above is the same as the PLC System video.
 
 ---
 ### Further Improvements
