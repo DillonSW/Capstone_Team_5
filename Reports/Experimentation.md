@@ -115,11 +115,10 @@ The interface is able to let a user input information into the ID subsystem and 
 ### Constraints/Specifications
 ---
 
-  1. UI must not operate at greater than 100 W because of PC output rating of USB-C.
-  2. UI must run Windows/Linux environment to run Kiosk application.
-  3. Must have HDMI or type C or USB port to connect to PC.
-  4. UI must be at least 15.6" (diagonal) because of the TIA (Totally Integrated Automation) Portal application.
-  5. UI must be anchored to prevent theft problems.
+  1. UI must run Windows/Linux environment to run the application.
+  2. Must have HDMI or type C or USB port to connect to PC.
+  3. UI must be at least 15.6" (diagonal) because of the TIA (Totally Integrated Automation) Portal application.
+  4. UI must be anchored to prevent theft problems.
 
 Constraints C1-C3 are satisfied by the computer provided to the team by the IT department. 
 
