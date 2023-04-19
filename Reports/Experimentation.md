@@ -99,6 +99,11 @@ In figure 2, the student data was entered and stored in the correct format. All 
 In figure 3, the device information was stored correctly after being entered by an administrator. Students are not allowed to decide the board received and therefore the device location is also stored in the database. 
 
 ---
+### Measures of Success
+---
+The measure of success for the ID system states that the program must correctly store the boxnumbers and student information. Given the previous testing done on the system, the measure of success was met.  
+
+---
 ### Future Improvements
 ---
 Several improvements can be made on this system because parts need to be installed in a future version, and the database can be expanded. The next team that receives the project must make sure to install the barcode scanner and card reader to the machine. The card reader is needed because, as of now, the student can enter any correctly formatted T#. The system should take information from the card so a student cannot fake information. The voltmeter must also be acquired to monitor the operation of the barcode and card scanners.  
@@ -168,9 +173,13 @@ At last, if the student filled all the information, but failed to agree to the t
 To protect students from accidentally closing the program we implemented a special keybinding so that students don't close it intentionally or unintentionally and access the student information. To do so, the program is set to close with the keybinding of "Alt + Z" as our team thinks that this combination wouldn't be used that frequently.This keybinding can be changed like other commands by associates if needed.
 
 ---
+### Measures of Success
+---
+The measure of success for the GUI system states that the program must be easy to use and also must prevent SQL injection. Given the previous tests on the system, the measures of success have been satisfied.  
+
+---
 ### Future Improvements
 ---
-
 Several improvements can be done to this subsystem. In future, if the IT department allows to order the Touchscreen UI as originally proposed then that can be used for GUI as that would get rid off extra hardware. Also, another improvement would be making the GUI more intuitive so students or associates could navigate it easily, also  if the future capstone team were to get SD card for PLC then they could integrate the PLC with the program so that they both can perform synchronously, and at last the machine is made up to hold one board but in case if they students were to expand the design so that the machine can hold multiple boards then some modifications would have to be done for GUI with some additonal details.
 
 ## PLC System
@@ -214,6 +223,11 @@ Video of Collected Data: https://youtu.be/f2e1zKOUCzw
 ## Data Interpretation
 ---
 The video collected above shows how constraint C5 was satisfied through our OPC client. When the client is ran, it energizes a controller tag associated with stepping the motor. As will be shown (as best as we can) in the motor system analysis section, we did not touch the PLC code in our Studio 5000 software. Instead we had a stopwatch up on the screen to time how long it took the motor to complete a full rotation.
+
+---
+### Measures of Success
+---
+The measure of success for the PLC system states that the program must keep track of the location of the motor. Given the testing done on the PLC, the program keeps track of the step count of the motor at all times.  
 
 ---
 ### Further Improvements
@@ -299,6 +313,11 @@ As shown in the video above, when the inductance sensor is within the range of a
 The material of theoretical solenoid locks would be made of stainless steel, meaning the max sensing range would be 2.8mm. The design would have the plunger of the lock well within this range.
 
 ---
+### Measures of Success
+---
+The measure of success for the safety system states that the sensors must interrupt the motor power while also being seperated from the PLC. Given previous testing on the system, the measure of success has been met.    
+
+---
 ### Further Improvements
 ---
 It is suggested that the team would move forward with using the proximity sensors since the system is already in place, and the materials are already collected.
@@ -366,7 +385,12 @@ The table above shows the 30 tests we ran on the motor to see if it could rotate
 
 Video of Collected Data: https://youtu.be/f2e1zKOUCzw
 
-**Note**: The video above is the same as the PLC System video.
+**Note**: The video above is the same as the PLC System video. 
+
+---
+### Measures of Success
+---
+The measure of success for the Motor system states the machine should turn within several seconds to a board. Given that it takes on average 20 seconds to fully rotate, the time to the next slot is 1 second.  
 
 ---
 ### Further Improvements
@@ -428,6 +452,12 @@ It is assumed that the components would function properly and be compatible with
 The only data that could be collected was that of the inductance proximity sensors, which discussed in depth in the Safety System.
 
 The data from the other components cannot be collected since they are not in our possession.
+
+---
+### Measures of Success
+---
+The Lock system could not be measured without the approriate parts.  
+
 ---
 ### Further Improvements
 ---
@@ -483,6 +513,11 @@ Constraint C1 was satisfied by the use of a GFCI cord for the motor driver enclo
 Constraint C2 is no longer within the scope of this version due to unforseen circumstances with ordering. 
 
 ---
+### Measures of Success
+---
+The measure of success for the Power system states that the rest of the systems should be powered from this system. Due to ordering issues, the measurement could not be verified. 
+
+---
 ### Future Improvements
 ---
 In the next version of the machine, the missing parts that could not be received need to be ordered and can be installed according to the signoff. The entire din rail must be constructed and the blocks must be installed along with circuit breakers. 
@@ -524,6 +559,11 @@ No data could be collected due to never receiving the parts to this system.
 ### Data Interpretation
 ---
 Since no data could be collected, there is no interpretation of the data. 
+
+---
+### Measures of Success
+---
+The measure of success for the Sensor system states that the sensors should test the state of the door. Due to ordering issues, the measurement could not be verified. 
 
 ---
 ### Future Improvements
