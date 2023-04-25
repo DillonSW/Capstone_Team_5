@@ -273,12 +273,12 @@ Constraint C3 has been fulfilled by using relays to control the enable state of 
 ### Experimental Procedure
 ---
 
-To properly test this system, the sensors and relay system was wired and tested using in-lab power supply and DMM. The sensors were originally tested on aluminum material, and has since been experimented with other ferrous material as listed on the datasheet. After wiring the sensors and relay to match the required logic. The logic prepared resembles that of a simple AND gate, meaning all of the sensors must be activated for a signal to be sent to the motor driver. 
+To properly test this system, the sensors and relay system was wired and tested using in-lab power supply and DMM. The sensors were originally tested on aluminum material, and has since been experimented with other ferrous material as listed on the datasheet. After wiring the sensors and relay to match the required logic. The logic prepared resembles that of a simple AND gate, meaning all of the sensors must be activated for a signal to be sent to the motor driver. When the enable recieves a positive input, the motor stops all movement.
 
 ---
 ### Expected Results
 ---
-When all the sensors detect the presence of metal, the power should flow through and enable the motor to spin. When any of the sensors don’t detect any metal, this would cut power being sent to the enable, disabling the motor.
+When all the sensors detect the presence of metal, the power should flow through and enable the motor to spin. When any of the sensors don’t detect any metal, this would cut power being sent to the enable, disabling the motor and ceasing all movement.
 
 The expected outcome is rather straightforward. The sensors will either detect the theoretical door enabling the motor, or not detect anything and disabling the motor.
 
@@ -301,6 +301,11 @@ Due to the change in the configuration for the sensors and relay, the logic bein
 ![image](https://user-images.githubusercontent.com/100805322/231349890-56891dc2-6194-4a68-bf19-fbf86c155de0.png)
 
 After these adjustments, the results were as expected. Whenever one of the sensors does not sense their door, the motor will cease movement and will not move until everything is in place.
+
+
+https://user-images.githubusercontent.com/100805322/234241463-0bac8268-ea57-4a61-8167-c97eb8001625.mp4
+
+As shown in the video above, the safety sensors are functioning properly and are working in conjunction to the motor system. Every time either of the sensors aren't in range of the piece of metal, the motor will completely stop. While only 2 sensors are presented in the video, the process can be simply replicated up to 8 times. The relay module being used has the capability to logically control 8 inputs/outputs. Simply repeating the logic discussed earlier allows for more controlling inputs and it all leads to the same output.
 
 
 https://user-images.githubusercontent.com/100805322/231724287-a65690ac-44f0-45db-8140-a93368bf456c.mp4
