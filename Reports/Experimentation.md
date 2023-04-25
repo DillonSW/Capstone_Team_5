@@ -450,7 +450,9 @@ The LEDs would be tested for their responsiveness and longevity. They would also
 ---
 ### Expected Results
 ---
-It is assumed that the components would function properly and be compatible with one another. 
+
+It is assumed that the components would function properly and be compatible with one another.
+
 ---
 ### Collected Data
 ---
