@@ -320,7 +320,7 @@ The material of theoretical solenoid locks would be made of stainless steel, mea
 ---
 ### Measures of Success
 ---
-The measure of success for the safety system states that the sensors must interrupt the motor power while also being seperated from the PLC. Given previous testing on the system, the measure of success has been met.    
+The measure of success for the safety system states that the sensors must interrupt the motor's enable signal while also being seperated from the PLC. This assures that all movement of the motor will cease, securing the safety of the device and possible deviants. Given previous testing on the system, the measure of success has been met.    
 
 ---
 ### Further Improvements
