@@ -156,8 +156,6 @@ Below is the all the data that was collected for input validation for different 
 ![ID_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/ID_Error.png) Figure 5: ID_Error| ![Load_Complete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Complete.png) Figure 6: Load_Complete| 
 ![Load_Mode](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Mode.png) Figure 7: Load_Mode| ![Name_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Name_Error.png) Figure 8: Name_Error| 
 
-Video of Collected Data: https://youtu.be/VZnFoWEEd3s
-
 ---
 ### Data Interpretation
 ---
@@ -179,7 +177,7 @@ To protect students from accidentally closing the program we implemented a speci
 ---
 The measure of success for the GUI system states that the program must be easy to use and also must prevent SQL injection by throwing errors when inforamtion is incorrectly entered. The following video shows the layout of the GUI which is also shown above, and the video also shows errors being thrown when information was incorrectly entered. 
 
-Video : 
+Video : https://youtu.be/tVvsogPO3sM
 
 ---
 ### Future Improvements
@@ -221,8 +219,6 @@ Above is a video recording of us using the OPC client to control the PLC, which 
 
 The image above is of the OPC client running on our Linux VM. The client first reads the value of the controller tag, then changes it to "true" or "energized" and reads it again. This along with the video show that the OPC is able to communicate with the PLC.  
 
-Video of Collected Data: https://youtu.be/f2e1zKOUCzw
-
 ---
 ## Data Interpretation
 ---
@@ -233,7 +229,7 @@ The video collected above shows how constraint C5 was satisfied through our OPC 
 ---
 The measure of success for the PLC system states that the program must correctly control the peripherals given signals from the OPC. In the following video, it can be seen that the motor correctly activates and turns after being given the signal from the OPC. The other peripherals have not been connected because the parts were never received. 
 
-Video : 
+Video : https://youtu.be/Vv9zIDt42ac
 
 ---
 ### Further Improvements
@@ -328,7 +324,7 @@ The material of theoretical solenoid locks would be made of stainless steel, mea
 ---
 The measure of success for the safety system states that the sensors must interrupt the motor's enable signal while also being seperated from the PLC. This assures that all movement of the motor will cease, securing the safety of the device and possible deviants. In the video below, it can be shown that the sensors properly interrupt the motor and do not allow it to turn when the sensors were removed. 
 
-Video : 
+Video : https://youtu.be/iVfy9IWk9oA
 
 ---
 ### Further Improvements
