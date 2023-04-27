@@ -42,13 +42,13 @@ Constraints C7-C9 required the team to have a decently rated Windows 10 computer
 ---
 ### Experimental Procedure  
 ---
-To test this subsystem, a user entered data through the GUI and it was verified to be inside of the database on the host with the correct assigned board. The inventory entered in the program was also verified to be inside the database. The running of the motor will be demonstrated in the PLC analysis, and the Error checking will be shown in the GUI analysis. 
+To test this subsystem, a user entered data through the GUI and it was verified to be inside of the database on the host with the correct assigned board. The inventory entered in the program was also verified to be inside the database. The running of the motor will be demonstrated in the PLC analysis, and the Error checking will be shown in the GUI analysis. The communication via OPC was verified as shown in the below video by sending and receiving signals to and from the tag. 
 
 ---
 ### Expected Results  
 ---
 The team expected the student data to be in the database in alphabetical order along with the rented board determined by the step count handled by the program. The inventory was also expected to be present with its rented and stored date because a student cannot rent without a device in the machine.
-A total of 10 random students were entered into the database along with 15 random devices.
+A total of 10 random students were entered into the database along with 15 random devices. We also expected the motor to turn correctly based on the values sent to the PLC. 
 
 ---
 ### Collected Data
@@ -101,7 +101,9 @@ In figure 3, the device information was stored correctly after being entered by 
 ---
 ### Measures of Success
 ---
-The measure of success for the ID system states that the program must correctly store the boxnumbers and student information. Given the previous testing done on the system, the measure of success was met.  
+The measure of success for the ID system states that the program must correctly store the boxnumbers and student information. For the OPC communication, the program needed to send and receive signals to and from the database. In the following video it can be shown that the OPC communication correctly activated the motor, and the previous results show the data from the GUI being stored correctly into MySQL. 
+
+Video : 
 
 ---
 ### Future Improvements
@@ -175,7 +177,9 @@ To protect students from accidentally closing the program we implemented a speci
 ---
 ### Measures of Success
 ---
-The measure of success for the GUI system states that the program must be easy to use and also must prevent SQL injection. Given the previous tests on the system, the measures of success have been satisfied.  
+The measure of success for the GUI system states that the program must be easy to use and also must prevent SQL injection by throwing errors when inforamtion is incorrectly entered. The following video shows the layout of the GUI which is also shown above, and the video also shows errors being thrown when information was incorrectly entered. 
+
+Video : 
 
 ---
 ### Future Improvements
@@ -227,7 +231,9 @@ The video collected above shows how constraint C5 was satisfied through our OPC 
 ---
 ### Measures of Success
 ---
-The measure of success for the PLC system states that the program must keep track of the location of the motor. Given the testing done on the PLC, the program keeps track of the step count of the motor at all times.  
+The measure of success for the PLC system states that the program must correctly control the peripherals given signals from the OPC. In the following video, it can be seen that the motor correctly activates and turns after being given the signal from the OPC. The other peripherals have not been connected because the parts were never received. 
+
+Video : 
 
 ---
 ### Further Improvements
@@ -320,7 +326,9 @@ The material of theoretical solenoid locks would be made of stainless steel, mea
 ---
 ### Measures of Success
 ---
-The measure of success for the safety system states that the sensors must interrupt the motor's enable signal while also being seperated from the PLC. This assures that all movement of the motor will cease, securing the safety of the device and possible deviants. Given previous testing on the system, the measure of success has been met.    
+The measure of success for the safety system states that the sensors must interrupt the motor's enable signal while also being seperated from the PLC. This assures that all movement of the motor will cease, securing the safety of the device and possible deviants. In the video below, it can be shown that the sensors properly interrupt the motor and do not allow it to turn when the sensors were removed. 
+
+Video : 
 
 ---
 ### Further Improvements
