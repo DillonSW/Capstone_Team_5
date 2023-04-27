@@ -353,9 +353,9 @@ C3: The motor system shall follow the NEC 310-16 Table for wiring.
 ---
 ### Experimental Procedure
 ---
-The hardest constraint to analyze is C1. We did not have access to the housing for our electrical components, and we could not feasibly find 85 lbs worth of materials that could rest on the motor's shaft. But there are calculations that we can perform to make an estimate of how much weight the motor can turn.
+Constraint C1 cannot feasibly be measured, as we did not have a way to safely place 85 lbs on the motor's shaft. Constraint C2 is also not feasibly measurable. The multimeters that we have access to cannot fit in the grommet holes on our enclosure. Because we have hot 120VAC in the enclosure when powered, we must keep the enclosure shut for safety.
 
-In addition, we can run a test to see if the motor can truly reach 200 steps/revolution. Our PLC has a count-up accumulator that counts to 200 and stops the motor once it is reached.
+However, we can run a test to see if the motor can truly reach 200 steps/revolution. Our PLC has a count-up accumulator that counts to 200 and stops the motor once it is reached.
 
 ---
 ### Expected Results
@@ -365,24 +365,8 @@ The expected results of this procedure are the motor being able to complete a fu
 ---
 ### Collected Data
 ---
-A stepper motor's torque (T), torque constant (Kt), and input current (i) are related by the equation:
 
-$T = Kt * i$
-
-Currently we have 1A being sent to the motor. According to the motor's datasheet, we can reach we can reach up to 1841 oz-in (or 13 Nm) of torque. This means that at 1A of current, we have a torque constant of 13 Nm/A.
-
-According to this table:
-
-|  t(s)  |        |∆N (rpm)|        |  
-|--------|--------|--------|--------|
-|        |    1   |    2   |    3   |
-|  0.25  | 2.0164 | 6.0491 | 10.0818 |
-|  0.5   | 1.0082 | 3.0245 | 5.0409 |
-|    1   | 0.5041 | 1.5123 | 2.5205 |  
-
-At *maximum*, we would need to output 10.0818 Nm of torque. At 1A, we can output 13Nm. Considering that 1) We are not planning on accelerating the load this quick and 2) We can increase the input current to 2.5A, Constraint C1 is satisfied.
-
-We cannot safely test the current that is going into the motor. Our enclosure's grummet holes are not large enough to fit a DMM's prongs, and the driver (and motor leads) must be enclosed whenever we are powering the driver.
+We cannot safely test the current that is going into the motor. Our enclosure's grommet holes are not large enough to fit a DMM's prongs, and the driver (and motor leads) must be enclosed whenever we are powering the driver.
 
 Constraint C2 is no longer within the scope of this project as we did not receive the fuse breakers required to protect the driver. **But** the motor driver can sense overcurrent and shut everything off if that threshold is reached.
 
