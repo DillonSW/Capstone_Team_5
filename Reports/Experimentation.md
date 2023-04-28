@@ -83,8 +83,6 @@ Below you can see the results of the inventory table after testing the entry of 
 
 ![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)
 
-Video of data collection: https://youtu.be/LkNtLlUZSTo
-
 ---
 ### Data Interpretation
 ---
@@ -103,7 +101,7 @@ In figure 3, the device information was stored correctly after being entered by 
 ---
 The measure of success for the ID system states that the program must correctly store the boxnumbers and student information. For the OPC communication, the program needed to send and receive signals to and from the database. In the following video it can be shown that the OPC communication correctly activated the motor, and the previous results show the data from the GUI being stored correctly into MySQL. 
 
-Video : 
+Video : https://youtu.be/tVvsogPO3sM
 
 ---
 ### Future Improvements
