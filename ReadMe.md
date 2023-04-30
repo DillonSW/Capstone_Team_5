@@ -20,12 +20,15 @@ Experimentation Videos:
 * PLC System: https://youtu.be/Vv9zIDt42ac  
 
 **GUI Image**  
+
 ![GUI](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/GUI.jpg)  
 
 **Enclosure Image**  
+
 ![Enclosure](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Enclosure.jpg)  
 
 **Safety System and PLC Image**  
+
 ![Safety/PLC](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Safety_PLC.jpg)  
 
 ## Subsystems
