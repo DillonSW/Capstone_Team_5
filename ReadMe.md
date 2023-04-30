@@ -19,11 +19,10 @@ In progress...
 ## About Us  
 
 ![TeamPhoto](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/TeamPhoto.jpg)  
-Left to Right: 
 
-### Team  
+Left to Right: Michel Turpeau, Ryan Reed, Dillon Williams, Nidhay Patel, Austin Sigg  
 
-This team consists of three Electrical Engineers and two Computer Engineers. The three Electrical Engineers are Austin Sigg, Ryan Reed, and Michel Turpeau. The two Computer Engineers are Dillon Williams and Nidhay Patel. The Class Kit Vending Machine is being designed to make the process of renting class devices faster while giving our customers more time for their own responsibilities. 
+This team consists of three Electrical Engineers and two Computer Engineers. The three Electrical Engineers are Austin Sigg, Ryan Reed, and Michel Turpeau. The two Computer Engineers are Dillon Williams and Nidhay Patel. The Class Kit Vending Machine is being designed to make the process of renting class devices faster while giving our customers more time for their own responsibilities.  
 
 ### Faculty Supervisor
 
