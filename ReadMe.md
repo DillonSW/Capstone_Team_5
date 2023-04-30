@@ -10,7 +10,9 @@ The first prototype of the vending machine has the capability to record all inpu
 
 ## Salient Outcomes
 
-In progress...
+The team believes one salient outcome of this project is the development of a base communication program between a host machine and PLC. This project can serve as a platform for future teams to be able to create a full version of the kit vending machine for the ECE department. The communication is specifically between a linux machine and Allen Bradley PLC.  
+
+The team also believes another outcome of the project is the protection of data through research into SQL Injection. This can also serve to teach future teams about data safety when using databases. SQL Injection is an issue many large companies deal with on a daily basis.  
 
 ## Project Demonstration & Images
 
