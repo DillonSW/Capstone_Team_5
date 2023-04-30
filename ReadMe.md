@@ -6,7 +6,7 @@ Every year hundreds of students require various devices for their ECE (Electrica
 
 ## Capabilities
 
-The first prototype of the vending machine will have the capability to prevent boards from getting stuck, have a card reader to verify the student’s identity, have locked doors to enable associates to restock the machine, and have memory in the event of a fault or power loss. Also, the machine will be fitted with a method of communication for the associates to procure student information from it. Security will be implemented to prevent boards from being stolen and to protect the database. The machine will also have a safety system to prevent a student getting hurt by the rotating inner section.  
+The first prototype of the vending machine has the capability to record all input student data and store to the SQL database held on the host machine. The program can communicate using custom OPC software and read/write tags to turn the motor. The GUI has a loading mode where the admin can enter all devices inside the machine and a delete mode where all data held by the database can be removed. After loading, the machine resets to the initial position to track exactly which board will be rented. The motor is powered through the custom enclosure and is controlled by the PLC. The overall function of the machine allows a student to enter data and quickly receive a response from the machine, returning a board to the student and recording exactly which device was given.  
 
 ## Salient Outcomes
 
