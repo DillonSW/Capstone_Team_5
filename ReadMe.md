@@ -39,12 +39,14 @@ Carson Pitts, Jessee Millsaps, Mason Baines, and Nathan Bangean.
 ## Repo Organization
 
 * The Team Contract is present in main  
-* A Folder of images held within Documents and Signoffs is also included  
+
 
 ### Reports
 
 * Conceptual Design and Revisions  
 * Project Proposal and Revisions  
+* Experimentation
+* Lessons Learned
 
 ### Documentation
 
