@@ -125,11 +125,11 @@ This loss is 0.064%. This loss will be minimal, and the transformer will suffice
 ^ Source: https://www.lincenergysystems.com/blog/difference-between-tracer-wire-tw-thw-thhn/
 ^ Source: http://www.paigewire.com/wire_resistance-prop.aspx?AspxAutoDetectCookieSupport=1
 
-![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/3D%20Models/MotorMount.jpg)
+![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/MotorMount.jpg)
 
 The image above shows the proposed idea of mounting the motor into the machine. Proposed by the Mechanical Engineering team, the motor will be mounted at the bottom of the machine, and will be on the same level as the mount for the platforms.
 
-![Connection](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PulleySystem.jpg)
+![Connection](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/PulleySystem.jpg)
 
 The image above shows the proposed idea of having the motor rotate the platforms. Proposed and discussed by the Mechanical and ECE teams, there will be a gear or belt-feed attatched to the motor's shaft and to the platform's base. These mounts will be of identical size in order to keep the ratio of motor rotation and platform rotation equal. Of course, there will be efficiency loss; any belt-feed or gear ratio will have some sort of loss. As shown in the calculations, we are assuming the worst-case scenario of 50% efficiency.
 
@@ -324,7 +324,7 @@ If all else fails, there can be a delay for the platform rotating. During this d
 
 **Note**
 The torque required to stop the device is well below the holding torque of the selected motor. Also, since this motor has an electromagnetic brake, it will have even greater stopping power assuring the motor does not lose its step. A table displaying the pull out torque is placed below. Pull Out Torque is the maximum torque the brake can output at higher speeds. The higher the rmp, the less it can brake. Our maximum speed (5 rpm) will not come close to being an issue.  
-![PulloutTorque](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/NewMotorTorque.jpg)
+![PulloutTorque](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-signoff-Motor-System/images/NewMotorTorque.jpg)
 
 Since the motor we are looking at can have a holding torque of 9 Nm at 5 rps, a higher speed than we intend to run the motor, it will meet the constraints of outputting enough torque and securing the devices. We would be able to operate the motor at a lower demand than its maximum, putting less strain on the motor over time.  
 
