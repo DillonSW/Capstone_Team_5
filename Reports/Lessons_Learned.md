@@ -34,12 +34,13 @@ This document should have a section for each team member. Each engineer should r
 6.  I gained a deeper understanding of topics that I was already interested in, and some new understanding of topics that I was not familiar with thanks to doing signoffs. The technical presentation also helped deepen and solidify my knowledge on tools that I might have to use when I'm in the industry.
 
 ## Michel Turpeau
-1.
-2.
-3.
-4.
-5.
-6.
+1. At first, I was worried due to my past experiences with teamwork. I will say, if consider myself the weakest link on the team that's a good sign. Organization was pretty easy since you can count on everyone to complete their work. On the technical side, everyone had background knowledge to help with the project. Even if there was any knowledge lacking, the team was always willing to do the research to find the solution the current problem.
+2. The biggest problems stemmed from the ordering issues and my personal knowledge on safety. I originally forgot to dedicate a system to the safety of the machine and users. This meant I had to make a new subsystem without any prior knowledge on the subject or any of its components. After conducting the research and making the schematics, things became much clearer and the system was approved. As for the ordering, the issue was never exactly resolved with us instead focusing on what we did have and making the most of it.
+3. I we were able to do it over again I would focus on two specifics things. First, it would have been useful to work on the detail designs over break. While it wasn't particularly expected of us, it would have helped a ton in the spring semester and greatly reduced the amount of stress we placed on ourselves. Second would have to be constantly checking in on our orders, making sure everything was handled properly. 
+4. It is good for each person to be assigned their own tasked, but understand that we are a team. I anyone needs advice, they shouldn't be afraid to ask one of the team for help. Also, another best practice is to stay in contact with the team and alert them to any updates and changes to the project.
+5. "15 minutes early, is being on time. Being on time is late." Always try to be ahead on your work. And even if we aren't expected to work on the weekend or during breaks, utilize this time to get ahead. While you miss out on some "fun times" it's better to get the work done and have free time afterwards, then it is to risk your project and work. Also, if you are working with another team in a different department, collaborate as much as possible. Every department has their own timeline and process, so don't assume they are on the same wavelength.
+6. Thanks to capstone, I truly have a better understanding of what it means to be an engineer. I gained better skills for organization and collaborating with my teammates. I also learned plenty about using 3D modeling software like SolidWorks and AutoCAD, along with schematic software like KiCad. I also have done tons of writing and research, more than any other class before.
+
 
 ## Nidhay Patel
 1. During the early days of Capstone 1, I was little concerned about how the project was going to get laid out for us as I believe our team had no idea whatsoever on how we were going to achieve this big goal, but I believe with every member having skills in different areas it helped our team a lot in achieving the target altogether. The team did face some technical problems with the first sign-off as I believe there were some discrepancies in what was expected and also with a bit of date-based grading but as a team I feel like we tackled the problem pretty good.
