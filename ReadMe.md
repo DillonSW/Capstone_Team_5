@@ -62,4 +62,8 @@ Carson Pitts, Jessee Millsaps, Mason Baines, and Nathan Bangean.
 
 ### Software
 
-* In progress...  
+* Database
+* Klaw_rev3
+* OPC_rev2
+* PLC
+
