@@ -1,14 +1,5 @@
 ## Lesson Learned Team 5
 
-This document should have a section for each team member. Each engineer should respond to these:
-
-* Reflect on the project, both technical and organizational. What went well? What didn’t go well?
-* What unanticipated problems occurred?
-* What would you do differently if you were to do it over again?
-* What “best practices” have you identified?
-* What words of wisdom would you pass on to future students?
-* What new knowledge or skills did you acquire throughout capstone.
-
 ## Austin Sigg
 1. Everyone had sufficient techinical knowledge or means to learn said knowledge required to sufficiently perform all design tasks in our Capstone project.  Organizationally we could have had a more solidified structure in the roles each of us had, like not having a designated hierarchy with a 'team captain' sometimes resulted in confusion on who's responsibility it was to do what.  Overall though the functionaility of our team through out this project did end up working well besides a few minor things not even worth mentioning.
 2. The largest problems all came mostly from misunderstanding on what exactly was wanted in reports. A lot of time could have been saved for everyone if we more easily grasped and comprehended what information our signoffs, reports, and experiments should specifically be composed of.  One problem we did not expect was that our parts may not arrive on time or at all. 
