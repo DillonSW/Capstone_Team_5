@@ -38,7 +38,7 @@ This will be accomplished by having a fuse breaker between the 24VDC supply and 
 
 ## Schematic 
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCSchemRevisionSeven.jpg) 
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Schematics/PLCSchemRevisionSeven.jpg) 
  
 Above is a schematic of how the PLC is going to be implemented into our machine. The LED's in the schematic are rated to receive 24V AC/DC. Because of this there is no need for resistors to limit current to the LEDs. The 24VDC side is protected with a 15A fuse, and will be further discussed in Analysiss
 
@@ -80,13 +80,13 @@ Given that our constraint is 3x1x1 feet, our PLC does meet this constraint.
 
 To protect the 120VAC side of the system, we are using a GFCI cord and circuit breaker on the din rail (This is further discussed in the Power System signoff). To protect the 24VDC side, we must calculate the amount of current that will be drawn from each component. These values are already taking into account the x1.25 storage so that the current draw will not exceed 80% of the maximum. (Again, please refer to the Power System Signoff).
 
-![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCToDriver.jpg) 
+![PLCToDriver](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Schematics/PLCToDriver.jpg) 
 
 The image above shows how the PLC is going to connect to the motor's driver. The driver's ports will receive 24VDC, hence why the PLC needed 24VDC output pins. The PLC will control the pulses (PUL +/-) and the direction (DIR +/-) of the driver, which will dictate how many pulses the motor will receive and what direction the motor will rotate.
 
 ^ Source: https://youtu.be/8hoBHmvRutA (This video is from an automation channel and shows, in great detail, how to connect a PLC to a stpper motor driver)
 
-![Wiring](https://github.com/DillonSW/Capstone_Team_5/blob/Team5-Signoff-PLC/images/PLCWiring.jpg)
+![Wiring](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Schematics/PLCWiring.jpg)
 
 The image above shows how the PLC is wired internally to its inputs and outputs, and how it will be powered. The diagram shows that from a 24VDC power supply, the V- terminal will be connected to "M". The reason there are two wires is because the V- can act as the "ground" of the power supply, however it is still treated as V- and not common ground for the system. The V+ side will only be connected to "L".
 
