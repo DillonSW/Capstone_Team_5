@@ -18,12 +18,12 @@ This document should have a section for each team member. Each engineer should r
 6. In capstone I gained greater social skills more than anything, such as becoming better at negotiating, working with teammates, and preparing and presenting information. I also became highly developed in base engineering skills that come from being faced with problem and problem and having to adapt and solve such problems. 
 
 ## Dillon Williams
-1.
-2.
-3.
-4.
-5.
-6.
+1. I believe we had a good overall team layout, each of us having sufficient prior knowledge to tackle the project. I think not having a team leader in the structure complicated the team. By that I mean there was confusion on who exactly needed to tackle what problem and a recluctance to take orders from others. Although the problems occured, the structure without a designated leader did help the team in the matter of treating all as equal.  
+2. I believe the largest problem during the project was the ablility to receive all orders on time. We received around 3 out of 70 parts ordered in total. This could have caused major issues if the recevied parts had not been the required vital system pieces. It was also a small issue that some teammates would sometimes not want to do work most likely due to a fact that they were graduating soon. Although this occured, other teams experienced more of an issue that our team.  
+3. If I knew there would have been such an issue receiving parts, I would have worked ahead far sooner so we could have gotten as much as possible. It also took time to figure out an exact layout for the signoffs. Once we noticed a pattern in the accpeted signoffs, the team quickly finished the reamining.  
+4. Although we are in a team, it was best to designate **exactly** what each member would work on and **exactly** when it was expected to be finished. This way of communicating allowed the members to quickly finish sections of the project.  
+5. Stay ahead on signoffs. There is date-based grading and delaying one grade can affect all of them. If you stay ahead then the grades will not be a concern.  
+6. I improve majorly on my communication skills, with our team actually being voted best presentation. I also learned how to code GUI programs and how to develop communication betwwen a computer and PLC.  
 
 ## Ryan Reed 
 1.  I think our organizational efforts paid off very well. If we were working on something (signoffs, experimentation, etc.), we were almost always doing it together. I think this helped all of us gain a better understanding of all subsystems and allowed us to help troubleshoot problems as a team. Something that I believe didn't go well was making sure parts were ordered. I understand that issues can arise, but I think we could have stayed more consistent and thorough with checking on ordering.
