@@ -14,8 +14,8 @@ It contains the code needed to create the GUI, access the database, and message 
 
 ### Installation
 Install mysql.connector either from the terminal or from the webiste. Make sure it is the connector for python.  
-To install all python libraries listed, use: Sudo pip install <library>.  
-You can always use: <library> --version to check installations.  
+To install all python libraries listed, use: Sudo pip install library_name.  
+You can always use: library_name --version to check installations.  
   
 ### Running
 The file can be run through the terminal. You will need to have the OPC operational to actually run the program though.  
