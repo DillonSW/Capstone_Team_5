@@ -53,3 +53,7 @@ Carson Pitts, Jessee Millsaps, Mason Baines, and Nathan Bangean.
 ### Software
 
 * In progress...  
+
+### Images
+
+* Contains Photos of the project/schematics/models  
