@@ -71,17 +71,17 @@ Constraint C8 has been deemed out of scope due to never receiving the USB NIC fr
 
 For testing C9, the team went into the specifications of the PC provided by the college to verify that the CPU and Memory. 
 
-![SpecsPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/CapstonePC_Specs.png)  
+![SpecsPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/CapstonePC_Specs.png)  
 
 As you can see in the photo above, the CPU is stronger than an Intel Core i5 and the Memory is 16 GB.
 
 Below you can see the results of running the database program while taking input from the GUI. The database needed to hold all 10 test entries in the student database and keep track of the rented device and student information. 
 
-![Students_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Students_Results.png)  
+![Students_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Students_Results.png)  
 
 Below you can see the results of the inventory table after testing the entry of 15 devices and the renting of 10. The devices should be removed in order of entry into the machine.  
 
-![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Inventory_Results.png)
+![Inventory_Results](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Inventory_Results.png)
 
 ---
 ### Data Interpretation
@@ -149,10 +149,10 @@ Below is the all the data that was collected for input validation for different 
 
 | | | 
 |:--------------------:|:--------------------:|
-![Delete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Admin_Delete.png) Figure 1: Admin_Delete| ![Agree](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Agreement_Error.png) Figure 2: Agreement_Error| 
-![Email](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Email_Error.png) Figure 3: Email_Error| ![Field](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Field_Error.png) Figure 4: Field_Error|
-![ID_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/ID_Error.png) Figure 5: ID_Error| ![Load_Complete](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Complete.png) Figure 6: Load_Complete| 
-![Load_Mode](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Load_Mode.png) Figure 7: Load_Mode| ![Name_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/Name_Error.png) Figure 8: Name_Error| 
+![Delete](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Admin_Delete.png) Figure 1: Admin_Delete| ![Agree](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Agreement_Error.png) Figure 2: Agreement_Error| 
+![Email](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Email_Error.png) Figure 3: Email_Error| ![Field](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Field_Error.png) Figure 4: Field_Error|
+![ID_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/ID_Error.png) Figure 5: ID_Error| ![Load_Complete](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Load_Complete.png) Figure 6: Load_Complete| 
+![Load_Mode](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Load_Mode.png) Figure 7: Load_Mode| ![Name_Error](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/Name_Error.png) Figure 8: Name_Error| 
 
 ---
 ### Data Interpretation
@@ -213,7 +213,7 @@ https://user-images.githubusercontent.com/100802994/231836664-d108fc11-3d49-4a41
 
 Above is a video recording of us using the OPC client to control the PLC, which is controlling the motor driver.
 
-![OPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/PLC_OPC.jpeg)
+![OPC](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Software/PLC_OPC.jpeg)
 
 The image above is of the OPC client running on our Linux VM. The client first reads the value of the controller tag, then changes it to "true" or "energized" and reads it again. This along with the video show that the OPC is able to communicate with the PLC.  
 
