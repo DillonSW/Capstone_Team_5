@@ -12,10 +12,10 @@ You will also need to import LogixDriver to connect directly through the PLC IP 
 
 ### Installation
 You will first need to install python3 to the host machine before python can be used. Use the command below in a linux terminal.  
-Command : sudo apt install python3  
+Command : sudo apt install python3.  
 If the command : pip3 --version returns a result, continue. Otherwise use : sudo apt install python3-pip.  
 
-Then install pycomm3 using the command : pip install pycomm3. It may be reasonable to use sudo to overcome any path dependency errors
+Then install pycomm3 using the command : pip install pycomm3. It may be reasonable to use sudo to overcome any path dependency errors.
 
 ### Running
 To run the program, you will need to create a static IP on the host machine to be on the same network.  
