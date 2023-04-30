@@ -85,7 +85,7 @@ Three Current-Carrying Conductors in Raceway, Cable, or Earth (Directly Buried),
 
 ## Schematic
 
-![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/DriverAndMotorRevisionEight.jpg)
+![Schematic](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/Schematics/DriverAndMotorRevisionEight.jpg)
 
 The schematic above shows the wiring connections between the microcontroller/microcomputer, driver, and motor. The resistor options for connecting the microcontroller/microcomputer with the driver are: 0 for 5V, 1kΩ for 12V, or 2kΩ for 24V. Because there are 5 resistor connections, 10, 2kΩ resistors would suffice for covering all of them, in which we can use 2, 2kΩ resistors in parallel to create a 1kΩ connection.
 
@@ -125,7 +125,7 @@ This loss is 0.064%. This loss will be minimal, and the transformer will suffice
 ^ Source: https://www.lincenergysystems.com/blog/difference-between-tracer-wire-tw-thw-thhn/
 ^ Source: http://www.paigewire.com/wire_resistance-prop.aspx?AspxAutoDetectCookieSupport=1
 
-![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/main/images/MotorMount.jpg)
+![MotorMount](https://github.com/DillonSW/Capstone_Team_5/blob/main/Documentation/Images/3D%20Models/MotorMount.jpg)
 
 The image above shows the proposed idea of mounting the motor into the machine. Proposed by the Mechanical Engineering team, the motor will be mounted at the bottom of the machine, and will be on the same level as the mount for the platforms.
 
