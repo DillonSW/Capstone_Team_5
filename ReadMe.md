@@ -48,12 +48,16 @@ Carson Pitts, Jessee Millsaps, Mason Baines, and Nathan Bangean.
 
 ### Documentation
 
+* 3D Models
+* Electrical
+  * Sources
+  * Schematics
+* Images
+  * 3D Models
+  * Schematics
+  * Software
 * Signoffs
 
 ### Software
 
 * In progress...  
-
-### Images
-
-* Contains Photos of the project/schematics/models  
